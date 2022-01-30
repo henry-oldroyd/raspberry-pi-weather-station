@@ -1,0 +1,53 @@
+/* TOP */
+#topBanner {
+    width: 100%;
+    height: 15%;
+    border: 5px solid black;
+
+
+}
+#title {
+    text-align: left;
+    width: 100%;
+    font-size: 300%;
+}
+
+/* BUTTONS */
+#buttonMenu {
+    width: 100%;
+    height: 5%;
+}
+
+.button {
+    margin-bottom: 5%;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 20%;
+}
+
+/* MAIN DATA */
+#rawData {
+    position: absolute;
+    font-size: 20px;
+    height: 35%;
+    width: 35%;
+    border: 1px solid blue;
+
+}
+
+.dataLine {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.dataTitle {
+    font-size: 75%;
+}
+
+.dataValue {
+    font-size: 100%;
+    font-style: oblique;
+}
