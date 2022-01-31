@@ -5,37 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <!-- note that this import statement will be changed on full front and back integration but folder structure won't be changed -->
-    <link rel="stylesheet" href="..\static\styles\styles.css">
-    
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <title>Raspberry Pi Project</title>
 
 </head>
 <body>
 
-    <!-- Henry: comment out below script closing tag? I think it is not meant to be their -->
-    <!-- </script> -->
+    </script>
     <div id="topBanner">
         <h1 id="title">TITLE</h1>
     </div>
 
     <div id="buttonMenu">
         <span>
-        <button type="button" id="Homepage" class="button">Homepage</button>
-        <button type="button" id="temp" class="button">temp</button>
-        <button type="button" id="humidity" class="button">humidity</button>
-        <button type="button" id="pressure" class="button">Pressure</button>
+        <button type="button" id="oneData" class="button">Add one data point</button>
+        <button type="button" id="contData" class="button">Continue adding data points</button>
+        <button type="button" id="stop" class="button">Stop adding points</button>
         </span>
     </div>
 
-    <canvas id="myChart" width="400" height="400"></canvas>
-
-    <!-- will added script to an external JS file -->
-    <!-- the link is here not in the head os it runs after the relevant element is created -->
-    <!-- note that this import statement will be changed on full front and back integration but folder structure won't be changed -->
-    <script type="text/javascript" src="..\static\js\main.js"></script>
+    <canvas id="myChart" width="500%" height="300%"></canvas>
 
     <div id="rawData">
         <div class="dataLine" id="tempLine">
@@ -53,11 +44,10 @@
         </div>
     </div>
 
-    <!-- Henry: there is some kind of problem with this merging with the above raw data div on screen  -->
-    <div id="footer">
+    <!-- <div id="footer">
         <h3 id="aboutTitle">About us</h3>
         <p1 id="aboutText">blah blah blah</p1>
-    </div>
+    </div> -->
 
 
 
