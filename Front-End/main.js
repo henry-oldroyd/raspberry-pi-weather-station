@@ -48,6 +48,7 @@ function updateChart(data) {
 
 
 window.addEventListener('load', function(){
+    getData();
     var ctx = document.getElementById('myChart').getContext('2d');
     chart = createChart(initialData,ctx);
 
@@ -73,9 +74,20 @@ window.addEventListener('load', function(){
 
 })
 
-
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
 function getData() {
-    data = JSON.parse(data)
-    console.log(data)
+    readTextFile("test_data.json", function(text){
+    var data = JSON.parse(text);
+    console.log(data);
     return data
+})
 }
