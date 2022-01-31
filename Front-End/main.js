@@ -3,6 +3,7 @@ var x = 4;
 var chart;
 var running = false;
 var interval;
+var data;
 
 function createChart(intialData,ctx) {
     var myChart = new Chart(ctx, {
@@ -71,3 +72,10 @@ window.addEventListener('load', function(){
     })
 
 })
+
+
+function getData() {
+    data = JSON.parse(data)
+    console.log(data)
+    return data
+}
