@@ -47,7 +47,7 @@ def give_photo():
 @app.route("/")
 def main():
     # return f"<p>Main website</p><br/> <a href={flask.url_for('data')}>see the data</a>"
-    return render_template("index.html")
+    return render_template("test backend.html")
 
 
 

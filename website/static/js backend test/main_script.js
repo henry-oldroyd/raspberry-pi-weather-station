@@ -24,7 +24,8 @@ function output_weather_data(data) {
 // });
 
 document.querySelector("#get_data_btn").addEventListener("click", () => {
-    fetch("/data")
+    // fetch("/data")
+    fetch("http://127.0.0.1:5000/data")
         .then(response => response.json())
         .then(output_weather_data)
         .catch((error)=>   console.log(error));
