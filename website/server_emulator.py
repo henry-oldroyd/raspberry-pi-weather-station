@@ -20,10 +20,12 @@ def data():
     return json.dumps(sample_data)
 
 
-# @app.route("/")
-# def main():
-#     return flask.render_template("test backend.html")
+@app.route("/")
+def main():
+    return flask.render_template("index.html")
 
 
 if __name__ == "__main__":
+    print("George, go here in browser to see your website:")
+    print("http://127.0.0.1:5000/")
     app.run(host='127.0.0.1', port=5000)
