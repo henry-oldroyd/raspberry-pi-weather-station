@@ -13,11 +13,15 @@
     <!-- note that this import statement will be changed on full front and back integration but folder structure won't be changed -->
     <!-- <script type="text/javascript" src="..\static\js\main.js"></script> -->
     <!-- changed path for flask server -->
-    <script type="text/javascript" src="{{ url_for('static', filename='js\main.js') }}"></script>
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js\main.js') }}"></script> -->
+    <!-- url link not by directory -->
+    <script type="text/javascript" src="\static\js\main.js"></script>
 
     <!-- note that this import statement will be changed on full front and back integration but folder structure won't be changed -->
     <!-- <link rel="stylesheet" href="..\static\style\styles.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'style\styles.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'style\styles.css') }}"> -->
+    <!-- url link not by directory -->
+    <link rel="stylesheet" href="\static\style\styles.css">
     <title>Raspberry Pi Project</title>
 
 </head>

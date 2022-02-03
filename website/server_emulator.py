@@ -12,7 +12,8 @@ def create_data_unit():
 
 sample_data = [create_data_unit() for _ in range(10)]
 
-app = flask.Flask(__name__)
+# https://stackoverflow.com/questions/27234593/setting-up-static-folder-path-in-flask
+app = flask.Flask(__name__, static_url_path="/static", static_folder="static")
 
 
 @app.route("/data")
