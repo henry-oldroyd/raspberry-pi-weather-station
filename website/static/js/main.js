@@ -34,6 +34,11 @@ function createChart(intialData,ctx) {
     return myChart;
 }
 
+function outputData(data) {
+    console.log("Data addaed!")
+    console.log(data)
+}
+
 function updateChart(data) {
     newData = Math.floor((Math.random() +2)* 10);
 
@@ -62,6 +67,7 @@ window.addEventListener('load', function(){
                 updateChart("data goes here")
             },100)
         }
+    });
 
     var stopDataButton = document.getElementById('stop');
     stopDataButton.addEventListener("click", function(){
@@ -69,9 +75,16 @@ window.addEventListener('load', function(){
         running = false;
     });
 
-    })
-
-})
+    var getDatabutton = document.getElementById("#getDataButton");
+    getDataButton.addEventListener("click", () => {
+        // fetch("/data")
+        fetch("http://127.0.0.1:5000/data")
+            .then(response => response.json())
+            .then(outputData)
+            .catch((error) =>  console.log(error));
+    });
+    }
+)
 
 // function readTextFile(file, callback) {
 //     var rawFile = new XMLHttpRequest();
