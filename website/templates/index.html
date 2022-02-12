@@ -38,25 +38,24 @@
         <button type="button" id="contData" class="button">Continue adding data points</button>
         <button type="button" id="stop" class="button">Stop adding points</button>
         <button type="button" id="getDataButton" class="button">Get Data</button>
+        <button type="button" id="makeTable" class="button">Create Table</button>
         </span>
     </div>
 
     <canvas id="myChart" width="500%" height="300%"></canvas>
 
-    <div id="rawData">
-        <div class="dataLine" id="tempLine">
-            <span>
-            <p1 id="tempTitle" class="temp dataTitle">TEMPERATURE:</p1>
-            <p1 id="tempValue" class="temp dataValue">30 degrees</p1>
-            <span/>
-        </div>
+    <table id="table">
+        <tr>
+            <th>Day</th>
+            <th>Light</th>
+            <th>Rain</th>
+        </tr>
+            <td>1</td>
+            <td>56</td>
+            <td>89</td>
+        <tr>
 
-        <div class="dataLine" id="pressureLine">
-            <span>
-            <p1 id="pressureTitle" class="pressure dataTitle">PRESSURE:</p1>
-            <p1 id="pressureValue" class="pressure dataValue">30Pa</p1>
-            </span>
-        </div>
-    </div>
+        </tr>
+    </table>
 </body>
 </html>
