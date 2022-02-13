@@ -1,11 +1,12 @@
 let initialData = [28,29,31];
 var lights = []
+var usinglights;
 var x = 4;
 var chart;
 var running = false;
 var interval;
 var jsondata;
-var day = 2;
+var day = 1;
 
 function createChart(intialData,ctx) {
     var myChart = new Chart(ctx, {
@@ -14,7 +15,7 @@ function createChart(intialData,ctx) {
         labels: [],
         datasets: [{
             label: 'Light',
-            data: lights,
+            data: usinglights,
             backgroundColor: 'rgba(255,0,0,1)',
             color: 'rgba(255,0,0,1)',
             borderColor: 'rgba(255,0,0,0.2)'
@@ -44,13 +45,14 @@ function outputData(data) {
     let i = 0;
     for (let i=0; i < data.length; i++) {
         lights.push(data[i]['light'])
-        // adds the lable
-        chart.data.labels.push("Day " + (i+1));
     }
-
-
-    console.log(lights)
-    chart.update();
+    //     // adds the lable
+    //     chart.data.labels.push("Day " + (i+1));
+    // }
+    //
+    //
+    // console.log(lights)
+    // chart.update();
 }
 
 function updateChart(data) {
@@ -65,9 +67,30 @@ function updateChart(data) {
 
 }
 
+function changeGraph(slider) {
+    let start = 1;
+    console.log('Changing Graph')
+    usinglights = lights;
+    usinglights = usinglights.slice(1, slider.value)
+
+
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data = [89];
+    })
+
+    chart.data.labels = ["day 1"]
+    // for (let i=1; i <= usinglights.len; i++) {
+    //     chart.data.labels.push("Day " + i)
+    // }
+
+
+    console.log(usinglights)
+    chart.update();
+
+
+}
 
 function createTable() {
-
     var table = document.getElementById("table");
     jsondata.forEach(function(thisData) {
         // inserts row to the bottom
@@ -78,7 +101,7 @@ function createTable() {
         let newText1 = document.createTextNode(day);
         day ++;
 
-        // temp
+        // light
         let newCell2 = newRow.insertCell(1);
         let newText2 = document.createTextNode(thisData['light']);
 
@@ -90,9 +113,6 @@ function createTable() {
         newCell1.appendChild(newText1);
         newCell2.appendChild(newText2);
         newCell3.appendChild(newText3);
-
-
-
     });
 }
 
@@ -135,7 +155,10 @@ window.addEventListener('load', function(){
         createTable();
     });
 
-    }
+    var slider = document.getElementById("slider1");
+    slider.oninput = function() {changeGraph(slider)}
+
+}
 
 
 )
