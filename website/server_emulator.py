@@ -1,32 +1,61 @@
-# this is here to return some random weather data to Georges website so he can test his code that makes get requests
 import flask
+from flask import Flask, request, render_template
 import json
-from random import randint
 
-def create_data_unit():
-    return {
-        "temperature": randint(0,25),
-        "humidity": randint(0, 100) 
-    }
+# read data
 
 
-sample_data = [create_data_unit() for _ in range(10)]
+def read_json():
+    with open("./data.json", "r") as file:
+        # return json.load(file)
+        return file.read()
 
-# https://stackoverflow.com/questions/27234593/setting-up-static-folder-path-in-flask
-app = flask.Flask(__name__, static_url_path="/static", static_folder="static")
+# append data point
 
 
-@app.route("/data")
+def append_data(data_item):
+    # read existing data
+    with open("./data.json", "r") as file:
+        data = json.load(file)
+    # append new item
+    data.append(data_item)
+    # rewrite
+    with open("./data.json", "w") as file:
+        json.dump(data, file)
+
+
+app = Flask(__name__)
+
+
+@app.route("/data", methods=['GET', 'POST'])
 def data():
-    return json.dumps(sample_data)
+    if request.method == "GET":
+        print("server sending reponce to get request:")
+        print(read_json())
+        return read_json()
+    if request.method == "POST":
+        data_header = request.json
+        print("server received data")
+        print(data_header)
+        secret_key = data_header["secret_key"]
+        new_data_item = data_header["new_data_item"]
+        if secret_key != "123abc":
+            print("secret key wrong for post request")
+            return "Wrong key!"
+        append_data(new_data_item)
+        return str(read_json())
+
+
+@app.route("/photos", methods=["GET"])
+def give_photo():
+    pass
 
 
 @app.route("/")
 def main():
-    return flask.render_template("index.html")
+    # return f"<p>Main website</p><br/> <a href={flask.url_for('data')}>see the data</a>"
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
-    print("George, go here in browser to see your website:")
-    print("http://127.0.0.1:5000/")
     app.run(host='127.0.0.1', port=5000)
