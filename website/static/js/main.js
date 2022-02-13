@@ -37,9 +37,7 @@ function createChart(intialData,ctx) {
     return myChart;
 }
 
-function outputData(data) {
-    console.log("Data addaed!")
-    console.log(jsondata)
+function storeData(data) {
     jsondata = data;
     // adds the data value
     let i = 0;
@@ -68,20 +66,19 @@ function updateChart(data) {
 }
 
 function changeGraph(slider) {
-    let start = 1;
-    console.log('Changing Graph')
-    usinglights = lights;
-    usinglights = usinglights.slice(1, slider.value)
+    let start = 0;
+    console.log('Using Lights:')
+    usinglights = lights.slice(start, slider.value);
 
 
     chart.data.datasets.forEach((dataset) => {
-        dataset.data = [89];
-    })
+        dataset.data = usinglights;
+    });
 
-    chart.data.labels = ["day 1"]
-    // for (let i=1; i <= usinglights.len; i++) {
-    //     chart.data.labels.push("Day " + i)
-    // }
+    chart.data.labels = []
+    for (let i = start; i < slider.value; i++) {
+        chart.data.labels.push("Day " + (i+1));
+    }
 
 
     console.log(usinglights)
@@ -145,7 +142,7 @@ window.addEventListener('load', function(){
         // fetch("/data")
         fetch("http://127.0.0.1:5000/data")
             .then(response => response.json())
-            .then(outputData)
+            .then(storeData)
             .catch((error) =>  console.log(error));
     });
 
