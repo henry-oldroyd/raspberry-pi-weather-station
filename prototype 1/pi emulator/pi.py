@@ -10,9 +10,13 @@ logger_module.setup_logger('pi_emulator')
 logger = logging.getLogger('pi_emulator')
 
 # will be sotred in an environmental variable in PI
-SECRET_KEY = "ABC123-this-is-a-pi-secret-key!"
-logger.info(f"using secret key:   {SECRET_KEY}")
+with open("secret_key.key", "r") as file:
+    SECRET_KEY = file.read()
 SERVER_URL = 'http://127.0.0.1:5000/data'
+
+output_safe_secret_key = SECRET_KEY[:4] + "*"*(len(SECRET_KEY)-8) + SECRET_KEY[-4:]
+logger.info(f"using secret key:   {output_safe_secret_key}")
+logger.info(f"using server url:   {SERVER_URL}")
 
 example_data = {
     "light": random.randint(0, 100),
@@ -36,11 +40,11 @@ try:
         logger.critical("status code was not 200")
         match request.status_code:
             case 404:
-                logger.critical('page not found')
+                logger.critical('404 page not found')
             case 401:
-                logger.critical('authentication failed, check key')
+                logger.critical('401 authentication failed, check key')
             case 500:
-                logger.critical('internal server error, perhaps flask server has crashed')
+                logger.critical('500 internal server error, perhaps flask server has crashed')
         raise
     else:
         logger.info("Post request successfull")
