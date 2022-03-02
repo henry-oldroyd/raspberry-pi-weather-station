@@ -3,24 +3,39 @@
 import logging
 import os
 
-# Create a custom logger
-logger = logging.getLogger(__name__)
 
-# Create handlers
-c_handler = logging.StreamHandler()
+# def setup_logger(name, file_path='log.log', c_level='INFO', f_level='INFO'):
+def setup_logger(name, file_path='log.log', level='INFO'):
+    log_file_dir = os.path.abspath(file_path)
+    # clear log file:
+    with open(log_file_dir, 'w') as file:
+        file.write("")
+    
+    
+    # Create a custom logger
+    logger = logging.getLogger(name)
+    # Create handlers
+    c_handler = logging.StreamHandler()
 
-log_file_dir = os.path.abspath('log.log')
 
-f_handler = logging.FileHandler(log_file_dir)
-c_handler.setLevel(logging.WARNING)
-f_handler.setLevel(logging.ERROR)
+    f_handler = logging.FileHandler(log_file_dir)
+    # c_handler.setLevel(c_level)
+    # f_handler.setLevel(f_level)
+    logger.setLevel(level)
 
-# Create formatters and add it to handlers
-c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-c_handler.setFormatter(c_format)
-f_handler.setFormatter(f_format)
+    # Create formatters and add it to handlers
+    c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+    f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    c_handler.setFormatter(c_format)
+    f_handler.setFormatter(f_format)
 
-# Add handlers to the logger
-logger.addHandler(c_handler)
-logger.addHandler(f_handler)
+    # Add handlers to the logger
+    logger.addHandler(c_handler)
+    logger.addHandler(f_handler)
+    
+    
+
+
+
+if __name__ == "__main__":
+    setup_logger(name=__name__)

@@ -3,10 +3,11 @@ import random
 import logging
 
 # local
-import logger
+import logger as logger_module
 
 # setup logger
-logger = logging.getLogger(__name__)
+logger_module.setup_logger('pi_emulator')
+logger = logging.getLogger('pi_emulator')
 
 # will be sotred in an environmental variable in PI
 SECRET_KEY = "ABC123-this-is-a-pi-secret-key!"
@@ -26,24 +27,26 @@ logger.info(f"data about to be sent in post request:   {data_to_send}")
 try:
     try:    
         request = requests.post(SERVER_URL, json=data_to_send)
+        # request = requests.post('https://stackoverflow.com/', json=data_to_send)
         assert request.status_code == 200, f"Status code was not 200 success but was  {request.status_code}"
     except requests.exceptions.ConnectionError as e:
-        logger.error(f"Post request to url  {SERVER_URL}  failed to connect")
+        logger.critical(f"Post request to url  {SERVER_URL}  failed to connect")
         raise
     except AssertionError as e:
-        logger.error("status code was not 200")
+        logger.critical("status code was not 200")
         match request.status_code:
             case 404:
-                logger.error('page not found')
+                logger.critical('page not found')
             case 401:
-                logger.error('authentication failed, check key')
+                logger.critical('authentication failed, check key')
             case 500:
-                logger.error('internal server error, perhaps flask server has crashed')
+                logger.critical('internal server error, perhaps flask server has crashed')
         raise
     else:
         logger.info("Post request successfull")
         logger.info(f"request status code:   {request.status_code}")
-        logger.info(f"returned text:   {request.text}")
+        text = request.text[:250].replace("\n", "")
+        logger.info(f"returned text (first 250 characters):   {text}")
 except Exception as e:
     logger.exception(e)
     raise
