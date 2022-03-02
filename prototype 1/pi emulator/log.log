@@ -1,12 +1,8 @@
-2022-03-02 18:21:29,660 - pi.py - INFO - this logger named pi.py created
-2022-03-02 18:21:29,661 - pi.py - INFO - using secret key:   wronrong
-2022-03-02 18:21:29,662 - pi.py - INFO - using server url:   http://127.0.0.1:5000/data
-2022-03-02 18:21:29,662 - pi.py - INFO - using sample data:   {'light': 14, 'rain': 95}
-2022-03-02 18:21:29,662 - pi.py - INFO - data about to be sent in post request:   {'secret_key': 'wrong', 'new_data_item': {'light': 14, 'rain': 95}}
-2022-03-02 18:21:29,672 - pi.py - CRITICAL - status code was not 200
-2022-03-02 18:21:29,672 - pi.py - CRITICAL - 401 authentication failed, check key
-2022-03-02 18:21:29,674 - pi.py - ERROR - Status code was not 200 success but was  401
-Traceback (most recent call last):
-  File "C:\Users\henry\Documents\GitHub\raspberry-pi-weather-station\prototype 1\pi emulator\pi.py", line 36, in <module>
-    assert request.status_code == 200, f"Status code was not 200 success but was  {request.status_code}"
-AssertionError: Status code was not 200 success but was  401
+2022-03-02 19:02:50,771 - pi.py - INFO - this logger named pi.py created
+2022-03-02 19:02:50,771 - pi.py - INFO - using secret key:   ABC1**********************-key
+2022-03-02 19:02:50,772 - pi.py - INFO - using server url:   http://127.0.0.1:5000/data
+2022-03-02 19:02:50,772 - pi.py - INFO - using sample data:   {'light': 15, 'rain': 76}
+2022-03-02 19:02:50,772 - pi.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'light': 15, 'rain': 76}}
+2022-03-02 19:02:50,793 - pi.py - INFO - Post request successfull
+2022-03-02 19:02:50,793 - pi.py - INFO - request status code:   200
+2022-03-02 19:02:50,793 - pi.py - INFO - returned text (first 250 characters):   [{"light": 56, "rain": 23}, {"light": 89, "rain": 2}, {"light": 23, "rain": 82}, {"light": 41, "rain": 44}, {"light": 25, "rain": 56}, {"light": 16, "rain": 60}, {"light": 93, "rain": 19}, {"light": 37, "rain": 49}, {"light": 4, "rain": 83}, {"light"
