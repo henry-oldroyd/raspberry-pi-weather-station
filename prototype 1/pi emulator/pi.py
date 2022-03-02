@@ -1,13 +1,14 @@
 import requests
 import random
 import logging
+import os
 
 # local
 import logger as logger_module
 
 # setup logger
-logger_module.setup_logger('pi_emulator')
-logger = logging.getLogger('pi_emulator')
+logger_module.setup_logger(os.path.basename(__file__))
+logger = logging.getLogger(os.path.basename(__file__))
 
 # will be sotred in an environmental variable in PI
 with open("secret_key.key", "r") as file:

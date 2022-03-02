@@ -33,7 +33,8 @@ def setup_logger(name, file_path='log.log', level='INFO'):
     logger.addHandler(c_handler)
     logger.addHandler(f_handler)
     
-    
+    logger.info(f"this logger named {name} created")
+
 
 
 

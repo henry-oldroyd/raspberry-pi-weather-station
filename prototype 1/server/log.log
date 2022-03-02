@@ -1,0 +1,11 @@
+2022-03-02 18:21:24,886 - server.py - INFO - this logger named server.py created
+2022-03-02 18:21:24,887 - server.py - INFO - fetched secret key hash: e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
+2022-03-02 18:21:24,887 - server.py - INFO - Using port 5000
+2022-03-02 18:21:24,888 - server.py - INFO - flask app object created
+2022-03-02 18:21:24,890 - server.py - INFO - all flask routes defined
+2022-03-02 18:21:24,890 - server.py - INFO - running flask app
+2022-03-02 18:21:29,668 - server.py - INFO - Route data used with method  POST
+2022-03-02 18:21:29,668 - server.py - INFO - server received new data:  {'light': 14, 'rain': 95}
+2022-03-02 18:21:29,669 - server.py - INFO - server received new secret key:  wronrong
+2022-03-02 18:21:29,669 - server.py - INFO - the hash of which is:  8810ad581e59f2bc3928b261707a71308f7e139eb04820366dc4d5c18d980225
+2022-03-02 18:21:29,669 - server.py - WARNING - secret key wrong for post request, aborting with 401 authentication failed
