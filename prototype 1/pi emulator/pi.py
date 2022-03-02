@@ -25,8 +25,7 @@ example_data = {
 logger.info(f"using sample data:   {example_data}")
 
 
-
-data_to_send = {"SECRET_KEY": SECRET_KEY, "new_data_item": example_data}
+data_to_send = {"secret_key": SECRET_KEY, "new_data_item": example_data}
 logger.info(f"data about to be sent in post request:   {data_to_send}")
 try:
     try:    
@@ -34,7 +33,7 @@ try:
         # request = requests.post('https://stackoverflow.com/', json=data_to_send)
         assert request.status_code == 200, f"Status code was not 200 success but was  {request.status_code}"
     except requests.exceptions.ConnectionError as e:
-        logger.critical(f"Post request to url  {SERVER_URL}  failed to connect")
+        logger.critical(f"Post request to url  {SERVER_URL}  failed to connect, server offline?")
         raise
     except AssertionError as e:
         logger.critical("status code was not 200")

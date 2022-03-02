@@ -1,67 +1,7 @@
-2022-03-02 17:43:05,490 - pi_emulator - INFO - using secret key:   ABC1**********************-key
-2022-03-02 17:43:05,491 - pi_emulator - INFO - using server url:   http://127.0.0.1:5000/data
-2022-03-02 17:43:05,492 - pi_emulator - INFO - using sample data:   {'light': 56, 'rain': 81}
-2022-03-02 17:43:05,493 - pi_emulator - INFO - data about to be sent in post request:   {'SECRET_KEY': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'light': 56, 'rain': 81}}
-2022-03-02 17:43:07,527 - pi_emulator - CRITICAL - Post request to url  http://127.0.0.1:5000/data  failed to connect
-2022-03-02 17:43:07,528 - pi_emulator - ERROR - HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /data (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020919AC6DA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
-Traceback (most recent call last):
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
-    conn = connection.create_connection(
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
-    raise err
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
-    sock.connect(sa)
-ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
-    httplib_response = self._make_request(
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
-    conn.request(method, url, **httplib_request_kw)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 239, in request
-    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1276, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1322, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1271, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1031, in _send_output
-    self.send(msg)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 969, in send
-    self.connect()
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 205, in connect
-    conn = self._new_conn()
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
-    raise NewConnectionError(
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020919AC6DA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 440, in send
-    resp = conn.urlopen(
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 785, in urlopen
-    retries = retries.increment(
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 592, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /data (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020919AC6DA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\henry\Documents\GitHub\raspberry-pi-weather-station\prototype 1\pi emulator\pi.py", line 33, in <module>
-    request = requests.post(SERVER_URL, json=data_to_send)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 117, in post
-    return request('post', url, data=data, json=json, **kwargs)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 61, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 529, in request
-    resp = self.send(prep, **send_kwargs)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 645, in send
-    r = adapter.send(request, **kwargs)
-  File "C:\Users\henry\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 519, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /data (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020919AC6DA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2022-03-02 17:56:33,094 - pi_emulator - INFO - using secret key:   ABC1**********************-key
+2022-03-02 17:56:33,095 - pi_emulator - INFO - using server url:   http://127.0.0.1:5000/data
+2022-03-02 17:56:33,095 - pi_emulator - INFO - using sample data:   {'light': 37, 'rain': 49}
+2022-03-02 17:56:33,096 - pi_emulator - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'light': 37, 'rain': 49}}
+2022-03-02 17:56:33,118 - pi_emulator - INFO - Post request successfull
+2022-03-02 17:56:33,120 - pi_emulator - INFO - request status code:   200
+2022-03-02 17:56:33,121 - pi_emulator - INFO - returned text (first 250 characters):   [{"light": 56, "rain": 23}, {"light": 89, "rain": 2}, {"light": 23, "rain": 82}, {"light": 41, "rain": 44}, {"light": 25, "rain": 56}, {"light": 16, "rain": 60}, {"light": 93, "rain": 19}, {"light": 37, "rain": 49}]
