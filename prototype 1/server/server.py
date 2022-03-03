@@ -90,7 +90,11 @@ def data():
 def main():
     logger.info("Route main used with GET method")
     logger.info("Rendering and returning html home page")
-    return flask.render_template("test backend.html")
+    
+    rendered = flask.render_template("index.html")
+    # vue meant to also use {{ }} but it instead now uses {({})}
+    rendered = rendered.replace("{({", "{{").replace("})}", "}}")
+    return rendered
 
 
 logger.info("all flask routes defined")
