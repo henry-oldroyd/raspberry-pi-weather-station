@@ -86,15 +86,15 @@ def data():
             return str(read_data())
 
 
-@app.route("/")
-def main():
-    logger.info("Route main used with GET method")
-    logger.info("Rendering and returning html home page")
+# @app.route("/")
+# def main():
+#     logger.info("Route main used with GET method")
+#     logger.info("Rendering and returning html home page")
     
-    rendered = flask.render_template("index.html")
-    # vue meant to also use {{ }} but it instead now uses {({})}
-    rendered = rendered.replace("{({", "{{").replace("})}", "}}")
-    return rendered
+#     rendered = flask.render_template("index.html")
+#     # vue meant to also use {{ }} but it instead now uses {({})}
+#     rendered = rendered.replace("{({", "{{").replace("})}", "}}")
+#     return rendered
 
 
 logger.info("all flask routes defined")
