@@ -1,12 +1,3 @@
-let initialData = [28,29,31];
-var lights = []
-var usinglights;
-var x = 4;
-var chart;
-var running = false;
-var interval;
-var jsondata;
-var day = 1;
 
 
 class Graph {
@@ -32,10 +23,21 @@ class Graph {
         this.addDataButton.addEventListener("click", () => {this.addDataPoint(0)}) // 0 has no signficangce
         // currently adds a random data point
 
+        this.initialiseGraph()
+
     }
+
+    initialiseGraph(){
+        this.chart = new Chart(this.ctx, {
             type: 'line',
             data: {
                 labels: this.xlabels,
+                datasets: [{
+                    label: 'Light',
+                    data: this.dataBeingUsed,
+                    backgroundColour: this.backgroundColour,
+                    colour: this.colour,
+                    borderColour: this.borderColour
 
                 }]
             },
@@ -64,6 +66,7 @@ class Graph {
     }
 
     addDataPoint(dataPoint){
+        let newDataPoint = Math.floor((Math.random() +2)* 10);
         this.dataBeingUsed.push(newDataPoint);
         this.len++
         this.xlabels.push("Day " + (this.len))
