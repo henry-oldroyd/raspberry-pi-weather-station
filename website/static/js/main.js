@@ -1,19 +1,29 @@
+var globalData; // global variable
+window.addEventListener('load', function(){
 
+
+    var getDatabutton = document.getElementById("getDataButton");
+    getDataButton.addEventListener("click", () => {getData()})
+
+    var createGraph = document.getElementById("createGraph");
+    createGraph.addEventListener("click", () => {let lightGraph = new Graph('light', filterData('light'))});
+
+    var createTableButton = document.getElementById("makeTableButton");
+    createTableButton.addEventListener("click", () => {createTable()});
+})
 
 class Graph {
-    constructor(title){
+    constructor(title, data){
         this.title = title
-
-
         this.backgroundColour = 'rgba(255,0,0,1)'
-        this.color = 'rgba(255,0,0,1)'
+        this.colour = 'rgba(255,0,0,1)'
         this.borderColour = 'rgba(255,0,0,0.2)'
         this.ctx = document.getElementById('myChart').getContext('2d')
-        this.data = [25,23, 20,19]
+        this.data = data
+
         this.dataBeingUsed = this.data
         this.xlabels = this.createXlabels()
 
-        console.log(this.xlabels)
 
 
         this.slider = document.getElementById('slider1')
@@ -35,9 +45,9 @@ class Graph {
                 datasets: [{
                     label: 'Light',
                     data: this.dataBeingUsed,
-                    backgroundColour: this.backgroundColour,
-                    colour: this.colour,
-                    borderColour: this.borderColour
+                    backgroundColor: this.backgroundColour,
+                    color: this.colour,
+                    borderColor: this.borderColour
 
                 }]
             },
@@ -101,7 +111,8 @@ class Graph {
 
 function createTable() {
     var table = document.getElementById("table");
-    jsondata.forEach(function(thisData) {
+    let day = 1;
+    globalData.forEach(function(thisData) {
         // inserts row to the bottom
         var newRow = table.insertRow(-1);
 
@@ -125,31 +136,21 @@ function createTable() {
     });
 }
 
+function getData() { // gets all data
+    fetch("http://127.0.0.1:5000/data")
+        .then(response => response.json())
+        .then(jsondata => {
+            globalData = jsondata
 
-window.addEventListener('load', function(){
-
-    let lightGraph = new Graph("Light");
-
-
-    var getDatabutton = document.getElementById("getDataButton");
-    getDataButton.addEventListener("click", () => {
-        // fetch("/data")
-        fetch("http://127.0.0.1:5000/data")
-            .then(response => response.json())
-            .then(storeData)
-            .catch((error) =>  console.log(error));
-    });
-
-    // var createTableButton = document.getElementById("makeTable");
-    // createTableButton.addEventListener("click", function(){
-    //
-    //     createTable();
-    // });
-
-
-
+        })
+        .catch((error) => console.log(error));
 
 }
 
-
-)
+function filterData(filter) { // returns just light data
+    filteredData = []
+    for (let i=0; i < globalData.length; i++){
+        filteredData.push(globalData[i][filter]) // eg filter = 'light'
+    }
+    return filteredData
+}
