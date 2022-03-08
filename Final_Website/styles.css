@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Sans Pro', sans-serif;
@@ -15,7 +20,7 @@
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
 
-    --fs-h1: 3rem;
+    --fs-h1: 3.5rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
@@ -28,14 +33,27 @@
 /* intro section */
 .intro {
     position: relative;
-    padding-top: 0.25rem;
+    top: 0;
+    left: 0;
+    padding-top: 0;
     padding-bottom: 5rem;
+    background: var(--clr-accent);
+    padding-left: 0;
+
+    margin: 0;
 
 }
 
 .weather-prediction {
     position: relative;
 }
+.weather-current-item{
+    border: 5px outset var(--clr-accent);
+    box-shadow: 0 0 5px var(--clr-dark)
+}
+
+
+
 
 .weather-prediction::before {
     position: absolute;
@@ -46,8 +64,6 @@
     font-weight: var(--fw-bold);
     text-align: center;
     width: 100%;
-    border: 1px solid blue;
-
 
 }
 
@@ -60,12 +76,13 @@
         "weather-prediction weather-current";
         grid-template-columns: 50% 50%;
         column-gap: 2rem;
+
     }
 
     .section__title--intro {
         grid-area: title;
         font-size: var(--fs-h1);
-        border: 1px solid blue;
+
         text-align: center;
         display: flex;
         justify-content: center;
@@ -77,13 +94,14 @@
         grid-area: weather-prediction;
         max-height: 15rem;
         overflow: scroll;
-        border: 1px solid red;
+        border: 5px double var(--clr-dark);
+        width: 80%;
 
+        margin: 0 auto;
     }
 
     .list--weather-prediction {
 
-        color: red;
         margin-top: 2.75em;
         display: flex;
         justify-content: center;
@@ -95,14 +113,39 @@
 
     .weather-prediction__item {
         margin-top: 1em;
+
     }
 
     .weather-current {
+        position: absolute;
+        padding-top: 2.5em;
+        display: grid;
         grid-area: weather-current;
+        grid-template-areas:
+        "wci1 wci2"
+        "wci3 wci4"
+        "wci5 wci6";
+        text-align: center;
+        column-gap: 2em;
+        row-gap: 2em;
+        width: 90%;
+        height: 100%;
 
 
 
     }
+
+
+    .subtitle--weather-current{
+        font-size: var(--fs-h2);
+    }
+
+    #wci1{grid-area:wci1}
+    #wci2{grid-area:wci2}
+    #wci3{grid-area:wci3}
+    #wci4{grid-area:wci4}
+    #wci5{grid-area:wci5}
+    #wci6{grid-area:wci6}
 
 
 
