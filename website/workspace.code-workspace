@@ -1,0 +1,22 @@
+{
+	"folders": [
+        {
+            "path": "..\\pi emulator"
+        },
+        {
+            "path": "..\\server"
+        },
+        {
+            "path": "weather-station-website"
+        },
+        {
+            "path": "..\\..\\website"
+        },
+        {
+            "path": "..\\chart experiment"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "weather-station-website"
+    }
+}

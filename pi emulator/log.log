@@ -1,0 +1,8 @@
+2022-03-08 13:01:58,926 - pi.py - INFO - this logger named pi.py created
+2022-03-08 13:01:58,928 - pi.py - INFO - using secret key:   ABC1**********************-key
+2022-03-08 13:01:58,928 - pi.py - INFO - using server url:   https://cbcb-2-218-255-35.ngrok.io/data
+2022-03-08 13:01:58,929 - pi.py - INFO - using sample data:   {'light': 53, 'rain': 4}
+2022-03-08 13:01:58,929 - pi.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'light': 53, 'rain': 4}}
+2022-03-08 13:01:59,744 - pi.py - INFO - Post request successfull
+2022-03-08 13:01:59,745 - pi.py - INFO - request status code:   200
+2022-03-08 13:01:59,746 - pi.py - INFO - returned json data:   [{"light": 56, "rain": 23}, {"light": 89, "rain": 2}, {"light": 23, "rain": 82}, {"light": 41, "rain": 44}, {"light": 25, "rain": 56}, {"light": 16, "rain": 60}, {"light": 93, "rain": 19}, {"light": 37, "rain": 49}, {"light": 4, "rain": 83}, {"light": 15, "rain": 76}, {"light": 14, "rain": 96}, {"light": 53, "rain": 4}]
