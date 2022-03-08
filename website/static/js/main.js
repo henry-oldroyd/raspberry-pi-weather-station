@@ -8,84 +8,93 @@ var interval;
 var jsondata;
 var day = 1;
 
-function createChart(intialData,ctx) {
-    var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: [],
-        datasets: [{
-            label: 'Light',
-            data: usinglights,
-            backgroundColor: 'rgba(255,0,0,1)',
-            color: 'rgba(255,0,0,1)',
-            borderColor: 'rgba(255,0,0,0.2)'
 
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-                }
+class Graph {
+    constructor(title){
+        this.title = title
+
+
+        this.backgroundColour = 'rgba(255,0,0,1)'
+        this.color = 'rgba(255,0,0,1)'
+        this.borderColour = 'rgba(255,0,0,0.2)'
+        this.ctx = document.getElementById('myChart').getContext('2d')
+        this.data = [25,23, 20,19]
+        this.dataBeingUsed = this.data
+        this.xlabels = this.createXlabels()
+
+        console.log(this.xlabels)
+
+
+        this.slider = document.getElementById('slider1')
+        this.slider.addEventListener("input", () => {this.editDisplayData()})
+
+        this.addDataButton = document.getElementById("oneData")
+        this.addDataButton.addEventListener("click", () => {this.addDataPoint(0)}) // 0 has no signficangce
+        // currently adds a random data point
+
+    }
+            type: 'line',
+            data: {
+                labels: this.xlabels,
+
+                }]
             },
-        responsive: false,
-        interaction: {
-            intersection: false,
-        }
-        }
-    });
-    return myChart;
-}
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                        }
+                    },
+                responsive: true,
+                interaction: {
+                    intersection: false,
+                }
+                }
+            }
 
-function storeData(data) {
-    jsondata = data;
-    // adds the data value
-    let i = 0;
-    for (let i=0; i < data.length; i++) {
-        lights.push(data[i]['light'])
-    }
-    //     // adds the lable
-    //     chart.data.labels.push("Day " + (i+1));
-    // }
-    //
-    //
-    // console.log(lights)
-    // chart.update();
-}
-
-function updateChart(data) {
-    newData = Math.floor((Math.random() +2)* 10);
-
-    chart.data.labels.push("Day " + x);
-    x = ++x;
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(newData);
-    });
-    chart.update();
-
-}
-
-function changeGraph(slider) {
-    let start = 0;
-    console.log('Using Lights:')
-    usinglights = lights.slice(start, slider.value);
-
-
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data = usinglights;
-    });
-
-    chart.data.labels = []
-    for (let i = start; i < slider.value; i++) {
-        chart.data.labels.push("Day " + (i+1));
+        );
     }
 
+    createXlabels() {
+        let xlabels = [] // local variable
+        for (let dayCounter=1; dayCounter <= this.dataBeingUsed.length; dayCounter++){
+            xlabels.push("Day " + dayCounter)
+        }
+        return xlabels
+    }
 
-    console.log(usinglights)
-    chart.update();
+    addDataPoint(dataPoint){
+        this.dataBeingUsed.push(newDataPoint);
+        this.len++
+        this.xlabels.push("Day " + (this.len))
+        this.chart.update()
+    }
+
+    removeDataPoint(){
+        this.dataBeingUsed.pop()
+        this.xlabels.pop()
+        this.len--;
+        this.chart.update()
+    }
+
+    editDisplayData(){
+        let val = this.slider.value;
+        console.log(val)
+
+        this.dataBeingUsed = this.data.slice(0,val); // edits which part of data set is shwon
+        this.xlabels = this.createXlabels()
+
+
+        this.chart.data.datasets.forEach((dataset) => {
+            dataset.data = this.dataBeingUsed;
+        })
+        this.chart.data.labels = this.xlabels;
+        this.chart.update()
+    }
 
 
 }
+
 
 function createTable() {
     var table = document.getElementById("table");
@@ -115,27 +124,9 @@ function createTable() {
 
 
 window.addEventListener('load', function(){
-    var ctx = document.getElementById('myChart').getContext('2d');
-    chart = createChart(initialData,ctx);
 
-    var addDataButton = document.getElementById("oneData");
-    addDataButton.addEventListener("click", function(){updateChart("data goes here")})
+    let lightGraph = new Graph("Light");
 
-    var contDataButton = document.getElementById("contData");
-    contDataButton.addEventListener('click', function(){
-        if (running == false) {
-            running = true;
-            interval = setInterval(function(){
-                updateChart("data goes here")
-            },100)
-        }
-    });
-
-    var stopDataButton = document.getElementById('stop');
-    stopDataButton.addEventListener("click", function(){
-        clearInterval(interval);
-        running = false;
-    });
 
     var getDatabutton = document.getElementById("getDataButton");
     getDataButton.addEventListener("click", () => {
@@ -146,14 +137,14 @@ window.addEventListener('load', function(){
             .catch((error) =>  console.log(error));
     });
 
-    var createTableButton = document.getElementById("makeTable");
-    createTableButton.addEventListener("click", function(){
+    // var createTableButton = document.getElementById("makeTable");
+    // createTableButton.addEventListener("click", function(){
+    //
+    //     createTable();
+    // });
 
-        createTable();
-    });
 
-    var slider = document.getElementById("slider1");
-    slider.oninput = function() {changeGraph(slider)}
+
 
 }
 
