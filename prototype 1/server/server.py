@@ -3,6 +3,9 @@ import json
 import os
 import hashlib
 import logging
+import flask
+from flask_cors import CORS
+
 
 # local
 import logger as logger_module
@@ -53,16 +56,32 @@ app = flask.Flask(
     static_folder= os.path.abspath('../website/static'),
     template_folder= os.path.abspath('../website/templates'),
 )
+CORS(app)
 logger.info("flask app object created")
 
 
 @app.route("/data", methods=['GET', 'POST'])
-def data():
+@app.route("/data/<data_category>", methods=['GET', 'POST'])
+def data(data_category=None):
+    data_category = data_category.lower()
     method = flask.request.method
-    logger.info(f"Route data used with method  {method}")
+    logger.info(f"Route data used with method  {method} and data category as {data_category}")
     if method == "GET":
-        logger.info("Responding to get request with all data")
-        return read_data()
+        if not data_header:
+            logger.info("Responding to get request with all data")
+            return read_data()
+        else:
+            try: assert data_category in ["light", "rain"], "data_category invalid"
+            except AssertionError as e:
+                logger.exception(e)
+                raise
+            else:
+                logger.info("data argument recognised")
+            data = read_data()
+            data = filter(lambda e: e[0] == data_category, data)
+            logger.info("responding with just this data")
+            logger.info(data)
+            return data
 
     if method == "POST":
         data_header  = flask.request.json

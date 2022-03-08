@@ -1,12 +1,10 @@
-2022-03-02 19:07:04,221 - server.py - INFO - this logger named server.py created
-2022-03-02 19:07:04,222 - server.py - INFO - fetched secret key hash: e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
-2022-03-02 19:07:04,223 - server.py - INFO - Using port 5000
-2022-03-02 19:07:04,225 - server.py - INFO - flask app object created
-2022-03-02 19:07:04,226 - server.py - INFO - all flask routes defined
-2022-03-02 19:07:04,227 - server.py - INFO - running flask app
-2022-03-02 19:07:09,136 - server.py - INFO - Route main used with GET method
-2022-03-02 19:07:09,137 - server.py - INFO - Rendering and returning html home page
-2022-03-02 19:07:11,199 - server.py - INFO - Route data used with method  GET
-2022-03-02 19:07:11,200 - server.py - INFO - Responding to get request with all data
-2022-03-02 19:07:11,201 - server.py - INFO - reading all data from data store
-2022-03-02 19:07:11,202 - server.py - INFO - data store contents:  [{"light": 56, "rain": 23}, {"light": 89, "rain": 2}, {"light": 23, "rain": 82}, {"light": 41, "rain": 44}, {"light": 25, "rain": 56}, {"light": 16, "rain": 60}, {"light": 93, "rain": 19}, {"light": 37, "rain": 49}, {"light": 4, "rain": 83}, {"light": 15, "rain": 76}]
+2022-03-04 20:45:56,401 - server.py - INFO - this logger named server.py created
+2022-03-04 20:45:56,408 - server.py - INFO - fetched secret key hash: e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
+2022-03-04 20:45:56,409 - server.py - INFO - Using port 5000
+2022-03-04 20:45:56,411 - server.py - INFO - flask app object created
+2022-03-04 20:45:56,412 - server.py - INFO - all flask routes defined
+2022-03-04 20:45:56,412 - server.py - INFO - running flask app
+2022-03-04 20:46:26,080 - server.py - INFO - Route data used with method  GET
+2022-03-04 20:46:26,080 - server.py - INFO - Responding to get request with all data
+2022-03-04 20:46:26,080 - server.py - INFO - reading all data from data store
+2022-03-04 20:46:26,098 - server.py - INFO - data store contents:  [{"light": 56, "rain": 23}, {"light": 89, "rain": 2}, {"light": 23, "rain": 82}, {"light": 41, "rain": 44}, {"light": 25, "rain": 56}, {"light": 16, "rain": 60}, {"light": 93, "rain": 19}, {"light": 37, "rain": 49}, {"light": 4, "rain": 83}, {"light": 15, "rain": 76}]
