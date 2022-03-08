@@ -20,6 +20,7 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
+
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25.),
     0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
@@ -27,15 +28,26 @@
 /* intro section */
 .intro {
     position: relative;
-    padding-top: 1rem;
+    padding-top: 0.25rem;
     padding-bottom: 5rem;
 
 }
 
+.weather-prediction {
+    position: relative;
+}
+
 .weather-prediction::before {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     content: "Weather Predictions";
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
+    text-align: center;
+    width: 100%;
+    border: 1px solid blue;
+
 
 }
 
@@ -58,25 +70,41 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 25rem;
+        height: 20rem;
     }
 
     .weather-prediction {
         grid-area: weather-prediction;
+        max-height: 15rem;
         overflow: scroll;
+        border: 1px solid red;
 
     }
 
     .list--weather-prediction {
-        display: none;
-        border: 1px solid blue;
-        padding-top: 10em;
+
+        color: red;
+        margin-top: 2.75em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--fs-h3);
+
+    }
+
+    .weather-prediction__item {
+        margin-top: 1em;
     }
 
     .weather-current {
         grid-area: weather-current;
 
+
+
     }
+
+
 
 
 
