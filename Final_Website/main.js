@@ -1,7 +1,7 @@
 var globalData; // global variable
 console.log('yo')
 window.addEventListener('load', function(){
-    let lightGraph = new Graph('light', 'graph--temp', [96,53,25,35,23,45])
+    let lightGraph = new Graph('temp', 'graph--temp', [96,53,25,35,23,45])
     let pressureGraph = new Graph('pressure', 'graph--pressure', [30,28,53,20])
     let humidityGraph = new Graph('humidity', 'graph--humidity', [1,22,3,4])
     let precipitationGraph = new Graph('precipitation', 'graph--precip', [5,2,1,0.1])
