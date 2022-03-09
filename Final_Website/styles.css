@@ -37,7 +37,7 @@ body, html {
     left: 0;
     padding-top: 0;
     padding-bottom: 5rem;
-    background: var(--clr-accent);
+
     padding-left: 0;
 
     margin: 0;
@@ -48,8 +48,8 @@ body, html {
     position: relative;
 }
 .weather-current-item{
-    border: 5px outset var(--clr-accent);
-    box-shadow: 0 0 5px var(--clr-dark)
+
+    box-shadow: 0 0 10px grey;
 }
 
 
