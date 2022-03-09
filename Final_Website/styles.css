@@ -155,19 +155,22 @@ body, html {
     flex-direction: column;
     margin: 2em;
     align-items: center;
-    border: 1px solid green;
+    box-shadow: 0 0 10px grey;
+    padding: 1em;
 
 }
 
 .slider--graph{
-    width: 50%; 
+    width: 50%;
 
 }
 
 .canvas--graph{
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+    border: 1px dotted grey;
+    margin-bottom: 1em;
+
 
 }
 
@@ -187,7 +190,9 @@ body, html {
         "humid precip"
         "speed dir";
         width: 100%;
-        grid-auto-columns: auto;
+
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
     }
 
 
