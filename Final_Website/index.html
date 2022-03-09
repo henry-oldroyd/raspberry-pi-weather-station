@@ -52,27 +52,31 @@
     </section>
 
     <section class="data-graph">
-        <div class="graph--weather-data" id="data--temp">
-            <canvas id="graph--temp"></canvas>
-        </div>
-        <div class="graph--weather-data" id="data--pressure">
-            <canvas id="graph--pressure"></canvas>
-        </div>
-        <div class="graph--weather-data" id="data--humidity">
-            <canvas id="graph--humidity"></canvas>
-        </div>
-        <div class="graph--weather-data" id="data--wind-speed">
-            <canvas id="graph--wind-speed"></canvas>
-        </div>
-        <div class="graph--weather-data" id="data--wind-dir">
-            <p1>INSERT GRAPH HERE</p1>
-        </div>
-        <div class="graph--weather-data" id="precip-graph">
-            <canvas id="graph--precip-graph"></canvas>
+        <div class="container--graph">
+            <div class="graph--weather-data" id="data--temp">
+                <canvas class="canvas--graph" id="graph--temp"></canvas>
+                <input type="range" class="slider--graph" id="slider--temp">
+            </div>
+            <div class="graph--weather-data" id="data--pressure">
+                <canvas class="canvas--graph" id="graph--pressure"></canvas>
+                <input type="range" class="slider--graph" id="slider--pressure">
+            </div>
+            <div class="graph--weather-data" id="data--humidity">
+                <canvas class="canvas--graph" id="graph--humidity"></canvas>
+                <input type="range" class="slider--graph" id="slider--humidity">
+            </div>
+            <div class="graph--weather-data" id="data--wind-speed">
+                <canvas class="canvas--graph" id="graph--wind-speed"></canvas>
+                <input type="range" class="slider--graph" id="slider--wind-speed">
+            </div>
+            <div class="graph--weather-data" id="data--wind-dir">
+                <p1>INSERT GRAPH HERE</p1>
+            </div>
+            <div class="graph--weather-data" id="data--precip">
+                <canvas class="canvas--graph" id="graph--precip"></canvas>
+                <input type="range" class="slider--graph" id="slider--precip">
+            </div>
         </div>
     </section>
-
-
-
 </body>
 </html>

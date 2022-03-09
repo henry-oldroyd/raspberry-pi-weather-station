@@ -146,11 +146,64 @@ body, html {
     #wci4{grid-area:wci4}
     #wci5{grid-area:wci5}
     #wci6{grid-area:wci6}
+}
+
+/* graph section  */
+.graph--weather-data{
+
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    align-items: center;
+    border: 1px solid green;
+
+}
+
+.slider--graph{
+    display: none;
+
+}
+
+.canvas--graph{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+
+}
+
+.container--graph{
+    margin-top: 5em;
+    width:80%;
+    margin:0;
+}
+
+
+@media (min-width: 700px) {
+    .container--graph {
+        position: relative;
+        display: grid;
+        grid-template-areas:
+        "temp press"
+        "humid precip"
+        "speed dir";
+        width: 100%;
+        grid-auto-columns: auto;
+    }
 
 
 
+    #data--temp{grid-area:"temp"}
+    #data--pressure{grid-area:"press"}
+    #data--humidity{grid-area:"humid"}
+    #data--wind-speed{grid-area:"speed"}
+    #data--wind-dir{grid-area:"dir"}
+    #data--precip{grid-area:"precip"}
+}
 
-
-
-
+@media (min-width: 900px) {
+    .container--graph{
+        grid-template-areas:
+        "temp press humid"
+        "precip speed dir";
+    }
 }
