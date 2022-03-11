@@ -1,13 +1,13 @@
 var globalData; // global variable
-console.log('yo')
+
 window.addEventListener('load', function(){
-    let lightGraph = new Graph('temp', 'graph--temp', [96,53,25,35,23,45])
-    let pressureGraph = new Graph('pressure', 'graph--pressure', [30,28,53,20])
-    let humidityGraph = new Graph('humidity', 'graph--humidity', [1,22,3,4])
-    let precipitationGraph = new Graph('precipitation', 'graph--precip', [5,2,1,0.1])
-    let windSpeedGraph = new Graph('wind speed', 'graph--wind-speed', [1,2,1,2])
+    let lightGraph = new Graph('temp', 'graph--temp', [25,35,23,45, 32,86,92])
+    let pressureGraph = new Graph('pressure', 'graph--pressure', [30,28,53,20,10,15,14])
+    let humidityGraph = new Graph('humidity', 'graph--humidity', [1,22,3,4,7,8,0])
+    let precipitationGraph = new Graph('precipitation', 'graph--precip', [5,2,1,0.1,10,2,3])
+    let windSpeedGraph = new Graph('wind speed', 'graph--wind-speed', [1,2,1,2,4,8,10])
 
-
+    let bigGraph = new Graph('Temp', 'graph--graph-big', [1,2,3,4,5,6,6,7,8])
 })
 
 class Graph {
@@ -21,7 +21,6 @@ class Graph {
 
         this.dataBeingUsed = this.data
         this.xlabels = this.createXlabels()
-
         this.initialiseGraph()
 
     }

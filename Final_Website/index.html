@@ -55,27 +55,42 @@
         <div class="container--graph">
             <div class="graph--weather-data" id="data--temp">
                 <canvas class="canvas--graph" id="graph--temp"></canvas>
-                <input type="range" class="slider--graph" id="slider--temp">
+                <!-- <input type="range" class="slider--graph" id="slider--temp"> -->
             </div>
             <div class="graph--weather-data" id="data--pressure">
                 <canvas class="canvas--graph" id="graph--pressure"></canvas>
-                <input type="range" class="slider--graph" id="slider--pressure">
+                <!-- <input type="range" class="slider--graph" id="slider--pressure"> -->
             </div>
             <div class="graph--weather-data" id="data--humidity">
                 <canvas class="canvas--graph" id="graph--humidity"></canvas>
-                <input type="range" class="slider--graph" id="slider--humidity">
+                <!-- <input type="range" class="slider--graph" id="slider--humidity"> -->
             </div>
             <div class="graph--weather-data" id="data--wind-speed">
                 <canvas class="canvas--graph" id="graph--wind-speed"></canvas>
-                <input type="range" class="slider--graph" id="slider--wind-speed">
+                <!-- <input type="range" class="slider--graph" id="slider--wind-speed"> -->
             </div>
             <div class="graph--weather-data" id="data--wind-dir">
                 <p1>INSERT GRAPH HERE</p1>
             </div>
             <div class="graph--weather-data" id="data--precip">
                 <canvas class="canvas--graph" id="graph--precip"></canvas>
-                <input type="range" class="slider--graph" id="slider--precip">
+                <!-- <input type="range" class="slider--graph" id="slider--precip"> -->
             </div>
+        </div>
+    </section>
+
+    <section class="detailed-graph">
+        <div class="container--graph-big">
+            <canvas id="graph--graph-big"></canvas>
+        </div>
+        <input type="range" class="slider--graph-big">
+        <button class="drop-button-main--big-graph drop-button-down--big-graph">Temperature</button>
+        <div class="drop-elements--big-graph">
+            <button class="drop-button-down--big-graph hidden-button">Temperature</button>
+            <button class="drop-button-down--big-graph hidden-button">Pressure</button>
+            <button class="drop-button-down--big-graph hidden-button">Light</button>
+            <button class="drop-button-down--big-graph hidden-button">Wind Speed</button>
+            <button class="drop-button-down--big-graph hidden-button">Humidity</button>
         </div>
     </section>
 </body>
