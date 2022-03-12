@@ -212,6 +212,70 @@ body, html {
 
 
 /* big graph section  */
-.hidden-button{
-    display: none;
+
+.detailed-graph{
+    margin-top: 5em;
+}
+
+
+
+.slider--graph-big::before{
+    content: "Adjust the time range";
+    padding:0;
+}
+
+.drop-elements--big-graph{
+    display: flex;
+    flex-direction: column;
+}
+.slider--big-graph{
+    width: 75%;
+    transform:translate(0,3em);
+    overflow: visible;
+}
+
+.slider--big-graph::after{
+    content: "Adjust time here"
+
+}
+
+
+.drop-button--big-graph{
+    padding:0;
+    transform: translate(0,3em);
+    width: 75%;
+    height: 5em;
+}
+
+.selected-button{
+    background: darkgrey
+}
+
+
+
+
+
+@media (min-width: 600px) {
+    .container--detailed-graph-section{
+        display: grid;
+        grid-template-areas:
+        "graph dropdown"
+        "graph slider";
+        grid-auto-columns: 75% 25%;
+
+    }
+
+    .slider--graph-big{
+        grid-area: slider;
+    }
+
+    .container--graph-big{
+        grid-area: graph
+    }
+
+    .button-container--big-graph{
+        grid-area:dropdown;
+    }
+
+
 }

@@ -80,17 +80,22 @@
     </section>
 
     <section class="detailed-graph">
-        <div class="container--graph-big">
-            <canvas id="graph--graph-big"></canvas>
+        <div class="container--detailed-graph-section">
+            <div class="container--graph-big">
+                <canvas id="graph--graph-big"></canvas>
+            </div>
+
+            <input type="range" class="slider--big-graph">
+            <div class="button-container--big-graph">
+                <!-- <button class="drop-button-main--big-graph">Temperature</button> -->
+                <div class="drop-elements--big-graph">
+                    <button class="drop-button--big-graph selected-button">Temperature</button>
+                    <button class="drop-button--big-graph">Pressure</button>
+                    <button class="drop-button--big-graph">Light</button>
+                    <button class="drop-button--big-graph">Wind Speed</button>
+                    <button class="drop-button--big-graph">Humidity</button>
+                </div>
         </div>
-        <input type="range" class="slider--graph-big">
-        <button class="drop-button-main--big-graph drop-button-down--big-graph">Temperature</button>
-        <div class="drop-elements--big-graph">
-            <button class="drop-button-down--big-graph hidden-button">Temperature</button>
-            <button class="drop-button-down--big-graph hidden-button">Pressure</button>
-            <button class="drop-button-down--big-graph hidden-button">Light</button>
-            <button class="drop-button-down--big-graph hidden-button">Wind Speed</button>
-            <button class="drop-button-down--big-graph hidden-button">Humidity</button>
         </div>
     </section>
 </body>
