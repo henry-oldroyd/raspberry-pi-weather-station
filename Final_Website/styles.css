@@ -215,34 +215,40 @@ body, html {
 
 .detailed-graph{
     margin-top: 5em;
+    margin-left: 3em;
+    margin-bottom: 5em;
 }
 
 
-
-.slider--graph-big::before{
-    content: "Adjust the time range";
-    padding:0;
-}
 
 .drop-elements--big-graph{
     display: flex;
     flex-direction: column;
+
+    align-items: center;
 }
 .slider--big-graph{
-    width: 75%;
-    transform:translate(0,3em);
-    overflow: visible;
-}
 
-.slider--big-graph::after{
-    content: "Adjust time here"
+    /* transform:translate(0,3em); */
 
 }
+
+.slider-title--big-graph{
+    text-align: left;
+}
+
+.slider-div--big-graph{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 .drop-button--big-graph{
     padding:0;
-    transform: translate(0,3em);
+    /* transform: translate(0,3em); */
     width: 75%;
     height: 5em;
 }
@@ -263,9 +269,10 @@ body, html {
         "graph slider";
         grid-auto-columns: 75% 25%;
 
+
     }
 
-    .slider--graph-big{
+    .slider-div--graph-big{
         grid-area: slider;
     }
 
