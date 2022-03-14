@@ -1,13 +1,25 @@
 var globalData; // global variable
 
 window.addEventListener('load', function(){
+    // smaller graphs on page 2
     let lightGraph = new Graph('temp', 'graph--temp', [25,35,23,45, 32,86,92])
     let pressureGraph = new Graph('pressure', 'graph--pressure', [30,28,53,20,10,15,14])
     let humidityGraph = new Graph('humidity', 'graph--humidity', [1,22,3,4,7,8,0])
     let precipitationGraph = new Graph('precipitation', 'graph--precip', [5,2,1,0.1,10,2,3])
     let windSpeedGraph = new Graph('wind speed', 'graph--wind-speed', [1,2,1,2,4,8,10])
 
+    // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph--graph-big', [1,2,3,4,5,6,6,7,8])
+
+    // buttons on page 3
+    let tempButton = document.getElementById("temp-button--big-graph");
+    let pressureButton = document.getElementById("pressure-button--big-graph");
+    let lightButton = document.getElementById("light-button--big-graph");
+    let windButton = document.getElementById("wind-button--big-graph");
+    let humidButton = document.getElementById("humid-button--big-graph");
+
+    let buttons = [tempButton, pressureButton, lightButton, windButton, humidButton]
+    page3Buttons(buttons); // adds functionality to each button
 })
 
 class Graph {
@@ -92,6 +104,55 @@ class Graph {
         this.chart.data.labels = this.xlabels;
         this.chart.update()
     }
+}
+
+function page3Buttons(buttons){
+    buttons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+            console.log(button);
+
+            // checks how many buttons are hidden
+            let buttonsHidden = 0;
+            buttons.forEach((button) => {
+                if (button.classList.contains("hidden-button")) {
+                    buttonsHidden++;
+                    console.log(buttonsHidden)
+                }
+            })
+
+            //if multiple buttons are hidden, show them all on click.
+            if (buttonsHidden > 1) {
+                console.log("showing all")
+                buttons.forEach((button) => {
+                    if (button.classList.contains("hidden-button")) {
+                        button.classList.remove("hidden-button")
+                    }
+                    if (button.classList.contains("selected-button")){
+                        button.classList.remove("selected-button");
+                    }
+
+                })
+
+            } else {  // if no buttons are hidden
+                // shows the right one
+                console.log("showing one")
+                buttons.forEach((button) => {
+                    button.classList.add("hidden-button");
+                });
+
+                button.classList.add("selected-button");
+                button.classList.remove("hidden-button");
+
+
+            }
+        });
+    });
+}
+
+function buttonClicked(button) { // page 3 buttons
+    // button.classList.toggle("hidden-button")
+    console.log('hi')
 }
 
 

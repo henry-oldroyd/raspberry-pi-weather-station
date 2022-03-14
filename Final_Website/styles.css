@@ -191,9 +191,6 @@ body, html {
         grid-auto-columns: minmax(0, 1fr);
         grid-auto-flow: column;
     }
-
-
-
     #data--temp{grid-area:"temp"}
     #data--pressure{grid-area:"press"}
     #data--humidity{grid-area:"humid"}
@@ -220,10 +217,10 @@ body, html {
 }
 
 
-
 .drop-elements--big-graph{
     display: flex;
     flex-direction: column;
+    transform: translate(0,3em);
 
     align-items: center;
 }
@@ -238,10 +235,10 @@ body, html {
 }
 
 .slider-div--big-graph{
-
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 
@@ -257,6 +254,13 @@ body, html {
     background: darkgrey
 }
 
+.hidden-button{
+    display: none;
+}
+
+.button-container--big-graph{
+    height:100%;
+}
 
 
 
@@ -268,7 +272,7 @@ body, html {
         "graph dropdown"
         "graph slider";
         grid-auto-columns: 75% 25%;
-
+        grid-auto-columns: minmax(0,fr);
 
     }
 
