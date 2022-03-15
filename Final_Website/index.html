@@ -12,7 +12,36 @@
 <body>
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">The weather at sandringham school is currently...</h1>
+        <div class="weather-current">
+
+            <div class="weather-current-item" id="wci1">
+                <h2 class="subtitle--weather-current">Temperature</h2>
+                <p class="variable--weather-current">30</p>
+            </div>
+            <div class="weather-current-item"id="wci2">
+                <h2 class="subtitle--weather-current">Pressure</h2>
+                <p class="variable--weather-current">30</p>
+            </div>
+            <div class="weather-current-item"id="wci3">
+                <h2 class="subtitle--weather-current">Humidity</h2>
+                <p class="variable--weather-current">30</p>
+            </div>
+            <div class="weather-current-item"id="wci4">
+                <h2 class="subtitle--weather-current">Light Intensity</h2>
+                <p class="variable--weather-current">30</p>
+            </div>
+            <div class="weather-current-item"id="wci5">
+                <h2 class="subtitle--weather-current">Wind Speed</h2>
+                <p class="variable--weather-current">30</p>
+            </div>
+            <div class="weather-current-item"id="wci6">
+                <h2 class="subtitle--weather-current">Wind direction</h2>
+                <p class="variable--weather-current">--></p>
+            </div>
+        </div>
+
         <div class="weather-prediction">
+            <h3 class="subtitle--weather-prediction">Weather Predictions</h3>
             <ul class="list--weather-prediction">
                 <li class="weather-prediction__item">Predicted Temp: 30</li>
                 <li class="weather-prediction__item">Predicted Pressure: 30</li>
@@ -23,32 +52,7 @@
             </ul>
         </div>
 
-        <div class="weather-current">
-            <div class="weather-current-item" id="wci1">
-                <h2 class="subtitle--weather-current">TEMP</h2>
-                <p class="variable--weather-current">30</p>
-            </div>
-            <div class="weather-current-item"id="wci2">
-                <h2 class="subtitle--weather-current">TEMP</h2>
-                <p class="variable--weather-current">30</p>
-            </div>
-            <div class="weather-current-item"id="wci3">
-                <h2 class="subtitle--weather-current">TEMP</h2>
-                <p class="variable--weather-current">30</p>
-            </div>
-            <div class="weather-current-item"id="wci4">
-                <h2 class="subtitle--weather-current">TEMP</h2>
-                <p class="variable--weather-current">30</p>
-            </div>
-            <div class="weather-current-item"id="wci5">
-                <h2 class="subtitle--weather-current">TEMP</h2>
-                <p class="variable--weather-current">30</p>
-            </div>
-            <div class="weather-current-item"id="wci6">
-                <h2 class="subtitle--weather-current">TEMP</h2>
-                <p class="variable--weather-current">30</p>
-            </div>
-        </div>
+
     </section>
 
     <section class="data-graph">
@@ -89,7 +93,6 @@
                 <input type="range" class="slider--big-graph">
             </div>
             <div class="button-container--big-graph">
-                <!-- <button class="drop-button-main--big-graph">Temperature</button> -->
                 <div class="drop-elements--big-graph">
                     <button class="drop-button--big-graph hidden-button" id="temp-button--big-graph">Temperature</button>
                     <button class="drop-button--big-graph selected-button"id="pressure-button--big-graph">Pressure</button>
@@ -99,6 +102,10 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="section--data-table">
+        
     </section>
 </body>
 </html>
