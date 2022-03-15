@@ -34,6 +34,9 @@ body, html {
 .intro {
     position: relative;
     padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -52,9 +55,9 @@ body, html {
 }
 
 .weather-current {
-    text-align: center;
+    /* text-align: center;
     width: 90%;
-    height: 100%;
+    height: 100%; */
 }
 
 /* .list--weather-prediction {
@@ -65,17 +68,31 @@ body, html {
 } */
 
 .variable--weather-current{
-    font-size: 3em;
+    /* font-size: 3em; */
     /* background: lightblue; */
     width: 50%;
     text-align: center;
 }
 
+.weather-current{
+    width: 75%;
+    margin: 0 auto;
+
+}
+
+
+
 .weather-current-item{
-    box-shadow: 0 0 3px grey;
+    /* box-shadow: 0 0 3px grey; */
+    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    overflow: visible;
+    /* max-height: 5em; */
+    /* margin-left: 3em; */
+
 }
 
 @media (min-width: 600px) {
@@ -127,6 +144,7 @@ body, html {
         row-gap: 2em;
         width: 90%;
         height: 100%;
+        grid-template-columns: 45% 45%;
     }
 
 
