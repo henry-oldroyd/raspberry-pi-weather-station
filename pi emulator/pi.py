@@ -7,6 +7,8 @@ import os
 # local
 import logger as logger_module
 
+PORT = 443
+
 # setup logger
 logger_module.setup_logger(os.path.basename(__file__))
 logger = logging.getLogger(os.path.basename(__file__))
@@ -14,8 +16,8 @@ logger = logging.getLogger(os.path.basename(__file__))
 # will be sotred in an environmental variable in PI
 with open("secret_key.key", "r") as file:
     SECRET_KEY = file.read()
-# SERVER_URL = 'http://127.0.0.1:80/data'
-SERVER_URL = 'https://cbcb-2-218-255-35.ngrok.io/data'
+SERVER_URL = f'http://127.0.0.1:{PORT}/data'
+# SERVER_URL = 'https://cbcb-2-218-255-35.ngrok.io/data'
 
 
 output_safe_secret_key = SECRET_KEY[:4] + "*"*(len(SECRET_KEY)-8) + SECRET_KEY[-4:]

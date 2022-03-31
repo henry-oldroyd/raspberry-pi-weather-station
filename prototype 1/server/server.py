@@ -17,7 +17,7 @@ logger = logging.getLogger(os.path.basename(__file__))
 # would be sotred hashed
 with open('hashed_key.key', 'r') as file:
     SECRET_KEY_HASH = file.read()
-PORT = 5000
+PORT = 443
 logger.info(f"fetched secret key hash: {SECRET_KEY_HASH}")
 logger.info(f"Using port {PORT}")
 
@@ -61,9 +61,9 @@ logger.info("flask app object created")
 
 
 @app.route("/data", methods=['GET', 'POST'])
-@app.route("/data/<data_category>", methods=['GET', 'POST'])
-def data(data_category=None):
-    data_category = data_category.lower()
+# @app.route("/data/<data_category>", methods=['GET', 'POST'])
+def data():
+    # data_category = data_category.lower()
     method = flask.request.method
     logger.info(f"Route data used with method  {method} and data category as {data_category}")
     if method == "GET":
