@@ -9,6 +9,12 @@ body, html {
     padding: 0;
 }
 
+.section-header{
+    font-size: 3em;
+    font-style: var(--ff-primary);
+    padding-left: 1em;
+}
+
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Sans Pro', sans-serif;
@@ -300,8 +306,26 @@ body, html {
     }
 
     .button-container--big-graph{
-        grid-area:dropdown;
+        grid-area: dropdown;
     }
+}
+
+/* footer */
+.footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background: #211f1e;
+    text-align: center;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.credits{
+    background: #423d3a;
 
 
+    margin-top: 1em;
+    margin-bottom: 5em;
 }
