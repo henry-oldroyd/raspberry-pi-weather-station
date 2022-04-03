@@ -3,11 +3,46 @@
 *::after {
     box-sizing: border-box;
 }
-
 body, html {
     margin: 0;
     padding: 0;
 }
+.section__title--intro{
+    color: rgb(255, 255, 255);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+h1{
+    text-align: center;
+    margin: 0px;
+    padding: 2%;
+}
+
+/*Stylisation of boxes in section 1 */
+.weather-current-item{
+    /* box-shadow: 0 0 3px grey; */
+    border: 3px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 2%;
+    /* max-height: 5em; */
+    /* margin-left: 3em; */
+
+}
+.subtitle--weather-current{
+    color: white;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+}
+.variable--weather-current{
+    color: white;
+    font-size: 250%;
+    font-weight: bold;
+    margin-top: 0;
+}
+
 
 .section-header{
     font-size: 3em;
@@ -34,6 +69,8 @@ body, html {
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25.),
     0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+    --bgImg: url(images/sunny.png); /* Declare bgImg variable and set (optimistically) to sunny by default */
 }
 
 /* intro section */
@@ -44,6 +81,16 @@ body, html {
     flex-direction: column;
     align-items: center;
 
+    /* Adds background image to first section with mild colour overlay to aid legibibility */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), var(--bgImg);
+    background-size: cover;
+}
+
+/* 2nd sections */
+.data-graph{
+    background: rgb(243, 243, 243);
+    background-size: cover;
+    
 }
 
 
@@ -57,14 +104,14 @@ body, html {
 }
 
 .weather-prediction__item {
-    margin-top: 1em;
+    top: 1em;
 }
 
-.weather-current {
-    /* text-align: center;
+/*.weather-current {
+    text-align: center;
     width: 90%;
-    height: 100%; */
-}
+    height: 100%;
+}*/
 
 /* .list--weather-prediction {
     display: flex;
@@ -83,21 +130,6 @@ body, html {
 .weather-current{
     width: 75%;
     margin: 0 auto;
-
-}
-
-
-
-.weather-current-item{
-    /* box-shadow: 0 0 3px grey; */
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    overflow: visible;
-    /* max-height: 5em; */
-    /* margin-left: 3em; */
 
 }
 
@@ -183,7 +215,6 @@ body, html {
 
 
 .container--graph{
-    margin-top: 5em;
     width:80%;
 
 }
@@ -219,14 +250,12 @@ body, html {
 }
 
 
-/* big graph section  */
-
+/* 3rd section (big graph) */
 .detailed-graph{
-    margin-top: 5em;
-    margin-left: 3em;
-    margin-bottom: 5em;
+    background: rgb(226, 226, 226);
+    background-size: cover;
+    padding: 2%;
 }
-
 
 .drop-elements--big-graph{
     display: flex;
@@ -235,11 +264,11 @@ body, html {
 
     align-items: center;
 }
-.slider--big-graph{
+/*.slider--big-graph{
 
-    /* transform:translate(0,3em); */
+    transform:translate(0,3em);
 
-}
+}*/
 
 .slider-title--big-graph{
     text-align: left;
@@ -315,16 +344,19 @@ body, html {
     position: sticky;
     bottom: 0;
     left: 0;
-    background: #211f1e;
+    background: #3b3936;
     text-align: center;
-    height: 5em;
+    height: 3em;
     display: flex;
     flex-direction: column;
 }
 
 .credits{
-    background: #423d3a;
+    /*background: #423d3a;*/
 
+    display: inline-block;
+
+    color: white;
 
     margin-top: 1em;
     margin-bottom: 5em;

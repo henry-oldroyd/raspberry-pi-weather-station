@@ -106,6 +106,13 @@ class Graph {
     }
 }
 
+
+// Update the background image to the current weather
+var r = document.querySelector(':root');
+r.style.setProperty('--bgImg', "url('images/cold.png')");
+//To-do: Set image based off current weather with if statements 
+//DP: Will do above once GA has finished read-outs in section 1
+
 function page3Buttons(buttons){
     buttons.forEach((button) => {
 
