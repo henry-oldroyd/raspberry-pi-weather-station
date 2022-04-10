@@ -256,7 +256,6 @@ h1{
     display: flex;
     flex-direction: column;
     transform: translate(0,3em);
-
     align-items: center;
 }
 /*.slider--big-graph{
@@ -276,11 +275,17 @@ h1{
 
 }
 
+/* #dropdown{
+    font-size: 2em;
+    background: rgb(226, 226, 226);
+} */
 
-.drop-button-big-graph:hover{
-    width: 80%;
-    height: 4em;
+/* .selected-button:hover + .hidden-button{
+    visibility: visible;
 }
+.selected-button:hover + .drop-elements-big-graph{
+    visibility: visible;
+} */
 
 .drop-button-big-graph{
     padding:0;
@@ -289,18 +294,15 @@ h1{
 }
 
 .selected-button {
-    background: lightgrey;
+    background: darkgrey;
     width: 75%;
     height: 5em;
 }
 
-.selected-button:hover{
-    width: 80%;
-    height: 6em;
-}
+
 
 .hidden-button{
-    display: none;
+    visibility: hidden;
 }
 
 .button-container-big-graph{
