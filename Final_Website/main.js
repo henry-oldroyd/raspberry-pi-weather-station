@@ -2,21 +2,21 @@ var globalData; // global variable
 
 window.addEventListener('load', function(){
     // smaller graphs on page 2
-    let lightGraph = new Graph('temp', 'graph--temp', [25,35,23,45, 32,86,92])
-    let pressureGraph = new Graph('pressure', 'graph--pressure', [30,28,53,20,10,15,14])
-    let humidityGraph = new Graph('humidity', 'graph--humidity', [1,22,3,4,7,8,0])
-    let precipitationGraph = new Graph('precipitation', 'graph--precip', [5,2,1,0.1,10,2,3])
-    let windSpeedGraph = new Graph('wind speed', 'graph--wind-speed', [1,2,1,2,4,8,10])
+    let lightGraph = new Graph('temp', 'graph-temp', [25,35,23,45, 32,86,92])
+    let pressureGraph = new Graph('pressure', 'graph-pressure', [30,28,53,20,10,15,14])
+    let humidityGraph = new Graph('humidity', 'graph-humidity', [1,22,3,4,7,8,0])
+    let precipitationGraph = new Graph('precipitation', 'graph-precip', [5,2,1,0.1,10,2,3])
+    let windSpeedGraph = new Graph('wind speed', 'graph-wind-speed', [1,2,1,2,4,8,10])
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph--graph-big', [1,2,3,4,5,6,6,7,8])
+    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8])
 
     // buttons on page 3
-    let tempButton = document.getElementById("temp-button--big-graph");
-    let pressureButton = document.getElementById("pressure-button--big-graph");
-    let lightButton = document.getElementById("light-button--big-graph");
-    let windButton = document.getElementById("wind-button--big-graph");
-    let humidButton = document.getElementById("humid-button--big-graph");
+    let tempButton = document.getElementById("temp-button-big-graph");
+    let pressureButton = document.getElementById("pressure-button-big-graph");
+    let lightButton = document.getElementById("light-button-big-graph");
+    let windButton = document.getElementById("wind-button-big-graph");
+    let humidButton = document.getElementById("humid-button-big-graph");
 
     let buttons = [tempButton, pressureButton, lightButton, windButton, humidButton]
     page3Buttons(buttons); // adds functionality to each button
@@ -110,7 +110,7 @@ class Graph {
 // Update the background image to the current weather
 var r = document.querySelector(':root');
 r.style.setProperty('--bgImg', "url('images/cold.png')");
-//To-do: Set image based off current weather with if statements 
+//To-do: Set image based off current weather with if statements
 //DP: Will do above once GA has finished read-outs in section 1
 
 function page3Buttons(buttons){

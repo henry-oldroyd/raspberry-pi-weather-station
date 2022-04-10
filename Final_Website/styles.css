@@ -7,7 +7,7 @@ body, html {
     margin: 0;
     padding: 0;
 }
-.section__title--intro{
+.intro-title{
     color: rgb(255, 255, 255);
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -18,7 +18,7 @@ h1{
 }
 
 /*Stylisation of boxes in section 1 */
-.weather-current-item{
+.item-weather-current{
     /* box-shadow: 0 0 3px grey; */
     border: 3px solid whitesmoke;
     display: flex;
@@ -31,12 +31,12 @@ h1{
     /* margin-left: 3em; */
 
 }
-.subtitle--weather-current{
+.subtitle-weather-current{
     color: white;
     font-weight: bolder;
     border-bottom: 1px solid white;
 }
-.variable--weather-current{
+.variable-weather-current{
     color: white;
     font-size: 250%;
     font-weight: bold;
@@ -90,11 +90,10 @@ h1{
 .data-graph{
     background: rgb(243, 243, 243);
     background-size: cover;
-    
 }
 
 
-.section__title--intro {
+.intro-title {
     font-size: var(--fs-h1);
     text-align: center;
     display: flex;
@@ -103,7 +102,7 @@ h1{
     height: 20rem;
 }
 
-.weather-prediction__item {
+.item-weather-prediction {
     top: 1em;
 }
 
@@ -120,14 +119,14 @@ h1{
     align-items: center;
 } */
 
-.variable--weather-current{
+.variable-weather-current{
     /* font-size: 3em; */
     /* background: lightblue; */
     width: 50%;
     text-align: center;
 }
 
-.weather-current{
+.intro-current-weather-box{
     width: 75%;
     margin: 0 auto;
 
@@ -145,7 +144,7 @@ h1{
 
     }
 
-    .section__title--intro {
+    .intro-title{
         grid-area: title;
         font-size: var(--fs-h1);
         text-align: center;
@@ -155,7 +154,7 @@ h1{
         height: 20rem;
     }
 
-    .weather-prediction {
+    .box-weather-prediction {
         grid-area: weather-prediction;
         max-height: 15rem;
         overflow: scroll;
@@ -164,11 +163,7 @@ h1{
         margin: 0 auto;
     }
 
-
-
-
-
-    .weather-current {
+    .intro-current-weather-box {
         position: absolute;
         padding-top: 2.5em;
         display: grid;
@@ -197,7 +192,7 @@ h1{
 }
 
 /* multiple graph section  */
-.graph--weather-data{
+.graph-weather-data{
     display: flex;
     flex-direction: column;
     margin: 2em;
@@ -206,7 +201,7 @@ h1{
     padding: 1em;
 }
 
-.canvas--graph{
+.canvas-graph{
     width: 100%;
     height: 100%;
     border: 1px dotted grey;
@@ -214,14 +209,14 @@ h1{
 }
 
 
-.container--graph{
+.container-graph{
     width:80%;
 
 }
 
 
 @media (min-width: 700px) {
-    .container--graph {
+    .container-graph {
         position: relative;
         display: grid;
         grid-template-areas:
@@ -233,16 +228,16 @@ h1{
         grid-auto-columns: minmax(0, 1fr);
         grid-auto-flow: column;
     }
-    #data--temp{grid-area:"temp"}
-    #data--pressure{grid-area:"press"}
-    #data--humidity{grid-area:"humid"}
-    #data--wind-speed{grid-area:"speed"}
-    #data--wind-dir{grid-area:"dir"}
-    #data--precip{grid-area:"precip"}
+    #data-temp{grid-area:"temp"}
+    #data-pressure{grid-area:"press"}
+    #data-humidity{grid-area:"humid"}
+    #data-wind-speed{grid-area:"speed"}
+    #data-wind-dir{grid-area:"dir"}
+    #data-precip{grid-area:"precip"}
 }
 
 @media (min-width: 900px) {
-    .container--graph{
+    .container-graph{
         grid-template-areas:
         "temp press humid"
         "precip speed dir";
@@ -257,7 +252,7 @@ h1{
     padding: 2%;
 }
 
-.drop-elements--big-graph{
+.drop-elements-big-graph{
     display: flex;
     flex-direction: column;
     transform: translate(0,3em);
@@ -270,11 +265,11 @@ h1{
 
 }*/
 
-.slider-title--big-graph{
+.slider-title-big-graph{
     text-align: left;
 }
 
-.slider-div--big-graph{
+.slider-div-big-graph{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -282,12 +277,12 @@ h1{
 }
 
 
-.drop-button--big-graph:hover{
+.drop-button-big-graph:hover{
     width: 80%;
     height: 4em;
 }
 
-.drop-button--big-graph{
+.drop-button-big-graph{
     padding:0;
     width: 75%;
     height: 3em;
@@ -308,7 +303,7 @@ h1{
     display: none;
 }
 
-.button-container--big-graph{
+.button-container-big-graph{
     height:100%;
 }
 
@@ -316,7 +311,7 @@ h1{
 
 
 @media (min-width: 600px) {
-    .container--detailed-graph-section{
+    .container-detailed-graph-section{
         display: grid;
         grid-template-areas:
         "graph dropdown"
@@ -326,15 +321,15 @@ h1{
 
     }
 
-    .slider-div--graph-big{
+    .slider-div-graph-big{
         grid-area: slider;
     }
 
-    .container--graph-big{
+    .container-graph-big{
         grid-area: graph
     }
 
-    .button-container--big-graph{
+    .button-container-big-graph{
         grid-area: dropdown;
     }
 }
@@ -351,6 +346,9 @@ h1{
     flex-direction: column;
 }
 
+.sandringham-link{
+    color: grey;
+}
 .credits{
     /*background: #423d3a;*/
 
