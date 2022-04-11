@@ -121,13 +121,12 @@ r.style.setProperty('--bgImg', "url('images/cold.png')");
 //    at least a pseduo version, that requires Henry?
 
 function compassSpin(compassButton){
-    let timesClicked = 0;
-    compassButton.addEventListener("click", (timesClicked) => {
-        timesClicked = timesClicked + 1;
-        let rotation = (-45 + (timesClicked*45));
-        rotation = 0;
-        compassButton.style.transform = "translate(-49.5%, -50%) rotate(${rotation}deg"
-        console.log('Hi');
+
+    let rotation = -45 // upwards
+    compassButton.addEventListener("click", () => {
+
+        rotation = rotation + 45;
+        compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
     })
 }
 
