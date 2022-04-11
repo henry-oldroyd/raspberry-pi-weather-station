@@ -244,6 +244,32 @@ h1{
     }
 }
 
+.img-containter-compass{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+}
+.img-compass-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    height: 90%;
+}
+.img-compass-arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49.5%, -50%) rotate(-45deg);
+    z-index: 10;
+    width: 70%;
+    height: 70%;
+}
+
 
 /* 3rd section (big graph) */
 .detailed-graph{

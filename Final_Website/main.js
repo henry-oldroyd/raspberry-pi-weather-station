@@ -20,6 +20,11 @@ window.addEventListener('load', function(){
 
     let buttons = [tempButton, pressureButton, lightButton, windButton, humidButton]
     page3Buttons(buttons); // adds functionality to each button
+
+    //button that spins compass
+    let compassButton = document.getElementById("img-compass-arrow");
+    //function for button to spin the compass
+    compassSpin(compassButton);
 })
 
 class Graph {
@@ -112,6 +117,19 @@ var r = document.querySelector(':root');
 r.style.setProperty('--bgImg', "url('images/cold.png')");
 //To-do: Set image based off current weather with if statements
 //DP: Will do above once GA has finished read-outs in section 1
+//GA: I didn't realise this was my job... doesn't this require hooking up with the backend,
+//    at least a pseduo version, that requires Henry?
+
+function compassSpin(compassButton){
+    let timesClicked = 0;
+    compassButton.addEventListener("click", (timesClicked) => {
+        timesClicked = timesClicked + 1;
+        let rotation = (-45 + (timesClicked*45));
+        rotation = 0;
+        compassButton.style.transform = "translate(-49.5%, -50%) rotate(${rotation}deg"
+        console.log('Hi');
+    })
+}
 
 function page3Buttons(buttons){
     buttons.forEach((button) => {
@@ -163,20 +181,20 @@ function buttonClicked(button) { // page 3 buttons
 }
 
 
-function getData() { // gets all data
-    fetch("http://127.0.0.1:5000/data")
-        .then(response => response.json())
-        .then(jsondata => {
-            globalData = jsondata
-        })
-        .catch((error) => console.log(error));
-
-}
-
-function filterData(filter) { // returns just light data
-    filteredData = []
-    for (let i=0; i < globalData.length; i++){
-        filteredData.push(globalData[i][filter]) // eg filter = 'light'
-    }
-    return filteredData
-}
+// function getData() { // gets all data
+//     fetch("http://127.0.0.1:5000/data")
+//         .then(response => response.json())
+//         .then(jsondata => {
+//             globalData = jsondata
+//         })
+//         .catch((error) => console.log(error));
+//
+// }
+//
+// function filterData(filter) { // returns just light data
+//     filteredData = []
+//     for (let i=0; i < globalData.length; i++){
+//         filteredData.push(globalData[i][filter]) // eg filter = 'light'
+//     }
+//     return filteredData
+// }
