@@ -121,13 +121,28 @@ r.style.setProperty('--bgImg', "url('images/cold.png')");
 //    at least a pseduo version, that requires Henry?
 
 function compassSpin(compassButton){
-
+    // let negative = -5; // so that the arrow can spin back and forth
     let rotation = -45 // upwards
     compassButton.addEventListener("click", () => {
-
         rotation = rotation + 45;
         compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
     })
+
+    // let id = setInterval(function() {
+    //     compassShake(rotation, compassButton, negative);
+    //     negative = 20*(Math.random())
+    //     negative = negative * -1
+    // },Math.random()*5000);
+}
+
+function compassShake(rotation, compassButton, negative){
+
+    if (1==2){
+        console.log('test for spinning')
+    } else{
+        rotation = rotation + negative
+        compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
+    }
 }
 
 function page3Buttons(buttons){
