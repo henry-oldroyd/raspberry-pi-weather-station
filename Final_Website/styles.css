@@ -119,6 +119,12 @@ h1{
     top: 1em;
 }
 
+select {
+    width: 25em;
+    text-align: center;
+
+}
+
 /*.weather-current {
     text-align: center;
     width: 90%;
