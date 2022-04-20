@@ -232,6 +232,7 @@ function compassShake(rotation, compassButton, negative){
 // }
 
 
+// HENRYYYYYYYYY - this is where you come in
 
 function getFilterData(param) { // gets all data
     // fetch("http://127.0.0.1:5000/data")
@@ -260,9 +261,5 @@ function getFilterData(param) { // gets all data
 function dropdownFunctionality(dropdown){
     let value = dropdown.target.value; // oh thank god!!!
     console.log(value);
-
-    
-
-
 
 }
