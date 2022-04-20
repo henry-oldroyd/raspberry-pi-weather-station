@@ -92,9 +92,22 @@ h1{
     background-size: cover;
 }
 
+.item-weather-current{
+    text-align: center;
+    display: flex;
+    flex-direction: vertical;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.variable-weather-current{
+    font-size: 2.5em;
+}
+
 
 .intro-title {
-    font-size: var(--fs-h1);
+    font-size: 5em;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -122,14 +135,19 @@ h1{
 .variable-weather-current{
     /* font-size: 3em; */
     /* background: lightblue; */
-    width: 50%;
-    text-align: center;
+
+
 }
 
 .intro-current-weather-box{
     width: 75%;
     margin: 0 auto;
+    text-align: center;
 
+}
+
+.box-weather-prediction {
+    visibility: hidden;
 }
 
 @media (min-width: 600px) {
@@ -137,16 +155,20 @@ h1{
         display: grid;
         margin: 0 auto;
         grid-template-areas:
-        "title weather-current"
-        "weather-prediction weather-current";
+        "title weather-current";
+
+        /* grid-template-areas: */
+        /* "title weather-current"; */
+        /* "title weather-current"; */
         grid-template-columns: 50% 50%;
         column-gap: 2rem;
+        height: 100vh;
+
 
     }
 
     .intro-title{
         grid-area: title;
-        font-size: var(--fs-h1);
         text-align: center;
         display: flex;
         justify-content: center;
@@ -155,12 +177,12 @@ h1{
     }
 
     .box-weather-prediction {
-        grid-area: weather-prediction;
         max-height: 15rem;
         overflow: scroll;
         border: 5px double var(--clr-dark);
         width: 80%;
         margin: 0 auto;
+        grid-area: weather-prediction;
     }
 
     .intro-current-weather-box {
@@ -376,7 +398,7 @@ h1{
 }
 
 .sandringham-link{
-    color: grey;
+    color: white;
 }
 .credits{
     /*background: #423d3a;*/

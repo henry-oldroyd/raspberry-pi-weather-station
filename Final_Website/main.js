@@ -1,6 +1,13 @@
-var globalData; // global variable
+
 
 window.addEventListener('load', function(){
+    // create readout boxes
+    let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
+    let pressureReadOutBox = new Dataset("Pressure", "Pa", "pressure-readout-box");
+    let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
+    let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
+    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
+
     // smaller graphs on page 2
     let lightGraph = new Graph('temp', 'graph-temp', [25,35,23,45, 32,86,92])
     let pressureGraph = new Graph('pressure', 'graph-pressure', [30,28,53,20,10,15,14])
@@ -26,6 +33,31 @@ window.addEventListener('load', function(){
     //function for button to spin the compass
     compassSpin(compassButton);
 })
+
+class Dataset {
+    constructor(title, unit, divName){
+        this.title = title;
+        this.unit = unit;
+        this.divName = divName;
+        this.getSpecificData();
+        this.editReadOut();
+    }
+
+    getSpecificData(param){
+        this.data = getFilterData(param); // global function, see at bottom
+
+    }
+
+    editReadOut(){
+        this.currentData = this.data[0];
+        this.div = document.getElementsByClassName(this.divName);
+        this.child = this.div[0].getElementsByTagName("p");
+        this.child[0].innerText = this.currentData + this.unit;
+
+    }
+
+
+}
 
 class Graph {
     constructor(title, id, data){
@@ -195,15 +227,21 @@ function buttonClicked(button) { // page 3 buttons
 }
 
 
-// function getData() { // gets all data
-//     fetch("http://127.0.0.1:5000/data")
-//         .then(response => response.json())
-//         .then(jsondata => {
-//             globalData = jsondata
-//         })
-//         .catch((error) => console.log(error));
-//
-// }
+
+function getFilterData(param) { // gets all data
+    // fetch("http://127.0.0.1:5000/data")
+    //     .then(response => response.json())
+    //     .then(jsondata => {
+    //         globalData = jsondata
+    //     })
+    //     .catch((error) => console.log(error));
+    let data = [];
+    for (let i =0; i<10; i++){
+        let num = Math.round(Math.random() * 30);
+        data.push(num);
+    }
+    return data
+}
 //
 // function filterData(filter) { // returns just light data
 //     filteredData = []
