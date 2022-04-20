@@ -18,6 +18,7 @@ window.addEventListener('load', function(){
     // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8], true)
 
+    // dropdown box on page 3
     let dropdown = document.getElementById("dropdown");
     dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown);})
 
@@ -69,7 +70,7 @@ class Graph {
         this.colour = 'rgba(255,0,0,1)'
         this.borderColour = 'rgba(255,0,0,0.2)'
         this.ctx = document.getElementById(id).getContext('2d')
-        this.data = data
+        this.data = data;
 
         this.dataBeingUsed = this.data
         this.xlabels = this.createXlabels()
@@ -77,7 +78,8 @@ class Graph {
         if (slider == true) {
             this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
             this.slider = this.sliders[0] // one element array
-            this.slider.max = 9;
+            this.slider.max = this.data.length;
+            this.slider.value = this.slider.max;
             this.slider.addEventListener("input", () => {this.editDisplayData()});
         }
 
