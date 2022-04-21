@@ -20,7 +20,9 @@ window.addEventListener('load', function(){
 
     // dropdown box on page 3
     let dropdown = document.getElementById("dropdown");
-    dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown);})
+    dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown, bigGraph);})
+
+    console.log(tempReadOutBox.currentData);
 
 
     // buttons on page 3
@@ -76,13 +78,17 @@ class Graph {
         this.xlabels = this.createXlabels()
         this.initialiseGraph()
         if (slider == true) {
-            this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
-            this.slider = this.sliders[0] // one element array
-            this.slider.max = this.data.length;
-            this.slider.value = this.slider.max;
-            this.slider.addEventListener("input", () => {this.editDisplayData()});
+            this.initialiseSlider();
         }
 
+    }
+
+    initialiseSlider(){
+        this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
+        this.slider = this.sliders[0] // one element array
+        this.slider.max = this.data.length;
+        this.slider.value = this.slider.max;
+        this.slider.addEventListener("input", () => {this.editDisplayData()});
     }
 
     initialiseGraph(){
@@ -102,7 +108,7 @@ class Graph {
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: false
                         }
                     },
                 responsive: true,
@@ -159,7 +165,7 @@ class Graph {
 // Update the background image to the current weather
 var r = document.querySelector(':root');
 r.style.setProperty('--bgImg', "url('images/cold.png')");
-console.log(window.tempReadOutBox.currentData); //DP: TO-DO
+ //DP: TO-DO
 
 
 function compassSpin(compassButton){
@@ -258,8 +264,21 @@ function getFilterData(param) { // gets all data
 // }
 
 
-function dropdownFunctionality(dropdown){
+function dropdownFunctionality(dropdown,bigGraph){
     let value = dropdown.target.value; // oh thank god!!!
-    console.log(value);
+    console.log("Hi");
+    let newdata = [700,500,200,100,900,100,300,400,500,200,200,200]
+
+    // bigGraph.data = [4,3,2,1,2,4,5,6,6,4];
+
+    bigGraph.chart.data.datasets.forEach((dataset) => {
+        dataset.data = newdata;
+    })
+    bigGraph.data = newdata;
+
+    bigGraph.xlabels = bigGraph.createXlabels()
+    bigGraph.chart.data.labels = this.xlabels;
+    bigGraph.initialiseSlider();
+    bigGraph.chart.update()
 
 }
