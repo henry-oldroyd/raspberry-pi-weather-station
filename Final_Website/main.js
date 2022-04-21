@@ -159,10 +159,8 @@ class Graph {
 // Update the background image to the current weather
 var r = document.querySelector(':root');
 r.style.setProperty('--bgImg', "url('images/cold.png')");
-//To-do: Set image based off current weather with if statements
-//DP: Will do above once GA has finished read-outs in section 1
-//GA: I didn't realise this was my job... doesn't this require hooking up with the backend,
-//    at least a pseduo version, that requires Henry?
+console.log(window.tempReadOutBox.currentData); //DP: TO-DO
+
 
 function compassSpin(compassButton){
     // let negative = -5; // so that the arrow can spin back and forth
