@@ -244,6 +244,9 @@ function compassShake(rotation, compassButton, negative){
 
 
 // HENRYYYYYYYYY - this is where you come in
+// I'm thinking that you have one function that makes a json requests and
+// stores the data to a variable in the JS file, then this function simply uses this
+// variable and filters the correct data. 
 
 function getFilterData(param=null) { // gets all data
     // fetch("http://127.0.0.1:5000/data")
