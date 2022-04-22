@@ -1,4 +1,9 @@
-
+let boldRed = "rgba(255,0,0,1)";
+let faintRed = "rgba(255,0,0,0.2)";
+let boldBlue = "rgba(0,0,255,1)";
+let faintBlue = "rgba(0,0,255,0.2)";
+let boldGreen = "rgba(0,255,0,1)";
+let faintGreen = "rgba(0,255,0,0.2)";
 
 window.addEventListener('load', function(){
     // create readout boxes
@@ -9,11 +14,11 @@ window.addEventListener('load', function(){
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
 
     // smaller graphs on page 2
-    let tempGraph = new Graph('temp', 'graph-temp', [25,35,23,45, 32,86,92])
-    let pressureGraph = new Graph('pressure', 'graph-pressure', [30,28,53,20,10,15,14])
-    let humidityGraph = new Graph('humidity', 'graph-humidity', [1,22,3,4,7,8,0])
-    let rainGraph = new Graph('precipitation', 'graph-precip', [5,2,1,0.1,10,2,3])
-    let windSpeedGraph = new Graph('wind speed', 'graph-wind-speed', [1,2,1,2,4,8,10])
+    let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], boldRed, faintRed)
+    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30,28,53,20,10,15,14], boldRed, faintRed)
+    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1,22,3,4,7,8,0], boldGreen, faintGreen)
+    let rainGraph = new Graph('Precipitation', 'graph-precip', [5,2,1,0.1,10,2,3],boldBlue, faintBlue)
+    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10], boldGreen, faintGreen)
 
     // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8], true)
@@ -66,14 +71,13 @@ class Dataset {
 }
 
 class Graph {
-    constructor(title, id, data, slider=false){
+    constructor(title, id, data, rgbaFront="rgba(0,0,0,1)", rgbaBack="rgba(0,0,0,0.2)", slider=false){
         this.title = title
-        this.backgroundColour = 'rgba(255,0,0,1)'
-        this.colour = 'rgba(255,0,0,1)'
-        this.borderColour = 'rgba(255,0,0,0.2)'
+        this.backgroundColour = rgbaFront
+        this.colour = rgbaFront
+        this.borderColour = rgbaBack
         this.ctx = document.getElementById(id).getContext('2d')
         this.data = data;
-
         this.dataBeingUsed = this.data
         this.xlabels = this.createXlabels()
         this.initialiseGraph()
@@ -241,7 +245,7 @@ function compassShake(rotation, compassButton, negative){
 
 // HENRYYYYYYYYY - this is where you come in
 
-function getFilterData(param) { // gets all data
+function getFilterData(param=null) { // gets all data
     // fetch("http://127.0.0.1:5000/data")
     //     .then(response => response.json())
     //     .then(jsondata => {
@@ -268,14 +272,17 @@ function getFilterData(param) { // gets all data
 function dropdownFunctionality(dropdown,bigGraph){
     let value = dropdown.target.value; // oh thank god!!!
     console.log("Hi");
-    let newdata = [700,500,200,100,900,100,300,400,500,200,200,200]
+    newdata = getFilterData(); // at the moment generates random data
 
     // bigGraph.data = [4,3,2,1,2,4,5,6,6,4];
 
     bigGraph.chart.data.datasets.forEach((dataset) => {
-        dataset.data = newdata;
+        dataset.data = newdata; // changes the data
+        dataset.label = value; // changes the title
     })
+
     bigGraph.data = newdata;
+    // bigGraph.chart.data.datasets.label = dropdown.target.value;
 
     bigGraph.xlabels = bigGraph.createXlabels()
     bigGraph.chart.data.labels = this.xlabels;
