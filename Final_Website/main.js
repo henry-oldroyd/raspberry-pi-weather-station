@@ -89,6 +89,7 @@ class Graph {
         this.slider.max = this.data.length;
         this.slider.value = this.slider.max;
         this.slider.addEventListener("input", () => {this.editDisplayData()});
+        this.editDisplayData();
     }
 
     initialiseGraph(){
