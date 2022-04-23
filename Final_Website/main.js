@@ -4,6 +4,8 @@ let boldBlue = "rgba(0,0,255,1)";
 let faintBlue = "rgba(0,0,255,0.2)";
 let boldGreen = "rgba(0,255,0,1)";
 let faintGreen = "rgba(0,255,0,0.2)";
+let boldBlack = "rgba(0,0,0,1)";
+let faintBlack = "rgba(0,0,0,0.2)";
 
 window.addEventListener('load', function(){
     // create readout boxes
@@ -21,7 +23,7 @@ window.addEventListener('load', function(){
     let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10], boldGreen, faintGreen)
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8], true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8], boldBlack, faintBlack, true)
 
     // dropdown box on page 3
     let dropdown = document.getElementById("dropdown");
@@ -71,7 +73,7 @@ class Dataset {
 }
 
 class Graph {
-    constructor(title, id, data, rgbaFront="rgba(0,0,0,1)", rgbaBack="rgba(0,0,0,0.2)", slider=false){
+    constructor(title, id, data, rgbaFront, rgbaBack, slider=false){
         this.title = title
         this.backgroundColour = rgbaFront
         this.colour = rgbaFront
@@ -246,7 +248,7 @@ function compassShake(rotation, compassButton, negative){
 // HENRYYYYYYYYY - this is where you come in
 // I'm thinking that you have one function that makes a json requests and
 // stores the data to a variable in the JS file, then this function simply uses this
-// variable and filters the correct data.  
+// variable and filters the correct data.
 
 function getFilterData(param=null) { // gets all data
     // fetch("http://127.0.0.1:5000/data")
