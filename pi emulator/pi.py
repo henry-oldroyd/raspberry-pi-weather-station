@@ -7,7 +7,7 @@ import os
 # local
 import logger as logger_module
 
-PORT = 443
+PORT = 80
 
 # setup logger
 logger_module.setup_logger(os.path.basename(__file__))

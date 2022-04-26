@@ -1,5 +1,5 @@
-2022-03-31 15:53:23,090 - pi.py - INFO - this logger named pi.py created
-2022-03-31 15:53:23,090 - pi.py - INFO - using secret key:   ABC1**********************-key
-2022-03-31 15:53:23,091 - pi.py - INFO - using server url:   http://127.0.0.1:443/data
-2022-03-31 15:53:23,091 - pi.py - INFO - using sample data:   {'light': 29, 'rain': 50}
-2022-03-31 15:53:23,092 - pi.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'light': 29, 'rain': 50}}
+2022-04-25 21:45:38,754 - pi.py - INFO - this logger named pi.py created
+2022-04-25 21:45:38,754 - pi.py - INFO - using secret key:   ABC1**********************-key
+2022-04-25 21:45:38,755 - pi.py - INFO - using server url:   http://127.0.0.1:80/data
+2022-04-25 21:45:38,755 - pi.py - INFO - using sample data:   {'light': 50, 'rain': 77}
+2022-04-25 21:45:38,755 - pi.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'light': 50, 'rain': 77}}
