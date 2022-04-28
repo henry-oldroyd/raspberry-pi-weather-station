@@ -7,16 +7,13 @@ let faintGreen = "rgba(0,255,0,0.2)";
 let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 
-let tempReadOutBox, pressureReadOutBox, humidityReadOutBox, rainReadOutBox, windSpeedReadOutBox;
-// Made all these readout boxes global so that can be accessed by updateBGimg()
-
 window.addEventListener('load', function(){
     // create readout boxes
-    tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
-    pressureReadOutBox = new Dataset("Pressure", "Pa", "pressure-readout-box");
-    humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
-    rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
-    windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
+    let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
+    let pressureReadOutBox = new Dataset("Pressure", "Pa", "pressure-readout-box");
+    let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
+    let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
+    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
 
     // smaller graphs on page 2
     let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], "°C", boldRed, faintRed)
@@ -50,7 +47,7 @@ window.addEventListener('load', function(){
     //function for button to spin the compass
     compassSpin(compassButton);
 
-    updateBGimg();
+    updateBGimg(tempReadOutBox, rainReadOutBox);
 })
 
 class Dataset {
@@ -192,7 +189,7 @@ class Graph {
 
 // Update the background image to the current weather
 
-function updateBGimg(){
+function updateBGimg(tempReadOutBox, rainReadOutBox){
     var r = document.querySelector(':root');
     var time = new Date().getHours(); // Used for condition of night time below
     
