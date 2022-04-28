@@ -92,9 +92,8 @@ class Graph {
         this.data = data;
         this.dataBeingUsed = this.data
         this.unit = unit;
-        console.log(this.unit);
         this.xlabels = this.createXlabels()
-        this.initialiseGraph()
+        this.initialiseGraph(unit)
         if (slider == true) {
             this.initialiseSlider();
         }
@@ -110,7 +109,7 @@ class Graph {
         this.editDisplayData();
     }
 
-    initialiseGraph(){
+    initialiseGraph(unit){
         this.chart = new Chart(this.ctx, {
             type: 'line',
             data: {
@@ -130,8 +129,7 @@ class Graph {
                         beginAtZero: false,
                         ticks: {
                             callback: function(value, index, ticks){
-                                value = value + " " + this.unit;
-                                console.log(this.unit);
+                                value = value + " " + unit;
                                 return value;
                             }
                         }
@@ -193,7 +191,7 @@ function updateBGimg(tempReadOutBox, rainReadOutBox){
     var r = document.querySelector(':root');
     var time = new Date().getHours(); // Used for condition of night time below
     
-    console.log(tempReadOutBox.currentData);
+    //console.log(tempReadOutBox.currentData);
 
     if (time <= 6 && time >= 18) {
         r.style.setProperty('--bgImg', "url('images/night.png')");
