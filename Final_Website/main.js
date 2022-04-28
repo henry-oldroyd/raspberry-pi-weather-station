@@ -7,13 +7,16 @@ let faintGreen = "rgba(0,255,0,0.2)";
 let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 
+let tempReadOutBox, pressureReadOutBox, humidityReadOutBox, rainReadOutBox, windSpeedReadOutBox;
+// Made all these readout boxes global so that can be accessed by updateBGimg()
+
 window.addEventListener('load', function(){
     // create readout boxes
-    let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
-    let pressureReadOutBox = new Dataset("Pressure", "Pa", "pressure-readout-box");
-    let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
-    let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
-    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
+    tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
+    pressureReadOutBox = new Dataset("Pressure", "Pa", "pressure-readout-box");
+    humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
+    rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
+    windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
 
     // smaller graphs on page 2
     let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], "°C", boldRed, faintRed)
@@ -46,6 +49,8 @@ window.addEventListener('load', function(){
     let compassButton = document.getElementById("img-compass-arrow");
     //function for button to spin the compass
     compassSpin(compassButton);
+
+    updateBGimg();
 })
 
 class Dataset {
@@ -66,7 +71,15 @@ class Dataset {
         this.currentData = this.data[0];
         this.div = document.getElementsByClassName(this.divName);
         this.child = this.div[0].getElementsByTagName("p");
-        this.child[0].innerText = this.currentData + this.unit;
+        
+        // Add spacing between unit and value for some data series
+        if(this.unit=="°C" || this.unit == "%"){
+            this.child[0].innerText = this.currentData + this.unit;
+        }
+        else{
+            this.child[0].innerText = this.currentData + " " + this.unit;
+        }
+        
     }
 
 
@@ -178,10 +191,33 @@ class Graph {
 
 
 // Update the background image to the current weather
-var r = document.querySelector(':root');
-r.style.setProperty('--bgImg', "url('images/cold.png')");
- //DP: TO-DO
 
+function updateBGimg(){
+    var r = document.querySelector(':root');
+    var time = new Date().getHours(); // Used for condition of night time below
+    
+    console.log(tempReadOutBox.currentData);
+
+    if (time <= 6 && time >= 18) {
+        r.style.setProperty('--bgImg', "url('images/night.png')");
+    }
+    else{
+        if(rainReadOutBox.currentData > 0){
+            r.style.setProperty('--bgImg', "url('images/rain.png')");
+        }
+        else{
+            if(tempReadOutBox.currentData > 20){
+                r.style.setProperty('--bgImg', "url('images/sunny.png')");
+            }
+            else if(tempReadOutBox.currentData > 14){
+                r.style.setProperty('--bgImg', "url('images/mild.png')");
+            }
+            else{
+                r.style.setProperty('--bgImg', "url('images/cold.png')");
+            }
+        }
+    }
+}
 
 function compassSpin(compassButton){
     // let negative = -5; // so that the arrow can spin back and forth
