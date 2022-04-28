@@ -16,20 +16,20 @@ window.addEventListener('load', function(){
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
 
     // smaller graphs on page 2
-    let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], boldRed, faintRed)
-    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30,28,53,20,10,15,14], boldRed, faintRed)
-    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1,22,3,4,7,8,0], boldGreen, faintGreen)
-    let rainGraph = new Graph('Precipitation', 'graph-precip', [5,2,1,0.1,10,2,3],boldBlue, faintBlue)
-    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10], boldGreen, faintGreen)
+    let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], "°C", boldRed, faintRed)
+    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30,28,53,20,10,15,14],"Pa", boldRed, faintRed)
+    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1,22,3,4,7,8,0],"%", boldGreen, faintGreen)
+    let rainGraph = new Graph('Precipitation', 'graph-precip', [5,2,1,0.1,10,2,3],"mm",boldBlue, faintBlue)
+    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10],"mph", boldGreen, faintGreen)
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8], boldBlack, faintBlack, true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8],"Pa", boldBlack, faintBlack, true)
 
     // dropdown box on page 3
     let dropdown = document.getElementById("dropdown");
     dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown, bigGraph);})
 
-    console.log(tempReadOutBox.currentData);
+
 
 
     // buttons on page 3
@@ -73,7 +73,7 @@ class Dataset {
 }
 
 class Graph {
-    constructor(title, id, data, rgbaFront, rgbaBack, slider=false){
+    constructor(title, id, data, unit, rgbaFront, rgbaBack, slider=false){
         this.title = title
         this.backgroundColour = rgbaFront
         this.colour = rgbaFront
@@ -81,6 +81,8 @@ class Graph {
         this.ctx = document.getElementById(id).getContext('2d')
         this.data = data;
         this.dataBeingUsed = this.data
+        this.unit = unit;
+        console.log(this.unit);
         this.xlabels = this.createXlabels()
         this.initialiseGraph()
         if (slider == true) {
@@ -115,7 +117,14 @@ class Graph {
             options: {
                 scales: {
                     y: {
-                        beginAtZero: false
+                        beginAtZero: false,
+                        ticks: {
+                            callback: function(value, index, ticks){
+                                value = value + " " + this.unit;
+                                console.log(this.unit);
+                                return value;
+                            }
+                        }
                         }
                     },
                 responsive: true,
@@ -152,9 +161,8 @@ class Graph {
     }
 
     editDisplayData(){
-        console.log(this.slider.value);
         let val = this.slider.value;
-        console.log(val)
+
 
         this.dataBeingUsed = this.data.slice(0,val); // edits which part of data set is shwon
         this.xlabels = this.createXlabels()
@@ -276,7 +284,7 @@ function getFilterData(param=null) { // gets all data
 
 function dropdownFunctionality(dropdown,bigGraph){
     let value = dropdown.target.value; // oh thank god!!!
-    console.log("Hi");
+
     newdata = getFilterData(); // at the moment generates random data
 
     // bigGraph.data = [4,3,2,1,2,4,5,6,6,4];
