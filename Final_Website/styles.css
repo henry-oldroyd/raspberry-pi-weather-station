@@ -371,7 +371,7 @@ select {
 
 }
 
-input[type="range"] {
+/* input[type="range"] {
   -webkit-appearance: none;
   height: 7px;
   background: rgba(255, 255, 255, 0.6);
@@ -389,10 +389,38 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out;
+} */
+
+
+input[type="range"] {
+  margin-top: 5em;
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 50em;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  /* background-image: linear-gradient(#ff4500, #ff4500); */
+  background-repeat: no-repeat;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
 
+}
 
+input[type=range]::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
 
 
 
@@ -403,7 +431,7 @@ input[type="range"]::-webkit-slider-thumb {
         display: grid;
         grid-template-areas:
         "graph dropdown"
-        "graph slider";
+        "slider dropdown";
         grid-auto-columns: 75% 25%;
         grid-auto-columns: minmax(0,fr);
 
