@@ -23,7 +23,7 @@ window.addEventListener('load', function(){
     let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10],"mph", boldGreen, faintGreen)
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8],"Pa", boldBlack, faintBlack, true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8],"°C", boldBlack, faintBlack, true)
 
     // dropdown box on page 3
     let dropdown = document.getElementById("dropdown");
@@ -68,7 +68,7 @@ class Dataset {
         this.currentData = this.data[0];
         this.div = document.getElementsByClassName(this.divName);
         this.child = this.div[0].getElementsByTagName("p");
-        
+
         // Add spacing between unit and value for some data series
         if(this.unit=="°C" || this.unit == "%"){
             this.child[0].innerText = this.currentData + this.unit;
@@ -76,7 +76,7 @@ class Dataset {
         else{
             this.child[0].innerText = this.currentData + " " + this.unit;
         }
-        
+
     }
 
 
@@ -190,7 +190,7 @@ class Graph {
 function updateBGimg(tempReadOutBox, rainReadOutBox){
     var r = document.querySelector(':root');
     var time = new Date().getHours(); // Used for condition of night time below
-    
+
     //console.log(tempReadOutBox.currentData);
 
     if (time <= 6 && time >= 18) {
@@ -315,6 +315,17 @@ function getFilterData(param=null) { // gets all data
 
 function dropdownFunctionality(dropdown,bigGraph){
     let value = dropdown.target.value; // oh thank god!!!
+    if (value=="Temperature"){
+        unit = "°C"
+    } else if(value=="Pressure"){
+        unit = "Pa"
+    } else if(value=="Humidity"){
+        unit = "%"
+    } else if(value=="Wind Speed"){
+        unit = "mph";
+    } else if(value=="Rain"){
+        unit = "mm";
+    }
 
     newdata = getFilterData(); // at the moment generates random data
 
@@ -331,6 +342,11 @@ function dropdownFunctionality(dropdown,bigGraph){
     bigGraph.xlabels = bigGraph.createXlabels()
     bigGraph.chart.data.labels = this.xlabels;
     bigGraph.initialiseSlider();
+    bigGraph.chart.options.scales.y.ticks.callback = function(value, index, ticks){
+        value = value + " " + unit;
+        return value
+    }
     bigGraph.chart.update()
+
 
 }
