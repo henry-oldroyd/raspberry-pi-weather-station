@@ -364,6 +364,37 @@ select {
     height:100%;
 }
 
+.slider-big-graph{
+    width: 10em;
+    color: blue;
+
+
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10%;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 3em;
+  width: 0.5em;
+
+  background: rgba(0,0,0,1);
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+
+
+
+
 
 
 
