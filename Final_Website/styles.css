@@ -310,9 +310,14 @@ select {
 .drop-elements-big-graph{
     display: flex;
     flex-direction: column;
-    transform: translate(0,3em);
+    height: 75%;
+    border: 1px solid red;
+    justify-content: space-evenly;
     align-items: center;
+    font-size: 10em;
 }
+
+
 /*.slider--big-graph{
 
     transform:translate(0,3em);
@@ -328,6 +333,7 @@ select {
     flex-direction: column;
     align-items: center;
 
+
 }
 
 /* #dropdown{
@@ -342,33 +348,28 @@ select {
     visibility: visible;
 } */
 
-.drop-button-big-graph{
-    padding:0;
-    width: 75%;
-    height: 3em;
-}
 
-.selected-button {
-    background: darkgrey;
-    width: 75%;
-    height: 5em;
-}
-
-
-
-.hidden-button{
-    visibility: hidden;
-}
 
 .button-container-big-graph{
     height:100%;
+    padding-top: 3em;
+}
+
+.drop-button-big-graph{
+    height: 15%;
+    width: 90%;
+    font-size: 0.125em;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+.selected-button{
+    background: grey;
 }
 
 .slider-big-graph{
     width: 10em;
     color: blue;
-
-
 }
 
 /* input[type="range"] {

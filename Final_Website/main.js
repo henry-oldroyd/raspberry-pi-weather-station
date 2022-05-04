@@ -26,21 +26,21 @@ window.addEventListener('load', function(){
     let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8],"°C", boldBlack, faintBlack, true)
 
     // dropdown box on page 3
-    let dropdown = document.getElementById("dropdown");
-    dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown, bigGraph);})
+    // let dropdown = document.getElementById("dropdown");
+    // dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown, bigGraph);})
 
 
 
 
     // buttons on page 3
-    // let tempButton = document.getElementById("temp-button-big-graph");
-    // let pressureButton = document.getElementById("pressure-button-big-graph");
-    // let rainButton = document.getElementById("rain-button-big-graph");
-    // let windButton = document.getElementById("wind-button-big-graph");
-    // let humidButton = document.getElementById("humid-button-big-graph");
-    //
-    // let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
-    // page3Buttons(buttons); // adds functionality to each button
+    let tempButton = document.getElementById("temp-button-big-graph");
+    let pressureButton = document.getElementById("pressure-button-big-graph");
+    let rainButton = document.getElementById("rain-button-big-graph");
+    let windButton = document.getElementById("wind-button-big-graph");
+    let humidButton = document.getElementById("humid-button-big-graph");
+
+    let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
+    page3Buttons(buttons, bigGraph); // adds functionality to each button
 
     //button that spins compass
     let compassButton = document.getElementById("img-compass-arrow");
@@ -239,6 +239,7 @@ function compassShake(rotation, compassButton, negative){
     }
 }
 
+
 // function page3Buttons(buttons){
 //     buttons.forEach((button) => {
 //
@@ -313,18 +314,19 @@ function getFilterData(param=null) { // gets all data
 // }
 
 
-function dropdownFunctionality(dropdown,bigGraph){
-    let value = dropdown.target.value; // oh thank god!!!
+function dropdownFunctionality(value,bigGraph){
+
+
     if (value=="Temperature"){
         unit = "°C"
     } else if(value=="Pressure"){
         unit = "Pa"
-    } else if(value=="Humidity"){
-        unit = "%"
+    } else if(value=="Rain"){
+        unit = "mm"
     } else if(value=="Wind Speed"){
         unit = "mph";
-    } else if(value=="Rain"){
-        unit = "mm";
+    } else if(value=="Humidity"){
+        unit = "%";
     }
 
     newdata = getFilterData(); // at the moment generates random data
@@ -347,6 +349,17 @@ function dropdownFunctionality(dropdown,bigGraph){
         return value
     }
     bigGraph.chart.update()
+}
 
+function page3Buttons(buttons, bigGraph) {
+    // console.log(buttons)
+    buttons.forEach((button) => {
+        console.log(button)
+        button.addEventListener("click", () => {
+            console.log(button.innerText);
+            dropdownFunctionality(button.innerText, bigGraph)
+        })
+
+    });
 
 }
