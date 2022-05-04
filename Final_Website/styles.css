@@ -1,3 +1,5 @@
+/* #2E5A88 -- just a colour i thought was nice lmao */
+
 *,
 *::before,
 *::after {
@@ -303,18 +305,29 @@ select {
 /* 3rd section (big graph) */
 .detailed-graph{
     background: rgb(226, 226, 226);
+
     background-size: cover;
     padding: 2%;
+}
+
+.buttons-heading{
+    height: 1em;
+    width: 1em;
+    font-size: 2em;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    color: grey;
 }
 
 .drop-elements-big-graph{
     display: flex;
     flex-direction: column;
     height: 75%;
-    border: 1px solid red;
+
     justify-content: space-evenly;
     align-items: center;
-    font-size: 10em;
+    text-align: center;
 }
 
 
@@ -326,13 +339,14 @@ select {
 
 .slider-title-big-graph{
     text-align: left;
+
 }
 
 .slider-div-big-graph{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    text-align: right;
 
 }
 
@@ -352,19 +366,27 @@ select {
 
 .button-container-big-graph{
     height:100%;
-    padding-top: 3em;
+    /* padding-top: 3em; */
 }
 
 .drop-button-big-graph{
     height: 15%;
     width: 90%;
-    font-size: 0.125em;
+    font-size: 1.2em;
     font-family: "Lucida Console", "Courier New", monospace;
+    margin-top: 1em;
+    border-radius: 5%;
+
 
 }
 
 .selected-button{
     background: grey;
+    border: inline;
+}
+
+.drop-button-big-graph:hover{
+    transform: scale(1.05, 1.05)
 }
 
 .slider-big-graph{
@@ -393,8 +415,18 @@ input[type="range"]::-webkit-slider-thumb {
 } */
 
 
+.slider-title{
+    margin-top: 3em;
+    color: grey;
+    text-align: right;
+    font-size: 1em;
+    width: 25em;
+    font-family: "arial";
+    font-style: italic;
+
+}
 input[type="range"] {
-  margin-top: 5em;
+  margin-top: 1em;
   -webkit-appearance: none;
   margin-right: 15px;
   width: 50em;
@@ -403,6 +435,7 @@ input[type="range"] {
   border-radius: 5px;
   /* background-image: linear-gradient(#ff4500, #ff4500); */
   background-repeat: no-repeat;
+  border: 3px black solid;
 }
 
 input[type="range"]::-webkit-slider-thumb {
