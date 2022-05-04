@@ -354,10 +354,17 @@ function dropdownFunctionality(value,bigGraph){
 function page3Buttons(buttons, bigGraph) {
     // console.log(buttons)
     buttons.forEach((button) => {
-        console.log(button)
         button.addEventListener("click", () => {
-            console.log(button.innerText);
+            //removes selected from all
+            buttons.forEach((button) => {
+                button.classList.remove("selected-button")
+            });
+
+            // changes the graph
             dropdownFunctionality(button.innerText, bigGraph)
+
+            // makes the button selected
+            button.classList.add("selected-button");
         })
 
     });
