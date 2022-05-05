@@ -202,6 +202,11 @@ select {
         "wci1 wci2"
         "wci3 wci4"
         "wci5 wci6";
+
+        /* grid-template-areas:
+        "wci1 wci1 wci2"
+        "wci1 wci1 wci3"
+        "wci4 wci5 wci6"; */
         text-align: center;
         column-gap: 2em;
         row-gap: 2em;
