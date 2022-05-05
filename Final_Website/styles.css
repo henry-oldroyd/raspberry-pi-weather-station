@@ -286,6 +286,7 @@ select {
     height: 100%;
 
 
+
 }
 .img-compass-background {
     position: absolute;
@@ -499,6 +500,7 @@ input[type=range]::-webkit-slider-runnable-track  {
     height: 3em;
     display: flex;
     flex-direction: column;
+    z-index: 1000;
 }
 
 .sandringham-link{
