@@ -11,7 +11,13 @@
 </head>
 <body>
     <section class="intro" id="home">
-        <h1 class="intro-title">The weather at Sandringham School is currently...</h1>
+        <section class="intro-text">
+            <h1 class="intro-title">The weather at Sandringham School is...</h1>
+
+            <!--Add this - needs to be read from the RP data-->
+            <p class="intro-updated"><i>Last Updated at...</i></p>
+        </section>
+
         <div class="intro-current-weather-box">
             <!-- <div class="filler filler1"></div>
             <div class="filler filler2"></div> -->
@@ -101,7 +107,7 @@
             </div>
             <div class="button-container-big-graph">
                 <div class="drop-elements-big-graph">
-                    <p class="buttons-heading">Select to view</p>
+                    <p class="buttons-heading">Select to view...</p>
                     <button class="drop-button-big-graph" id="temp-button-big-graph">Temperature</button>
                     <button class="drop-button-big-graph selected-button"id="pressure-button-big-graph">Pressure</button>
                     <button class="drop-button-big-graph"id="rain-button-big-graph">Rain</button>

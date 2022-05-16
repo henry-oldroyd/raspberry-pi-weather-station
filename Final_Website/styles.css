@@ -9,10 +9,6 @@ body, html {
     margin: 0;
     padding: 0;
 }
-.intro-title{
-    color: rgb(255, 255, 255);
-    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
 h1{
     text-align: center;
     margin: 0px;
@@ -87,6 +83,20 @@ h1{
     /* Adds background image to first section with mild colour overlay to aid legibibility */
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), var(--bgImg);
     background-size: cover;
+}
+.intro-title{
+    color: rgb(255, 255, 255);
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.intro-updated{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+    transform: translate(0px, 25vh);
 }
 
 /* 2nd sections */
@@ -350,7 +360,7 @@ select {
 }*/
 
 .slider-title-big-graph{
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -388,22 +398,21 @@ select {
     font-family: "Lucida Console", "Courier New", monospace;
     margin-top: 1em;
     border-radius: 5%;
-
-
 }
 
 .selected-button{
-    background: grey;
+    background: rgba(112, 109, 109, 0.2);
     border: inline;
 }
 
 .drop-button-big-graph:hover{
-    transform: scale(1.05, 1.05)
+    transform: scale(1.05)
 }
 
 .slider-big-graph{
     width: 10em;
     color: blue;
+    margin: auto;
 }
 
 /* input[type="range"] {
@@ -429,12 +438,14 @@ input[type="range"]::-webkit-slider-thumb {
 
 .slider-title{
     margin-top: 3em;
+    margin-bottom: 0;
     color: grey;
     text-align: right;
     font-size: 1em;
     width: 25em;
     font-family: "arial";
     font-style: italic;
+    transform: translate(50px, 0px);
 
 }
 input[type="range"] {
