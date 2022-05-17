@@ -1,5 +1,9 @@
 let boldRed = "rgba(255,0,0,1)";
 let faintRed = "rgba(255,0,0,0.2)";
+let boldOrange = "rgba(255,196,0,1)";
+let faintOrange = "rgba(255,196,0,0.4)";
+let boldPurple = "rgba(156,0,130,1)";
+let faintPurple = "rgba(156,0,130,0.2)";
 let boldBlue = "rgba(0,0,255,1)";
 let faintBlue = "rgba(0,0,255,0.2)";
 let boldGreen = "rgba(0,255,0,1)";
@@ -17,8 +21,8 @@ window.addEventListener('load', function(){
 
     // smaller graphs on page 2
     let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], "°C", boldRed, faintRed)
-    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30,28,53,20,10,15,14],"Pa", boldRed, faintRed)
-    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1,22,3,4,7,8,0],"%", boldGreen, faintGreen)
+    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30,28,53,20,10,15,14],"Pa", boldOrange, faintOrange)
+    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1,22,3,4,7,8,0],"%", boldPurple, faintPurple)
     let rainGraph = new Graph('Precipitation', 'graph-precip', [5,2,1,0.1,10,2,3],"mm",boldBlue, faintBlue)
     let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10],"mph", boldGreen, faintGreen)
 
