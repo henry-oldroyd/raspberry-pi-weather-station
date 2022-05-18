@@ -14,7 +14,7 @@ let faintBlack = "rgba(0,0,0,0.2)";
 window.addEventListener('load', function(){
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
-    let pressureReadOutBox = new Dataset("Pressure", "Pa", "pressure-readout-box");
+    let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box");
     let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
     let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
