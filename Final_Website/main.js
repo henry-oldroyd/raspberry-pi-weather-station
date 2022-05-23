@@ -11,7 +11,7 @@ let faintGreen = "rgba(0,255,0,0.2)";
 let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function() {
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
     let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box");
@@ -20,14 +20,14 @@ window.addEventListener('load', function(){
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
 
     // smaller graphs on page 2
-    let tempGraph = new Graph('Temparure', 'graph-temp', [25,10,23,0,-2,15,3], "°C", boldRed, faintRed)
-    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30,28,53,20,10,15,14],"Pa", boldOrange, faintOrange)
-    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1,22,3,4,7,8,0],"%", boldPurple, faintPurple)
-    let rainGraph = new Graph('Precipitation', 'graph-precip', [5,2,1,0.1,10,2,3],"mm",boldBlue, faintBlue)
-    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1,2,1,2,4,8,10],"mph", boldGreen, faintGreen)
+    let tempGraph = new Graph('Temparure', 'graph-temp', [25, 10, 23, 0, -2, 15, 3], "°C", boldRed, faintRed)
+    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30, 28, 53, 20, 10, 15, 14], "Pa", boldOrange, faintOrange)
+    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1, 22, 3, 4, 7, 8, 0], "%", boldPurple, faintPurple)
+    let rainGraph = new Graph('Precipitation', 'graph-precip', [5, 2, 1, 0.1, 10, 2, 3], "mm", boldBlue, faintBlue)
+    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1, 2, 1, 2, 4, 8, 10], "mph", boldGreen, faintGreen)
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', [1,2,3,4,5,6,6,7,8],"°C", boldBlack, faintBlack, true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', [1, 2, 3, 4, 5, 6, 6, 7, 8], "°C", boldBlack, faintBlack, true)
 
     // dropdown box on page 3
     // let dropdown = document.getElementById("dropdown");
@@ -55,7 +55,7 @@ window.addEventListener('load', function(){
 })
 
 class Dataset {
-    constructor(title, unit, divName){
+    constructor(title, unit, divName) {
         this.title = title;
         this.unit = unit;
         this.divName = divName;
@@ -63,21 +63,20 @@ class Dataset {
         this.editReadOut();
     }
 
-    getSpecificData(param){
+    getSpecificData(param) {
         this.data = getFilterData(param); // global function, see at bottom
 
     }
 
-    editReadOut(){
+    editReadOut() {
         this.currentData = this.data[0];
         this.div = document.getElementsByClassName(this.divName);
         this.child = this.div[0].getElementsByTagName("p");
 
         // Add spacing between unit and value for some data series
-        if(this.unit=="°C" || this.unit == "%"){
+        if (this.unit == "°C" || this.unit == "%") {
             this.child[0].innerText = this.currentData + this.unit;
-        }
-        else{
+        } else {
             this.child[0].innerText = this.currentData + " " + this.unit;
         }
 
@@ -87,7 +86,7 @@ class Dataset {
 }
 
 class Graph {
-    constructor(title, id, data, unit, rgbaFront, rgbaBack, slider=false){
+    constructor(title, id, data, unit, rgbaFront, rgbaBack, slider = false) {
         this.title = title
         this.backgroundColour = rgbaFront
         this.colour = rgbaFront
@@ -104,45 +103,45 @@ class Graph {
 
     }
 
-    initialiseSlider(){
+    initialiseSlider() {
         this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
         this.slider = this.sliders[0] // one element array
         this.slider.max = this.data.length;
         this.slider.value = this.slider.max;
-        this.slider.addEventListener("input", () => {this.editDisplayData()});
+        this.slider.addEventListener("input", () => { this.editDisplayData() });
         this.editDisplayData();
     }
 
-    initialiseGraph(unit){
+    initialiseGraph(unit) {
         this.chart = new Chart(this.ctx, {
-            type: 'line',
-            data: {
-                labels: this.xlabels,
-                datasets: [{
-                    label: this.title,
-                    data: this.dataBeingUsed,
-                    backgroundColor: this.backgroundColour,
-                    color: this.colour,
-                    borderColor: this.borderColour
+                type: 'line',
+                data: {
+                    labels: this.xlabels,
+                    datasets: [{
+                        label: this.title,
+                        data: this.dataBeingUsed,
+                        backgroundColor: this.backgroundColour,
+                        color: this.colour,
+                        borderColor: this.borderColour
 
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: false,
-                        ticks: {
-                            callback: function(value, index, ticks){
-                                value = value + " " + unit;
-                                return value;
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: {
+                                callback: function(value, index, ticks) {
+                                    value = value + " " + unit;
+                                    return value;
+                                }
                             }
                         }
-                        }
                     },
-                responsive: true,
-                interaction: {
-                    intersection: false,
-                }
+                    responsive: true,
+                    interaction: {
+                        intersection: false,
+                    }
                 }
             }
 
@@ -151,32 +150,32 @@ class Graph {
 
     createXlabels() {
         let xlabels = [] // local variable
-        for (let dayCounter=1; dayCounter <= this.dataBeingUsed.length; dayCounter++){
+        for (let dayCounter = 1; dayCounter <= this.dataBeingUsed.length; dayCounter++) {
             xlabels.push("Day " + dayCounter)
         }
         return xlabels
     }
 
-    addDataPoint(dataPoint){
-        let newDataPoint = Math.floor((Math.random() +2)* 10);
+    addDataPoint(dataPoint) {
+        let newDataPoint = Math.floor((Math.random() + 2) * 10);
         this.dataBeingUsed.push(newDataPoint);
         this.len++
-        this.xlabels.push("Day " + (this.len))
+            this.xlabels.push("Day " + (this.len))
         this.chart.update()
     }
 
-    removeDataPoint(){
+    removeDataPoint() {
         this.dataBeingUsed.pop()
         this.xlabels.pop()
         this.len--;
         this.chart.update()
     }
 
-    editDisplayData(){
+    editDisplayData() {
         let val = this.slider.value;
 
 
-        this.dataBeingUsed = this.data.slice(0,val); // edits which part of data set is shwon
+        this.dataBeingUsed = this.data.slice(0, val); // edits which part of data set is shwon
         this.xlabels = this.createXlabels()
 
 
@@ -191,7 +190,7 @@ class Graph {
 
 // Update the background image to the current weather
 
-function updateBGimg(tempReadOutBox, rainReadOutBox){
+function updateBGimg(tempReadOutBox, rainReadOutBox) {
     var r = document.querySelector(':root');
     var time = new Date().getHours(); // Used for condition of night time below
 
@@ -199,26 +198,22 @@ function updateBGimg(tempReadOutBox, rainReadOutBox){
 
     if (time <= 6 && time >= 18) {
         r.style.setProperty('--bgImg', "url('images/night.png')");
-    }
-    else{
-        if(rainReadOutBox.currentData > 0){
+    } else {
+        if (rainReadOutBox.currentData > 0) {
             r.style.setProperty('--bgImg', "url('images/rain.png')");
-        }
-        else{
-            if(tempReadOutBox.currentData > 20){
+        } else {
+            if (tempReadOutBox.currentData > 20) {
                 r.style.setProperty('--bgImg', "url('images/sunny.png')");
-            }
-            else if(tempReadOutBox.currentData > 14){
+            } else if (tempReadOutBox.currentData > 14) {
                 r.style.setProperty('--bgImg', "url('images/mild.png')");
-            }
-            else{
+            } else {
                 r.style.setProperty('--bgImg', "url('images/cold.png')");
             }
         }
     }
 }
 
-function compassSpin(compassButton){
+function compassSpin(compassButton) {
     // let negative = -5; // so that the arrow can spin back and forth
     let rotation = -45 // upwards
     compassButton.addEventListener("click", () => {
@@ -233,11 +228,11 @@ function compassSpin(compassButton){
     // },Math.random()*5000);
 }
 
-function compassShake(rotation, compassButton, negative){
+function compassShake(rotation, compassButton, negative) {
 
-    if (1==2){
+    if (1 == 2) {
         console.log('test for spinning')
-    } else{
+    } else {
         rotation = rotation + negative
         compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
     }
@@ -294,7 +289,7 @@ function compassShake(rotation, compassButton, negative){
 // stores the data to a variable in the JS file, then this function simply uses this
 // variable and filters the correct data.
 
-function getFilterData(param=null) { // gets all data
+function getFilterData(param = null) { // gets all data
     // fetch("http://127.0.0.1:5000/data")
     //     .then(response => response.json())
     //     .then(jsondata => {
@@ -302,7 +297,7 @@ function getFilterData(param=null) { // gets all data
     //     })
     //     .catch((error) => console.log(error));
     let data = [];
-    for (let i =0; i<10; i++){
+    for (let i = 0; i < 10; i++) {
         let num = Math.round(Math.random() * 30);
         data.push(num);
     }
@@ -318,18 +313,18 @@ function getFilterData(param=null) { // gets all data
 // }
 
 
-function dropdownFunctionality(value,bigGraph){
+function dropdownFunctionality(value, bigGraph) {
 
 
-    if (value=="Temperature"){
+    if (value == "Temperature") {
         unit = "°C"
-    } else if(value=="Pressure"){
+    } else if (value == "Pressure") {
         unit = "Pa"
-    } else if(value=="Rain"){
+    } else if (value == "Rain") {
         unit = "mm"
-    } else if(value=="Wind Speed"){
+    } else if (value == "Wind Speed") {
         unit = "mph";
-    } else if(value=="Humidity"){
+    } else if (value == "Humidity") {
         unit = "%";
     }
 
@@ -348,7 +343,7 @@ function dropdownFunctionality(value,bigGraph){
     bigGraph.xlabels = bigGraph.createXlabels()
     bigGraph.chart.data.labels = this.xlabels;
     bigGraph.initialiseSlider();
-    bigGraph.chart.options.scales.y.ticks.callback = function(value, index, ticks){
+    bigGraph.chart.options.scales.y.ticks.callback = function(value, index, ticks) {
         value = value + " " + unit;
         return value
     }
@@ -363,6 +358,7 @@ function page3Buttons(buttons, bigGraph) {
             buttons.forEach((button) => {
                 button.classList.remove("selected-button")
             });
+            button.classList.toggle("active")
 
             // changes the graph
             dropdownFunctionality(button.innerText, bigGraph)
