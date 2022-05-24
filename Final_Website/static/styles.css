@@ -400,8 +400,9 @@ select {
     font-size: 1.2em;
     font-family: "Lucida Console", "Courier New", monospace;
     margin-top: 1em;
+    border: none;
     /* border-radius: 5%; */
-    background-color: rgba(169, 158, 158, 0.5);
+    background-color: rgba(169, 158, 158, 0.1);
     box-shadow: 0px 4px 5px rgba(82, 73, 73, 0.5);
 }
 

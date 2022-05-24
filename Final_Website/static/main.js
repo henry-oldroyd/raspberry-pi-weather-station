@@ -11,7 +11,18 @@ let faintGreen = "rgba(0,255,0,0.2)";
 let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 
+
+async function get_all_json_data() {
+    let response = await fetch("http://127.0.0.1:5000/data");
+    let data = await response.json()
+    return data;
+}
+
+let jsondata = '';
 window.addEventListener('load', function() {
+    get_all_json_data()
+        .then(data => console.log(data));
+
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
     let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box");
@@ -197,17 +208,17 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //console.log(tempReadOutBox.currentData);
 
     if (time <= 6 && time >= 18) {
-        r.style.setProperty('--bgImg', "url('images/night.png')");
+        r.style.setProperty('--bgImg', "url('../images/night.png')");
     } else {
         if (rainReadOutBox.currentData > 0) {
-            r.style.setProperty('--bgImg', "url('images/rain.png')");
+            r.style.setProperty('--bgImg', "url('../images/rain.png')");
         } else {
             if (tempReadOutBox.currentData > 20) {
-                r.style.setProperty('--bgImg', "url('images/sunny.png')");
+                r.style.setProperty('--bgImg', "url('../images/sunny.png')");
             } else if (tempReadOutBox.currentData > 14) {
-                r.style.setProperty('--bgImg', "url('images/mild.png')");
+                r.style.setProperty('--bgImg', "url('../images/mild.png')");
             } else {
-                r.style.setProperty('--bgImg', "url('images/cold.png')");
+                r.style.setProperty('--bgImg', "url('../images/cold.png')");
             }
         }
     }
