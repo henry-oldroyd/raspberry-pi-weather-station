@@ -219,21 +219,29 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
 
     //console.log(tempReadOutBox.currentData);
 
-    if (time <= 6 && time >= 18) {
-        r.style.setProperty('--bgImg', "url('../images/night.png')");
-    } else {
-        if (rainReadOutBox.currentData > 0) {
-            r.style.setProperty('--bgImg', "url('../images/rain.png')");
-        } else {
-            if (tempReadOutBox.currentData > 20) {
-                r.style.setProperty('--bgImg', "url('../images/sunny.png')");
-            } else if (tempReadOutBox.currentData > 14) {
-                r.style.setProperty('--bgImg', "url('../images/mild.png')");
-            } else {
-                r.style.setProperty('--bgImg', "url('../images/cold.png')");
-            }
-        }
-    }
+    // if (time <= 6 && time >= 18) {
+
+    //     r.style.setProperty('--bgImg', "url('../images/night.png')");
+    // } else {
+    //     if (rainReadOutBox.currentData > 0) {
+    //         r.style.setProperty('--bgImg', "url('../images/rain.png')");
+    //     } else {
+    //         if (tempReadOutBox.currentData > 20) {
+    //             r.style.setProperty('--bgImg', "url('../images/sunny.png')");
+    //         } else if (tempReadOutBox.currentData > 14) {
+    //             r.style.setProperty('--bgImg', "url('../images/mild.png')");
+    //         } else {
+    //             r.style.setProperty('--bgImg', "url('../images/cold.png')");
+    //         }
+    //     }
+    // }
+    fetch("http://127.0.0.1:5000/images/mild")
+        // .then(response => console.log(response))
+        .then(img => {
+            var r = document.querySelector(':root');
+            console.log(img['url'])
+            r.style.setProperty('--bgImg', `url(${img['url']})`);
+        })
 }
 
 function compassSpin(compassButton) {

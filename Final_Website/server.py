@@ -1,5 +1,5 @@
 import flask
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_file
 import json
 
 # read data
@@ -40,9 +40,11 @@ def data():
         append_data(new_data_item)
         return str(read_json())
 
-@app.route("/photos", methods=["GET"])
-def give_photo():
-    pass
+@app.route("/images/<filename>", methods=["GET"])
+def give_photo(filename):
+    file = f"./images/{filename}.png"
+    return send_file(file, mimetype='image/gif')
+
 
 @app.route("/")
 def main():
