@@ -24,27 +24,27 @@ window.addEventListener('load', function() {
 
 
 function load_page(jsondata) {
-    console.log(jsondata)
-    // split data into light, pressure etc. 
+
     let tempData = []
     let rainData = []
     let pressureData = []
     let windSpeedData = []
     let humidityData = []
 
-    jsondata.forEach(dataset =>{
+    jsondata.forEach(dataset => {
         tempData.push(dataset['temp'])
         rainData.push(dataset['rain'])
         pressureData.push(dataset['pressure'])
         windSpeedData.push(dataset['windspeed'])
         humidityData.push(dataset['humidity'])
     });
+
     // create readout boxes
-    let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
-    let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box");
-    let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box");
-    let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box");
-    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
+    let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box", tempData);
+    let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box", pressureData);
+    let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box", humidityData);
+    let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box", rainData);
+    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box", windSpeedData);
 
     // smaller graphs on page 2
     let tempGraph = new Graph('Temparure', 'graph-temp', tempData, "°C", boldRed, faintRed)
@@ -71,7 +71,7 @@ function load_page(jsondata) {
     let humidButton = document.getElementById("humid-button-big-graph");
 
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
-    page3Buttons(buttons, bigGraph); // adds functionality to each button
+    page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
     //button that spins compass
     let compassButton = document.getElementById("img-compass-arrow");
@@ -82,21 +82,17 @@ function load_page(jsondata) {
 }
 
 class Dataset {
-    constructor(title, unit, divName) {
+    constructor(title, unit, divName, data) {
         this.title = title;
         this.unit = unit;
         this.divName = divName;
-        this.getSpecificData();
+        this.data = data;
         this.editReadOut();
     }
 
-    getSpecificData(param) {
-        this.data = getFilterData(param); // global function, see at bottom
-
-    }
 
     editReadOut() {
-        this.currentData = this.data[0];
+        this.currentData = this.data[0]; // shows the first element in readout box 
         this.div = document.getElementsByClassName(this.divName);
         this.child = this.div[0].getElementsByTagName("p");
 
@@ -317,12 +313,6 @@ function compassShake(rotation, compassButton, negative) {
 // variable and filters the correct data.
 
 function getFilterData(param = null) { // gets all data
-    // fetch("http://127.0.0.1:5000/data")
-    //     .then(response => response.json())
-    //     .then(jsondata => {
-    //         globalData = jsondata
-    //     })
-    //     .catch((error) => console.log(error));
     let data = [];
     for (let i = 0; i < 10; i++) {
         let num = Math.round(Math.random() * 30);
@@ -340,22 +330,27 @@ function getFilterData(param = null) { // gets all data
 // }
 
 
-function dropdownFunctionality(value, bigGraph) {
-
-
+function dropdownFunctionality(value, bigGraph, jsondata) {
     if (value == "Temperature") {
         unit = "°C"
+        filter = "temp"
     } else if (value == "Pressure") {
         unit = "Pa"
+        filter = "pressure"
     } else if (value == "Rain") {
         unit = "mm"
+        filter = "rain"
     } else if (value == "Wind Speed") {
         unit = "mph";
+        filter = "windspeed"
     } else if (value == "Humidity") {
         unit = "%";
+        filter = "humidity"
     }
-
-    newdata = getFilterData(); // at the moment generates random data
+    let newdata = [];
+    jsondata.forEach(dataset => {
+        newdata.push(dataset[filter])
+    });
 
     // bigGraph.data = [4,3,2,1,2,4,5,6,6,4];
 
@@ -377,7 +372,7 @@ function dropdownFunctionality(value, bigGraph) {
     bigGraph.chart.update()
 }
 
-function page3Buttons(buttons, bigGraph) {
+function page3Buttons(buttons, bigGraph, jsondata) {
     // console.log(buttons)
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -388,7 +383,7 @@ function page3Buttons(buttons, bigGraph) {
             button.classList.toggle("active")
 
             // changes the graph
-            dropdownFunctionality(button.innerText, bigGraph)
+            dropdownFunctionality(button.innerText, bigGraph, jsondata)
 
             // makes the button selected
             button.classList.add("selected-button");
