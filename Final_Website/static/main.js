@@ -235,7 +235,9 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //         }
     //     }
     // }
-    fetch("http://127.0.0.1:5000/images/mild")
+
+    let img_file = "mild" // no .png 
+    fetch(`http://127.0.0.1:5000/images/${img_file}`)
         // .then(response => console.log(response))
         .then(img => {
             var r = document.querySelector(':root');
