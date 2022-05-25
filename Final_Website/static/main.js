@@ -14,15 +14,31 @@ let faintBlack = "rgba(0,0,0,0.2)";
 
 async function get_all_json_data() {
     let response = await fetch("http://127.0.0.1:5000/data");
-    let data = await response.json()
+    let data = response.json()
     return data;
 }
-
-let jsondata = '';
 window.addEventListener('load', function() {
     get_all_json_data()
-        .then(data => console.log(data));
+        .then(data => load_page(data))
+});
 
+
+function load_page(jsondata) {
+    console.log(jsondata)
+    // split data into light, pressure etc. 
+    let tempData = []
+    let rainData = []
+    let pressureData = []
+    let windSpeedData = []
+    let humidityData = []
+
+    jsondata.forEach(dataset =>{
+        tempData.push(dataset['temp'])
+        rainData.push(dataset['rain'])
+        pressureData.push(dataset['pressure'])
+        windSpeedData.push(dataset['windspeed'])
+        humidityData.push(dataset['humidity'])
+    });
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box");
     let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box");
@@ -31,14 +47,14 @@ window.addEventListener('load', function() {
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box");
 
     // smaller graphs on page 2
-    let tempGraph = new Graph('Temparure', 'graph-temp', [25, 10, 23, 0, -2, 15, 3], "°C", boldRed, faintRed)
-    let pressureGraph = new Graph('Pressure', 'graph-pressure', [30, 28, 53, 20, 10, 15, 14], "Pa", boldOrange, faintOrange)
-    let humidityGraph = new Graph('Humidity', 'graph-humidity', [1, 22, 3, 4, 7, 8, 0], "%", boldPurple, faintPurple)
-    let rainGraph = new Graph('Precipitation', 'graph-precip', [5, 2, 1, 0.1, 10, 2, 3], "mm", boldBlue, faintBlue)
-    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', [1, 2, 1, 2, 4, 8, 10], "mph", boldGreen, faintGreen)
+    let tempGraph = new Graph('Temparure', 'graph-temp', tempData, "°C", boldRed, faintRed)
+    let pressureGraph = new Graph('Pressure', 'graph-pressure', pressureData, "Pa", boldOrange, faintOrange)
+    let humidityGraph = new Graph('Humidity', 'graph-humidity', humidityData, "%", boldPurple, faintPurple)
+    let rainGraph = new Graph('Precipitation', 'graph-precip', rainData, "mm", boldBlue, faintBlue)
+    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', windSpeedData, "mph", boldGreen, faintGreen)
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', [1, 2, 3, 4, 5, 6, 6, 7, 8], "°C", boldBlack, faintBlack, true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, "°C", boldBlack, faintBlack, true)
 
     // dropdown box on page 3
     // let dropdown = document.getElementById("dropdown");
@@ -63,7 +79,7 @@ window.addEventListener('load', function() {
     compassSpin(compassButton);
 
     updateBGimg(tempReadOutBox, rainReadOutBox);
-})
+}
 
 class Dataset {
     constructor(title, unit, divName) {

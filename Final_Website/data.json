@@ -1,1 +1,1 @@
-[{"light": 56, "rain": 23}, {"light": 89, "rain": 2}, {"light": 23, "rain": 82}, {"light": 41, "rain": 44}, {"light": 25, "rain": 56}, {"light": 16, "rain": 60}, {"light": 93, "rain": 19}]
+[{"temp": 56, "rain": 23, "pressure": 30, "windspeed": 5, "humidity":25}, {"temp": 59, "rain": 20, "pressure": 32, "windspeed":7, "humidity":22}, {"temp": 60, "rain": 22, "pressure": 35, "windspeed": 0, "humidity":32}, {"temp": 52, "rain": 18, "pressure": 20, "windspeed": 15, "humidity":50}]
