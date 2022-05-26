@@ -39,6 +39,8 @@ function load_page(jsondata) {
         humidityData.push(dataset['humidity'])
     });
 
+    windDirectionData = "west";
+
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box", tempData);
     let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box", pressureData);
@@ -76,7 +78,7 @@ function load_page(jsondata) {
     //button that spins compass
     let compassButton = document.getElementById("img-compass-arrow");
     //function for button to spin the compass
-    compassSpin(compassButton);
+    compassSpin(compassButton, windDirectionData);
 
     updateBGimg(tempReadOutBox, rainReadOutBox);
 }
@@ -246,13 +248,34 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
         })
 }
 
-function compassSpin(compassButton) {
+function compassSpin(compassButton, orientation) {
     // let negative = -5; // so that the arrow can spin back and forth
-    let rotation = -45 // upwards
-    compassButton.addEventListener("click", () => {
-        rotation = rotation + 45;
-        compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
-    })
+    var rotation = -28 // upwards
+    switch (orientation) {
+
+        case "north":
+            rotation = -28; // sets it to north 
+            break;
+
+        case "south":
+            rotation = -28 + 180
+            break;
+
+        case "east":
+            rotation = -28 + 90
+            break;
+
+        case "west":
+            rotation = -28 + 270
+            break;
+
+        default:
+            break;
+    }
+
+    compassButton.style.transform = `translate(-48.3%, -50%) rotate(${rotation}deg`
+
+
 
     // let id = setInterval(function() {
     //     compassShake(rotation, compassButton, negative);
@@ -261,15 +284,15 @@ function compassSpin(compassButton) {
     // },Math.random()*5000);
 }
 
-function compassShake(rotation, compassButton, negative) {
+// function compassShake(rotation, compassButton, negative) {
 
-    if (1 == 2) {
-        console.log('test for spinning')
-    } else {
-        rotation = rotation + negative
-        compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
-    }
-}
+//     if (1 == 2) {
+//         console.log('test for spinning')
+//     } else {
+//         rotation = rotation + negative
+//         compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
+//     }
+// }
 
 
 // function page3Buttons(buttons){
