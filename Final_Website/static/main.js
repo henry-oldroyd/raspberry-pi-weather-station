@@ -238,7 +238,7 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //     }
     // }
 
-    let img_file = "mild" // no .png 
+    let img_file = "cold" // no .png 
     fetch(`http://127.0.0.1:5000/images/${img_file}`)
         // .then(response => console.log(response))
         .then(img => {
@@ -252,7 +252,6 @@ function compassSpin(compassButton, orientation) {
     // let negative = -5; // so that the arrow can spin back and forth
     var rotation = -28 // upwards
     switch (orientation) {
-
         case "north":
             rotation = -28; // sets it to north 
             break;
@@ -268,7 +267,6 @@ function compassSpin(compassButton, orientation) {
         case "west":
             rotation = -28 + 270
             break;
-
         default:
             break;
     }
