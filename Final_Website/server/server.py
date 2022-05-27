@@ -1,6 +1,6 @@
-import flask
-from flask import Flask, request, render_template, send_file
+from flask import Flask, request, render_template, send_file, abort
 import json
+import os
 
 # read data
 def read_json():
@@ -20,7 +20,20 @@ def append_data(data_item):
         json.dump(data, file)
 
 
-app = Flask(__name__)
+with open("../images/images.json", "r") as file:
+    image_paths = json.loads(file.read())
+print(image_paths)
+
+app = Flask(
+    __name__,
+    static_folder='../static',
+    template_folder='../templates'
+)
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return "404: page not found", 404
 
 @app.route("/data", methods=['GET', 'POST'])
 def data():
@@ -40,10 +53,17 @@ def data():
         append_data(new_data_item)
         return str(read_json())
 
-@app.route("/images/<filename>", methods=["GET"])
-def give_photo(filename):
-    file = f"./images/{filename}.png"
-    return send_file(file, mimetype='image/gif')
+@app.route("/images/<name>", methods=["GET"])
+def give_photo(name):
+    print(name)
+    try:
+        assert name in image_paths.keys()
+        file_path = image_paths[name]
+        assert os.path.exists(file_path)
+    except AssertionError:
+        abort(404)
+    else:
+        return send_file(file_path, mimetype='image/gif')
 
 
 @app.route("/")
