@@ -23,5 +23,11 @@ html {
 }
 
 .banner {
-    background: red;
+    background: var(--header-bg-colour);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
