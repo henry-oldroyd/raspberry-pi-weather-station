@@ -10,24 +10,13 @@ html {
     padding: 0;
 }
 
-h1 {
-    text-align: center;
-    margin: 0px;
-    padding: 2%;
-}
-
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Sans Pro', sans-serif;
     --fw-reg: 300;
     --fw-bold: 900;
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accent: #16e0bd;
-    --fs-h1: 3.5rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --header-bg-colour: red;
+    --header-text-colour: white;
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25.), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
     --bgImg: url();
     /* Declare bgImg variable and set initially to blank so just shows overlay */
