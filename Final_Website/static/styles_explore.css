@@ -1,0 +1,261 @@
+/* multiple graph section  */
+
+.graph-weather-data {
+    padding-left: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    box-shadow: 0 0 10px grey;
+}
+
+.canvas-graph {
+    width: 10em;
+    height: 50em;
+    border: 1px dotted grey;
+    margin-bottom: 1em;
+}
+
+.container-graph {
+    width: 80%;
+    height: 75%;
+    margin-top: 2em;
+}
+
+@media (min-width: 700px) {
+    .container-graph {
+        position: relative;
+        display: grid;
+        grid-template-areas: "temp press" "humid precip" "speed dir";
+        width: 100%;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
+    }
+    #data-temp {
+        grid-area: "temp"
+    }
+    #data-pressure {
+        grid-area: "press"
+    }
+    #data-humidity {
+        grid-area: "humid"
+    }
+    #data-wind-speed {
+        grid-area: "speed"
+    }
+    #data-wind-dir {
+        grid-area: "dir"
+    }
+    #data-precip {
+        grid-area: "precip"
+    }
+}
+
+@media (min-width: 900px) {
+    .container-graph {
+        grid-template-areas: "temp press humid" "precip speed dir";
+    }
+}
+
+.img-containter-compass {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-compass-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170%;
+    height: 150%;
+}
+
+.img-compass-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48.5%, -50%) rotate(-45deg);
+    z-index: 10;
+    width: 70%;
+    height: 70%;
+}
+
+
+/* 3rd section (big graph) */
+
+.detailed-graph {
+    background: rgb(226, 226, 226);
+    background-size: cover;
+    padding: 2%;
+}
+
+.buttons-heading {
+    height: 1em;
+    width: 1em;
+    font-size: 2em;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    color: rgb(59, 56, 56);
+    margin-bottom: 0;
+}
+
+.drop-elements-big-graph {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+
+/*.slider--big-graph{
+
+    transform:translate(0,3em);
+
+}*/
+
+.slider-title-big-graph {
+    text-align: left;
+}
+
+.slider-div-big-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
+
+/* #dropdown{
+    font-size: 2em;
+    background: rgb(226, 226, 226);
+} */
+
+
+/* .selected-button:hover + .hidden-button{
+    visibility: visible;
+}
+.selected-button:hover + .drop-elements-big-graph{
+    visibility: visible;
+} */
+
+.button-container-big-graph {
+    height: 100%;
+    /* padding-top: 3em; */
+}
+
+.drop-button-big-graph {
+    position: relative;
+    height: 15%;
+    width: 90%;
+    font-size: 1.2em;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin-top: 1em;
+    border: none;
+    /* border-radius: 5%; */
+    background-color: rgba(169, 158, 158, 0.1);
+    box-shadow: 0px 4px 5px rgba(82, 73, 73, 0.5);
+}
+
+.selected-button {
+    /* background: rgba(35, 35, 35, 0.8); */
+    border: inline;
+    top: 5px;
+    left: 4px;
+    box-shadow: none;
+    background-color: rgba(169, 158, 158, 0.9);
+}
+
+.drop-button-big-graph:hover {
+    transform: scale(1.05)
+}
+
+.slider-big-graph {
+    width: 10em;
+    color: blue;
+}
+
+
+/* input[type="range"] {
+  -webkit-appearance: none;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10%;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 3em;
+  width: 0.5em;
+
+  background: rgba(0,0,0,1);
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+} */
+
+.slider-title {
+    margin-top: 3em;
+    margin-bottom: 0;
+    color: grey;
+    text-align: center;
+    font-size: 1em;
+    width: 25em;
+    font-family: "arial";
+    font-style: italic;
+}
+
+input[type="range"] {
+    margin-top: 1em;
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 50em;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    /* background-image: linear-gradient(#ff4500, #ff4500); */
+    background-repeat: no-repeat;
+    border: 3px black solid;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+@media (min-width: 600px) {
+    .container-detailed-graph-section {
+        display: grid;
+        grid-template-areas: "graph dropdown" "slider dropdown";
+        grid-auto-columns: 75% 25%;
+        grid-auto-columns: minmax(0, fr);
+    }
+    .slider-div-graph-big {
+        grid-area: slider;
+    }
+    .container-graph-big {
+        grid-area: graph
+    }
+    .button-container-big-graph {
+        grid-area: dropdown;
+    }
+}

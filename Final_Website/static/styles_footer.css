@@ -1,0 +1,25 @@
+/* footer */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background: #3b3936;
+    text-align: center;
+    height: 3em;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.sandringham-link {
+    color: white;
+}
+
+.credits {
+    /*background: #423d3a;*/
+    display: inline-block;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
