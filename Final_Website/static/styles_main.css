@@ -21,3 +21,7 @@ html {
     --bgImg: url();
     /* Declare bgImg variable and set initially to blank so just shows overlay */
 }
+
+.banner {
+    background: red;
+}
