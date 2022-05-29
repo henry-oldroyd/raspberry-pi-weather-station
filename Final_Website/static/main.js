@@ -42,18 +42,18 @@ function load_page(jsondata) {
     windDirectionData = "west";
 
     // create readout boxes
-    let tempReadOutBox = new Dataset("Temperature", "°C", "temperature-readout-box", tempData);
-    let pressureReadOutBox = new Dataset("Pressure", "mb", "pressure-readout-box", pressureData);
-    let humidityReadOutBox = new Dataset("Humidity", "%", "humidity-readout-box", humidityData);
-    let rainReadOutBox = new Dataset("Rain", "mm", "rain-readout-box", rainData);
-    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "wind-speed-readout-box", windSpeedData);
+    let tempReadOutBox = new Dataset("Temperature", "°C", "readout-box-temp", tempData);
+    let pressureReadOutBox = new Dataset("Pressure", "mb", "readout-box-pressure", pressureData);
+    let humidityReadOutBox = new Dataset("Humidity", "%", "readout-box-humidity", humidityData);
+    let rainReadOutBox = new Dataset("Rain", "mm", "readout-box-rain", rainData);
+    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData);
 
-    // smaller graphs on page 2
-    let tempGraph = new Graph('Temparure', 'graph-temp', tempData, "°C", boldRed, faintRed)
-    let pressureGraph = new Graph('Pressure', 'graph-pressure', pressureData, "Pa", boldOrange, faintOrange)
-    let humidityGraph = new Graph('Humidity', 'graph-humidity', humidityData, "%", boldPurple, faintPurple)
-    let rainGraph = new Graph('Precipitation', 'graph-precip', rainData, "mm", boldBlue, faintBlue)
-    let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', windSpeedData, "mph", boldGreen, faintGreen)
+    // // smaller graphs on page 2
+    // let tempGraph = new Graph('Temparure', 'graph-temp', tempData, "°C", boldRed, faintRed)
+    // let pressureGraph = new Graph('Pressure', 'graph-pressure', pressureData, "Pa", boldOrange, faintOrange)
+    // let humidityGraph = new Graph('Humidity', 'graph-humidity', humidityData, "%", boldPurple, faintPurple)
+    // let rainGraph = new Graph('Precipitation', 'graph-precip', rainData, "mm", boldBlue, faintBlue)
+    // let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', windSpeedData, "mph", boldGreen, faintGreen)
 
     // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, "°C", boldBlack, faintBlack, true)
@@ -95,8 +95,10 @@ class Dataset {
 
     editReadOut() {
         this.currentData = this.data[0]; // shows the first element in readout box 
-        this.div = document.getElementsByClassName(this.divName);
-        this.child = this.div[0].getElementsByTagName("p");
+        this.div = document.getElementById(this.divName);
+        this.child = this.div.getElementsByTagName("p");
+        console.log('now')
+        console.log(this.div)
 
         // Add spacing between unit and value for some data series
         if (this.unit == "°C" || this.unit == "%") {
@@ -216,7 +218,7 @@ class Graph {
 // Update the background image to the current weather
 
 function updateBGimg(tempReadOutBox, rainReadOutBox) {
-    var r = document.querySelector(':root');
+    var r = document.getElementsByClassName('intro')[0];
     var time = new Date().getHours(); // Used for condition of night time below
 
     //console.log(tempReadOutBox.currentData);
@@ -238,18 +240,17 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //     }
     // }
 
-    let img_file = "cold" // no .png 
-    fetch(`http://127.0.0.1:5000/images/${img_file}`)
+    let img_file = "cold" // no .png  ${img_file}
+    fetch(`http://127.0.0.1:5000/images/cold`)
         // .then(response => console.log(response))
         .then(img => {
-            var r = document.querySelector(':root');
+            var r = document.querySelector('intro');
             console.log(img['url'])
             r.style.setProperty('--bgImg', `url(${img['url']})`);
         })
 }
 
 function compassSpin(compassButton, orientation) {
-    // let negative = -5; // so that the arrow can spin back and forth
     var rotation = -28 // upwards
     switch (orientation) {
         case "north":
@@ -270,95 +271,8 @@ function compassSpin(compassButton, orientation) {
         default:
             break;
     }
-
     compassButton.style.transform = `translate(-48.3%, -50%) rotate(${rotation}deg`
-
-
-
-    // let id = setInterval(function() {
-    //     compassShake(rotation, compassButton, negative);
-    //     negative = 20*(Math.random())
-    //     negative = negative * -1
-    // },Math.random()*5000);
 }
-
-// function compassShake(rotation, compassButton, negative) {
-
-//     if (1 == 2) {
-//         console.log('test for spinning')
-//     } else {
-//         rotation = rotation + negative
-//         compassButton.style.transform = `translate(-49.5%, -50%) rotate(${rotation}deg`
-//     }
-// }
-
-
-// function page3Buttons(buttons){
-//     buttons.forEach((button) => {
-//
-//         button.addEventListener("click", () => {
-//             console.log(button);
-//
-//             // checks how many buttons are hidden
-//             let buttonsHidden = 0;
-//             buttons.forEach((button) => {
-//                 if (button.classList.contains("hidden-button")) {
-//                     buttonsHidden++;
-//                     console.log(buttonsHidden)
-//                 }
-//             })
-//
-//             //if multiple buttons are hidden, show them all on click.
-//             if (buttonsHidden > 1) {
-//                 console.log("showing all")
-//                 buttons.forEach((button) => {
-//                     if (button.classList.contains("hidden-button")) {
-//                         button.classList.remove("hidden-button")
-//                     }
-//                     if (button.classList.contains("selected-button")){
-//                         button.classList.remove("selected-button");
-//                     }
-//
-//                 })
-//
-//             } else {  // if no buttons are hidden
-//                 // shows the right one
-//                 console.log("showing one")
-//                 buttons.forEach((button) => {
-//                     button.classList.add("hidden-button");
-//                 });
-//
-//                 button.classList.add("selected-button");
-//                 button.classList.remove("hidden-button");
-//
-//
-//             }
-//         });
-//     });
-// }
-
-
-// HENRYYYYYYYYY - this is where you come in
-// I'm thinking that you have one function that makes a json requests and
-// stores the data to a variable in the JS file, then this function simply uses this
-// variable and filters the correct data.
-
-function getFilterData(param = null) { // gets all data
-    let data = [];
-    for (let i = 0; i < 10; i++) {
-        let num = Math.round(Math.random() * 30);
-        data.push(num);
-    }
-    return data
-}
-//
-// function filterData(filter) { // returns just light data
-//     filteredData = []
-//     for (let i=0; i < globalData.length; i++){
-//         filteredData.push(globalData[i][filter]) // eg filter = 'light'
-//     }
-//     return filteredData
-// }
 
 
 function dropdownFunctionality(value, bigGraph, jsondata) {

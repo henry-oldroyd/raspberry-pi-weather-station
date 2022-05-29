@@ -1,5 +1,5 @@
 .intro {
-    background: green;
+    background-image: url();
     height: 100vh;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .sand-logo {
-    position: fixed;
+    position: absolute;
     width: 6em;
     height: calc(0.1*inherit);
     top: 0.1em;
@@ -36,7 +36,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 
 #intro-subtitle {
@@ -48,7 +47,6 @@
 .intro-readout-boxes {
     justify-self: center;
     margin-top: 3em;
-    border: 5px solid green;
     /* height: 100%; */
     width: 70%;
     display: grid;
@@ -87,7 +85,7 @@
 .readout-box {
     height: 12em;
     aspect-ratio: 1/1;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.4);
     display: grid;
     grid-template-rows: 1fr 2fr;
     justify-content: center;
@@ -95,15 +93,17 @@
 }
 
 .readout-box-title {
-    font-size: 1.5em;
+    font-size: 2em;
+    color: white;
 }
 
 .readout-box-data {
+    color: lightgrey;
     width: 100%;
     text-align: center;
     font-size: 3em;
-    background: orange;
     justify-self: center;
+    font-weight: 1000;
 }
 
 
