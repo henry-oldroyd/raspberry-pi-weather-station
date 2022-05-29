@@ -1,3 +1,17 @@
 .about-us {
-    background: green;
+    background-color: var(--about-bg-colour);
+}
+
+.about-wrapper {
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+    border: 1px solid var(--about-bg-colour);
+}
+
+
+/* banner */
+
+#about-banner {
+    margin-top: var(--banner-top-gap);
+    margin-bottom: var(--banner-bottom-gap);
 }

@@ -21,11 +21,11 @@ html {
     --banner-margin-left: 3em;
     --banner-margin-right: 3em;
     --banner-font-size: 1.5em;
+    --about-bg-colour: rgb(158, 152, 152);
+    --banner-top-gap: 4em;
+    --banner-bottom-gap: 3em;
     --margin-left: 5em;
     --margin-right: 5em;
-    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25.), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
-    --bgImg: url();
-    /* Declare bgImg variable and set initially to blank so just shows overlay */
 }
 
 .banner {
