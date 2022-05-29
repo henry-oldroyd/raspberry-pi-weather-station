@@ -1,1 +1,32 @@
-[{ "temp": 16, "rain": 23, "pressure": 30, "windspeed": 5, "humidity": 25 }, { "temp": 59, "rain": 20, "pressure": 32, "windspeed": 7, "humidity": 22 }, { "temp": 60, "rain": 22, "pressure": 35, "windspeed": 0, "humidity": 32 }, { "temp": 52, "rain": 18, "pressure": 20, "windspeed": 15, "humidity": 50 }]
+[
+    {
+        "time_stamp": "2022-05-29 22:00:00",
+        "pressure": 50,
+        "temperature": 12,
+        "humidity": 0.64,
+        "wind_speed": 12,
+        "wind_direction": 165,
+        "precipitation": 15,
+        "day_type": "cold"
+    },
+    {
+        "time_stamp": "2022-05-29 22:15:00",
+        "pressure": 12,
+        "temperature": 30,
+        "humidity": 0.34,
+        "wind_speed": 15,
+        "wind_direction": 55,
+        "precipitation": 33,
+        "day_type": "hot"
+    },
+    {
+        "time_stamp": "2022-05-29 22:30:00",
+        "pressure": 53,
+        "temperature": 19,
+        "humidity": 0.15,
+        "wind_speed": 60,
+        "wind_direction": 222,
+        "precipitation": 0,
+        "day_type": "windy"
+    }
+]
