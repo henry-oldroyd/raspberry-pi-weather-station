@@ -3,6 +3,8 @@
 .explore {
     background-color: var(--explore-bg-colour);
     padding-bottom: 4em;
+    border: 1px solid var(--explore-bg-colour);
+    /* idk why but this changes the color of background */
 }
 
 
@@ -10,14 +12,13 @@
 
 .wrapper-explore {
     background-color: var(--explore-bg-colour);
-    border: 1px solid red;
 }
 
 
 /* banner at the top */
 
 #explore-banner {
-    margin-top: 5em;
+    margin-top: 4em;
     margin-bottom: 3em;
 }
 
@@ -160,4 +161,12 @@ input[type=range]::-webkit-slider-runnable-track {
 #graph-graph-big {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
+}
+
+
+/* csv data button */
+
+.download-csv {
+    float: right;
+    margin-right: calc(var(--margin-right) * 3)
 }

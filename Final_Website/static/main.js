@@ -77,6 +77,7 @@ function load_page(jsondata) {
 
     updateBGimg(tempReadOutBox, rainReadOutBox);
     sandringhamLogo();
+    selfieImg();
 }
 
 class Dataset {
@@ -93,8 +94,6 @@ class Dataset {
         this.currentData = this.data[0]; // shows the first element in readout box 
         this.div = document.getElementById(this.divName);
         this.child = this.div.getElementsByTagName("p");
-        console.log('now')
-        console.log(this.div)
 
         // Add spacing between unit and value for some data series
         if (this.unit == "°C" || this.unit == "%") {
@@ -227,6 +226,7 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //         r.style.setProperty('--bgImg', "url('../images/rain.png')");
     //     } else {
     //         if (tempReadOutBox.currentData > 20) {
+
     //             r.style.setProperty('--bgImg', "url('../images/sunny.png')");
     //         } else if (tempReadOutBox.currentData > 14) {
     //             r.style.setProperty('--bgImg', "url('../images/mild.png')");
@@ -237,13 +237,10 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     // }
 
     let img_file = "cold" // no .png  ${img_file}
-    console.log('making getch')
     fetch(`http://127.0.0.1:5000/images/cold`)
         // .then(response => console.log(response))
         .then(img => {
             var r = document.getElementsByClassName('intro')[0];
-            console.log(img['url'])
-            console.log('background image set')
             r.style.setProperty('background-image', `url(${img['url']})`);
         })
 }
@@ -252,11 +249,18 @@ function sandringhamLogo() {
     fetch("http://127.0.0.1:5000/images/logo")
         .then(img => {
             var logoImg = document.getElementById("sand-logo")
-            console.log(img)
-            console.log(logoImg)
             logoImg.src = img['url']
         })
 }
+
+function selfieImg() {
+    fetch("http://127.0.0.1:5000/images/selfie")
+        .then(img => {
+            var selfieImg = document.getElementById("selfie-img")
+            selfieImg.src = img['url']
+        })
+}
+
 
 function dropdownFunctionality(value, bigGraph, jsondata) {
     if (value == "Temperature") {
@@ -301,7 +305,7 @@ function dropdownFunctionality(value, bigGraph, jsondata) {
 }
 
 function page3Buttons(buttons, bigGraph, jsondata) {
-    // console.log(buttons)
+
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
             //removes selected from all
