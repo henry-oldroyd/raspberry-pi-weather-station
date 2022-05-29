@@ -75,11 +75,6 @@ function load_page(jsondata) {
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
     page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
-    //button that spins compass
-    let compassButton = document.getElementById("img-compass-arrow");
-    //function for button to spin the compass
-    compassSpin(compassButton, windDirectionData);
-
     updateBGimg(tempReadOutBox, rainReadOutBox);
 }
 
@@ -218,7 +213,7 @@ class Graph {
 // Update the background image to the current weather
 
 function updateBGimg(tempReadOutBox, rainReadOutBox) {
-    var r = document.getElementsByClassName('intro')[0];
+
     var time = new Date().getHours(); // Used for condition of night time below
 
     //console.log(tempReadOutBox.currentData);
@@ -241,37 +236,15 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     // }
 
     let img_file = "cold" // no .png  ${img_file}
+    console.log('making getch')
     fetch(`http://127.0.0.1:5000/images/cold`)
         // .then(response => console.log(response))
         .then(img => {
-            var r = document.querySelector('intro');
+            var r = document.getElementsByClassName('intro')[0];
             console.log(img['url'])
-            r.style.setProperty('--bgImg', `url(${img['url']})`);
+            console.log('background image set')
+            r.style.setProperty('background-image', `url(${img['url']})`);
         })
-}
-
-function compassSpin(compassButton, orientation) {
-    var rotation = -28 // upwards
-    switch (orientation) {
-        case "north":
-            rotation = -28; // sets it to north 
-            break;
-
-        case "south":
-            rotation = -28 + 180
-            break;
-
-        case "east":
-            rotation = -28 + 90
-            break;
-
-        case "west":
-            rotation = -28 + 270
-            break;
-        default:
-            break;
-    }
-    compassButton.style.transform = `translate(-48.3%, -50%) rotate(${rotation}deg`
 }
 
 

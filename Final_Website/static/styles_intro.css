@@ -1,5 +1,6 @@
 .intro {
     background-image: url();
+    background-size: cover;
     height: 100vh;
 }
 
