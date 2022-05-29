@@ -47,6 +47,7 @@
 
 .intro-readout-boxes {
     justify-self: center;
+    text-align: center;
     margin-top: 3em;
     /* height: 100%; */
     width: 70%;
@@ -94,6 +95,7 @@
 }
 
 .readout-box-title {
+    margin-top: 0.75em;
     font-size: 2em;
     color: white;
 }
@@ -105,6 +107,7 @@
     font-size: 3em;
     justify-self: center;
     font-weight: 1000;
+    margin-bottom: 1em;
 }
 
 
