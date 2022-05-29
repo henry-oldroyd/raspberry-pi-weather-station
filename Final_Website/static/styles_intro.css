@@ -1,28 +1,115 @@
 .intro {
-    background: blue;
+    background: green;
+    height: 100vh;
 }
 
 
 /* top banner */
 
 .banner-intro {
-    height: 5em;
-    display: grid;
-    grid-template-columns: 5em auto;
-    grid-gap: 50%;
-    justify-content: unset;
+    height: 6em;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .sand-logo {
+    position: fixed;
     width: 6em;
-    height: 3em;
-    top: 1em;
-}
-
-.intro-title {
-    transform: translateX(-40%);
+    height: calc(0.1*inherit);
+    top: 0.1em;
+    left: 0.1em;
 }
 
 .banner-intro {
     margin: 0;
+}
+
+.intro-title {
+    font-size: 3em;
+}
+
+
+/* readout boxes */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+#intro-subtitle {
+    width: 50vh;
+    height: var(--banner-height);
+    justify-self: center;
+}
+
+.intro-readout-boxes {
+    justify-self: center;
+    margin-top: 3em;
+    border: 5px solid green;
+    /* height: 100%; */
+    width: 70%;
+    display: grid;
+    grid-auto-columns: minmax(0, 0.5fr);
+    grid-auto-rows: auto;
+    grid-template-areas: ". . subtitle subtitle . ." "temp temp pressure pressure rain rain" ". wind wind humidity humidity .";
+    grid-gap: 1em;
+    /* width: 100%; */
+    /* grid-gap: 3em; */
+}
+
+#intro-subtitle {
+    grid-area: subtitle;
+}
+
+#readout-box-rain {
+    grid-area: rain
+}
+
+#readout-box-temp {
+    grid-area: temp;
+}
+
+#readout-box-pressure {
+    grid-area: pressure
+}
+
+#readout-box-wind {
+    grid-area: wind;
+}
+
+#readout-box-humidity {
+    grid-area: humidity
+}
+
+.readout-box {
+    height: 12em;
+    aspect-ratio: 1/1;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.readout-box-title {
+    font-size: 1.5em;
+}
+
+.readout-box-data {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    background: orange;
+    justify-self: center;
+}
+
+
+/*  Last updated */
+
+.last-updated {
+    color: var(--white-text-color);
+    margin-left: 2em;
 }
