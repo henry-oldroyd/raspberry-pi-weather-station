@@ -1,96 +1,28 @@
-/* multiple graph section  */
-
-.graph-weather-data {
-    padding-left: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    padding-right: 1em;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    box-shadow: 0 0 10px grey;
-}
-
-.canvas-graph {
-    width: 10em;
-    height: 50em;
-    border: 1px dotted grey;
-    margin-bottom: 1em;
-}
-
-.container-graph {
-    width: 80%;
-    height: 75%;
-    margin-top: 2em;
-}
-
-@media (min-width: 700px) {
-    .container-graph {
-        position: relative;
-        display: grid;
-        grid-template-areas: "temp press" "humid precip" "speed dir";
-        width: 100%;
-        grid-auto-columns: minmax(0, 1fr);
-        grid-auto-flow: column;
-    }
-    #data-temp {
-        grid-area: "temp"
-    }
-    #data-pressure {
-        grid-area: "press"
-    }
-    #data-humidity {
-        grid-area: "humid"
-    }
-    #data-wind-speed {
-        grid-area: "speed"
-    }
-    #data-wind-dir {
-        grid-area: "dir"
-    }
-    #data-precip {
-        grid-area: "precip"
-    }
-}
-
-@media (min-width: 900px) {
-    .container-graph {
-        grid-template-areas: "temp press humid" "precip speed dir";
-    }
-}
-
-.img-containter-compass {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.img-compass-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 170%;
-    height: 150%;
-}
-
-.img-compass-arrow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-48.5%, -50%) rotate(-45deg);
-    z-index: 10;
-    width: 70%;
-    height: 70%;
-}
-
-
 /* 3rd section (big graph) */
 
-.detailed-graph {
-    background: rgb(226, 226, 226);
-    background-size: cover;
-    padding: 2%;
+.explore {
+    background-color: var(--explore-bg-colour);
+    padding-bottom: 4em;
 }
+
+
+/* wrapper  */
+
+.wrapper-explore {
+    background-color: var(--explore-bg-colour);
+    border: 1px solid red;
+}
+
+
+/* banner at the top */
+
+#explore-banner {
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+
+
+/* buttons */
 
 .buttons-heading {
     height: 1em;
@@ -112,41 +44,10 @@
     text-align: center;
 }
 
-
-/*.slider--big-graph{
-
-    transform:translate(0,3em);
-
-}*/
-
-.slider-title-big-graph {
-    text-align: left;
-}
-
-.slider-div-big-graph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: right;
-}
-
-
-/* #dropdown{
-    font-size: 2em;
-    background: rgb(226, 226, 226);
-} */
-
-
-/* .selected-button:hover + .hidden-button{
-    visibility: visible;
-}
-.selected-button:hover + .drop-elements-big-graph{
-    visibility: visible;
-} */
-
 .button-container-big-graph {
     height: 100%;
     /* padding-top: 3em; */
+    margin-right: var(--margin-right);
 }
 
 .drop-button-big-graph {
@@ -175,34 +76,27 @@
     transform: scale(1.05)
 }
 
+
+/* sliders */
+
+.slider-title-big-graph {
+    text-align: left;
+}
+
+.slider-div-big-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
 .slider-big-graph {
     width: 10em;
     color: blue;
 }
 
-
-/* input[type="range"] {
-  -webkit-appearance: none;
-  height: 7px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 10%;
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1));
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 3em;
-  width: 0.5em;
-
-  background: rgba(0,0,0,1);
-  cursor: ew-resize;
-  box-shadow: 0 0 2px 0 #555;
-  transition: background .3s ease-in-out;
-} */
-
 .slider-title {
-    margin-top: 3em;
+    margin-top: 1em;
     margin-bottom: 0;
     color: grey;
     text-align: center;
@@ -258,4 +152,12 @@ input[type=range]::-webkit-slider-runnable-track {
     .button-container-big-graph {
         grid-area: dropdown;
     }
+}
+
+
+/* graph  */
+
+#graph-graph-big {
+    background-color: var(--explore-bg-colour);
+    margin-left: var(--margin-left);
 }
