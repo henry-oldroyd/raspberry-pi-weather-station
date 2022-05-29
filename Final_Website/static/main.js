@@ -76,6 +76,7 @@ function load_page(jsondata) {
     page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
     updateBGimg(tempReadOutBox, rainReadOutBox);
+    sandringhamLogo();
 }
 
 class Dataset {
@@ -247,6 +248,15 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
         })
 }
 
+function sandringhamLogo() {
+    fetch("http://127.0.0.1:5000/images/logo")
+        .then(img => {
+            var logoImg = document.getElementById("sand-logo")
+            console.log(img)
+            console.log(logoImg)
+            logoImg.src = img['url']
+        })
+}
 
 function dropdownFunctionality(value, bigGraph, jsondata) {
     if (value == "Temperature") {

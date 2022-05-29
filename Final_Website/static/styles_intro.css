@@ -14,7 +14,7 @@
     width: 100%;
 }
 
-.sand-logo {
+#sand-logo {
     position: absolute;
     width: 6em;
     height: calc(0.1*inherit);
