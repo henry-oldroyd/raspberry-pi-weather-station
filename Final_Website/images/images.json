@@ -5,5 +5,8 @@
     "mild": "../images/mild.png",
     "night": "../images/night.png",
     "rain": "../images/rain.png",
-    "sunny": "../images/sunny.png"
+    "sunny": "../images/sunny.png",
+    "logo": "../images/sandringham_logo.png",
+    "selfie": "../images/random.png",
+    "raspberry": "../images/raspberry.png"
 }

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Station</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-    <!-- <script type="text/javascript" src="../static/main.js"></script> -->
+    <script type="text/javascript" src="../static/main.js"></script>
     <link rel="stylesheet" href="../static/styles_main.css">
     <link rel="stylesheet" href="../static/styles_explore.css">
     <link rel="stylesheet" href="../static/styles_intro.css">
@@ -19,77 +19,84 @@
     <section class="intro">
 
         <div class="banner-intro banner">
-            <img class="sand-logo" src="../images/sandringham_logo.png" alt="">
+            <img id="sand-logo" src="" alt="">
             <h1 class="section-title intro-title">Weather Station</h1>
 
         </div>
+        <div class="wrapper">
+            <div class="intro-readout-boxes">
+                <div id="intro-subtitle" class="banner small-banner">
+                    <h1 class="section-title">Currently...</h1>
+                </div>
 
-        <div class="intro-readout-boxes">
-            <div class="banner small-banner">
-                <h1 class="section-title">Right now!</h1>
-            </div>
-            <div id="readout-box-temp" class="readout-box">
-                <div class="readout-box-title">Temp</div>
-                <div class="readout-box-data">30</div>
-            </div>
-            <div id="readout-box-pressure" class="readout-box">
-                <div class="readout-box-title">Pressure</div>
-                <div class="readout-box-data">30</div>
-            </div>
-            <div id="readout-box-humidity" class="readout-box">
-                <div class="readout-box-title">Humidity</div>
-                <div class="readout-box-data">30</div>
-            </div>
-            <div id="readout-box-rain" class="readout-box">
-                <div class="readout-box-title">Rain</div>
-                <div class="readout-box-data">30</div>
-            </div>
-            <div id="readout-box-wind" class="readout-box">
-                <div class="readout-box-title">Wind</div>
-                <div class="readout-box-data">30</div>
+                <div id="readout-box-temp" class="readout-box">
+                    <div class="readout-box-title">Temperature</div>
+                    <p class="readout-box-data">30</p>
+                </div>
+                <div id="readout-box-pressure" class="readout-box">
+                    <div class="readout-box-title">Pressure</div>
+                    <p class="readout-box-data">30</p>
+                </div>
+                <div id="readout-box-humidity" class="readout-box">
+                    <div class="readout-box-title">Humidity</div>
+                    <p class="readout-box-data">30</p>
+                </div>
+                <div id="readout-box-rain" class="readout-box">
+                    <div class="readout-box-title">Rain</div>
+                    <p class="readout-box-data">30</p>
+                </div>
+                <div id="readout-box-wind" class="readout-box">
+                    <div class="readout-box-title">Wind</div>
+                    <p class="readout-box-data">30</p>
+                </div>
             </div>
         </div>
         <p class="last-updated">Last Updated~</p>
     </section>
 
     <section class="explore">
-        <div class="banner">
-            <h1 class="section-title">Explore</h1>
-        </div>
-        <div class="container-detailed-graph-section">
-            <div class="container-graph-big">
-                <canvas id="graph-graph-big"></canvas>
+        <div class="wrapper-explore">
+            <div id="explore-banner" class="banner">
+                <h1 class="section-title">Explore</h1>
             </div>
-            <div class="slider-div-big-graph">
-                <p class="slider-title">Drag to adjust time scale</p>
-                <input type="range" class="slider-big-graph">
+            <div class="container-detailed-graph-section">
+                <div class="container-graph-big">
+                    <canvas id="graph-graph-big"></canvas>
+                </div>
+                <div class="slider-div-big-graph">
+                    <p class="slider-title">Drag to adjust time scale</p>
+                    <input type="range" class="slider-big-graph">
 
-            </div>
-            <div class="button-container-big-graph">
-                <div class="drop-elements-big-graph">
-                    <p class="buttons-heading">Select to view...</p>
-                    <button class="drop-button-big-graph" id="temp-button-big-graph">Temperature</button>
-                    <button class="drop-button-big-graph selected-button" id="pressure-button-big-graph">Pressure</button>
-                    <button class="drop-button-big-graph" id="rain-button-big-graph">Rain</button>
-                    <button class="drop-button-big-graph " id="wind-button-big-graph">Wind Speed</button>
-                    <button class="drop-button-big-graph" id="humid-button-big-graph">Humidity</button>
+                </div>
+                <div class="button-container-big-graph">
+                    <div class="drop-elements-big-graph">
+                        <p class="buttons-heading">Select to view...</p>
+                        <button class="drop-button-big-graph selected-button" id="temp-button-big-graph">Temperature</button>
+                        <button class="drop-button-big-graph" id="pressure-button-big-graph">Pressure</button>
+                        <button class="drop-button-big-graph" id="rain-button-big-graph">Rain</button>
+                        <button class="drop-button-big-graph " id="wind-button-big-graph">Wind Speed</button>
+                        <button class="drop-button-big-graph" id="humid-button-big-graph">Humidity</button>
+                    </div>
                 </div>
             </div>
+            <button class="download-csv">Download Data</button>
         </div>
     </section>
 
     <section class="about-us">
-        <div class="banner">
-            <h1 class="section-title">About us</h1>
-        </div>
-        <div class="about-us-contents">
-            <p class="about-ustext1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-            <img src="../images/random.png" alt="">
-            <p class="about-us-text2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        <div class="about-wrapper">
+            <div id="about-banner" class="banner">
+                <h1 class="section-title">About us</h1>
+            </div>
+            <div class="about-us-contents">
+                <p class="about-ustext1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                    non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+                <img id="selfie-img" src="" alt="">
+                <p class="about-us-text2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                    non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </div>
         </div>
     </section>
 
