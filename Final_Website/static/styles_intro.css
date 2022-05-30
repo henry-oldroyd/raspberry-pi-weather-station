@@ -99,16 +99,20 @@
 .readout-box {
     -webkit-appearance: none;
     height: 12em;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     display: grid;
     grid-template-rows: 1fr 2fr;
     align-items: center;
+
+    /* Another potential solution if want 1:1 aspect ratio - simply comment out width above and uncomment line below */
+    /* transform: translate(50%, 0px); */ /* Centre divs in their 2 grid spaces */
 }
 
 .readout-box-title {
     -webkit-appearance: none;
-    margin-top: 0.75em;
+    margin-top: 1em;
     font-size: 2em;
     color: white;
 }
@@ -122,6 +126,7 @@
     justify-self: center;
     font-weight: 1000;
     margin-bottom: 1em;
+    margin-top: 0.4em;
 }
 
 
@@ -130,4 +135,6 @@
 .last-updated {
     color: var(--white-text-color);
     margin-left: 2em;
+    position: relative;
+    top: -1.5em;
 }
