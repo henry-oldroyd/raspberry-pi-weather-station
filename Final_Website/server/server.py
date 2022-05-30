@@ -30,6 +30,8 @@ app = Flask(
     template_folder='../templates'
 )
 
+# Added to prevent browser caching and update CSS, etc. in browser when editing 
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @app.errorhandler(404)
 def page_not_found(error):
