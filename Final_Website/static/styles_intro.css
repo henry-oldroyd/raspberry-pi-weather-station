@@ -101,9 +101,7 @@
     background-color: rgba(0, 0, 0, 0.4);
     display: grid;
     grid-template-rows: 1fr 2fr;
-    justify-content: center;
     align-items: center;
-    justify-self: center;
     width: 100%;
 }
 
