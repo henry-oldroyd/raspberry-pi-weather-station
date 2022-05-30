@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 *,
 *::before,
 *::after {
@@ -11,7 +12,8 @@ html {
 }
 
 :root {
-    --header-bg-colour: #821816;
+    font-family: 'Passion One', cursive;
+    --header-bg-colour: #bf211e;
     --header-text-colour: white;
     --readout-box-bg-colour: rgba(0, 0, 0, 0.25);
     --banner-height: 3em;
