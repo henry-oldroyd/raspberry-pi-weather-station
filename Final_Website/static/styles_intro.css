@@ -34,12 +34,14 @@
 /* readout boxes */
 
 .wrapper {
+    -webkit-appearance: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #intro-subtitle {
+    -webkit-appearance: none;
     position: relative;
     height: var(--banner-height);
     width: 30vw;
@@ -51,8 +53,10 @@
 }
 
 .intro-readout-boxes {
+    -webkit-appearance: none;
     justify-self: center;
     text-align: center;
+    align-items: center;
     margin-top: 3em;
     /* height: 100%; */
     width: 70%;
@@ -90,6 +94,7 @@
 }
 
 .readout-box {
+    -webkit-appearance: none;
     height: 12em;
     aspect-ratio: 1/1;
     background-color: rgba(0, 0, 0, 0.4);
@@ -97,15 +102,19 @@
     grid-template-rows: 1fr 2fr;
     justify-content: center;
     align-items: center;
+    justify-self: center;
+    width: 100%;
 }
 
 .readout-box-title {
+    -webkit-appearance: none;
     margin-top: 0.75em;
     font-size: 2em;
     color: white;
 }
 
 .readout-box-data {
+    -webkit-appearance: none;
     color: lightgrey;
     width: 100%;
     text-align: center;
