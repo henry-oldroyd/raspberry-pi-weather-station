@@ -30,16 +30,26 @@ function load_page(jsondata) {
     let pressureData = []
     let windSpeedData = []
     let humidityData = []
+    let windDirectionData = []
+    let dayTypeData = []
 
     jsondata.forEach(dataset => {
-        tempData.push(dataset['temp'])
-        rainData.push(dataset['rain'])
+        tempData.push(dataset['temperature'])
+        rainData.push(dataset['precipitation'])
         pressureData.push(dataset['pressure'])
-        windSpeedData.push(dataset['windspeed'])
+        windSpeedData.push(dataset['wind_speed'])
         humidityData.push(dataset['humidity'])
+        windDirectionData.push(dataset["wind_direction"])
+        dayTypeData.push(dataset["day_type"])
     });
 
-    windDirectionData = "west";
+    console.log(tempData)
+    console.log(pressureData)
+    console.log(windSpeedData)
+    console.log(windDirectionData)
+    console.log(dayTypeData)
+    console.log(humidityData)
+    console.log(rainData)
 
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "readout-box-temp", tempData);
@@ -178,21 +188,6 @@ class Graph {
         return xlabels
     }
 
-    addDataPoint(dataPoint) {
-        let newDataPoint = Math.floor((Math.random() + 2) * 10);
-        this.dataBeingUsed.push(newDataPoint);
-        this.len++
-            this.xlabels.push("Day " + (this.len))
-        this.chart.update()
-    }
-
-    removeDataPoint() {
-        this.dataBeingUsed.pop()
-        this.xlabels.pop()
-        this.len--;
-        this.chart.update()
-    }
-
     editDisplayData() {
         let val = this.slider.value;
 
@@ -213,9 +208,6 @@ class Graph {
 // Update the background image to the current weather
 
 function updateBGimg(tempReadOutBox, rainReadOutBox) {
-
-    var time = new Date().getHours(); // Used for condition of night time below
-
     //console.log(tempReadOutBox.currentData);
 
     // if (time <= 6 && time >= 18) {
@@ -265,16 +257,16 @@ function selfieImg() {
 function dropdownFunctionality(value, bigGraph, jsondata) {
     if (value == "Temperature") {
         unit = "°C"
-        filter = "temp"
+        filter = "temperature"
     } else if (value == "Pressure") {
         unit = "Pa"
         filter = "pressure"
     } else if (value == "Rain") {
         unit = "mm"
-        filter = "rain"
+        filter = "precipitation"
     } else if (value == "Wind Speed") {
         unit = "mph";
-        filter = "windspeed"
+        filter = "wind_speed"
     } else if (value == "Humidity") {
         unit = "%";
         filter = "humidity"
