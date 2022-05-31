@@ -18,7 +18,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 # print(os.path.join(basedir, 'database.db'))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+# Added to prevent browser caching and update CSS, etc. in browser when editing
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
