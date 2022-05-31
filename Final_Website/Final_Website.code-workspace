@@ -1,8 +1,11 @@
 {
 	"folders": [
-		{
-			"path": "."
-		}
+        {
+            "path": "."
+        },
+        {
+            "path": "..\\..\\..\\..\\Dropbox\\SQL alchemy\\many to many test"
+        }
     ],
     "settings": {}
 }

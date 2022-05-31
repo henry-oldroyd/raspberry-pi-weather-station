@@ -1,12 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, redirect, request, jsonify, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+import os
+from datetime import datetime
 
 
-#initliazing our flask app, SQLAlchemy and Marshmallow
+# initialing our flask app, SQLAlchemy and Marshmallow
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////datastore.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/datastore.db'
+basedir = os.path.abspath(os.path.dirname(__file__))
+# print(os.path.join(basedir, 'database.db'))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -38,34 +43,54 @@ class Data_Reading(db.Model):
 class Data_Reading_Schema(ma.Schema):
     class Meta:
         fields = ('timestamp', 'pressure', 'temperature', 'humidity', 'wind_speed', 'wind_direction', 'precipitation')
+        # https://stackoverflow.com/questions/53606872/datetime-format-in-flask-marshmallow-schema
+        datetimeformat = '%Y-%m-%d %H:%M:%S'
 
 
 data_reading_schema = Data_Reading_Schema()
 data_reading_schema_many = Data_Reading_Schema(many=True)
 
 
-# #adding a post
-# @app.route('/post', methods=['POST'])
-# def add_post():
-#     title = request.json['title']
-#     description = request.json['description']
-#     author = request.json['author']
+#adding a post
+@app.route('/post', methods=['POST'])
+def add_post():
+    pressure = request.json['pressure']
+    temperature = request.json['temperature']
+    humidity = request.json['humidity']
+    wind_speed = request.json['wind_speed']
+    wind_direction = request.json['wind_direction']
+    precipitation = request.json['precipitation']
+    timestamp = datetime.now()
+    
+    pressure, temperature, humidity, wind_speed, wind_direction, precipitation, timestamp
+    
 
-#     my_posts = Post(title, description, author)
-#     db.session.add(my_posts)
-#     db.session.commit()
+    new_data_reading = Data_Reading(
+        pressure=pressure, 
+        temperature=temperature,
+        humidity=humidity,
+        wind_speed=wind_speed,
+        wind_direction=wind_direction,
+        precipitation=precipitation,
+        timestamp=timestamp
+    )
+    db.session.add(new_data_reading)
+    db.session.commit()
 
-#     return post_schema.jsonify(my_posts)
+    return data_reading_schema.jsonify(new_data_reading)
 
 
 #getting posts
-@app.route('/get', methods=['GET'])
-def get_post():
+@app.route('/get_data', methods=['GET'])
+def get_data():
     all_posts = Data_Reading.query.all()
     result = data_reading_schema_many.dump(all_posts)
 
     return jsonify(result)
 
+@app.route("/", methods=['GET'])
+def index():
+    return redirect(url_for("get_data"))
 
 # #getting particular post
 # @app.route('/post_details/<id>/', methods=['GET'])
