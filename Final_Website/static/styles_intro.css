@@ -2,6 +2,7 @@
     background-image: url();
     background-size: cover;
     height: 100vh;
+    overflow: scroll;
 }
 
 
@@ -13,6 +14,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    border-radius: 0;
 }
 
 #sand-logo {
@@ -21,7 +23,8 @@
     height: calc(0.1*inherit);
     /* top: 0.1em;
     left: 0.1em; */
-    top: auto; /* Centres the logo vertically in the banner */
+    top: auto;
+    /* Centres the logo vertically in the banner */
     left: 0.1em;
 }
 
@@ -105,9 +108,9 @@
     display: grid;
     grid-template-rows: 1fr 2fr;
     align-items: center;
-
     /* Another potential solution if want 1:1 aspect ratio - simply comment out width above and uncomment line below */
-    /* transform: translate(50%, 0px); */ /* Centre divs in their 2 grid spaces */
+    /* transform: translate(50%, 0px); */
+    /* Centre divs in their 2 grid spaces */
 }
 
 .readout-box-title {

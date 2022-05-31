@@ -88,6 +88,7 @@ function load_page(jsondata) {
     updateBGimg(tempReadOutBox, rainReadOutBox);
     sandringhamLogo();
     selfieImg();
+    piImg();
 }
 
 class Dataset {
@@ -250,6 +251,14 @@ function selfieImg() {
         .then(img => {
             var selfieImg = document.getElementById("selfie-img")
             selfieImg.src = img['url']
+        })
+}
+
+function piImg() {
+    fetch("http://127.0.0.1:5000/images/raspberry")
+        .then(img => {
+            var piImg = document.getElementById("pi-img")
+            piImg.src = img['url']
         })
 }
 
