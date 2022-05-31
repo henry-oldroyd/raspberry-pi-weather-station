@@ -52,17 +52,19 @@ data_reading_schema_many = Data_Reading_Schema(many=True)
 
 
 #adding a post
-@app.route('/post', methods=['POST'])
+@app.route('/add_data', methods=['POST'])
 def add_post():
-    pressure = request.json['pressure']
-    temperature = request.json['temperature']
-    humidity = request.json['humidity']
-    wind_speed = request.json['wind_speed']
-    wind_direction = request.json['wind_direction']
-    precipitation = request.json['precipitation']
-    timestamp = datetime.now()
+    data_header = request.json
+    print("server received data")
+    print(data_header)
     
-    pressure, temperature, humidity, wind_speed, wind_direction, precipitation, timestamp
+    pressure = data_header['pressure']
+    temperature = data_header['temperature']
+    humidity = data_header['humidity']
+    wind_speed = data_header['wind_speed']
+    wind_direction = data_header['wind_direction']
+    precipitation = data_header['precipitation']
+    timestamp = datetime.now()
     
 
     new_data_reading = Data_Reading(
@@ -74,6 +76,7 @@ def add_post():
         precipitation=precipitation,
         timestamp=timestamp
     )
+
     db.session.add(new_data_reading)
     db.session.commit()
 
