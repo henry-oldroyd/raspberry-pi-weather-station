@@ -144,7 +144,7 @@
 /*  Last updated */
 
 .last-updated {
-    color: var(--white-text-color);
+    color: green;
     margin-left: 2em;
     position: relative;
     font-size: 1em;

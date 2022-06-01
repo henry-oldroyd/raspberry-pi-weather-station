@@ -15,6 +15,6 @@
         box-shadow: 0 0 0 3px green;
     }
     to {
-        box-sizing: 0 0 0 15px rgb(59, 73, 59), 0 0 0 10 px none, 0 0 0 5px rgb(65, 84, 65);
+        box-sizing: 0 0 0 15px rgb(59, 73, 59), 0 0 0 10px none, 0 0 0 5px rgb(65, 84, 65);
     }
 }
