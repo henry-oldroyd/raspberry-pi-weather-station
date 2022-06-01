@@ -144,24 +144,31 @@
 /*  Last updated */
 
 .last-updated {
-    color: green;
+    color: white;
     margin-left: 2em;
     position: relative;
     font-size: 1em;
     top: -2em;
-    left: 3em;
+    left: 1em;
 }
 
-.last-updated:before {
-    content: " ";
-    position: relative;
-    display: inline-block;
+.status-wrapper {
+    position: absolute;
+    right: 3em;
+    top: 8em;
+    font-size: 1em;
+    color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.status-dot {
     width: 1em;
     height: 1em;
-    left: -2em;
-    top: 1.3em;
     border-radius: 50%;
-    background-color: green;
-    z-index: 100;
     animation: dot-animation 1s infinite;
+    background-color: green;
+    margin-right: 0.5em;
 }
