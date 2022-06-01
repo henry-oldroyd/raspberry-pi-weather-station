@@ -2,7 +2,7 @@
     background-image: url();
     background-size: cover;
     height: 100vh;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 
@@ -10,7 +10,7 @@
 
 .banner-intro {
     font-family: 'Bebas Neue', cursive;
-    height: 4em;
+    height: var(--intro-banner-height);
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -67,11 +67,12 @@
     align-items: center;
     margin-top: 1.5em;
     /* height: 100%; */
-    width: 70%;
+    height: 70%;
+    width: 50%;
     display: grid;
     grid-auto-columns: minmax(0, 0.5fr);
     grid-auto-rows: auto;
-    grid-template-areas: ". . subtitle subtitle . ." "temp temp pressure pressure rain rain" ". wind wind humidity humidity .";
+    grid-template-areas: "udot . subtitle subtitle . ." "temp temp pressure pressure rain rain" ". wind wind humidity humidity .";
     grid-gap: 1em;
     /* width: 100%; */
     /* grid-gap: 3em; */
@@ -111,7 +112,10 @@
     grid-template-rows: 1fr 2fr;
     align-items: center;
     border-radius: 10%;
-    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0px 4px 5px rgba(82, 73, 73, 0.5);
+    animation-name: border;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
     /* Another potential solution if want 1:1 aspect ratio - simply comment out width above and uncomment line below */
     /* transform: translate(50%, 0px); */
     /* Centre divs in their 2 grid spaces */
@@ -143,5 +147,21 @@
     color: var(--white-text-color);
     margin-left: 2em;
     position: relative;
-    top: -1.5em;
+    font-size: 1em;
+    top: -2em;
+    left: 3em;
+}
+
+.last-updated:before {
+    content: " ";
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    left: -2em;
+    top: 1.3em;
+    border-radius: 50%;
+    background-color: green;
+    z-index: 100;
+    animation: dot-animation 1s infinite;
 }
