@@ -1,25 +1,26 @@
-/* footer */
-
-.footer {
-    position: sticky;
+.sticky {
+    position: fixed;
     bottom: 0;
     left: 0;
-    background: #3b3936;
-    text-align: center;
-    height: 3em;
+    width: 100vw;
+    background-color: rgb(56, 48, 39);
     display: flex;
-    flex-direction: column;
-    z-index: 1000;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.3em;
+}
+
+name {
+    font-weight: 200;
+    font-style: italic;
+    color: rgb(124, 108, 108);
 }
 
 .sandringham-link {
-    color: white;
-}
-
-.credits {
-    /*background: #423d3a;*/
-    display: inline-block;
-    color: white;
-    margin-top: 1em;
-    margin-bottom: 5em;
+    color: rgb(53, 44, 186);
+    font-style: none;
 }

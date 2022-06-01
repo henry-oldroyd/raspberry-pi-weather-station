@@ -98,7 +98,7 @@
 }
 
 .slider-title {
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom: 0;
     color: grey;
     text-align: center;
@@ -109,7 +109,7 @@
 }
 
 input[type="range"] {
-    margin-top: 1em;
+    margin-top: 0.5em;
     -webkit-appearance: none;
     margin-right: 15px;
     width: 50em;
@@ -162,6 +162,7 @@ input[type=range]::-webkit-slider-runnable-track {
 #graph-graph-big {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
+    transform: scaleY(0.9)
 }
 
 
