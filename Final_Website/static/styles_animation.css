@@ -18,3 +18,37 @@
         box-sizing: 0 0 0 15px rgb(59, 73, 59), 0 0 0 10px none, 0 0 0 5px rgb(65, 84, 65);
     }
 }
+
+@keyframes button-hover {
+    0% {
+        background-color: rgba(169, 158, 158, 0.1);
+    }
+    50% {
+        background-color: radial-gradient(circle, rgba(169, 158, 158, 0.7));
+    }
+    100% {
+        background-color: rgba(169, 158, 158, 0.7);
+    }
+}
+
+@keyframes button-hover-2 {
+    0% {
+        background-color: rgba(169, 158, 158, 0.1);
+    }
+    50% {
+        /* background-color: linear-gradient(to right, rgba(169, 158, 158, 0.9), rgba(169, 158, 158, 0.1)); */
+        background-color: red;
+    }
+    100% {
+        background-color: linear-gradient(to right, red, blue);
+    }
+}
+
+@keyframes button-hover-3 {
+    from {
+        background-color: black;
+    }
+    to {
+        background-color: red;
+    }
+}

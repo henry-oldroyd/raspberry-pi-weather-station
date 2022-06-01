@@ -63,6 +63,9 @@
     /* border-radius: 5%; */
     background-color: rgba(169, 158, 158, 0.1);
     box-shadow: 0px 4px 5px rgba(82, 73, 73, 0.5);
+    background: linear-gradient(to right, rgba(169, 158, 158, 0.1)50%, rgba(169, 158, 158, 0.9) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
 }
 
 .selected-button {
@@ -75,7 +78,9 @@
 }
 
 .drop-button-big-graph:hover {
-    transform: scale(1.05)
+    /* transform: scale(1.05); */
+    transition: all 1s ease;
+    background-position: right bottom;
 }
 
 

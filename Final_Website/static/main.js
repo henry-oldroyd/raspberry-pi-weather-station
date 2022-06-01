@@ -32,6 +32,7 @@ function load_page(jsondata) {
     let humidityData = []
     let windDirectionData = []
     let dayTypeData = []
+    let timeStampData = []
 
     jsondata.forEach(dataset => {
         tempData.push(dataset['temperature'])
@@ -41,6 +42,7 @@ function load_page(jsondata) {
         humidityData.push(dataset['humidity'])
         windDirectionData.push(dataset["wind_direction"])
         dayTypeData.push(dataset["day_type"])
+        timeStampData.push(dataset["time_stamp"])
     });
 
     console.log(tempData)
@@ -66,7 +68,7 @@ function load_page(jsondata) {
     // let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', windSpeedData, "mph", boldGreen, faintGreen)
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, "°C", boldBlack, faintBlack, true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, timeStampData, "°C", boldBlack, faintBlack, true)
 
     // dropdown box on page 3
     // let dropdown = document.getElementById("dropdown");
@@ -89,6 +91,7 @@ function load_page(jsondata) {
     sandringhamLogo();
     selfieImg();
     piImg();
+    lastUpdatedAt(timeStampData[timeStampData.length - 1]);
 }
 
 class Dataset {
@@ -119,7 +122,7 @@ class Dataset {
 }
 
 class Graph {
-    constructor(title, id, data, unit, rgbaFront, rgbaBack, slider = false) {
+    constructor(title, id, data, timestamps, unit, rgbaFront, rgbaBack, slider = false) {
         this.title = title
         this.backgroundColour = rgbaFront
         this.colour = rgbaFront
@@ -127,8 +130,9 @@ class Graph {
         this.ctx = document.getElementById(id).getContext('2d')
         this.data = data;
         this.dataBeingUsed = this.data
+        this.timeStamps = timestamps
         this.unit = unit;
-        this.xlabels = this.createXlabels()
+        this.xlabels = this.createXlabels(timestamps)
         this.initialiseGraph(unit)
         if (slider == true) {
             this.initialiseSlider();
@@ -184,8 +188,9 @@ class Graph {
     createXlabels() {
         let xlabels = [] // local variable
         for (let dayCounter = 1; dayCounter <= this.dataBeingUsed.length; dayCounter++) {
-            xlabels.push("Day " + dayCounter)
+            xlabels.push(this.timeStamps[dayCounter - 1])
         }
+
         return xlabels
     }
 
@@ -324,4 +329,9 @@ function page3Buttons(buttons, bigGraph, jsondata) {
 
     });
 
+}
+
+function lastUpdatedAt(time) {
+    elm = document.getElementsByClassName('last-updated')[0];
+    elm.innerText = `Last Updated: ${time}`
 }
