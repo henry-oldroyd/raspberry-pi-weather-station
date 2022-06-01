@@ -30,6 +30,7 @@ html {
     --banner-bottom-gap: 2em;
     --margin-left: 5em;
     --margin-right: 5em;
+    --intro-banner-height: 4em;
 }
 
 .banner {
