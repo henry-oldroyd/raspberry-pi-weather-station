@@ -10,5 +10,12 @@
             "path": "..\\prototype 1\\pi emulator"
         }
     ],
-    "settings": {}
+    "settings": {
+        "cSpell.words": [
+            "backref",
+            "sessionmaker",
+            "sqla",
+            "sqlalchemy"
+        ]
+    }
 }

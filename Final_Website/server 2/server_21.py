@@ -7,9 +7,6 @@ from flask_marshmallow import Marshmallow
 import os
 from datetime import datetime
 
-from pyparsing import ParseSyntaxException
-
-
 # initialing our flask app, SQLAlchemy and Marshmallow
 app = flask.Flask(__name__)
 
@@ -60,7 +57,7 @@ class Data_Reading_Schema(ma.Schema):
         datetimeformat = '%Y-%m-%d %H:%M:%S'
 
     @flask_marshmallow.pre_load
-    def add_timestamp(self, data, **kwargs):
+    def add_timestamp(self, data, **kwargs):    
         data['timestamp'] = datetime.now()
         return data
 
