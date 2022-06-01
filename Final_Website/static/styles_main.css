@@ -51,3 +51,8 @@ html {
     /* margin-left: var(--banner-margin-left);
     margin-right: var(--banner-margin-right); */
 }
+
+.animate-in {
+    animation: wipe-enter 1s 1;
+    animation-fill-mode: forwards;
+}

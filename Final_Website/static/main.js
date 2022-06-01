@@ -23,6 +23,8 @@ window.addEventListener('load', function() {
 });
 
 
+
+
 function load_page(jsondata) {
 
     let tempData = []

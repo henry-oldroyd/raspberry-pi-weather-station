@@ -40,7 +40,9 @@
         background-color: red;
     }
     100% {
-        background-color: linear-gradient(to right, red, blue);
+        background: linear-gradient(to right, red 50%, blue 50%);
+        background-size: 200% 100%;
+        background-position: left bottom;
     }
 }
 
@@ -50,5 +52,14 @@
     }
     to {
         background-color: red;
+    }
+}
+
+@keyframes wipe-enter {
+    0% {
+        transform: scale(0, .025);
+    }
+    50% {
+        transform: scale(1, .025);
     }
 }
