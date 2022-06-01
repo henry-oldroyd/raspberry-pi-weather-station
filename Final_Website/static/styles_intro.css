@@ -15,8 +15,8 @@
     align-items: center;
     width: 100%;
     border-radius: 0;
-    background-color: #3e3e3e;
-    color: #d9c9c9
+    background-color: var(--header-bg-colour);
+    color: var(--header-text-colour)
 }
 
 #sand-logo {
@@ -112,10 +112,7 @@
     grid-template-rows: 1fr 2fr;
     align-items: center;
     border-radius: 10%;
-    box-shadow: 0px 4px 5px rgba(82, 73, 73, 0.5);
-    animation-name: border;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    /* box-shadow: 0px 4px 5px rgba(82, 73, 73, 0.5); */
     /* Another potential solution if want 1:1 aspect ratio - simply comment out width above and uncomment line below */
     /* transform: translate(50%, 0px); */
     /* Centre divs in their 2 grid spaces */
