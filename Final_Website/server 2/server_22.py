@@ -45,15 +45,25 @@ Base = declarative_base()
 class Reading_Uncalibrated(Base):
     """Table for uncalibrated readings"""
     __tablename__ = 'readings_uncalibrated'
-    id = sqla.Column(sqla.Integer, primary_key=True)
-    timestamp = sqla.Column(sqla.DateTime())
+    primary_key = sqla.Column(sqla.Integer, primary_key=True)
+    # timestamp = sqla.Column(sqla.DateTime())
     pressure = sqla.Column(sqla.Float())
     temperature = sqla.Column(sqla.Float())
     humidity = sqla.Column(sqla.Float())
     wind_speed = sqla.Column(sqla.Float())
     wind_direction = sqla.Column(sqla.Float())
     precipitation = sqla.Column(sqla.Float())
-    
+
+    def __init__(self, timestamp, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
+        # self.timestamp = timestamp
+        self.pressure = pressure
+        self.temperature = temperature
+        self.humidity = humidity
+        self.wind_speed = wind_speed
+        self.wind_direction = wind_direction
+        self.precipitation = precipitation
+
+
     def __repr__(self):
         return f"<Reading_Uncalibrated(id={self.id}, timestamp={self.timestamp})>"
 
@@ -66,10 +76,10 @@ class Reading_Uncalibrated_Schema(SQLAlchemySchema):
     class Meta:
         model=Reading_Uncalibrated
         load_instance=True  # Optional: deserialize to model instances
-        datetimeformat = '%Y-%m-%d %H:%M:%S'
+        # datetimeformat = '%Y-%m-%d %H:%M:%S'
 
-    id=auto_field()
-    timestamp=auto_field()
+    primary_key =auto_field()
+    # timestamp=auto_field()
     pressure=auto_field()
     temperature=auto_field()
     humidity=auto_field()
@@ -77,10 +87,14 @@ class Reading_Uncalibrated_Schema(SQLAlchemySchema):
     wind_direction=auto_field()
     precipitation=auto_field()
     
-    @pre_load
-    def add_timestamp(self, data, **kwargs):
-        data['timestamp'] = datetime.now()
-        return data
+    # @pre_load
+    # def add_timestamp(self, data, **kwargs):
+    #     print("IN PRE_LOAD")
+    #     # print(type(data))
+    #     # print(data)
+    #     # data['timestamp'] = datetime.now()
+    #     # print(data)
+    #     return data
 
 # schema objs used in serialization
 reading_uncalibrated_schema = Reading_Uncalibrated_Schema()
@@ -88,42 +102,42 @@ reading_uncalibrated_schema_many = Reading_Uncalibrated_Schema(many=True)
 
 
 
-# functions
-def hash(plain_txt):
-    """one way hash using sha256"""
-    hash_ = hashlib.sha256()
-    hash_.update(plain_txt.encode())
-    return hash_.hexdigest()
+# # functions
+# def hash(plain_txt):
+#     """one way hash using sha256"""
+#     hash_ = hashlib.sha256()
+#     hash_.update(plain_txt.encode())
+#     return hash_.hexdigest()
 
 
 
-# setup get and post handlers
-def handle_get_readings():
-    query = sqla.select(Reading_Uncalibrated)
-    all_readings = list(session.scalars(query))
-    serialised_readings: dict = reading_uncalibrated_schema_many.dump(all_readings)
-    return flask.jsonify(serialised_readings)
+# # setup get and post handlers
+# def handle_get_readings():
+#     query = sqla.select(Reading_Uncalibrated)
+#     all_readings = list(session.scalars(query))
+#     serialised_readings: dict = reading_uncalibrated_schema_many.dump(all_readings)
+#     return flask.jsonify(serialised_readings)
 
 
-# setup app
-app = flask.Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+# # setup app
+# app = flask.Flask(__name__)
+# app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 
-# setup get routes
-@app.route('/get_readings', methods=['GET'])
-def get_readings():
-    return handle_get_readings()
+# # setup get routes
+# @app.route('/get_readings', methods=['GET'])
+# def get_readings():
+#     return handle_get_readings()
 
 
-@app.route("/", methods=['GET'])
-def index():
-    return flask.redirect(flask.url_for("get_readings"))
+# @app.route("/", methods=['GET'])
+# def index():
+#     return flask.redirect(flask.url_for("get_readings"))
 
 
-def run_app():
-    app.run(host='127.0.0.1', port=PORT, debug=True)
+# def run_app():
+#     app.run(host='127.0.0.1', port=PORT, debug=True)
 
-if __name__ == '__main__':
-    run_app()
+# if __name__ == '__main__':
+#     run_app()
