@@ -72,7 +72,7 @@
     display: grid;
     grid-auto-columns: minmax(0, 0.5fr);
     grid-auto-rows: auto;
-    grid-template-areas: "udot . subtitle subtitle . ." "temp temp pressure pressure rain rain" ". wind wind humidity humidity .";
+    grid-template-areas: ". . subtitle subtitle . ." "temp temp pressure pressure rain rain" ". wind wind humidity humidity .";
     grid-gap: 1em;
     /* width: 100%; */
     /* grid-gap: 3em; */

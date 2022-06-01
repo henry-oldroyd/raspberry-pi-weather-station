@@ -11,6 +11,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <script type="text/javascript" src="../static/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="../static/styles_main.css">
     <link rel="stylesheet" href="../static/styles_explore.css">
     <link rel="stylesheet" href="../static/styles_intro.css">
@@ -36,9 +38,11 @@
                 </div>
 
                 <div id="readout-box-temp" class="readout-box">
-                    <div class="readout-box-title">Temperature</div>
+                    <div class="readout-box-title readout-temp-title">Temperature</div>
+                    <span class="explanation-temp">Tooltip text</span>
                     <p class="readout-box-data">30</p>
                 </div>
+
                 <div id="readout-box-pressure" class="readout-box">
                     <div class="readout-box-title">Pressure</div>
                     <p class="readout-box-data">30</p>
