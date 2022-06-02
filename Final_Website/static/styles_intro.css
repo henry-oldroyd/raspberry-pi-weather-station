@@ -21,7 +21,7 @@
 
 #sand-logo {
     position: absolute;
-    width: 3.5em;
+    width: 3em;
     height: calc(0.1*inherit);
     /* top: 0.1em;
     left: 0.1em; */
@@ -151,8 +151,8 @@
 
 .status-wrapper {
     position: absolute;
-    right: 3em;
-    top: 8em;
+    right: 2.5em;
+    top: 6.5em;
     font-size: 1em;
     color: green;
     display: flex;
@@ -165,7 +165,7 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    animation: dot-animation 1s infinite;
+    animation: dot-animation 4s infinite;
     background-color: green;
     margin-right: 0.5em;
 }
