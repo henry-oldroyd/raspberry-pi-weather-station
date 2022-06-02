@@ -172,7 +172,7 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    animation: dot-animation 4s infinite;
+    animation: dot-animation 2s infinite;
     background-color: green;
     margin-right: 0.5em;
 }
