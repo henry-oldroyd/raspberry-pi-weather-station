@@ -78,6 +78,13 @@
     /* grid-gap: 3em; */
 }
 
+@media (max-width: 600px) {
+    .intro-readout-boxes {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 #intro-subtitle {
     grid-area: subtitle;
 }
@@ -168,18 +175,4 @@
     animation: dot-animation 1s infinite;
     background-color: green;
     margin-right: 0.5em;
-}
-
-
-/* scroll button  */
-
-.scroll-button {
-    position: absolute;
-    left: 50%;
-    top: 90vh;
-    opacity: 0.7;
-    background-color: grey;
-    width: 3em;
-    height: 3em;
-    transform: translate(-50%, -50%)
 }
