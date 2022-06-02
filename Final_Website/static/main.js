@@ -201,6 +201,8 @@ class Graph {
 
 function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //console.log(tempReadOutBox.currentData);
+    var date = new Date();
+    var hours = date.getHours();
 
     // if (time <= 6 && time >= 18) {
 
@@ -219,9 +221,34 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //         }
     //     }
     // }
+    let evening_hour = 20;
+    let morning_hour = 8;
+    let rain_threshold = 0;
+    let sunny_temp_threshold = 20;
+    let cold_temp_threshold = 10;
+    let img_file = "";
 
-    let img_file = "cold" // no .png  ${img_file}
-    fetch(`http://127.0.0.1:5000/images/cold`)
+    if (tempReadOutBox.currentData > sunny_temp_threshold) {
+        img_file = "sunny"
+    }
+
+    if (tempReadOutBox.currentData < cold_temp_threshold) {
+        img_file = "cold";
+    }
+
+    if (hours < morning_hour) {
+        img_file = "night"
+    }
+
+    if (hours > evening_hour) {
+        img_file = "night"
+    }
+
+    if (rainReadOutBox.currentData > rain_threshold) {
+        img_file = "rain"
+    }
+
+    fetch(`http://127.0.0.1:5000/images/${img_file}`)
         // .then(response => console.log(response))
         .then(img => {
             var r = document.getElementsByClassName('intro')[0];

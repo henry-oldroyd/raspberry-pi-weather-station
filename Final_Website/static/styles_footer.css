@@ -32,7 +32,7 @@ name {
 }
 
 .non-sticky {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     margin-left: var(--margin-left);
     margin-right: var(--margin-right);
     font-size: 1.3em;
