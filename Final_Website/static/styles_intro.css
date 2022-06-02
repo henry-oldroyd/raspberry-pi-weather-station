@@ -21,7 +21,7 @@
 
 #sand-logo {
     position: absolute;
-    width: 3.5em;
+    width: 3em;
     height: calc(0.1*inherit);
     /* top: 0.1em;
     left: 0.1em; */
@@ -76,6 +76,13 @@
     grid-gap: 1em;
     /* width: 100%; */
     /* grid-gap: 3em; */
+}
+
+@media (max-width: 600px) {
+    .intro-readout-boxes {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 #intro-subtitle {
@@ -151,8 +158,8 @@
 
 .status-wrapper {
     position: absolute;
-    right: 3em;
-    top: 8em;
+    right: 2.5em;
+    top: 6.5em;
     font-size: 1em;
     color: green;
     display: flex;
@@ -165,21 +172,7 @@
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    animation: dot-animation 1s infinite;
+    animation: dot-animation 2s infinite;
     background-color: green;
     margin-right: 0.5em;
-}
-
-
-/* scroll button  */
-
-.scroll-button {
-    position: absolute;
-    left: 50%;
-    top: 90vh;
-    opacity: 0.7;
-    background-color: grey;
-    width: 3em;
-    height: 3em;
-    transform: translate(-50%, -50%)
 }
