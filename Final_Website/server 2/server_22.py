@@ -29,13 +29,13 @@ logger = logging.getLogger(os.path.basename(__file__))
 
 
 # setup sql engine:
-# engine = sqla.create_engine("sqlite:///:memory:")
-basedir = os.path.abspath(os.path.dirname(__file__))
-engine = sqla.create_engine(
-    'sqlite:///' + os.path.join(basedir, 'database.db'),
-    echo=True,
-    future=True
-)
+engine = sqla.create_engine("sqlite:///:memory:")
+# basedir = os.path.abspath(os.path.dirname(__file__))
+# engine = sqla.create_engine(
+#     'sqlite:///' + os.path.join(basedir, 'database.db'),
+#     echo=True,
+#     future=True
+# )
 
 session = scoped_session(sessionmaker(bind=engine))
 Base = declarative_base()
@@ -46,7 +46,7 @@ class Reading_Uncalibrated(Base):
     """Table for uncalibrated readings"""
     __tablename__ = 'readings_uncalibrated'
     primary_key = sqla.Column(sqla.Integer, primary_key=True)
-    # timestamp = sqla.Column(sqla.DateTime())
+    timestamp = sqla.Column(sqla.DateTime())
     pressure = sqla.Column(sqla.Float())
     temperature = sqla.Column(sqla.Float())
     humidity = sqla.Column(sqla.Float())
@@ -54,8 +54,8 @@ class Reading_Uncalibrated(Base):
     wind_direction = sqla.Column(sqla.Float())
     precipitation = sqla.Column(sqla.Float())
 
-    def __init__(self, timestamp, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
-        # self.timestamp = timestamp
+    def __init__(self, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
+        self.timestamp = datetime.now()
         self.pressure = pressure
         self.temperature = temperature
         self.humidity = humidity
@@ -65,7 +65,8 @@ class Reading_Uncalibrated(Base):
 
 
     def __repr__(self):
-        return f"<Reading_Uncalibrated(id={self.id}, timestamp={self.timestamp})>"
+        # return f"<Reading_Uncalibrated(primary_key={self.primary_key}, timestamp={self.timestamp})>"
+        return f"<Reading_Uncalibrated(timestamp={self.timestamp})>"
 
 
 # create all tables
@@ -76,25 +77,18 @@ class Reading_Uncalibrated_Schema(SQLAlchemySchema):
     class Meta:
         model=Reading_Uncalibrated
         load_instance=True  # Optional: deserialize to model instances
-        # datetimeformat = '%Y-%m-%d %H:%M:%S'
+        datetimeformat = '%Y-%m-%d %H:%M:%S'
 
+    # if row was never committed then id can be none
     primary_key =auto_field()
-    # timestamp=auto_field()
-    pressure=auto_field()
-    temperature=auto_field()
-    humidity=auto_field()
-    wind_speed=auto_field()
-    wind_direction=auto_field()
-    precipitation=auto_field()
-    
-    # @pre_load
-    # def add_timestamp(self, data, **kwargs):
-    #     print("IN PRE_LOAD")
-    #     # print(type(data))
-    #     # print(data)
-    #     # data['timestamp'] = datetime.now()
-    #     # print(data)
-    #     return data
+    # lack of timestamp is on purpose
+    pressure=auto_field(required=True)
+    temperature = auto_field(required=True)
+    humidity = auto_field(required=True)
+    wind_speed = auto_field(required=True)
+    wind_direction = auto_field(required=True)
+    precipitation = auto_field(required=True)
+
 
 # schema objs used in serialization
 reading_uncalibrated_schema = Reading_Uncalibrated_Schema()
