@@ -47,14 +47,6 @@ function load_page(jsondata) {
         timeStampData.push(dataset["time_stamp"])
     });
 
-    console.log(tempData)
-    console.log(pressureData)
-    console.log(windSpeedData)
-    console.log(windDirectionData)
-    console.log(dayTypeData)
-    console.log(humidityData)
-    console.log(rainData)
-
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "readout-box-temp", tempData);
     let pressureReadOutBox = new Dataset("Pressure", "mb", "readout-box-pressure", pressureData);
@@ -62,20 +54,8 @@ function load_page(jsondata) {
     let rainReadOutBox = new Dataset("Rain", "mm", "readout-box-rain", rainData);
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData);
 
-    // // smaller graphs on page 2
-    // let tempGraph = new Graph('Temparure', 'graph-temp', tempData, "°C", boldRed, faintRed)
-    // let pressureGraph = new Graph('Pressure', 'graph-pressure', pressureData, "Pa", boldOrange, faintOrange)
-    // let humidityGraph = new Graph('Humidity', 'graph-humidity', humidityData, "%", boldPurple, faintPurple)
-    // let rainGraph = new Graph('Precipitation', 'graph-precip', rainData, "mm", boldBlue, faintBlue)
-    // let windSpeedGraph = new Graph('Wind Speed', 'graph-wind-speed', windSpeedData, "mph", boldGreen, faintGreen)
-
     // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, timeStampData, "°C", boldBlack, faintBlack, true)
-
-    // dropdown box on page 3
-    // let dropdown = document.getElementById("dropdown");
-    // dropdown.addEventListener("input", (dropdown) => {dropdownFunctionality(dropdown, bigGraph);})
-
 
 
 
@@ -89,11 +69,12 @@ function load_page(jsondata) {
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
     page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
-    updateBGimg(tempReadOutBox, rainReadOutBox);
-    sandringhamLogo();
-    selfieImg();
-    piImg();
-    lastUpdatedAt(timeStampData[timeStampData.length - 1]);
+    updateBGimg(tempReadOutBox, rainReadOutBox); // adds background img
+    sandringhamLogo(); // adds sandinrgham logo img
+    selfieImg(); // adds selfie img 
+    piImg(); // adds the pi img 
+    lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
+
 }
 
 class Dataset {
@@ -125,23 +106,23 @@ class Dataset {
 
 class Graph {
     constructor(title, id, data, timestamps, unit, rgbaFront, rgbaBack, slider = false) {
-        this.title = title
-        this.backgroundColour = rgbaFront
-        this.colour = rgbaFront
-        this.borderColour = rgbaBack
-        this.ctx = document.getElementById(id).getContext('2d')
-        this.data = data;
-        this.dataBeingUsed = this.data
-        this.timeStamps = timestamps
-        this.unit = unit;
-        this.xlabels = this.createXlabels(timestamps)
-        this.initialiseGraph(unit)
-        if (slider == true) {
-            this.initialiseSlider();
+            this.title = title
+            this.backgroundColour = rgbaFront
+            this.colour = rgbaFront
+            this.borderColour = rgbaBack
+            this.ctx = document.getElementById(id).getContext('2d')
+            this.data = data;
+            this.dataBeingUsed = this.data
+            this.timeStamps = timestamps
+            this.unit = unit;
+            this.xlabels = this.createXlabels(timestamps)
+            this.initialiseGraph(unit)
+            if (slider == true) {
+                this.initialiseSlider();
+            }
+
         }
-
-    }
-
+        // creates slider below graph 
     initialiseSlider() {
         this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
         this.slider = this.sliders[0] // one element array
@@ -151,6 +132,7 @@ class Graph {
         this.editDisplayData();
     }
 
+    //  creates the graph 
     initialiseGraph(unit) {
         this.chart = new Chart(this.ctx, {
                 type: 'line',
@@ -187,6 +169,7 @@ class Graph {
         );
     }
 
+    // adds the dates to the x axis of the graph 
     createXlabels() {
         let xlabels = [] // local variable
         for (let dayCounter = 1; dayCounter <= this.dataBeingUsed.length; dayCounter++) {
@@ -196,6 +179,7 @@ class Graph {
         return xlabels
     }
 
+    // uses the slider to determine how much of the data should be shown 
     editDisplayData() {
         let val = this.slider.value;
 
@@ -245,6 +229,7 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
         })
 }
 
+// returns sandringham logo img and sets to div in top left 
 function sandringhamLogo() {
     fetch("http://127.0.0.1:5000/images/logo")
         .then(img => {
@@ -253,6 +238,7 @@ function sandringhamLogo() {
         })
 }
 
+// returns selfie img and sets to about section 
 function selfieImg() {
     fetch("http://127.0.0.1:5000/images/selfie")
         .then(img => {
@@ -269,7 +255,7 @@ function piImg() {
         })
 }
 
-
+// changes the graph data upon click of the dropdown 
 function dropdownFunctionality(value, bigGraph, jsondata) {
     if (value == "Temperature") {
         unit = "°C"
@@ -312,6 +298,7 @@ function dropdownFunctionality(value, bigGraph, jsondata) {
     bigGraph.chart.update()
 }
 
+// checks which button is clicked, and toggles the required classes 
 function page3Buttons(buttons, bigGraph, jsondata) {
 
     buttons.forEach((button) => {
@@ -333,7 +320,20 @@ function page3Buttons(buttons, bigGraph, jsondata) {
 
 }
 
+// edits the "last updated at" on the first page 
 function lastUpdatedAt(time) {
     elm = document.getElementsByClassName('last-updated')[0];
     elm.innerText = `Last Updated: ${time}`
+}
+
+// checks if an element is in the viewport- currnetly not used, but i want the page to scroll in 
+// so will be used soon, fingers crossed, returns true or false 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
 }
