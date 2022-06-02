@@ -11,8 +11,8 @@ footer {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    background-color: rgb(56, 48, 39);
-    justify-content: space-between;
+    background-color: rgb(49, 47, 44);
+    justify-content: space-around;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 1em;
@@ -23,7 +23,7 @@ footer {
 name {
     font-weight: 200;
     font-style: italic;
-    color: rgb(124, 108, 108);
+    color: rgb(214, 205, 205);
 }
 
 .sandringham-link {
