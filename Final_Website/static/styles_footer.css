@@ -1,11 +1,17 @@
+footer {
+    background-color: rgb(56, 48, 39);
+    border: 1px solid rgb(56, 48, 39);
+    /* wtf is this border trick, i will never understand */
+}
+
 .sticky {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
-    background-color: rgb(56, 48, 39);
     display: flex;
     flex-direction: row;
+    background-color: rgb(56, 48, 39);
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
@@ -23,4 +29,26 @@ name {
 .sandringham-link {
     color: rgb(53, 44, 186);
     font-style: none;
+}
+
+.non-sticky {
+    margin-bottom: 5em;
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+    font-size: 1.3em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+li {
+    padding-right: 2em;
 }
