@@ -30,8 +30,8 @@ html {
     --header-text-colour: rgb(169, 26, 26);
     --readout-box-bg-colour: rgba(0, 0, 0, 0.25);
     --banner-height: 3em;
-    --white-text-color: rgba(255,255,255,1);
-    --graph-bg-colour: rgba(255,255,255,1);
+    --white-text-color: rgba(255, 255, 255, 1);
+    --graph-bg-colour: rgba(255, 255, 255, 1);
     --explore-bg-colour: rgb(226, 226, 226);
     --banner-margin-left: 3em;
     --banner-margin-right: 3em;
@@ -66,4 +66,11 @@ html {
 .animate-in {
     animation: wipe-enter 1s 1;
     animation-fill-mode: forwards;
+}
+
+@media (max-width: 812px) {
+    .banner {
+        width: 75%;
+        height: 2em;
+    }
 }

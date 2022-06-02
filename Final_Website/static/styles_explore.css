@@ -8,6 +8,12 @@
     height: 110vh;
 }
 
+@media (max-width: 750px) {
+    .explore {
+        height: auto;
+    }
+}
+
 
 /* wrapper  */
 
@@ -37,6 +43,12 @@
     margin-bottom: 0;
 }
 
+@media (max-width: 1095px) {
+    .buttons-heading {
+        font-size: 1.5em;
+    }
+}
+
 .drop-elements-big-graph {
     display: flex;
     flex-direction: column;
@@ -50,6 +62,12 @@
     height: 100%;
     /* padding-top: 3em; */
     margin-right: var(--margin-right);
+}
+
+@media (max-width: 750px) {
+    .button-container-big-graph {
+        margin-right: 0;
+    }
 }
 
 .drop-button-big-graph {
@@ -117,7 +135,7 @@ input[type="range"] {
     margin-top: 0.5em;
     -webkit-appearance: none;
     margin-right: 15px;
-    width: 50em;
+    width: 25vw;
     height: 7px;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
@@ -167,7 +185,13 @@ input[type=range]::-webkit-slider-runnable-track {
 #graph-graph-big {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
-    transform: scaleY(0.9)
+    transform: scaleY(0.9);
+}
+
+@media (max-width: 750px) {
+    #graph-graph-big {
+        transform: scaleY(1)
+    }
 }
 
 
@@ -176,4 +200,16 @@ input[type=range]::-webkit-slider-runnable-track {
 .download-csv {
     float: right;
     margin-right: calc(var(--margin-right) * 3)
+}
+
+@media (max-width: 580px) {
+    .download-csv {
+        position: absolute;
+        float: none;
+        margin-right: 0;
+        justify-self: center;
+        left: 50vw;
+        transform: translateX(-50%);
+        margin-top: 2em;
+    }
 }
