@@ -27,9 +27,9 @@ html {
     font-family: 'Passion One', cursive;
     --text-fs: 1.5em;
     --header-bg-colour: #342424c5;
-    --header-text-colour: rgb(169, 26, 26);
+    --header-text-colour: rgb(224, 19, 19);
     --readout-box-bg-colour: rgba(0, 0, 0, 0.25);
-    --banner-height: 3em;
+    --banner-height: 2em;
     --white-text-color: rgba(255, 255, 255, 1);
     --graph-bg-colour: rgba(255, 255, 255, 1);
     --explore-bg-colour: rgb(226, 226, 226);
@@ -37,8 +37,8 @@ html {
     --banner-margin-right: 3em;
     --banner-font-size: 2em;
     --about-bg-colour: rgb(158, 152, 152);
-    --banner-top-gap: 2em;
-    --banner-bottom-gap: 2em;
+    --banner-top-gap: 0.5em;
+    --banner-bottom-gap: 0.5em;
     --margin-left: 5em;
     --margin-right: 5em;
     --intro-banner-height: 3em;
@@ -66,6 +66,10 @@ html {
 .animate-in {
     animation: wipe-enter 1s 1;
     animation-fill-mode: forwards;
+}
+
+.section-title{
+    margin: 0;
 }
 
 @media (max-width: 812px) {

@@ -2,7 +2,7 @@
     background-color: var(--about-bg-colour);
     border: 1px solid var(--about-bg-colour);
     /* same trick as before, zero clue why it works lol  */
-    height: 110vh;
+    height: 100vh;
 }
 
 @media (max-width: 750px) {
@@ -23,6 +23,7 @@
 #about-banner {
     margin-top: var(--banner-top-gap);
     margin-bottom: var(--banner-bottom-gap);
+    height: var(--banner-height);
 }
 
 

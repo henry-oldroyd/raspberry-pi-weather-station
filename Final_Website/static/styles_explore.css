@@ -5,7 +5,7 @@
     padding-bottom: 4em;
     border: 1px solid var(--explore-bg-colour);
     /* idk why but this changes the color of background */
-    height: 110vh;
+    height: 100vh;
 }
 
 @media (max-width: 750px) {
@@ -27,6 +27,7 @@
 #explore-banner {
     margin-top: var(--banner-top-gap);
     margin-bottom: var(--banner-bottom-gap);
+    height: var(--banner-height);
 }
 
 
@@ -222,7 +223,7 @@ input::-moz-range-thumb {
 }
 
 input::-moz-range-progress {
-    background: #664AFF; //this progress background is only shown on Firefox
+    background: #664AFF; /*this progress background is only shown on Firefox8*/
 }
 
 
@@ -231,7 +232,7 @@ input::-moz-range-progress {
 #graph-graph-big {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
-    transform: scaleY(0.9);
+    transform: scaleY(0.7), translate(0, -2em);
 }
 
 @media (max-width: 750px) {
@@ -245,7 +246,8 @@ input::-moz-range-progress {
 
 .download-csv {
     float: right;
-    margin-right: calc(var(--margin-right) * 3)
+    margin-right: calc(var(--margin-right)*3);
+    transform: translate(0, -2em);
 }
 
 @media (max-width: 580px) {
