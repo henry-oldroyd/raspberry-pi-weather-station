@@ -5,7 +5,7 @@
     padding-bottom: 4em;
     border: 1px solid var(--explore-bg-colour);
     /* idk why but this changes the color of background */
-    height: 100vh;
+    height: 90vh;
 }
 
 @media (max-width: 750px) {
@@ -41,7 +41,7 @@
     justify-content: center;
     align-self: center;
     color: rgb(59, 56, 56);
-    margin-bottom: 0;
+    margin-bottom: 0.75em;
 }
 
 @media (max-width: 1095px) {
@@ -119,6 +119,10 @@
 .slider-big-graph {
     width: 10em;
     color: blue;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 0;
 }
 
 .slider-title {
@@ -168,6 +172,8 @@ input[type=range]::-webkit-slider-runnable-track {
         grid-template-areas: "graph dropdown" "slider dropdown";
         grid-auto-columns: 75% 25%;
         grid-auto-columns: minmax(0, fr);
+        padding: 1.5em 10% 0 10%;
+        margin: auto;
     }
     .slider-div-graph-big {
         grid-area: slider;
@@ -232,7 +238,6 @@ input::-moz-range-progress {
 #graph-graph-big {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
-    transform: scaleY(0.7), translate(0, -2em);
 }
 
 @media (max-width: 750px) {
