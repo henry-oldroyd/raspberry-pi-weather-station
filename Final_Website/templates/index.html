@@ -11,6 +11,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <script type="text/javascript" src="../static/main.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/styles_main.css">
     <link rel="stylesheet" href="../static/styles_explore.css">
     <link rel="stylesheet" href="../static/styles_intro.css">
@@ -67,14 +69,14 @@
 
     </section>
 
-    <section class="explore">
+    <section class="module explore">
         <div class="wrapper-explore">
             <div id="explore-banner" class="banner">
                 <h1 class="section-title">Explore</h1>
             </div>
             <div class="container-detailed-graph-section">
                 <div class="container-graph-big">
-                    <canvas class="module" id="graph-graph-big"></canvas>
+                    <canvas id="graph-graph-big"></canvas>
                 </div>
                 <div class="slider-div-big-graph">
                     <p class="slider-title">Drag to adjust time scale</p>

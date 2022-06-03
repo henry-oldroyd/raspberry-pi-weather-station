@@ -367,9 +367,10 @@ function isInViewport(element) {
 
 
 $(window).scroll(function() {
-
+    console.log('scrolling')
     if ($('.module').visible(true)) {
-        $('.module').classList.add('come-in')
+        $('.module').classList.add('come-in');
+        console.log('visible')
     };
 
 });
