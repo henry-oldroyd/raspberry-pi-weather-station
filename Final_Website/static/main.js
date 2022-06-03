@@ -364,3 +364,12 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
+
+$(window).scroll(function() {
+
+    if ($('.module').visible(true)) {
+        $('.module').classList.add('come-in')
+    };
+
+});
