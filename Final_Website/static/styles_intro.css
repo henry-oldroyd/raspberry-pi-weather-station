@@ -10,7 +10,12 @@
         height: auto;
     } */
 }
-
+@media (min-width: 600px) {
+    .intro {
+        margin: 0;
+        height: 100vh;
+    }
+}
 
 /* top banner */
 
@@ -64,6 +69,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    vertical-align: middle;
 }
 
 #intro-subtitle {
@@ -202,9 +209,9 @@
 .last-updated {
     color: white;
     margin-left: 2em;
-    position: relative;
+    position: absolute;
     font-size: 1em;
-    left: 1em;
+    bottom: 3em;
 }
 
 @media (max-width:788px) {
