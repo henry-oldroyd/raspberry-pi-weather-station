@@ -2,16 +2,10 @@
 
 .explore {
     background-color: var(--explore-bg-colour);
-    padding-bottom: 4em;
+    padding-bottom: 0em;
     border: 1px solid var(--explore-bg-colour);
     /* idk why but this changes the color of background */
-    height: 90vh;
-}
-
-@media (max-width: 750px) {
-    .explore {
-        height: auto;
-    }
+    height: 100vh;
 }
 
 
@@ -172,7 +166,7 @@ input[type=range]::-webkit-slider-runnable-track {
         grid-template-areas: "graph dropdown" "slider dropdown";
         grid-auto-columns: 75% 25%;
         grid-auto-columns: minmax(0, fr);
-        padding: 1.5em 10% 0 10%;
+        /* padding: 1.5em 10% 0 10%; */
         margin: auto;
     }
     .slider-div-graph-big {
@@ -229,7 +223,8 @@ input::-moz-range-thumb {
 }
 
 input::-moz-range-progress {
-    background: #664AFF; /*this progress background is only shown on Firefox8*/
+    background: #664AFF;
+    /*this progress background is only shown on Firefox8*/
 }
 
 

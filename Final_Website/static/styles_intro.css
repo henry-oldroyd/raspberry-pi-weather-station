@@ -6,9 +6,9 @@
 }
 
 @media (max-width: 750px) {
-    .intro {
+    /* .intro {
         height: auto;
-    }
+    } */
 }
 
 
@@ -31,7 +31,8 @@
     /* height: calc(0.1*inherit); */
     /* top: 0.1em;
     left: 0.1em; */
-    top: auto; /* Centres the logo vertically in the banner */
+    top: auto;
+    /* Centres the logo vertically in the banner */
     left: 0.1em;
 }
 
@@ -47,7 +48,6 @@
 
 .intro-title {
     font-size: 3em;
-    
 }
 
 @media (max-width: 750px) {
@@ -226,7 +226,6 @@
     justify-content: space-evenly;
     align-items: center;
     border-radius: 10%;
-
     padding: 0 10px 0 10px;
     background-color: rgba(0, 0, 0, 0.3);
 }
