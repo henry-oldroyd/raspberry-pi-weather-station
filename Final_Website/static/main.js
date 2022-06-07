@@ -352,25 +352,3 @@ function lastUpdatedAt(time) {
     elm = document.getElementsByClassName('last-updated')[0];
     elm.innerText = `Last Updated: ${time}`
 }
-
-// checks if an element is in the viewport- currnetly not used, but i want the page to scroll in 
-// so will be used soon, fingers crossed, returns true or false 
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-
-$(window).scroll(function() {
-    console.log('scrolling')
-    if ($('.module').visible(true)) {
-        $('.module').classList.add('come-in');
-        console.log('visible')
-    };
-
-});
