@@ -14,18 +14,14 @@ async function get_all_json_data() {
 window.addEventListener('load', function() {
     get_all_json_data()
         .then(data => load_page(data))
+
+    $(window).resize(resizeFunc());
 });
 
 
 
 
 function load_page(jsondata) {
-
-    if ($(window).width() < 650) {
-        alert('Please view on a wider screen!');
-    }
-
-
 
     let tempData = []
     let rainData = []
@@ -77,6 +73,7 @@ function load_page(jsondata) {
     lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
 
 }
+
 
 class Dataset {
     constructor(title, unit, divName, data) {
@@ -367,4 +364,10 @@ function connectingButton() {
         statusDot.style.animation = "dot-animation 2s infinite";
     }, 3000)
 
+}
+
+function resizeFunc() {
+    if ($(window).width() < 650) {
+        alert('Please view on a wider screen!');
+    }
 }
