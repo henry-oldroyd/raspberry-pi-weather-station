@@ -17,9 +17,23 @@ buttons padding on explore page
 wtf happens with footer 
 slider */
 
-@media (max-width: 400px) {
-    body {
-        display: none;
+.error {
+    position: absolute;
+    visibility: hidden;
+}
+
+@media (max-width: 650px) {
+    * {
+        visibility: hidden;
+    }
+    .error {
+        visibility: visible;
+        color: red;
+        font-size: auto;
+        width: 75vw;
+        text-align: center;
+        justify-self: center;
+        color: black;
     }
 }
 

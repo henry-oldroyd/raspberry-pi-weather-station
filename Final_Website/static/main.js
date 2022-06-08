@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
 
 function load_page(jsondata) {
 
-    if ($(window).width() < 400) {
+    if ($(window).width() < 650) {
         alert('Please view on a wider screen!');
     }
 
