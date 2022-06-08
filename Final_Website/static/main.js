@@ -27,6 +27,10 @@ window.addEventListener('load', function() {
 
 function load_page(jsondata) {
 
+    if ($(window).width() < 400) {
+        alert('Please view on a wider screen!');
+    }
+
     let tempData = []
     let rainData = []
     let pressureData = []

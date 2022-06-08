@@ -17,6 +17,12 @@ buttons padding on explore page
 wtf happens with footer 
 slider */
 
+@media (max-width: 400px) {
+    body {
+        display: none;
+    }
+}
+
 body,
 html {
     margin: 0;
@@ -68,7 +74,7 @@ html {
     animation-fill-mode: forwards;
 }
 
-.section-title{
+.section-title {
     margin: 0;
 }
 
