@@ -10,6 +10,8 @@ let boldGreen = "rgba(0,255,0,1)";
 let faintGreen = "rgba(0,255,0,0.2)";
 let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
+let connectingOrange = "rgb(254, 141, 2)";
+let connectedGreen = "rgb(4, 167, 40)"
 
 
 async function get_all_json_data() {
@@ -30,6 +32,8 @@ function load_page(jsondata) {
     if ($(window).width() < 650) {
         alert('Please view on a wider screen!');
     }
+
+
 
     let tempData = []
     let rainData = []
@@ -73,6 +77,7 @@ function load_page(jsondata) {
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
     page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
+    connectingButton()
     updateBGimg(tempReadOutBox, rainReadOutBox); // adds background img
     sandringhamLogo(); // adds sandinrgham logo img
     selfieImg(); // adds selfie img 
@@ -355,4 +360,19 @@ function page3Buttons(buttons, bigGraph, jsondata) {
 function lastUpdatedAt(time) {
     elm = document.getElementsByClassName('last-updated')[0];
     elm.innerText = `Last Updated: ${time}`
+}
+
+function connectingButton() {
+    statusText = document.getElementsByClassName("status-text")[0]
+    statusDot = document.getElementsByClassName("status-dot")[0]
+    statusText.style.color = connectingOrange;
+    statusText.innerText = "Status: Connecting...";
+    statusDot.style.animation = "connecting-dot 2s infinite";
+
+    setTimeout(function() {
+        statusText.style.color = connectedGreen;
+        statusText.innerText = "Status: Connected";
+        statusDot.style.animation = "dot-animation 2s infinite";
+    }, 3000)
+
 }

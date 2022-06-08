@@ -1,14 +1,4 @@
-@keyframes border {
-    0% {
-        box-shadow: 0px -8px 9px rgba(52, 49, 49, 0.75);
-    }
-    50% {
-        box-shadow: none;
-    }
-    100% {
-        box-shadow: 0px -8px 9px rgba(52, 49, 49, 0.75);
-    }
-}
+/* if editing colours, please change JS file too  */
 
 @keyframes dot-animation {
     0% {
@@ -34,30 +24,6 @@
     }
 }
 
-@keyframes button-hover-2 {
-    0% {
-        background-color: rgba(169, 158, 158, 0.1);
-    }
-    50% {
-        /* background-color: linear-gradient(to right, rgba(169, 158, 158, 0.9), rgba(169, 158, 158, 0.1)); */
-        background-color: red;
-    }
-    100% {
-        background: linear-gradient(to right, red 50%, blue 50%);
-        background-size: 200% 100%;
-        background-position: left bottom;
-    }
-}
-
-@keyframes button-hover-3 {
-    from {
-        background-color: black;
-    }
-    to {
-        background-color: red;
-    }
-}
-
 @keyframes wipe-enter {
     0% {
         transform: scale(0, .025);
@@ -72,8 +38,20 @@
     animation: come-in 0.8s ease forwards;
 }
 
-@keyframes come-in {
-    to {
-        transform: translateY(0);
+
+/* if editing colours, please change JS file too  */
+
+@keyframes connecting-dot {
+    0% {
+        box-sizing: 0 0 0 15px rgb(254, 141, 2), 0 0 0 10px none, 0 0 0 5px rgb(254, 141, 2);
+        background-color: rgb(254, 141, 2);
+    }
+    50% {
+        box-shadow: 0 0 0 3px rgb(173, 103, 24);
+        background-color: rgb(254, 141, 2);
+    }
+    100% {
+        box-sizing: 0 0 0 15px rgb(254, 141, 2), 0 0 0 10px none, 0 0 0 5px rgb(254, 141, 2);
+        background-color: rgb(254, 141, 2);
     }
 }
