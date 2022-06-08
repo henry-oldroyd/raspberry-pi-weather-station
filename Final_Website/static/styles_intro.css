@@ -10,12 +10,14 @@
         height: auto;
     } */
 }
+
 @media (min-width: 600px) {
     .intro {
         margin: 0;
         height: 100vh;
     }
 }
+
 
 /* top banner */
 
@@ -66,11 +68,20 @@
 
 .wrapper {
     -webkit-appearance: none;
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50vw;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    vertical-align: middle;
+}
+
+@media (max-width: 560px) {
+    .wrapper {
+        top: 60vh;
+    }
 }
 
 #intro-subtitle {
@@ -99,7 +110,7 @@
     margin-top: 2.5em;
     /* height: 100%; */
     height: 70%;
-    width: 50%;
+    width: 100%;
     display: grid;
     grid-auto-columns: minmax(0, 0.5fr);
     grid-auto-rows: auto;

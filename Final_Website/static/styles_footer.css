@@ -44,6 +44,12 @@ name {
     flex-direction: column;
 }
 
+@media (max-width: 500px) {
+    .non-sticky {
+        font-size: 1em;
+    }
+}
+
 .links {
     display: flex;
     flex-direction: row;
