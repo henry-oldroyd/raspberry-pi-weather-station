@@ -368,6 +368,9 @@ function connectingButton() {
 
 function resizeFunc() {
     if ($(window).width() < 650) {
-        alert('Please view on a wider screen!');
+        alert('Please view on a bigger screen!');
+    }
+    if ($(window).height() < 535) {
+        alert("please view on a bigger screen!")
     }
 }

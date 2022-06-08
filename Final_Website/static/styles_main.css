@@ -37,6 +37,21 @@ slider */
     }
 }
 
+@media (max-height: 535px) {
+    * {
+        visibility: hidden;
+    }
+    .error {
+        visibility: visible;
+        color: red;
+        font-size: auto;
+        width: 75vw;
+        text-align: center;
+        justify-self: center;
+        color: black;
+    }
+}
+
 body,
 html {
     margin: 0;
