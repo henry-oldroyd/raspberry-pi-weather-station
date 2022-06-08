@@ -1,17 +1,9 @@
-let boldRed = "rgba(255,0,0,1)";
-let faintRed = "rgba(255,0,0,0.2)";
-let boldOrange = "rgba(255,196,0,1)";
-let faintOrange = "rgba(255,196,0,0.4)";
-let boldPurple = "rgba(156,0,130,1)";
-let faintPurple = "rgba(156,0,130,0.2)";
-let boldBlue = "rgba(0,0,255,1)";
-let faintBlue = "rgba(0,0,255,0.2)";
-let boldGreen = "rgba(0,255,0,1)";
-let faintGreen = "rgba(0,255,0,0.2)";
 let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
+let timeBeforeArchive = 60 // mins 
+
 
 
 async function get_all_json_data() {
