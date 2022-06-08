@@ -3,7 +3,7 @@ let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
 let disconnectedRed = "rgb(205, 25, 50)"
-let timeBeforeInactive = 2 // mins 
+let timeBeforeInactive = 110 // mins 
 
 
 
@@ -90,7 +90,7 @@ class Dataset {
 
 
     editReadOut() {
-        this.currentData = this.data[0]; // shows the first element in readout box 
+        this.currentData = this.data[this.data.length - 1]; // shows the first element in readout box 
         this.div = document.getElementById(this.divName);
         this.child = this.div.getElementsByTagName("p");
 
@@ -390,11 +390,16 @@ function isConnected(recentTimeStamp) {
     let currentMinutes = today.getMinutes() // 0 - 60
     let totalMinsCurrentTime = (currentHours * 60) + currentMinutes;
 
+
     let timeStampTime = recentTimeStamp.split(/\s+/)[1] // splits by a whitespace, in form hh:mm:ss
     let timeStampHours = timeStampTime.split(':') //[22, 30, 00], hh, mm, ss
-    let totalMinsTimeStampTime = (timeStampHours[0] * 60) + timeStampHours[1]
+    let totalMinsTimeStamp = (parseInt(timeStampHours[0] * 60) + parseInt(timeStampHours[1]))
 
-    if (Math.abs(totalMinsCurrentTime - totalMinsTimeStampTime) > timeBeforeInactive) {
+
+    let minuteDifference = Math.abs(totalMinsCurrentTime - totalMinsTimeStamp)
+
+
+    if (minuteDifference > timeBeforeInactive) {
         return false
     } else {
         return true
