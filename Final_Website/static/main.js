@@ -2,7 +2,8 @@ let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
-let timeBeforeArchive = 60 // mins 
+let disconnectedRed = "rgb(205, 25, 50)"
+let timeBeforeInactive = 2 // mins 
 
 
 
@@ -43,6 +44,8 @@ function load_page(jsondata) {
         timeStampData.push(dataset["time_stamp"])
     });
 
+
+
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "readout-box-temp", tempData);
     let pressureReadOutBox = new Dataset("Pressure", "mb", "readout-box-pressure", pressureData);
@@ -65,7 +68,8 @@ function load_page(jsondata) {
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
     page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
-    connectingButton()
+    boolConnected = isConnected(timeStampData[timeStampData.length - 1])
+    connectingButton(boolConnected)
     updateBGimg(tempReadOutBox, rainReadOutBox); // adds background img
     sandringhamLogo(); // adds sandinrgham logo img
     selfieImg(); // adds selfie img 
@@ -351,20 +355,52 @@ function lastUpdatedAt(time) {
     elm.innerText = `Last Updated: ${time}`
 }
 
-function connectingButton() {
+function connectingButton(boolConnected) {
     statusText = document.getElementsByClassName("status-text")[0]
     statusDot = document.getElementsByClassName("status-dot")[0]
     statusText.style.color = connectingOrange;
     statusText.innerText = "Status: Connecting...";
     statusDot.style.animation = "connecting-dot 2s infinite";
 
-    setTimeout(function() {
-        statusText.style.color = connectedGreen;
-        statusText.innerText = "Status: Connected";
-        statusDot.style.animation = "dot-animation 2s infinite";
-    }, 3000)
+    // set to green 
+    if (boolConnected == true) {
+        setTimeout(function() {
+            statusText.style.color = connectedGreen;
+            statusText.innerText = "Status: Connected";
+            statusDot.style.animation = "dot-animation 2s infinite";
+        }, 3000)
+    } else {
+        setTimeout(function() {
+            statusText.style.color = disconnectedRed;
+            statusText.innerText = "Status: Offline";
+            statusDot.style.animation = "disconnected 2s infinite";
+        }, 3000)
+    }
+
+    // set to red
+
 
 }
+
+function isConnected(recentTimeStamp) {
+    console.log(recentTimeStamp);
+    // currentTimeStamp = yyyy-mm-dd hh:mm:ss eg
+    let today = new Date();
+    let currentHours = today.getHours(); // 0 - 24 
+    let currentMinutes = today.getMinutes() // 0 - 60
+    let totalMinsCurrentTime = (currentHours * 60) + currentMinutes;
+
+    let timeStampTime = recentTimeStamp.split(/\s+/)[1] // splits by a whitespace, in form hh:mm:ss
+    let timeStampHours = timeStampTime.split(':') //[22, 30, 00], hh, mm, ss
+    let totalMinsTimeStampTime = (timeStampHours[0] * 60) + timeStampHours[1]
+
+    if (Math.abs(totalMinsCurrentTime - totalMinsTimeStampTime) > timeBeforeInactive) {
+        return false
+    } else {
+        return true
+    }
+}
+
 
 function resizeFunc() {
     if ($(window).width() < 650) {

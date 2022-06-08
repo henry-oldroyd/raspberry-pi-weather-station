@@ -55,3 +55,18 @@
         background-color: rgb(254, 141, 2);
     }
 }
+
+@keyframes disconnected {
+    0% {
+        box-sizing: 0 0 0 15px rgb(213, 27, 27), 0 0 0 10px none, 0 0 0 5px rgb(213, 27, 27);
+        background-color: rgb(213, 27, 27);
+    }
+    50% {
+        box-shadow: 0 0 0 3px rgb(159, 29, 29);
+        background-color: rgb(213, 27, 27);
+    }
+    100% {
+        box-sizing: 0 0 0 15px rgb(213, 27, 27), 0 0 0 10px none, 0 0 0 5px rgb(213, 27, 27);
+        background-color: rgb(213, 27, 27);
+    }
+}
