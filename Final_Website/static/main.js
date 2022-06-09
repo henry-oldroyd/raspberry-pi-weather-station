@@ -129,7 +129,10 @@ class Graph {
         this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
         this.slider = this.sliders[0] // one element array
         this.slider.max = this.data.length;
-        this.slider.value = this.slider.max;
+        if (this.data.length >= 5) {
+            this.slider.value = 5;
+        };
+
         this.slider.addEventListener("input", () => { this.editDisplayData() });
         this.editDisplayData();
     }
@@ -173,6 +176,7 @@ class Graph {
 
     // adds the dates to the x axis of the graph 
     createXlabels() {
+        // neeeds to be changed to show the right dates 
         let xlabels = [] // local variable
         for (let dayCounter = 1; dayCounter <= this.dataBeingUsed.length; dayCounter++) {
             xlabels.push(this.timeStamps[dayCounter - 1])
@@ -185,8 +189,8 @@ class Graph {
     editDisplayData() {
         let val = this.slider.value;
 
-
-        this.dataBeingUsed = this.data.slice(0, val); // edits which part of data set is shwon
+        // array of 10, if selected 1, we want from 9- 10 
+        this.dataBeingUsed = this.data.slice(this.data.length - val, this.data.length); // edits which part of data set is shwon
         this.xlabels = this.createXlabels()
 
 
@@ -202,7 +206,6 @@ class Graph {
 // Update the background image to the current weather
 
 function updateBGimg(tempReadOutBox, rainReadOutBox) {
-    //console.log(tempReadOutBox.currentData);
     var date = new Date();
     var hours = date.getHours();
 
@@ -223,11 +226,11 @@ function updateBGimg(tempReadOutBox, rainReadOutBox) {
     //         }
     //     }
     // }
-    let evening_hour = 20;
-    let morning_hour = 8;
-    let rain_threshold = 0;
-    let sunny_temp_threshold = 20;
-    let cold_temp_threshold = 10;
+    let evening_hour = 20; // 8pm
+    let morning_hour = 8; // 8am
+    let rain_threshold = 0.5; //0.5mm
+    let sunny_temp_threshold = 20; // degrees
+    let cold_temp_threshold = 10; // degrees
     let img_file = "";
 
     if (tempReadOutBox.currentData > sunny_temp_threshold) {
