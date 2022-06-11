@@ -61,7 +61,7 @@ function load_page(jsondata) {
 
 
 
-    // buttons on page 3
+    // buttons on page 2
     let tempButton = document.getElementById("temp-button-big-graph");
     let pressureButton = document.getElementById("pressure-button-big-graph");
     let rainButton = document.getElementById("rain-button-big-graph");
@@ -391,30 +391,10 @@ function isConnected(recentTimeStamp) {
 }
 
 function resizeFunc() {
-    // if (resized == false) {
-    //     if ($(window).width() < 650) {
-    //         alert('Please view on a bigger screen!');
-    //         resized = true;
-    //     }
-    //     if ($(window).height() < 535) {
-    //         alert("please view on a bigger screen!")
-    //         resized = true;
-    //     }
-    // } else {
-    //     if ($(window).width() > 650) {
-    //         resized = false
-    //         alert.close()
-    //     }
-    //     if ($(window).height() > 535) {
-    //         resized = false
-    //     }
-    // }
-
     let all = document.getElementsByTagName("*");
     all = document.querySelectorAll("*")
     let error = document.getElementsByClassName("error")[0];
-    let body = document.getElementsByTagName("body")[0]
-    console.log(all)
+
 
     if ($(window).width() < 650 || $(window).height() < 535) {
         all.forEach(element => {
@@ -432,7 +412,4 @@ function resizeFunc() {
         error.style.visibility = "hidden";
         $(window).scrollTop(0);
     }
-
-
-
 }
