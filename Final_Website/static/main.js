@@ -3,7 +3,7 @@ let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
 let disconnectedRed = "rgb(205, 25, 50)"
-let timeBeforeInactive = 110 // mins 
+let timeBeforeInactive = 6 // hour 
 
 
 
@@ -389,26 +389,41 @@ function isConnected(recentTimeStamp) {
     console.log(recentTimeStamp);
     // currentTimeStamp = yyyy-mm-dd hh:mm:ss eg
     let today = new Date();
+
     let currentHours = today.getHours(); // 0 - 24 
-    let currentMinutes = today.getMinutes() // 0 - 60
-    let totalMinsCurrentTime = (currentHours * 60) + currentMinutes;
+    let currentDay = today.getDate(); // 1 - 31
+    let currentMonth = parseInt(today.getMonth()) + 1; // 1 - 12
+    let currentYear = today.getFullYear(); // 2022
 
 
-    let timeStampTime = recentTimeStamp.split(/\s+/)[1] // splits by a whitespace, in form hh:mm:ss
-    let timeStampHours = timeStampTime.split(':') //[22, 30, 00], hh, mm, ss
-    let totalMinsTimeStamp = (parseInt(timeStampHours[0] * 60) + parseInt(timeStampHours[1]))
 
 
-    let minuteDifference = Math.abs(totalMinsCurrentTime - totalMinsTimeStamp)
+    let timeStamp = recentTimeStamp.split(/\s+/)
+    let timeStampTime = timeStamp[1] // splits by a whitespace, in form hh:mm:ss
+    let timeStampYearMonthDay = timeStamp[0].split("-"); // splits in yyyy, mm, dd
+    let timeStampHours = timeStampTime.split(':')[0]
 
+    let timeStampYear = timeStampYearMonthDay[0];
+    let timeStampMonth = timeStampYearMonthDay[1];
+    let timeStampDay = timeStampYearMonthDay[2];
 
-    if (minuteDifference > timeBeforeInactive) {
-        return false
-    } else {
-        return true
+    let returnVal = true;
+
+    if (currentYear != timeStampYear) { // compares years 
+        returnVal = false;
     }
-}
+    if (currentMonth != timeStampMonth) { // compares months
+        returnVal = false;
+    }
+    if (currentDay != timeStampDay) {
+        returnVal = false;
+    }
+    if (currentHours > (parseInt(timeStampHours) + parseInt(timeBeforeInactive)) % 24) { // compares hours
+        returnVal = false
+    }
 
+    return returnVal;
+}
 
 function resizeFunc() {
     if ($(window).width() < 650) {
