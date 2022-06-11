@@ -187,6 +187,10 @@
     margin-top: 0.1em;
 }
 
+#readout-box-data-wind {
+    font-size: 2em;
+}
+
 @media (max-width: 980px) {
     .readout-box-title {
         font-size: 1.7em;
@@ -211,6 +215,9 @@
     }
     .readout-box-data {
         font-size: 2em;
+    }
+    #readout-box-data-wind {
+        font-size: 1.5em;
     }
 }
 

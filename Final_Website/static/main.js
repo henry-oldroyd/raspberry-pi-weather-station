@@ -4,6 +4,7 @@ let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
 let disconnectedRed = "rgb(205, 25, 50)"
 let timeBeforeInactive = 6 // hour 
+let resized = false;
 
 
 
@@ -18,6 +19,8 @@ window.addEventListener('load', function() {
 
     $(window).resize(resizeFunc());
 });
+
+window.addEventListener("resize", resizeFunc);
 
 
 
@@ -51,7 +54,7 @@ function load_page(jsondata) {
     let pressureReadOutBox = new Dataset("Pressure", "mb", "readout-box-pressure", pressureData);
     let humidityReadOutBox = new Dataset("Humidity", "%", "readout-box-humidity", humidityData);
     let rainReadOutBox = new Dataset("Rain", "mm", "readout-box-rain", rainData);
-    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData);
+    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData, windDirectionData[windDirectionData.length - 1]);
 
     // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, timeStampData, "°C", boldBlack, faintBlack, true)
@@ -70,7 +73,7 @@ function load_page(jsondata) {
 
     boolConnected = isConnected(timeStampData[timeStampData.length - 1])
     connectingButton(boolConnected)
-    updateBGimg(tempReadOutBox, rainReadOutBox); // adds background img
+    updateBGimg(dayTypeData); // adds background img
     sandringhamLogo(); // adds sandinrgham logo img
     selfieImg(); // adds selfie img 
     piImg(); // adds the pi img 
@@ -80,11 +83,13 @@ function load_page(jsondata) {
 
 
 class Dataset {
-    constructor(title, unit, divName, data) {
+    constructor(title, unit, divName, data, windDirection = null) {
         this.title = title;
         this.unit = unit;
         this.divName = divName;
         this.data = data;
+        this.windDirection = windDirection;
+
         this.editReadOut();
     }
 
@@ -99,6 +104,11 @@ class Dataset {
             this.child[0].innerText = this.currentData + this.unit;
         } else {
             this.child[0].innerText = this.currentData + " " + this.unit;
+        }
+
+        if (this.windDirection != null) {
+            this.child[0].innerText = this.currentData + this.unit + ' ' + this.windDirection + "°";
+
         }
 
     }
@@ -205,53 +215,8 @@ class Graph {
 
 // Update the background image to the current weather
 
-function updateBGimg(tempReadOutBox, rainReadOutBox) {
-    var date = new Date();
-    var hours = date.getHours();
-
-    // if (time <= 6 && time >= 18) {
-
-    //     r.style.setProperty('--bgImg', "url('../images/night.png')");
-    // } else {
-    //     if (rainReadOutBox.currentData > 0) {
-    //         r.style.setProperty('--bgImg', "url('../images/rain.png')");
-    //     } else {
-    //         if (tempReadOutBox.currentData > 20) {
-
-    //             r.style.setProperty('--bgImg', "url('../images/sunny.png')");
-    //         } else if (tempReadOutBox.currentData > 14) {
-    //             r.style.setProperty('--bgImg', "url('../images/mild.png')");
-    //         } else {
-    //             r.style.setProperty('--bgImg', "url('../images/cold.png')");
-    //         }
-    //     }
-    // }
-    let evening_hour = 20; // 8pm
-    let morning_hour = 8; // 8am
-    let rain_threshold = 0.5; //0.5mm
-    let sunny_temp_threshold = 20; // degrees
-    let cold_temp_threshold = 10; // degrees
-    let img_file = "";
-
-    if (tempReadOutBox.currentData > sunny_temp_threshold) {
-        img_file = "sunny"
-    }
-
-    if (tempReadOutBox.currentData < cold_temp_threshold) {
-        img_file = "cold";
-    }
-
-    if (hours < morning_hour) {
-        img_file = "night"
-    }
-
-    if (hours > evening_hour) {
-        img_file = "night"
-    }
-
-    if (rainReadOutBox.currentData > rain_threshold) {
-        img_file = "rain"
-    }
+function updateBGimg(dayTypeData) {
+    img_file = dayTypeData[dayTypeData.length - 1]
 
     fetch(`http://127.0.0.1:5000/images/${img_file}`)
         // .then(response => console.log(response))
@@ -426,10 +391,48 @@ function isConnected(recentTimeStamp) {
 }
 
 function resizeFunc() {
-    if ($(window).width() < 650) {
-        alert('Please view on a bigger screen!');
+    // if (resized == false) {
+    //     if ($(window).width() < 650) {
+    //         alert('Please view on a bigger screen!');
+    //         resized = true;
+    //     }
+    //     if ($(window).height() < 535) {
+    //         alert("please view on a bigger screen!")
+    //         resized = true;
+    //     }
+    // } else {
+    //     if ($(window).width() > 650) {
+    //         resized = false
+    //         alert.close()
+    //     }
+    //     if ($(window).height() > 535) {
+    //         resized = false
+    //     }
+    // }
+
+    let all = document.getElementsByTagName("*");
+    all = document.querySelectorAll("*")
+    let error = document.getElementsByClassName("error")[0];
+    let body = document.getElementsByTagName("body")[0]
+    console.log(all)
+
+    if ($(window).width() < 650 || $(window).height() < 535) {
+        all.forEach(element => {
+            element.style.visibility = "hidden";
+        });
+
+        error.style.visibility = "visible";
+        $(window).scrollTop(0);
+
+    } else {
+        all.forEach(element => {
+            element.style.visibility = "visible";
+        });
+
+        error.style.visibility = "hidden";
+        $(window).scrollTop(0);
     }
-    if ($(window).height() < 535) {
-        alert("please view on a bigger screen!")
-    }
+
+
+
 }
