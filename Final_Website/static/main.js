@@ -4,15 +4,8 @@ let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
 let disconnectedRed = "rgb(205, 25, 50)"
 let timeBeforeInactive = 6 // hour 
-let resized = false;
 
 
-
-async function get_all_json_data() {
-    let response = await fetch("http://127.0.0.1:5000/data");
-    let data = response.json()
-    return data;
-}
 window.addEventListener('load', function() {
     get_all_json_data()
         .then(data => load_page(data))
@@ -21,9 +14,6 @@ window.addEventListener('load', function() {
 });
 
 window.addEventListener("resize", resizeFunc);
-
-
-
 
 function load_page(jsondata) {
 
@@ -73,10 +63,8 @@ function load_page(jsondata) {
 
     boolConnected = isConnected(timeStampData[timeStampData.length - 1])
     connectingButton(boolConnected)
-    updateBGimg(dayTypeData); // adds background img
-    sandringhamLogo(); // adds sandinrgham logo img
-    selfieImg(); // adds selfie img 
-    piImg(); // adds the pi img 
+
+    getPhotoImages(dayTypeData);
     lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
 
 }
@@ -212,9 +200,20 @@ class Graph {
     }
 }
 
+async function get_all_json_data() {
+    let response = await fetch("http://127.0.0.1:5000/data");
+    let data = response.json()
+    return data;
+}
+
+function getPhotoImages(dayTypeData) {
+    updateBGimg(dayTypeData);
+    sandringhamLogo()
+    selfieImg();
+    piImg();
+}
 
 // Update the background image to the current weather
-
 function updateBGimg(dayTypeData) {
     img_file = dayTypeData[dayTypeData.length - 1]
 
