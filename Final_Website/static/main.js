@@ -2,15 +2,10 @@ let boldBlack = "rgba(0,0,0,1)";
 let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
-let timeBeforeArchive = 60 // mins 
+let disconnectedRed = "rgb(205, 25, 50)"
+let timeBeforeInactive = 6 // hour 
 
 
-
-async function get_all_json_data() {
-    let response = await fetch("http://127.0.0.1:5000/data");
-    let data = response.json()
-    return data;
-}
 window.addEventListener('load', function() {
     get_all_json_data()
         .then(data => load_page(data))
@@ -18,8 +13,7 @@ window.addEventListener('load', function() {
     $(window).resize(resizeFunc());
 });
 
-
-
+window.addEventListener("resize", resizeFunc);
 
 function load_page(jsondata) {
 
@@ -43,19 +37,21 @@ function load_page(jsondata) {
         timeStampData.push(dataset["time_stamp"])
     });
 
+
+
     // create readout boxes
     let tempReadOutBox = new Dataset("Temperature", "°C", "readout-box-temp", tempData);
     let pressureReadOutBox = new Dataset("Pressure", "mb", "readout-box-pressure", pressureData);
     let humidityReadOutBox = new Dataset("Humidity", "%", "readout-box-humidity", humidityData);
     let rainReadOutBox = new Dataset("Rain", "mm", "readout-box-rain", rainData);
-    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData);
+    let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData, windDirectionData[windDirectionData.length - 1]);
 
     // main graph on page 3
     let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, timeStampData, "°C", boldBlack, faintBlack, true)
 
 
 
-    // buttons on page 3
+    // buttons on page 2
     let tempButton = document.getElementById("temp-button-big-graph");
     let pressureButton = document.getElementById("pressure-button-big-graph");
     let rainButton = document.getElementById("rain-button-big-graph");
@@ -65,28 +61,29 @@ function load_page(jsondata) {
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
     page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
 
-    connectingButton()
-    updateBGimg(tempReadOutBox, rainReadOutBox); // adds background img
-    sandringhamLogo(); // adds sandinrgham logo img
-    selfieImg(); // adds selfie img 
-    piImg(); // adds the pi img 
+    boolConnected = isConnected(timeStampData[timeStampData.length - 1])
+    connectingButton(boolConnected)
+
+    getPhotoImages(dayTypeData);
     lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
 
 }
 
 
 class Dataset {
-    constructor(title, unit, divName, data) {
+    constructor(title, unit, divName, data, windDirection = null) {
         this.title = title;
         this.unit = unit;
         this.divName = divName;
         this.data = data;
+        this.windDirection = windDirection;
+
         this.editReadOut();
     }
 
 
     editReadOut() {
-        this.currentData = this.data[0]; // shows the first element in readout box 
+        this.currentData = this.data[this.data.length - 1]; // shows the first element in readout box 
         this.div = document.getElementById(this.divName);
         this.child = this.div.getElementsByTagName("p");
 
@@ -95,6 +92,11 @@ class Dataset {
             this.child[0].innerText = this.currentData + this.unit;
         } else {
             this.child[0].innerText = this.currentData + " " + this.unit;
+        }
+
+        if (this.windDirection != null) {
+            this.child[0].innerText = this.currentData + this.unit + ' ' + this.windDirection + "°";
+
         }
 
     }
@@ -125,7 +127,10 @@ class Graph {
         this.sliders = document.getElementsByClassName("slider-big-graph"); // only lets you take as a list
         this.slider = this.sliders[0] // one element array
         this.slider.max = this.data.length;
-        this.slider.value = this.slider.max;
+        if (this.data.length >= 5) {
+            this.slider.value = 5;
+        };
+
         this.slider.addEventListener("input", () => { this.editDisplayData() });
         this.editDisplayData();
     }
@@ -169,6 +174,7 @@ class Graph {
 
     // adds the dates to the x axis of the graph 
     createXlabels() {
+        // neeeds to be changed to show the right dates 
         let xlabels = [] // local variable
         for (let dayCounter = 1; dayCounter <= this.dataBeingUsed.length; dayCounter++) {
             xlabels.push(this.timeStamps[dayCounter - 1])
@@ -180,9 +186,9 @@ class Graph {
     // uses the slider to determine how much of the data should be shown 
     editDisplayData() {
         let val = this.slider.value;
-        console.log(val, this.slider.max, this.data.length);
 
-        this.dataBeingUsed = this.data.slice(0, val); // edits which part of data set is shwon
+        // array of 10, if selected 1, we want from 9- 10 
+        this.dataBeingUsed = this.data.slice(this.data.length - val, this.data.length); // edits which part of data set is shwon
         this.xlabels = this.createXlabels()
 
 
@@ -194,57 +200,22 @@ class Graph {
     }
 }
 
+async function get_all_json_data() {
+    let response = await fetch("http://127.0.0.1:5000/data");
+    let data = response.json()
+    return data;
+}
+
+function getPhotoImages(dayTypeData) {
+    updateBGimg(dayTypeData);
+    sandringhamLogo()
+    selfieImg();
+    piImg();
+}
 
 // Update the background image to the current weather
-
-function updateBGimg(tempReadOutBox, rainReadOutBox) {
-    //console.log(tempReadOutBox.currentData);
-    var date = new Date();
-    var hours = date.getHours();
-
-    // if (time <= 6 && time >= 18) {
-
-    //     r.style.setProperty('--bgImg', "url('../images/night.png')");
-    // } else {
-    //     if (rainReadOutBox.currentData > 0) {
-    //         r.style.setProperty('--bgImg', "url('../images/rain.png')");
-    //     } else {
-    //         if (tempReadOutBox.currentData > 20) {
-
-    //             r.style.setProperty('--bgImg', "url('../images/sunny.png')");
-    //         } else if (tempReadOutBox.currentData > 14) {
-    //             r.style.setProperty('--bgImg', "url('../images/mild.png')");
-    //         } else {
-    //             r.style.setProperty('--bgImg', "url('../images/cold.png')");
-    //         }
-    //     }
-    // }
-    let evening_hour = 20;
-    let morning_hour = 8;
-    let rain_threshold = 0;
-    let sunny_temp_threshold = 20;
-    let cold_temp_threshold = 10;
-    let img_file = "";
-
-    if (tempReadOutBox.currentData > sunny_temp_threshold) {
-        img_file = "sunny"
-    }
-
-    if (tempReadOutBox.currentData < cold_temp_threshold) {
-        img_file = "cold";
-    }
-
-    if (hours < morning_hour) {
-        img_file = "night"
-    }
-
-    if (hours > evening_hour) {
-        img_file = "night"
-    }
-
-    if (rainReadOutBox.currentData > rain_threshold) {
-        img_file = "rain"
-    }
+function updateBGimg(dayTypeData) {
+    img_file = dayTypeData[dayTypeData.length - 1]
 
     fetch(`http://127.0.0.1:5000/images/${img_file}`)
         // .then(response => console.log(response))
@@ -351,23 +322,93 @@ function lastUpdatedAt(time) {
     elm.innerText = `Last Updated: ${time}`
 }
 
-function connectingButton() {
+function connectingButton(boolConnected) {
     statusText = document.getElementsByClassName("status-text")[0]
     statusDot = document.getElementsByClassName("status-dot")[0]
     statusText.style.color = connectingOrange;
     statusText.innerText = "Status: Connecting...";
     statusDot.style.animation = "connecting-dot 2s infinite";
 
-    setTimeout(function() {
-        statusText.style.color = connectedGreen;
-        statusText.innerText = "Status: Connected";
-        statusDot.style.animation = "dot-animation 2s infinite";
-    }, 3000)
+    // set to green 
+    if (boolConnected == true) {
+        setTimeout(function() {
+            statusText.style.color = connectedGreen;
+            statusText.innerText = "Status: Connected";
+            statusDot.style.animation = "dot-animation 2s infinite";
+        }, 3000)
+    } else {
+        setTimeout(function() {
+            statusText.style.color = disconnectedRed;
+            statusText.innerText = "Status: Offline";
+            statusDot.style.animation = "disconnected 2s infinite";
+        }, 3000)
+    }
+
+    // set to red
+
 
 }
 
+function isConnected(recentTimeStamp) {
+    console.log(recentTimeStamp);
+    // currentTimeStamp = yyyy-mm-dd hh:mm:ss eg
+    let today = new Date();
+
+    let currentHours = today.getHours(); // 0 - 24 
+    let currentDay = today.getDate(); // 1 - 31
+    let currentMonth = parseInt(today.getMonth()) + 1; // 1 - 12
+    let currentYear = today.getFullYear(); // 2022
+
+
+
+
+    let timeStamp = recentTimeStamp.split(/\s+/)
+    let timeStampTime = timeStamp[1] // splits by a whitespace, in form hh:mm:ss
+    let timeStampYearMonthDay = timeStamp[0].split("-"); // splits in yyyy, mm, dd
+    let timeStampHours = timeStampTime.split(':')[0]
+
+    let timeStampYear = timeStampYearMonthDay[0];
+    let timeStampMonth = timeStampYearMonthDay[1];
+    let timeStampDay = timeStampYearMonthDay[2];
+
+    let returnVal = true;
+
+    if (currentYear != timeStampYear) { // compares years 
+        returnVal = false;
+    }
+    if (currentMonth != timeStampMonth) { // compares months
+        returnVal = false;
+    }
+    if (currentDay != timeStampDay) {
+        returnVal = false;
+    }
+    if (currentHours > (parseInt(timeStampHours) + parseInt(timeBeforeInactive)) % 24) { // compares hours
+        returnVal = false
+    }
+
+    return returnVal;
+}
+
 function resizeFunc() {
-    if ($(window).width() < 650) {
-        alert('Please view on a wider screen!');
+    let all = document.getElementsByTagName("*");
+    all = document.querySelectorAll("*")
+    let error = document.getElementsByClassName("error")[0];
+
+
+    if ($(window).width() < 650 || $(window).height() < 535) {
+        all.forEach(element => {
+            element.style.visibility = "hidden";
+        });
+
+        error.style.visibility = "visible";
+        $(window).scrollTop(0);
+
+    } else {
+        all.forEach(element => {
+            element.style.visibility = "visible";
+        });
+
+        error.style.visibility = "hidden";
+        $(window).scrollTop(0);
     }
 }

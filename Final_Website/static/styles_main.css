@@ -20,21 +20,29 @@ slider */
 .error {
     position: absolute;
     visibility: hidden;
+    color: red;
+    font-size: auto;
+    width: 75vw;
+    text-align: center;
+    justify-self: center;
+    color: black;
 }
 
-@media (max-width: 650px) {
+@media (max-height: 535px) {
     * {
         visibility: hidden;
     }
     .error {
         visibility: visible;
-        color: red;
-        font-size: auto;
-        width: 75vw;
-        text-align: center;
-        justify-self: center;
-        color: black;
     }
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
 }
 
 body,
