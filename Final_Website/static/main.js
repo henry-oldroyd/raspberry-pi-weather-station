@@ -180,7 +180,7 @@ class Graph {
     // uses the slider to determine how much of the data should be shown 
     editDisplayData() {
         let val = this.slider.value;
-
+        console.log(val, this.slider.max, this.data.length);
 
         this.dataBeingUsed = this.data.slice(0, val); // edits which part of data set is shwon
         this.xlabels = this.createXlabels()

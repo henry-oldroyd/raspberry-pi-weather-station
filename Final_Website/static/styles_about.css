@@ -32,7 +32,7 @@
 .about-us-contents {
     display: grid;
     grid-gap: 1em;
-    grid-template-areas: "img1 text1 text1" "text2 text2 img2";
+    grid-template-areas: "img1 text1 text1" "quotes quotes img2";
     font-size: var(--text-fs)
 }
 
@@ -52,8 +52,8 @@
     grid-area: text1;
 }
 
-.about-us-text2 {
-    grid-area: text2;
+.about-us-quotes {
+    grid-area: quotes;
 }
 
 #selfie-img {
