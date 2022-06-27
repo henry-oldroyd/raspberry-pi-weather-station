@@ -1,0 +1,10 @@
+{
+    "cSpell.words": [
+        "backref",
+        "datetimeformat",
+        "jsonify",
+        "sessionmaker",
+        "sqla",
+        "sqlalchemy"
+    ]
+}

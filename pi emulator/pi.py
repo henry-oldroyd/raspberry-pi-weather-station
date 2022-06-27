@@ -7,13 +7,13 @@ import os
 # local
 import logger as logger_module
 
-PORT = 80
+PORT = 5000
 
 # setup logger
 logger_module.setup_logger(os.path.basename(__file__))
 logger = logging.getLogger(os.path.basename(__file__))
 
-# will be sotred in an environmental variable in PI
+# will be stored in an environmental variable in PI
 with open("secret_key.key", "r") as file:
     SECRET_KEY = file.read()
 SERVER_URL = f'http://127.0.0.1:{PORT}/data'
@@ -25,8 +25,12 @@ logger.info(f"using secret key:   {output_safe_secret_key}")
 logger.info(f"using server url:   {SERVER_URL}")
 
 example_data = {
-    "light": random.randint(0, 100),
-    "rain": random.randint(0, 100)
+    'pressure': random.uniform(0, 30),
+    'temperature': random.uniform(0, 30),
+    'humidity': random.uniform(0, 30),
+    'wind_speed': random.uniform(0, 30),
+    'wind_direction': random.uniform(0, 30),
+    'precipitation': random.uniform(0, 30)
 }
 logger.info(f"using sample data:   {example_data}")
 
@@ -42,16 +46,14 @@ try:
         logger.critical(f"Post request to url  {SERVER_URL}  failed to connect, server offline?")
         raise
     except AssertionError as e:
-        # logger.critical("status code was not 200")
-        # match request.status_code:
-        #     case 404:
-        #         logger.critical('404 page not found')
-        #     case 401:
-        #         logger.critical('401 authentication failed, check key')
-        #     case 500:
-        #         logger.critical('500 internal server error, perhaps flask server has crashed')
-        # raise
-        pass
+        logger.critical("status code was not 200")
+        match request.status_code:
+            case 404:
+                logger.critical('404 page not found')
+            case 401:
+                logger.critical('401 authentication failed, check key')
+            case 500:
+                logger.critical('500 internal server error, perhaps flask server has crashed')
     else:
         logger.info("Post request successfull")
         logger.info(f"request status code:   {request.status_code}")
