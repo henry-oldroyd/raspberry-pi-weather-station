@@ -1,7 +1,7 @@
-2022-06-27 18:13:52,639 - pi_emulator.py - INFO - this logger named pi_emulator.py created
-2022-06-27 18:13:52,640 - pi_emulator.py - INFO - using secret key:   ABC1**********************-key
-2022-06-27 18:13:52,641 - pi_emulator.py - INFO - using server url:   http://127.0.0.1:5000/data
-2022-06-27 18:13:52,641 - pi_emulator.py - INFO - using sample data:   {'pressure': 20.537142861085503, 'temperature': 10.361338802565736, 'humidity': 0.7748223729664627, 'wind_speed': 11.791665231989304, 'wind_direction': 9.215041204068315, 'precipitation': 21.422218105259002}
-2022-06-27 18:13:52,642 - pi_emulator.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'pressure': 20.537142861085503, 'temperature': 10.361338802565736, 'humidity': 0.7748223729664627, 'wind_speed': 11.791665231989304, 'wind_direction': 9.215041204068315, 'precipitation': 21.422218105259002}}
-2022-06-27 18:13:52,687 - pi_emulator.py - CRITICAL - status code was not 200
-2022-06-27 18:13:52,688 - pi_emulator.py - CRITICAL - 500 internal server error, perhaps flask server has crashed
+2022-06-27 19:31:01,467 - pi_emulator.py - INFO - this logger named pi_emulator.py created
+2022-06-27 19:31:01,468 - pi_emulator.py - INFO - using secret key:   ABC1**********************-key
+2022-06-27 19:31:01,468 - pi_emulator.py - INFO - using server url:   http://127.0.0.1:5000/data
+2022-06-27 19:31:01,468 - pi_emulator.py - INFO - using sample data:   {'pressure': 18.266500366301003, 'temperature': 10.022372474757372, 'humidity': 0.7308428035528369, 'wind_speed': 24.783621669945962, 'wind_direction': 13.966841023426483, 'precipitation': 19.848515459812727}
+2022-06-27 19:31:01,468 - pi_emulator.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'pressure': 18.266500366301003, 'temperature': 10.022372474757372, 'humidity': 0.7308428035528369, 'wind_speed': 24.783621669945962, 'wind_direction': 13.966841023426483, 'precipitation': 19.848515459812727}}
+2022-06-27 19:31:01,477 - pi_emulator.py - INFO - Post request successfull
+2022-06-27 19:31:01,477 - pi_emulator.py - INFO - request status code:   200

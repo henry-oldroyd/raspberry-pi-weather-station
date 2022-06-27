@@ -57,8 +57,8 @@ try:
     else:
         logger.info("Post request successfull")
         logger.info(f"request status code:   {request.status_code}")
-        json = json.loads(request.text)
-        logger.info(f"""returned json data:   {json}""")
+        # json = json.loads(request.text)
+        # logger.info(f"""returned json data:   {json}""")
 
 except Exception as e:
     logger.exception(e)

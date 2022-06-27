@@ -50,22 +50,6 @@ session = scoped_session(sessionmaker(bind=engine))
 Base = declarative_base()
 
 
-def determine_background_image(timestamp, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
-    # will check time stamp and be true if between 11pm and 5am
-    is_night = True
-    # will make some comparrison with rain but I am not sure how to yet ask Sam
-    is_raining = False
-    
-    if is_raining: return "rain"
-    # not sure of priority, should a hot night be night image or sunny image 
-    if is_night: return "night"
-    if temperature >= 20: return "sunny"
-    if temperature <= 14: return "cold"
-    # default mild
-    return "mild"
-    
-    
-
 
 # setup sqlalchemy row obj
 class Reading(Base):
@@ -73,7 +57,7 @@ class Reading(Base):
     __tablename__ = 'readings_uncalibrated'
     primary_key = sqla.Column(sqla.Integer, primary_key=True)
     timestamp = sqla.Column(sqla.DateTime())
-    background_img = sqla.Column(sqla.VARCHAR(100))
+    # background_img = sqla.Column(sqla.VARCHAR(100))
     
     pressure = sqla.Column(sqla.Float())
     temperature = sqla.Column(sqla.Float())
@@ -91,15 +75,15 @@ class Reading(Base):
         self.precipitation = precipitation
         timestamp = datetime.now()
         self.timestamp = timestamp
-        self.background_img = determine_background_image(
-            timestamp=timestamp,
-            pressure=pressure,
-            temperature=temperature,
-            humidity=humidity,
-            wind_speed=wind_speed, 
-            wind_direction=wind_direction,
-            precipitation=precipitation
-        )
+        # self.background_img = determine_background_image(
+        #     timestamp=timestamp,
+        #     pressure=pressure,
+        #     temperature=temperature,
+        #     humidity=humidity,
+        #     wind_speed=wind_speed, 
+        #     wind_direction=wind_direction,
+        #     precipitation=precipitation
+        # )
 
 
     def __repr__(self):
@@ -119,7 +103,8 @@ class Reading_Schema(SQLAlchemySchema):
 
     # primary_key = auto_field(dump_only=True)
     timestamp = auto_field(dump_only=True)
-    background_img = auto_field(dump_only=True)
+    # background_img = auto_field(dump_only=True)
+    
     pressure=auto_field(required=True)
     temperature = auto_field(required=True)
     humidity = auto_field(required=True)
@@ -141,6 +126,19 @@ def hash(plain_txt):
     hash_.update(plain_txt.encode())
     return hash_.hexdigest()
 
+def determine_background_image(timestamp, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
+    # will check time stamp and be true if between 11pm and 5am
+    is_night = True
+    # will make some comparrison with rain but I am not sure how to yet ask Sam
+    is_raining = False
+    
+    if is_raining: return "rain"
+    # not sure of priority, should a hot night be night image or sunny image 
+    if is_night: return "night"
+    if temperature >= 20: return "sunny"
+    if temperature <= 14: return "cold"
+    # default mild
+    return "mild"
 
 # setup app
 app = flask.Flask(__name__)
@@ -173,16 +171,17 @@ def new_reading():
         print(repr(new_reading_obj))
 
         # session.save_object(new_reading_obj)
-        # session.add(new_reading_obj)
-        session.bulk_save_objects([new_reading_obj])
-        session.commit(new_reading_obj)
+        session.add(new_reading_obj)
+        # session.bulk_save_objects([new_reading_obj])
+        # session.commit(new_reading_obj)
     except Exception as e:
         flask.abort(500, response=str(e))
-    else:
-        return flask.jsonify(
-            reading_schema.dumps(new_reading)
-        )
-        # return "Thumbs up"
+    else:#
+        print("Writing to DB was successful")
+        # return flask.jsonify(
+        #     reading_schema.dumps(new_reading)
+        # )
+        return "Thumbs up"
 
 
 @app.route("/get_data")
