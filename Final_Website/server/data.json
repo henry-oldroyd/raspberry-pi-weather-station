@@ -34,7 +34,7 @@
         "temperature": 19,
         "humidity": 52,
         "wind_speed": 60,
-        "wind_direction": 222,
+        "wind_direction": "NNS",
         "precipitation": 3.42,
         "day_type": "windy"
     },
@@ -284,7 +284,7 @@
         "temperature": 29,
         "humidity": 42,
         "wind_speed": 50,
-        "wind_direction": 342,
+        "wind_direction": "NNS",
         "precipitation": 2.42,
         "day_type": "mild"
     }
