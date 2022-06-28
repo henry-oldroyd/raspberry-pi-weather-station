@@ -56,6 +56,11 @@ name {
     justify-self: center;
 }
 
+.footer-link:visited {
+    color: green;
+    border: 1px solid red;
+}
+
 li {
     padding-right: 2em;
 }

@@ -197,17 +197,16 @@ input {
     border-radius: 5px;
     outline: none;
     border: none;
-    z-index: 2222;
 }
 
 input::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: red;
     border-radius: 50%;
     background: #664AFF;
-    border: 1px solid #664AFF;
+    /* border: 1px solid #664AFF; */
     cursor: pointer;
 }
 
@@ -218,7 +217,7 @@ input::-moz-range-thumb {
     background: red;
     border-radius: 50%;
     background: #664AFF;
-    border: 1px solid #664AFF;
+    /* border: 1px solid #664AFF; */
     cursor: pointer;
 }
 
