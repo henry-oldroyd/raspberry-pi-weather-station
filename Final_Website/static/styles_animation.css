@@ -12,19 +12,6 @@
     }
 }
 
-@keyframes button-hover {
-    0% {
-        background-color: rgb(254, 141, 2)";
-
-    }
-    50% {
-        background-color: radial-gradient(circle, rgb(254, 141, 2));
-    }
-    100% {
-        background-color: rgb(254, 141, 2);
-    }
-}
-
 @keyframes wipe-enter {
     0% {
         transform: scale(0, .025);
