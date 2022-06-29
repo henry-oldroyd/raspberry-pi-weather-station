@@ -1,6 +1,6 @@
 footer {
-    background-color: rgb(109, 109, 109);
-    border: 1px solid rgb(126, 126, 126);
+    border: 1px solid var(--about-bg-colour);
+    background-color: var(--about-bg-colour);
     /* wtf is this border trick, i will never understand */
 }
 
@@ -13,12 +13,12 @@ footer {
     flex-direction: row;
     background-color: rgb(49, 47, 44);
     justify-content: space-around;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 1.1em;
+    justify-content: space-around;
+    align-items: center;
     z-index: 10;
+    height: 5vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff
 }
 
 name {
@@ -28,7 +28,7 @@ name {
 }
 
 .sandringham-link {
-    color: rgb(53, 44, 186);
+    color: white;
     font-style: none;
 }
 
@@ -42,6 +42,8 @@ name {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--about-bg-colour);
 }
 
 @media (max-width: 500px) {
@@ -56,11 +58,16 @@ name {
     justify-self: center;
 }
 
-.footer-link:visited {
-    color: green;
-    border: 1px solid red;
+.footer-link {
+    color: blue;
 }
 
 li {
     padding-right: 2em;
+}
+
+.custom-hr {
+    width: 50%;
+    border-top: 2px solid grey;
+    padding-bottom: 1em;
 }

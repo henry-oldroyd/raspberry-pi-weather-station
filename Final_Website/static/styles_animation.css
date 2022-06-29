@@ -14,13 +14,14 @@
 
 @keyframes button-hover {
     0% {
-        background-color: rgba(169, 158, 158, 0.1);
+        background-color: rgb(254, 141, 2)";
+
     }
     50% {
-        background-color: radial-gradient(circle, rgba(169, 158, 158, 0.7));
+        background-color: radial-gradient(circle, rgb(254, 141, 2));
     }
     100% {
-        background-color: rgba(169, 158, 158, 0.7);
+        background-color: rgb(254, 141, 2);
     }
 }
 

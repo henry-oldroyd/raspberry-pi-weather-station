@@ -3,6 +3,7 @@ let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
 let disconnectedRed = "rgb(205, 25, 50)"
+
 let timeBeforeInactive = 6 // hour 
 
 
@@ -47,7 +48,7 @@ function load_page(jsondata) {
     let windSpeedReadOutBox = new Dataset("Wind Speed", "mph", "readout-box-wind", windSpeedData, windDirectionData[windDirectionData.length - 1]);
 
     // main graph on page 3
-    let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, timeStampData, "°C", boldBlack, faintBlack, true)
+    let bigGraph = new Graph('Temp', 'graph-graph-big', tempData, timeStampData, "°C", "rgb(254, 141, 2)", "rgba(254, 141, 2,0.25)", true)
 
 
 
@@ -93,7 +94,7 @@ class Dataset {
         } else {
             this.child[0].innerText = this.currentData + " " + this.unit;
         }
-
+        // getting rid of wind direction
         if (this.windDirection != null) {
             this.child[0].innerText = this.currentData + this.unit + ' ' + this.windDirection;
 

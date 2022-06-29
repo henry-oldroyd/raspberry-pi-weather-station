@@ -3,7 +3,7 @@
     background-color: var(--about-bg-colour);
     border: 1px solid var(--about-bg-colour);
     /* same trick as before, zero clue why it works lol  */
-    height: 100vh;
+    height: 95vh;
     font-family: 'Ubuntu', sans-serif;
 }
 

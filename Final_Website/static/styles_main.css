@@ -54,7 +54,7 @@ html {
 :root {
     font-family: 'Passion One', cursive;
     --text-fs: 1.5em;
-    --header-bg-colour: #342424c5;
+    --header-bg-colour: #463333c5;
     --header-text-colour: rgb(224, 19, 19);
     --readout-box-bg-colour: rgba(0, 0, 0, 0.25);
     --banner-height: 2em;
@@ -64,7 +64,7 @@ html {
     --banner-margin-left: 3em;
     --banner-margin-right: 3em;
     --banner-font-size: 2em;
-    --about-bg-colour: rgb(158, 152, 152);
+    --about-bg-colour: rgb(196, 187, 186);
     --banner-top-gap: 0.5em;
     --banner-bottom-gap: 0.5em;
     --margin-left: 5em;
@@ -87,6 +87,8 @@ html {
     width: 50%;
     padding-top: 0;
     border-radius: 10%;
+    margin-bottom: 10px;
+    color: rgb(231, 231, 231);
     /* margin-left: var(--banner-margin-left);
     margin-right: var(--banner-margin-right); */
 }
