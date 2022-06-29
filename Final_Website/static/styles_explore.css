@@ -118,6 +118,7 @@
     margin: 0;
     position: relative;
     z-index: 0;
+    /* padding-bottom: 5vh; */
 }
 
 .slider-title {
@@ -236,9 +237,9 @@ input::-moz-range-progress {
     margin-top: 50px;
 }
 
-@media (max-width: 750px) {
+@media (max-height: 700px) {
     #graph-graph-big {
-        transform: scaleY(1)
+        margin-top: 10px;
     }
 }
 
@@ -283,14 +284,8 @@ input::-moz-range-progress {
     box-shadow: none;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 750px) {
     .download-csv {
-        position: absolute;
-        float: none;
-        margin-right: 0;
-        justify-self: center;
-        left: 50vw;
-        transform: translateX(-50%);
-        margin-top: 2em;
+        font-size: 0.8em;
     }
 }

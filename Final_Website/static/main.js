@@ -60,7 +60,7 @@ function load_page(jsondata) {
     let humidButton = document.getElementById("humid-button-big-graph");
 
     let buttons = [tempButton, pressureButton, rainButton, windButton, humidButton]
-    page3Buttons(buttons, bigGraph, jsondata); // adds functionality to each button, and the big graph 
+    page3Buttons(buttons, bigGraph, jsondata, firstCall = true); // adds functionality to each button, and the big graph 
 
     boolConnected = isConnected(timeStampData[timeStampData.length - 1])
     connectingButton(boolConnected)
@@ -68,7 +68,7 @@ function load_page(jsondata) {
     getPhotoImages(dayTypeData);
     lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
 
-    buttonAnimation();
+
 
 }
 
@@ -282,6 +282,9 @@ function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
     bigGraph.chart.data.datasets.forEach((dataset) => {
         dataset.data = newdata; // changes the data
         dataset.label = value; // changes the title
+        dataset.backgroundColor = fgColour
+        dataset.color = fgColour
+        dataset.borderColor = bgColour
     })
 
     bigGraph.data = newdata;
@@ -294,11 +297,13 @@ function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
         value = value + " " + unit;
         return value
     }
+
+
     bigGraph.chart.update()
 }
 
 // checks which button is clicked, and toggles the required classes 
-function page3Buttons(buttons, bigGraph, jsondata) {
+function page3Buttons(buttons, bigGraph, jsondata, firstCall = false) {
 
     buttons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -313,11 +318,14 @@ function page3Buttons(buttons, bigGraph, jsondata) {
             // makes the button selected
             button.classList.add("selected-button");
 
+
+
+
             //  too allow random colour changing
             colours = buttonAnimation();
-            // changes the graph
-            dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
 
+            // changes the groaph 
+            dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
         })
 
     });
@@ -405,7 +413,7 @@ function resizeFunc() {
     let error = document.getElementsByClassName("error")[0];
 
 
-    if ($(window).width() < 650 || $(window).height() < 535) {
+    if ($(window).width() < 700 || $(window).height() < 535) {
         all.forEach(element => {
             element.style.visibility = "hidden";
         });
@@ -419,18 +427,18 @@ function resizeFunc() {
         });
 
         error.style.visibility = "hidden";
-        $(window).scrollTop(0);
+        // $(window).scrollTop(0);
     }
 }
 
-function returnRandomRGB() {
+function returnRandomRGBs() {
     let max = 255
     let r = Math.floor(Math.random() * (max + 1));
     let g = Math.floor(Math.random() * (max + 1));
     let b = Math.floor(Math.random() * (max + 1));
     var brightcolorname = 'rgba(' + r + ',' + g + ',' + b + ',1)';
     var dimcolorname = 'rgba(' + r + ',' + g + ',' + b + ',0.2)';
-    return (brightcolorname, dimcolorname)
+    return [brightcolorname, dimcolorname]
 
 }
 
@@ -438,15 +446,32 @@ function buttonAnimation() {
     colours = returnRandomRGBs()
 
     nonSelectedButton = document.getElementsByClassName("drop-button-big-graph")
-    console.log(nonSelectedButton)
 
     for (let i = 0; i < nonSelectedButton.length; i++) {
-        nonSelectedButton[i].style.backgroundColor = 'rgba(169, 158, 158, 0.1)';
-        console.log(nonSelectedButton[i])
+        nonSelectedButton[i].style.background = 'linear-gradient(to right, rgba(169, 158, 158, 0.1) 50% ,' + colours[0] + ' 50%)'
+        nonSelectedButton[i].style.backgroundSize = '200% 100%'
+        nonSelectedButton[i].style.backgroundPosition = "left bottom"
+            // nonSelectedButton[i].style.background = 'linear-gradient(to right, #000000, #ffffff)'
+
+        nonSelectedButton[i].addEventListener('mouseover', function handleMouseOver() {
+            if (nonSelectedButton[i].classList.contains("selected-button") == false) {
+                nonSelectedButton[i].style.transition = "all 1s ease"
+                nonSelectedButton[i].style.backgroundPosition = "right bottom"
+            }
+        });
+
+        nonSelectedButton[i].addEventListener('mouseout', function handleMouseOut() {
+            if (nonSelectedButton[i].classList.contains("selected-button") == false) {
+                nonSelectedButton[i].style.background = 'linear-gradient(to right, rgba(169, 158, 158, 0.1) 50% ,' + colours[0] + ' 50%)'
+                nonSelectedButton[i].style.backgroundSize = '200% 100%'
+                nonSelectedButton[i].style.backgroundPosition = "left bottom"
+            }
+        });
     }
     selectedButton = document.getElementsByClassName("selected-button")[0]
-
     selectedButton.style.backgroundColor = colours[0]
+
+
     return colours
 
 
