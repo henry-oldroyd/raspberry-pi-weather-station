@@ -68,6 +68,8 @@ function load_page(jsondata) {
     getPhotoImages(dayTypeData);
     lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
 
+    buttonAnimation();
+
 }
 
 
@@ -178,9 +180,9 @@ class Graph {
         // neeeds to be changed to show the right dates 
         let xlabels = [] // local variable
         for (let dayCounter = 1; dayCounter <= this.dataBeingUsed.length; dayCounter++) {
-            xlabels.push(this.timeStamps[dayCounter - 1])
+            xlabels.push(this.timeStamps[this.timeStamps.length - dayCounter])
         }
-
+        xlabels.reverse()
         return xlabels
     }
 
@@ -253,7 +255,7 @@ function piImg() {
 }
 
 // changes the graph data upon click of the dropdown 
-function dropdownFunctionality(value, bigGraph, jsondata) {
+function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
     if (value == "Temperature") {
         unit = "°C"
         filter = "temperature"
@@ -306,14 +308,21 @@ function page3Buttons(buttons, bigGraph, jsondata) {
             });
             button.classList.toggle("active")
 
-            // changes the graph
-            dropdownFunctionality(button.innerText, bigGraph, jsondata)
+
 
             // makes the button selected
             button.classList.add("selected-button");
+
+            //  too allow random colour changing
+            colours = buttonAnimation();
+            // changes the graph
+            dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
+
         })
 
     });
+
+
 
 }
 
@@ -412,4 +421,34 @@ function resizeFunc() {
         error.style.visibility = "hidden";
         $(window).scrollTop(0);
     }
+}
+
+function returnRandomRGB() {
+    let max = 255
+    let r = Math.floor(Math.random() * (max + 1));
+    let g = Math.floor(Math.random() * (max + 1));
+    let b = Math.floor(Math.random() * (max + 1));
+    var brightcolorname = 'rgba(' + r + ',' + g + ',' + b + ',1)';
+    var dimcolorname = 'rgba(' + r + ',' + g + ',' + b + ',0.2)';
+    return (brightcolorname, dimcolorname)
+
+}
+
+function buttonAnimation() {
+    colours = returnRandomRGBs()
+
+    nonSelectedButton = document.getElementsByClassName("drop-button-big-graph")
+    console.log(nonSelectedButton)
+
+    for (let i = 0; i < nonSelectedButton.length; i++) {
+        nonSelectedButton[i].style.backgroundColor = 'rgba(169, 158, 158, 0.1)';
+        console.log(nonSelectedButton[i])
+    }
+    selectedButton = document.getElementsByClassName("selected-button")[0]
+
+    selectedButton.style.backgroundColor = colours[0]
+    return colours
+
+
+
 }
