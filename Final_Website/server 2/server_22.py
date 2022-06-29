@@ -8,9 +8,8 @@ import sqlalchemy as sqla
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 from marshmallow_sqlalchemy import SQLAlchemySchema, auto_field
-from marshmallow import pre_load
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 import logging
 import flask
 import json
@@ -24,6 +23,8 @@ logger = logging.getLogger(os.path.basename(__file__))
 
 # constants:
 PORT = 5000
+DATE_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+
 with open('hashed_key.key', 'r') as file:
     SECRET_KEY_HASH = file.read()
 
@@ -73,7 +74,9 @@ class Reading(Base):
         self.wind_speed = wind_speed
         self.wind_direction = wind_direction
         self.precipitation = precipitation
-        timestamp = datetime.now()
+        # timestamp = datetime.now()
+        # to test something
+        timestamp = datetime.now() - timedelta(days=21)
         self.timestamp = timestamp
         # self.background_img = determine_background_image(
         #     timestamp=timestamp,
@@ -99,7 +102,7 @@ class Reading_Schema(SQLAlchemySchema):
     class Meta:
         model=Reading
         load_instance=True  # Optional: deserialize to model instances
-        datetimeformat = '%Y-%m-%d %H:%M:%S'
+        datetimeformat = DATE_TIME_FORMAT
 
     # primary_key = auto_field(dump_only=True)
     timestamp = auto_field(dump_only=True)
@@ -145,10 +148,23 @@ app = flask.Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
+# def less_than_14_days_old(timestamp_str):
+#     print("\n\n"+timestamp_str+"\n\n")
+#     # timestamp = datetime.strptime(timestamp_str, 'YYYY-MM-DD HH:MM:SS')
+#     timestamp = datetime.strptime(timestamp_str, '%-%M-%D %H:%M:%S')
+#     # timestamp = datetime.strptime(timestamp_str, DATE_TIME_FORMAT)
+#     dif = datetime.now() - timestamp
+#     return dif.days < 14
+
+
 # setup get routes
 @app.route('/data', methods=['GET'])
 def get_readings():
-    query = sqla.select(Reading)
+    # datediff: https://stackoverflow.com/questions/36571706/python-sqlalchemy-filter-by-datediff-of-months
+    query = sqla.select(Reading)\
+        .filter(
+            sqla.func.julianday() - sqla.func.julianday(Reading.timestamp) <= 14
+        )
     all_readings = list(session.scalars(query))
     serialised_readings: dict = reading_schema_many.dump(all_readings)
     return flask.jsonify(serialised_readings)
@@ -166,22 +182,33 @@ def new_reading():
         print("secret key wrong for post request")
         flask.abort(401)
     
-    try:
-        new_reading_obj = reading_schema.load(new_reading_data, session=session)
-        print(repr(new_reading_obj))
+    # try:
+    #     new_reading_obj = reading_schema.load(new_reading_data, session=session)
+    #     print(repr(new_reading_obj))
 
-        # session.save_object(new_reading_obj)
-        session.add(new_reading_obj)
-        # session.bulk_save_objects([new_reading_obj])
-        # session.commit(new_reading_obj)
-    except Exception as e:
-        flask.abort(500, response=str(e))
-    else:#
-        print("Writing to DB was successful")
-        # return flask.jsonify(
-        #     reading_schema.dumps(new_reading)
-        # )
-        return "Thumbs up"
+    #     # session.save_object(new_reading_obj)
+    #     session.add(new_reading_obj)
+        
+    #     # session.bulk_save_objects([new_reading_obj])
+    #     session.commit(new_reading_obj)
+    # except Exception as e:
+    #     return flask.abort(500, response=str(e))
+    # else:#
+    #     print("Writing to DB was successful")
+    #     # return flask.jsonify(
+    #     #     reading_schema.dumps(new_reading)
+    #     # )
+    #     return "Thumbs up"
+    
+    new_reading_obj = reading_schema.load(new_reading_data, session=session)
+    print(repr(new_reading_obj))
+    session.add(new_reading_obj)
+    session.commit()
+    print("Writing to DB was successful")
+    return flask.jsonify(
+        reading_schema.dumps(new_reading)
+    )
+    # return "Thumbs up"
 
 
 @app.route("/get_data")
@@ -208,6 +235,30 @@ def give_photo(name):
     else:
         return flask.send_file(file_path, mimetype='image/gif')
 
+def dicts_to_csv_lines(records):
+    for row in [records[0].keys()] + [r.values() for r in records]:
+        yield ",".join(
+            map(
+                lambda e: str(e),
+                row
+            )
+        ) + ",<br>"
+
+
+@app.route("/csv_data", methods=["GET"])
+def csv_data():
+    # query all records
+    query = sqla.select(Reading)
+    all_readings = list(session.scalars(query))
+    
+    # dump to dictionary
+    serialised_readings: dict = reading_schema_many.dump(all_readings)
+    
+    # convert list of dictionaries to csv
+    # would use csv library but i don't want to write to a local file
+    return "\n".join(
+        dicts_to_csv_lines(serialised_readings)
+    )
 
 def run_app():
     try:

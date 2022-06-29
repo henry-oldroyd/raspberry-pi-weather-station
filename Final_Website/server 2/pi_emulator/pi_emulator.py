@@ -47,18 +47,16 @@ try:
         raise
     except AssertionError as e:
         logger.critical("status code was not 200")
-        match request.status_code:
-            case 404:
-                logger.critical('404 page not found')
-            case 401:
-                logger.critical('401 authentication failed, check key')
-            case 500:
-                logger.critical('500 internal server error, perhaps flask server has crashed')
+        # match request.status_code:
+        #     case 404:
+        #         logger.critical('404 page not found')
+        #     case 401:
+        #         logger.critical('401 authentication failed, check key')
+        #     case 500:
+        #         logger.critical('500 internal server error, perhaps flask server has crashed')
     else:
-        logger.info("Post request successfull")
+        logger.info("Post request successful")
         logger.info(f"request status code:   {request.status_code}")
-        # json = json.loads(request.text)
-        # logger.info(f"""returned json data:   {json}""")
 
 except Exception as e:
     logger.exception(e)
