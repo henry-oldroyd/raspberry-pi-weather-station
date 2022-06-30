@@ -54,10 +54,13 @@
 
 .about-us-text1 {
     grid-area: text1;
+    font-size: 0.7em;
+    margin: auto;
 }
 
 .about-us-quotes {
     grid-area: quotes;
+    font-size: 0.6em;
 }
 
 #selfie-img {

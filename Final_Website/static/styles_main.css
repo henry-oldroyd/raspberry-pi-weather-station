@@ -63,10 +63,10 @@ html {
     --explore-bg-colour: rgb(226, 226, 226);
     --banner-margin-left: 3em;
     --banner-margin-right: 3em;
-    --banner-font-size: 2em;
+    --banner-font-size: 1.8em;
     --about-bg-colour: rgb(196, 187, 186);
     --banner-top-gap: 0.5em;
-    --banner-bottom-gap: 0.5em;
+    --banner-bottom-gap: 0.3em;
     --margin-left: 5em;
     --margin-right: 5em;
     --intro-banner-height: 3em;

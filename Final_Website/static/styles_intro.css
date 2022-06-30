@@ -30,7 +30,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 12vh;
+    height: 14vh;
     border-radius: 0;
     background-color: var(--header-bg-colour);
     color: var(--header-text-colour)
@@ -256,7 +256,7 @@
 .status-wrapper {
     position: absolute;
     right: 2em;
-    top: 6.5em;
+    top: 7em;
     font-size: 1em;
     color: rgb(4, 167, 40);
     display: flex;

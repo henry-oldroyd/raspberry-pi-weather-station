@@ -51,12 +51,13 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    margin: 0;
 }
 
 .button-container-big-graph {
     height: 100%;
     /* padding-top: 3em; */
-    margin-top: 50px;
+    margin-top: 10px;
     margin-right: var(--margin-right);
 }
 
@@ -109,6 +110,7 @@
     flex-direction: column;
     align-items: center;
     text-align: right;
+    transform: translate(0, -10px);
 }
 
 .slider-big-graph {
@@ -252,7 +254,7 @@ input::-moz-range-progress {
 .download-csv {
     float: right;
     margin-right: calc(var(--margin-right));
-    transform: translate(-4em, -1.5em);
+    transform: translate(-4em, -3.5em);
     background-color: #9fa1a2;
     border: 1px solid transparent;
     border-radius: 3px;
