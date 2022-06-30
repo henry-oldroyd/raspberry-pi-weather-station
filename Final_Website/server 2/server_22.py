@@ -182,10 +182,11 @@ def new_reading():
     # return "Thumbs up"
 
 
-@app.route("/get_data")
-def redirect_to_data():
-    """was an old endpoint replaced by data"""
-    return flask.url_for(flask.url_for("get_reading"))
+# @app.route("/get_data")
+# def redirect_to_data():
+#     """was an old endpoint replaced by data"""
+#     # return flask.url_for(flask.url_for("get_readings"))
+#     # return flask.url_for("/data")
 
 
 @app.route("/", methods=['GET'])
@@ -220,25 +221,24 @@ def dicts_to_csv_lines(records):
 def background_image():
     # get last reading
     if LAST_COMMITTED_TIMESTAMP is not None:
-        reading = list(session.scalar(
+        reading = list(session.scalars(
             sqla.select(Reading)\
             .where(Reading.timestamp == LAST_COMMITTED_TIMESTAMP)
-        ))
-    else:
-        reading = list(session.scalar(
-            sqla.select(Reading)
         ))[0]
+    else:
+        reading = list(session.scalars(
+            sqla.select(Reading)\
+            .order_by(Reading.timestamp)
+        ))[-1]
     
-    
-    temperature, precipitation = None, None
-    return flask.redirect(
-        give_photo(
-            determine_background_image(
-                temperature=reading.temperature,
-                precipitation=reading.precipitation
-            )
-        )
+    image_name = determine_background_image(
+        temperature=reading.temperature,
+        precipitation=reading.precipitation
     )
+    print(f"determine_background_image called with ({reading.temperature}, {reading.precipitation}) returned {image_name}")
+    file_path = image_paths[image_name]
+    
+    return flask.send_file(file_path, mimetype='image/gif')
 
 @app.route("/csv_data", methods=["GET"])
 def csv_data():

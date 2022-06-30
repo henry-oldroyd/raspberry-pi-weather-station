@@ -30,7 +30,7 @@ example_data = {
     'humidity': random.uniform(0, 30),
     'wind_speed': random.uniform(0, 30),
     'wind_direction': random.uniform(0, 30),
-    'precipitation': random.uniform(0, 30)
+    'precipitation': random.uniform(0, 2)
 }
 logger.info(f"using sample data:   {example_data}")
 
