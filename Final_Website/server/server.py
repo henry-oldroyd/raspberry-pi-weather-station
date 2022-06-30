@@ -74,6 +74,11 @@ def main():
     return render_template("index.html")
 
 
+@app.route("/raw-data")
+def raw_data(): 
+    return send_file("data.json")
+
+
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=5000)

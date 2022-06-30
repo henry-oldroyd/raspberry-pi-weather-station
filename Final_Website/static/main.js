@@ -473,7 +473,4 @@ function buttonAnimation() {
 
 
     return colours
-
-
-
 }
