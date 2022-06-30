@@ -24,6 +24,7 @@ logger = logging.getLogger(os.path.basename(__file__))
 # constants:
 PORT = 5000
 DATE_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+LAST_COMMITTED_TIMESTAMP = None
 
 with open('hashed_key.key', 'r') as file:
     SECRET_KEY_HASH = file.read()
@@ -37,11 +38,11 @@ with open("../images/images.json", "r") as file:
 
 
 # setup sql engine:
-# engine = sqla.create_engine("sqlite:///:memory:")
 basedir = os.path.abspath(os.path.dirname(__file__))
 # https://stackoverflow.com/questions/48218065/programmingerror-sqlite-objects-created-in-a-thread-can-only-be-used-in-that-sa
 engine = sqla.create_engine(
     'sqlite:///' + os.path.join(basedir, 'database.db'),
+    # "sqlite:///:memory:",
     echo=True,
     future=True,
     connect_args={'check_same_thread': False}
@@ -55,7 +56,7 @@ Base = declarative_base()
 # setup sqlalchemy row obj
 class Reading(Base):
     """Table for uncalibrated readings"""
-    __tablename__ = 'readings_uncalibrated'
+    __tablename__ = 'Readings'
     primary_key = sqla.Column(sqla.Integer, primary_key=True)
     timestamp = sqla.Column(sqla.DateTime())
     # background_img = sqla.Column(sqla.VARCHAR(100))
@@ -74,24 +75,11 @@ class Reading(Base):
         self.wind_speed = wind_speed
         self.wind_direction = wind_direction
         self.precipitation = precipitation
-        # timestamp = datetime.now()
-        # to test something
-        timestamp = datetime.now() - timedelta(days=21)
-        self.timestamp = timestamp
-        # self.background_img = determine_background_image(
-        #     timestamp=timestamp,
-        #     pressure=pressure,
-        #     temperature=temperature,
-        #     humidity=humidity,
-        #     wind_speed=wind_speed, 
-        #     wind_direction=wind_direction,
-        #     precipitation=precipitation
-        # )
-
+        self.timestamp = datetime.now()
 
     def __repr__(self):
-        # return f"<Reading_Uncalibrated(primary_key={self.primary_key}, timestamp={self.timestamp})>"
-        return f"<Reading_Uncalibrated(timestamp={self.timestamp})>"
+        return f"<Reading_Uncalibrated(primary_key={self.primary_key}, timestamp={self.timestamp})>"
+        # return f"<Reading(timestamp={self.timestamp})>"
 
 
 # create all tables
@@ -105,9 +93,7 @@ class Reading_Schema(SQLAlchemySchema):
         datetimeformat = DATE_TIME_FORMAT
 
     # primary_key = auto_field(dump_only=True)
-    timestamp = auto_field(dump_only=True)
-    # background_img = auto_field(dump_only=True)
-    
+    timestamp = auto_field(dump_only=True)    
     pressure=auto_field(required=True)
     temperature = auto_field(required=True)
     humidity = auto_field(required=True)
@@ -120,7 +106,14 @@ class Reading_Schema(SQLAlchemySchema):
 reading_schema = Reading_Schema()
 reading_schema_many = Reading_Schema(many=True)
 
-
+# def delete_all_readings():
+#     # all_readings = list(session.scalar(
+#     #     sqla.select(Reading)
+#     # ))
+#     # session.delete_all(all_readings)
+#     session.()
+#     session.commit()
+    
 
 # functions
 def hash(plain_txt):
@@ -129,11 +122,12 @@ def hash(plain_txt):
     hash_.update(plain_txt.encode())
     return hash_.hexdigest()
 
-def determine_background_image(timestamp, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
+def determine_background_image(temperature, precipitation):
     # will check time stamp and be true if between 11pm and 5am
-    is_night = True
+    hour = datetime.now().hour
+    is_night = hour < 5 or hour >= 23
     # will make some comparrison with rain but I am not sure how to yet ask Sam
-    is_raining = False
+    is_raining = precipitation/hour > 1
     
     if is_raining: return "rain"
     # not sure of priority, should a hot night be night image or sunny image 
@@ -143,29 +137,21 @@ def determine_background_image(timestamp, pressure, temperature, humidity, wind_
     # default mild
     return "mild"
 
+
 # setup app
 app = flask.Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-
-
-# def less_than_14_days_old(timestamp_str):
-#     print("\n\n"+timestamp_str+"\n\n")
-#     # timestamp = datetime.strptime(timestamp_str, 'YYYY-MM-DD HH:MM:SS')
-#     timestamp = datetime.strptime(timestamp_str, '%-%M-%D %H:%M:%S')
-#     # timestamp = datetime.strptime(timestamp_str, DATE_TIME_FORMAT)
-#     dif = datetime.now() - timestamp
-#     return dif.days < 14
 
 
 # setup get routes
 @app.route('/data', methods=['GET'])
 def get_readings():
     # datediff: https://stackoverflow.com/questions/36571706/python-sqlalchemy-filter-by-datediff-of-months
-    query = sqla.select(Reading)\
+    stmt = sqla.select(Reading)\
         .filter(
             sqla.func.julianday() - sqla.func.julianday(Reading.timestamp) <= 14
         )
-    all_readings = list(session.scalars(query))
+    all_readings = list(session.scalars(stmt))
     serialised_readings: dict = reading_schema_many.dump(all_readings)
     return flask.jsonify(serialised_readings)
 
@@ -182,29 +168,14 @@ def new_reading():
         print("secret key wrong for post request")
         flask.abort(401)
     
-    # try:
-    #     new_reading_obj = reading_schema.load(new_reading_data, session=session)
-    #     print(repr(new_reading_obj))
-
-    #     # session.save_object(new_reading_obj)
-    #     session.add(new_reading_obj)
-        
-    #     # session.bulk_save_objects([new_reading_obj])
-    #     session.commit(new_reading_obj)
-    # except Exception as e:
-    #     return flask.abort(500, response=str(e))
-    # else:#
-    #     print("Writing to DB was successful")
-    #     # return flask.jsonify(
-    #     #     reading_schema.dumps(new_reading)
-    #     # )
-    #     return "Thumbs up"
     
     new_reading_obj = reading_schema.load(new_reading_data, session=session)
     print(repr(new_reading_obj))
+    global LAST_COMMITTED_TIMESTAMP
+    LAST_COMMITTED_TIMESTAMP = new_reading_obj.timestamp
+    
     session.add(new_reading_obj)
     session.commit()
-    print("Writing to DB was successful")
     return flask.jsonify(
         reading_schema.dumps(new_reading)
     )
@@ -242,11 +213,36 @@ def dicts_to_csv_lines(records):
                 lambda e: str(e),
                 row
             )
-        ) + ",<br>"
+        ) + ","
 
+
+@app.route("/background_image", methods=["GET"])
+def background_image():
+    # get last reading
+    if LAST_COMMITTED_TIMESTAMP is not None:
+        reading = list(session.scalar(
+            sqla.select(Reading)\
+            .where(Reading.timestamp == LAST_COMMITTED_TIMESTAMP)
+        ))
+    else:
+        reading = list(session.scalar(
+            sqla.select(Reading)
+        ))[0]
+    
+    
+    temperature, precipitation = None, None
+    return flask.redirect(
+        give_photo(
+            determine_background_image(
+                temperature=reading.temperature,
+                precipitation=reading.precipitation
+            )
+        )
+    )
 
 @app.route("/csv_data", methods=["GET"])
 def csv_data():
+    # source: https://stackoverflow.com/questions/30024948/flask-download-a-csv-file-on-clicking-a-button
     # query all records
     query = sqla.select(Reading)
     all_readings = list(session.scalars(query))
@@ -256,8 +252,14 @@ def csv_data():
     
     # convert list of dictionaries to csv
     # would use csv library but i don't want to write to a local file
-    return "\n".join(
-        dicts_to_csv_lines(serialised_readings)
+    return flask.Response(
+        "\n".join(
+            dicts_to_csv_lines(serialised_readings)
+        ),
+        mimetype="text/csv",
+        headers={
+            "Content-disposition": "attachment; filename=weather_data.csv",
+        }
     )
 
 def run_app():
@@ -270,3 +272,5 @@ def run_app():
 
 if __name__ == '__main__':
     run_app()
+    # delete_all_readings()
+    
