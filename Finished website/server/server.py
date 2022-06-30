@@ -32,6 +32,16 @@ with open('server/hashed_key.key', 'r') as file:
     SECRET_KEY_HASH = file.read()
 
 
+# setup app
+app = flask.Flask(
+    __name__,
+    # static_url_path='',
+    # static_folder='static',
+    # template_folder='templates'
+        static_folder='../static',
+    template_folder='../templates'
+)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 # setup sql engine:
@@ -127,16 +137,6 @@ def determine_background_image(temperature, precipitation):
     if temperature <= 14: return "cold"
     # default mild
     return "mild"
-
-
-# setup app
-app = flask.Flask(
-    __name__,
-    static_url_path='',
-    # static_folder='static',
-    # template_folder='templates'
-)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 # setup get routes
