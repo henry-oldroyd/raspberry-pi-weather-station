@@ -29,10 +29,7 @@ function load_page(jsondata) {
 
     jsondata.forEach(dataset => {
         tempData.push(dataset['temperature'])
-        roundedRain = parseFloat(dataset['precipitation']).toFixed(3)
-
-        rainData.push(roundedRain)
-
+        rainData.push(dataset['precipitation'])
         pressureData.push(dataset['pressure'])
         windSpeedData.push(dataset['wind_speed'])
         humidityData.push(dataset['humidity'])
@@ -40,8 +37,6 @@ function load_page(jsondata) {
         dayTypeData.push(dataset["day_type"])
         timeStampData.push(dataset["time_stamp"])
     });
-
-
 
 
 
@@ -164,8 +159,6 @@ class Graph {
                             beginAtZero: false,
                             ticks: {
                                 callback: function(value, index, ticks) {
-
-
                                     value = value + " " + unit;
                                     return value;
                                 }
@@ -301,12 +294,7 @@ function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
     bigGraph.chart.data.labels = this.xlabels;
     bigGraph.initialiseSlider();
     bigGraph.chart.options.scales.y.ticks.callback = function(value, index, ticks) {
-        if (unit == "mm") {
-            value = value.toFixed(3) + " " + unit;
-        } else {
-            value = value + " " + unit;
-        }
-
+        value = value + " " + unit;
         return value
     }
 
@@ -338,7 +326,6 @@ function page3Buttons(buttons, bigGraph, jsondata, firstCall = false) {
 
             // changes the groaph 
             dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
-            bigGraph.initialiseGraph("mm")
         })
 
     });
@@ -381,7 +368,7 @@ function connectingButton(boolConnected) {
 }
 
 function isConnected(recentTimeStamp) {
-
+    console.log(recentTimeStamp);
     // currentTimeStamp = yyyy-mm-dd hh:mm:ss eg
     let today = new Date();
 
