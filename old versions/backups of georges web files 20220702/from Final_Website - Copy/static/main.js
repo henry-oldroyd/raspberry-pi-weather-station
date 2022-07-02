@@ -338,7 +338,7 @@ function page3Buttons(buttons, bigGraph, jsondata, firstCall = false) {
 
             // changes the groaph 
             dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
-            bigGraph.initialiseGraph("mm")
+                // bigGraph.initialiseGraph("mm")
         })
 
     });

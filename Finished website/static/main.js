@@ -24,22 +24,20 @@ function load_page(jsondata) {
     let windSpeedData = []
     let humidityData = []
     let windDirectionData = []
-    let dayTypeData = []
+
     let timeStampData = []
 
     jsondata.forEach(dataset => {
-        tempData.push(dataset['temperature'])
-        roundedRain = parseFloat(dataset['precipitation']).toFixed(3)
-
-        rainData.push(roundedRain)
-
-        pressureData.push(dataset['pressure'])
-        windSpeedData.push(dataset['wind_speed'])
-        humidityData.push(dataset['humidity'])
-        windDirectionData.push(dataset["wind_direction"])
-        dayTypeData.push(dataset["day_type"])
-        timeStampData.push(dataset["time_stamp"])
+        tempData.push(dataset['temperature'].toFixed(1))
+        rainData.push(dataset['precipitation'].toFixed(2))
+        pressureData.push(Math.round(dataset['pressure']))
+        windSpeedData.push(Math.round(dataset['wind_speed']))
+        humidityData.push(Math.round(dataset['humidity']))
+        windDirectionData.push(Math.round(dataset["wind_direction"]))
+        timeStampData.push(dataset["timestamp"])
     });
+
+
 
 
 
@@ -70,7 +68,7 @@ function load_page(jsondata) {
     boolConnected = isConnected(timeStampData[timeStampData.length - 1])
     connectingButton(boolConnected)
 
-    getPhotoImages(dayTypeData);
+    getPhotoImages();
     lastUpdatedAt(timeStampData[timeStampData.length - 1]); // adds the "last updated" first page
 
 
@@ -211,23 +209,23 @@ class Graph {
 }
 
 async function get_all_json_data() {
-    let response = await fetch("http://127.0.0.1:5000/data");
+    let response = await fetch("/data");
     let data = response.json()
     return data;
 }
 
-function getPhotoImages(dayTypeData) {
-    updateBGimg(dayTypeData);
+function getPhotoImages() {
+    updateBGimg();
     sandringhamLogo()
     selfieImg();
     piImg();
 }
 
 // Update the background image to the current weather
-function updateBGimg(dayTypeData) {
-    img_file = dayTypeData[dayTypeData.length - 1]
+function updateBGimg() {
 
-    fetch(`http://127.0.0.1:5000/images/${img_file}`)
+
+    fetch(`/background_image`)
         // .then(response => console.log(response))
         .then(img => {
             var r = document.getElementsByClassName('intro')[0];
@@ -237,7 +235,7 @@ function updateBGimg(dayTypeData) {
 
 // returns sandringham logo img and sets to div in top left 
 function sandringhamLogo() {
-    fetch("http://127.0.0.1:5000/images/logo")
+    fetch("/images/logo")
         .then(img => {
             var logoImg = document.getElementById("sand-logo")
             logoImg.src = img['url']
@@ -246,7 +244,7 @@ function sandringhamLogo() {
 
 // returns selfie img and sets to about section 
 function selfieImg() {
-    fetch("http://127.0.0.1:5000/images/selfie")
+    fetch("/images/selfie")
         .then(img => {
             var selfieImg = document.getElementById("selfie-img")
             selfieImg.src = img['url']
@@ -254,7 +252,7 @@ function selfieImg() {
 }
 
 function piImg() {
-    fetch("http://127.0.0.1:5000/images/raspberry")
+    fetch("/images/raspberry")
         .then(img => {
             var piImg = document.getElementById("pi-img")
             piImg.src = img['url']
@@ -284,7 +282,6 @@ function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
         newdata.push(dataset[filter])
     });
 
-    // bigGraph.data = [4,3,2,1,2,4,5,6,6,4];
 
     bigGraph.chart.data.datasets.forEach((dataset) => {
         dataset.data = newdata; // changes the data
@@ -301,12 +298,7 @@ function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
     bigGraph.chart.data.labels = this.xlabels;
     bigGraph.initialiseSlider();
     bigGraph.chart.options.scales.y.ticks.callback = function(value, index, ticks) {
-        if (unit == "mm") {
-            value = value.toFixed(3) + " " + unit;
-        } else {
-            value = value + " " + unit;
-        }
-
+        value = value + " " + unit;
         return value
     }
 
@@ -338,7 +330,7 @@ function page3Buttons(buttons, bigGraph, jsondata, firstCall = false) {
 
             // changes the groaph 
             dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
-            bigGraph.initialiseGraph("mm")
+                // bigGraph.initialiseGraph("mm")
         })
 
     });
