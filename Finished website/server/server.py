@@ -160,7 +160,7 @@ def get_data():
     )
     all_readings = list(session.scalars(stmt))
     # this changes the order so the most recent item is at the top
-    all_readings.reverse()
+    # all_readings.reverse()
     serialised_readings: dict = reading_schema_many.dump(all_readings)
     return flask.jsonify(serialised_readings)
 
@@ -262,7 +262,7 @@ def csv_data():
     query = sqla.select(Reading).order_by(Reading.timestamp)
     all_readings = list(session.scalars(query))
     # reverse so most recent at the top
-    all_readings.reverse()
+    # all_readings.reverse()
 
     # dump to dictionary
     serialised_readings: dict = reading_schema_many.dump(all_readings)
