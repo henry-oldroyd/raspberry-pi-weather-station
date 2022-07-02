@@ -41,7 +41,7 @@ function load_page(jsondata) {
         timeStampData.push(dataset["time_stamp"])
     });
 
-    console.log(rainData)
+
 
 
 
@@ -164,7 +164,7 @@ class Graph {
                             beginAtZero: false,
                             ticks: {
                                 callback: function(value, index, ticks) {
-                                    console.log(unit)
+
 
                                     value = value + " " + unit;
                                     return value;
@@ -381,7 +381,7 @@ function connectingButton(boolConnected) {
 }
 
 function isConnected(recentTimeStamp) {
-    console.log(recentTimeStamp);
+
     // currentTimeStamp = yyyy-mm-dd hh:mm:ss eg
     let today = new Date();
 
