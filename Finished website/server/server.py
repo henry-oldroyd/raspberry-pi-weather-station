@@ -1,4 +1,4 @@
-#  docs:
+# docs:
 # https://marshmallow-sqlalchemy.readthedocs.io/en/latest/
 
 # imports
@@ -11,25 +11,21 @@ from marshmallow_sqlalchemy import SQLAlchemySchema, auto_field
 import os
 from datetime import datetime, timedelta
 import flask
-# import json
-# import logging
+import json
 
 
-
-# # local
-# import logger as logger_module
-
-# # setup logger
-# logger_module.setup_logger(os.path.basename(__file__))
-# logger = logging.getLogger(os.path.basename(__file__))
 
 # constants:
 PORT = 5000
 DATE_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 LAST_COMMITTED_TIMESTAMP = None
 
-with open('server/hashed_key.key', 'r') as file:
+with open('./server/hashed_key.key', 'r') as file:
     SECRET_KEY_HASH = file.read()
+
+# image paths lookup
+with open("./static/images.json", "r") as file:
+    image_paths = json.loads(file.read())
 
 
 # setup app
@@ -38,18 +34,19 @@ app = flask.Flask(
     # static_url_path='',
     # static_folder='static',
     # template_folder='templates'
-        static_folder='../static',
+    static_folder='../static',
     template_folder='../templates'
 )
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
+
+
 # setup sql engine:
-# basedir = os.path.abspath(os.path.dirname(__file__))
+basedir = os.path.abspath(os.path.dirname(__file__))
 # https://stackoverflow.com/questions/48218065/programmingerror-sqlite-objects-created-in-a-thread-can-only-be-used-in-that-sa
 engine = sqla.create_engine(
-    # 'sqlite:///' + os.path.join(basedir, './database.db'),
-    'sqlite:///database.db',
+    'sqlite:///' + os.path.join(basedir, 'database.db'),
     # "sqlite:///:memory:",
     echo=True,
     future=True,
@@ -114,6 +111,13 @@ class Reading_Schema(SQLAlchemySchema):
 reading_schema = Reading_Schema()
 reading_schema_many = Reading_Schema(many=True)
 
+# def delete_all_readings():
+#     # all_readings = list(session.scalar(
+#     #     sqla.select(Reading)
+#     # ))
+#     # session.delete_all(all_readings)
+#     session.()
+#     session.commit()
     
 
 # functions
@@ -139,9 +143,12 @@ def determine_background_image(temperature, precipitation):
     return "mild"
 
 
+
+
+
 # setup get routes
 @app.route('/data', methods=['GET'])
-def get_readings():
+def get_data():
     # datediff: https://stackoverflow.com/questions/36571706/python-sqlalchemy-filter-by-datediff-of-months
     stmt = sqla.select(Reading)\
         .filter(
@@ -153,7 +160,7 @@ def get_readings():
 
 
 @app.route('/data', methods=['POST'])
-def new_reading():
+def post_data():
     data_header = flask.request.json
 
     secret_key = data_header["secret_key"]
@@ -173,39 +180,42 @@ def new_reading():
     session.add(new_reading_obj)
     session.commit()
     return flask.jsonify(
-        reading_schema.dumps(new_reading)
+        reading_schema.dumps(new_reading_obj)
     )
     # return "Thumbs up"
 
 
-# @app.route("/get_data")
-# def redirect_to_data():
-#     """was an old endpoint replaced by data"""
-#     # return flask.url_for(flask.url_for("get_readings"))
-#     # return flask.url_for("/data")
+@app.route("/get_data")
+def redirect_to_data():
+    """was an old endpoint replaced by data"""
+    return flask.url_for(flask.url_for("get_data"))
 
 
 @app.route("/", methods=['GET'])
 def index():
-    # return "HTML HERE"
+    return "HTML HERE"
     # return flask.redirect(flask.url_for("get_readings"))
-    return flask.render_template("index.html")
 
 
 @app.route("/images/<name>", methods=["GET"])
 def give_photo(name):
     # print(name)
-    name = name.lower().strip()
-    return flask.redirect(flask.url_for("static", filename=f"images/{name}.png"))
-
-def dicts_to_csv_lines(records):
-    for row in [records[0].keys()] + [r.values() for r in records]:
-        yield ",".join(
-            map(
-                lambda e: str(e),
-                row
-            )
-        ) + ","
+    try:
+        assert name in image_paths.keys()
+        file_path = os.path.join(basedir, image_paths[name])
+        print(os.path.join(basedir, file_path))
+        assert os.path.exists(os.path.join(basedir, file_path))
+    except AssertionError:
+        flask.abort(404)
+    else:
+        # return flask.send_file(file_path, mimetype='image/gif')
+        img_url = flask.url_for(
+            "static",
+            # filename=f"images/{name}.png"
+            filename=os.path.join(basedir, file_path)
+        )
+        print(f"redirecting to  {img_url}")
+        return flask.redirect(img_url)
 
 
 @app.route("/background_image", methods=["GET"])
@@ -226,11 +236,29 @@ def background_image():
         temperature=reading.temperature,
         precipitation=reading.precipitation
     )
+    print(f"determine_background_image called with ({reading.temperature}, {reading.precipitation}) returned {image_name}")
+    file_path = image_paths[image_name]
+    assert os.path.exists(os.path.join(basedir, file_path))
     
-    return flask.redirect(flask.url_for("static", filename=f"{image_name}.png"))
+    return flask.redirect(
+        flask.url_for(
+            "static",
+            # filename=f"images/{name}.png"
+            filename=os.path.join(basedir, file_path)
+        )
+    )
+
 
 @app.route("/csv_data", methods=["GET"])
 def csv_data():
+    def dicts_to_csv_lines(records):
+        for row in [records[0].keys()] + [r.values() for r in records]:
+            yield ",".join(
+                map(
+                    lambda e: str(e),
+                    row
+                )
+            ) + ","
     # source: https://stackoverflow.com/questions/30024948/flask-download-a-csv-file-on-clicking-a-button
     # query all records
     query = sqla.select(Reading)

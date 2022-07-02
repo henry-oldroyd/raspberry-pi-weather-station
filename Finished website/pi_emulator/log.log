@@ -1,7 +1,7 @@
-2022-06-30 18:48:33,504 - pi_emulator.py - INFO - this logger named pi_emulator.py created
-2022-06-30 18:48:33,505 - pi_emulator.py - INFO - using secret key:   ABC1**********************-key
-2022-06-30 18:48:33,506 - pi_emulator.py - INFO - using server url:   http://127.0.0.1:5000/data
-2022-06-30 18:48:33,506 - pi_emulator.py - INFO - using sample data:   {'pressure': 19.88137728536526, 'temperature': 30, 'humidity': 13.377321295208274, 'wind_speed': 18.593090074251272, 'wind_direction': 7.5263200191657305, 'precipitation': 0}
-2022-06-30 18:48:33,507 - pi_emulator.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'pressure': 19.88137728536526, 'temperature': 30, 'humidity': 13.377321295208274, 'wind_speed': 18.593090074251272, 'wind_direction': 7.5263200191657305, 'precipitation': 0}}
-2022-06-30 18:48:33,542 - pi_emulator.py - INFO - Post request successful
-2022-06-30 18:48:33,542 - pi_emulator.py - INFO - request status code:   200
+2022-07-02 18:09:57,362 - pi_emulator.py - INFO - this logger named pi_emulator.py created
+2022-07-02 18:09:57,363 - pi_emulator.py - INFO - using secret key:   ABC1**********************-key
+2022-07-02 18:09:57,363 - pi_emulator.py - INFO - using server url:   http://127.0.0.1:5000/data
+2022-07-02 18:09:57,364 - pi_emulator.py - INFO - using sample data:   {'pressure': 13.304725676695075, 'temperature': 1.3282045926654262, 'humidity': 9.128151463747228, 'wind_speed': 8.421178696947209, 'wind_direction': 19.460104271236087, 'precipitation': 0.5921200567210241}
+2022-07-02 18:09:57,365 - pi_emulator.py - INFO - data about to be sent in post request:   {'secret_key': 'ABC123-this-is-a-pi-secret-key', 'new_data_item': {'pressure': 13.304725676695075, 'temperature': 1.3282045926654262, 'humidity': 9.128151463747228, 'wind_speed': 8.421178696947209, 'wind_direction': 19.460104271236087, 'precipitation': 0.5921200567210241}}
+2022-07-02 18:09:57,400 - pi_emulator.py - INFO - Post request successful
+2022-07-02 18:09:57,400 - pi_emulator.py - INFO - request status code:   200
