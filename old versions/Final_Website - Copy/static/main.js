@@ -29,7 +29,10 @@ function load_page(jsondata) {
 
     jsondata.forEach(dataset => {
         tempData.push(dataset['temperature'])
-        rainData.push(dataset['precipitation'])
+        roundedRain = parseFloat(dataset['precipitation']).toFixed(3)
+
+        rainData.push(roundedRain)
+
         pressureData.push(dataset['pressure'])
         windSpeedData.push(dataset['wind_speed'])
         humidityData.push(dataset['humidity'])
@@ -37,6 +40,8 @@ function load_page(jsondata) {
         dayTypeData.push(dataset["day_type"])
         timeStampData.push(dataset["time_stamp"])
     });
+
+    console.log(rainData)
 
 
 
@@ -159,6 +164,8 @@ class Graph {
                             beginAtZero: false,
                             ticks: {
                                 callback: function(value, index, ticks) {
+                                    console.log(unit)
+
                                     value = value + " " + unit;
                                     return value;
                                 }
@@ -294,7 +301,12 @@ function dropdownFunctionality(value, bigGraph, jsondata, fgColour, bgColour) {
     bigGraph.chart.data.labels = this.xlabels;
     bigGraph.initialiseSlider();
     bigGraph.chart.options.scales.y.ticks.callback = function(value, index, ticks) {
-        value = value + " " + unit;
+        if (unit == "mm") {
+            value = value.toFixed(3) + " " + unit;
+        } else {
+            value = value + " " + unit;
+        }
+
         return value
     }
 
@@ -326,6 +338,7 @@ function page3Buttons(buttons, bigGraph, jsondata, firstCall = false) {
 
             // changes the groaph 
             dropdownFunctionality(button.innerText, bigGraph, jsondata, colours[0], colours[1])
+            bigGraph.initialiseGraph("mm")
         })
 
     });
