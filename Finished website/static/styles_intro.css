@@ -256,7 +256,8 @@
 .status-wrapper {
     position: absolute;
     right: 2em;
-    top: 7em;
+    top: 15vh;
+    ;
     font-size: 1em;
     color: rgb(4, 167, 40);
     display: flex;
