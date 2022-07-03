@@ -154,10 +154,10 @@ def get_data():
     stmt = sqla.select(Reading)\
         .filter(
             sqla.func.julianday() - sqla.func.julianday(Reading.timestamp) <= 14
-    )\
+        )\
         .order_by(
             Reading.timestamp
-    )
+        )
     all_readings = list(session.scalars(stmt))
     # this changes the order so the most recent item is at the top
     # all_readings.reverse()
@@ -237,7 +237,8 @@ def background_image():
         precipitation=reading.precipitation
     )
     # print(f"determine_background_image called with ({reading.temperature}, {reading.precipitation}) returned {image_name}")
-    return give_photo(image_name)
+    # return give_photo(image_name)
+    return flask.send_file("test image.png", mimetype='image/gif')
 
 
 # @app.route("/csv_data", methods=["GET"])
