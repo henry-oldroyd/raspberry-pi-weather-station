@@ -245,6 +245,9 @@
     position: absolute;
     font-size: 1em;
     bottom: 3em;
+    border-radius: 10%;
+    padding: 0 10px 0 10px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width:788px) {
