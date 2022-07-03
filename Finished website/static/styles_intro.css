@@ -1,7 +1,9 @@
 .intro {
     background-image: url();
+    /* background-size: cover; */
+    width: 100%;
+    height: 100vh;
     background-size: cover;
-    height: 95vh;
     /* 100vh - sticky footer height */
     overflow: hidden;
 }
