@@ -237,8 +237,8 @@ def background_image():
         precipitation=reading.precipitation
     )
     # print(f"determine_background_image called with ({reading.temperature}, {reading.precipitation}) returned {image_name}")
-    # return give_photo(image_name)
-    return flask.send_file("test image.png", mimetype='image/gif')
+    return give_photo(image_name)
+    # return flask.send_file("test image.png", mimetype='image/gif')
 
 
 # @app.route("/csv_data", methods=["GET"])
