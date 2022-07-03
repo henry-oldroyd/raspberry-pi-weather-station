@@ -66,7 +66,7 @@ class Reading(Base):
     temperature = sqla.Column(sqla.Float())
     humidity = sqla.Column(sqla.Float())
     wind_speed = sqla.Column(sqla.Float())
-    wind_direction = sqla.Column(sqla.Float())
+    wind_direction = sqla.Column(sqla.Integer())
     precipitation = sqla.Column(sqla.Float())
 
     def __init__(self, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
