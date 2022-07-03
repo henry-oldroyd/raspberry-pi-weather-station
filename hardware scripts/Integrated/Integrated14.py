@@ -1,6 +1,5 @@
 #Import modules
 import requests
-from random import uniform, randint
 
 #Import files to use
 import Ann15 as Ann
