@@ -1,7 +1,7 @@
 import Ann15 as Ann
 import BME8 as BME
 import Rain15 as Rain
-import Wind13 as Wind
+import Wind14 as Wind
 
 #Takes readings
 rainVol = Rain.main()
