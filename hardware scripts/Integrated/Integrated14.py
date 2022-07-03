@@ -1,17 +1,21 @@
+#Import modules
 import requests
-from random import uniform, randint
 
+#Import files to use
+import Ann15 as Ann
+import BME8 as BME
+import Rain15 as Rain
+import Wind14 as Wind
 
+#Setting up server
 SERVER_URL = 'http://127.0.0.1:5000/data'
 
-
-# will be stored in an environmental variable in PI
+#Will be stored in an environmental variable in PI
 with open("secret_key.key", "r") as file:
     SECRET_KEY = file.read()
 
-
 def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
-    reading_data = {
+    readingData = {
         'pressure': pressure,
         'temperature': temperature,
         'humidity': humidity,
@@ -20,8 +24,7 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
         'precipitation': precipitation
     }
 
-
-    payload = {"secret_key": SECRET_KEY, "new_data_item": reading_data}
+    payload = {"secret_key": SECRET_KEY, "new_data_item": readingData}
 
     try:
         request = requests.post(SERVER_URL, json=payload)
@@ -31,13 +34,25 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
         print("ERROR:")
         print(e)
 
-if __name__ == '__main__':
+#Defaults all values to 0
+rainVol = 0
+windSpeed = 0
+temp = 0
+press = 0
+humid = 0
+windD = 0
 
-    send_reading(
-        pressure=uniform(0, 30),
-        temperature=uniform(0, 30),
-        humidity=uniform(0, 30),
-        wind_speed=uniform(0, 30),
-        wind_direction=randint(0, 360),
-        precipitation=uniform(0, 4),
-    )
+#Takes readings
+rainVol = Rain.main()
+windSpeed = Ann.main()
+temp, press, humid = BME.main()
+windD = Wind.get_value()
+
+#Send values to store in server
+send_reading(press, temp, humid, windSpeed, windD, rainVol)
+
+#Prints out values - for testing
+#print(rainVol)
+#print(windSpeed)
+#print(temp, press, humid)
+#print(windD)
