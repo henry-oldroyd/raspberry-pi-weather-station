@@ -1,7 +1,7 @@
 /* if editing colours, please change JS file too  */
 
 @keyframes dot-animation {
-    0% {
+    /* 0% {
         box-sizing: 0 0 0 15px rgb(59, 73, 59), 0 0 0 10px none, 0 0 0 5px rgb(65, 84, 65);
     }
     50% {
@@ -9,6 +9,18 @@
     }
     100% {
         box-sizing: 0 0 0 15px rgb(59, 73, 59), 0 0 0 10px none, 0 0 0 5px rgb(65, 84, 65);
+    }*/
+    0% {
+        box-sizing: 0 0 0 15px rgb(4, 167, 40), 0 0 0 10px none, 0 0 0 5px rgb(4, 167, 40);
+        background-color: rgb(4, 167, 40);
+    }
+    50% {
+        box-shadow: 0 0 0 3px rgb(4, 167, 40);
+        background-color: rgb(4, 167, 40);
+    }
+    100% {
+        box-sizing: 0 0 0 15px, 0 0 0 10px none, 0 0 0 5px rgb(4, 167, 40);
+        background-colrgb: rgb(4, 167, 40);
     }
 }
 
@@ -35,11 +47,11 @@
         background-color: rgb(254, 141, 2);
     }
     50% {
-        box-shadow: 0 0 0 3px rgb(173, 103, 24);
+        box-shadow: 0 0 0 3px rgb(254, 141, 2);
         background-color: rgb(254, 141, 2);
     }
     100% {
-        box-sizing: 0 0 0 15px rgb(254, 141, 2), 0 0 0 10px none, 0 0 0 5px rgb(254, 141, 2);
+        box-sizing: 0 0 0 15px, 0 0 0 10px none, 0 0 0 5px rgb(254, 141, 2);
         background-color: rgb(254, 141, 2);
     }
 }
@@ -50,7 +62,7 @@
         background-color: rgb(213, 27, 27);
     }
     50% {
-        box-shadow: 0 0 0 3px rgb(159, 29, 29);
+        box-shadow: 0 0 0 3px rgb(213, 27, 27);
         background-color: rgb(213, 27, 27);
     }
     100% {
