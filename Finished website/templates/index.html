@@ -10,6 +10,14 @@
     <link rel="icon" href="https://img.icons8.com/doodle/2x/apple-weather.png">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+
+    <!-- <script type="text/javascript" src="../static/main.js"></script> -->
+    <!-- example of how it should be done -->
+    <script type="text/javascript" src="{{  url_for('static', filename='main.js')  }}"></script>
+
+
+
     <script type="text/javascript" src="../static/main.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -19,7 +27,7 @@
     <link rel="stylesheet" href="../static/styles_footer.css">
     <link rel="stylesheet" href="../static/styles_about.css">
     <link rel="stylesheet" href="../static/styles_animation.css">
-    <link rel="stylesheet" href="./shadow.css" />
+    <!-- <link rel="stylesheet" href="./shadow.css" /> -->
 </head>
 
 <body>
@@ -96,7 +104,12 @@
                 </div>
             </div>
             <!-- can't get it to work yet  -->
-            <button type="submit" download="data.json" class="download-csv">Download Data</button>
+            <!-- <button type="submit" download="data.json" class="download-csv">Download Data</button> -->
+
+            <!-- here you go George -->
+            <a href="{{ url_for('csv_data') }}">
+                <button class="download-csv">Download Data</button>
+            </a>
 
         </div>
     </section>

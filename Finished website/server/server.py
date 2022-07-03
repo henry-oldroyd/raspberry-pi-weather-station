@@ -231,12 +231,12 @@ def background_image():
             .order_by(Reading.timestamp)
         ))[-1]
 
+
     image_name = determine_background_image(
         temperature=reading.temperature,
         precipitation=reading.precipitation
     )
     # print(f"determine_background_image called with ({reading.temperature}, {reading.precipitation}) returned {image_name}")
-
     return give_photo(image_name)
 
 
