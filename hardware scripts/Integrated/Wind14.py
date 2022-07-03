@@ -26,11 +26,9 @@ def get_value():
     value = adc.value*3.3 #Multiply by 3.3kOhm due to range of potential divider circuit
     wind = round(value, 1)
     if not wind in volts:
-         print("Unknown Value: " + str(wind))
+         #print("Unknown Value: " + str(wind))
          data = 0.0 #if unknown just sends as 0 or North 
     else:
          data = volts[wind]
     #print(volts[wind]) #also used for testing
     return data
-
-print(get_value())
