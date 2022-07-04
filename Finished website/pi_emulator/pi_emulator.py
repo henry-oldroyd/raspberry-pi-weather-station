@@ -42,11 +42,11 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
         print("ERROR:")
         print(e)
         if request.status_code == 404:
-                logger.critical('404 page not found')
+            logger.critical('404 page not found')
         if request.status_code == 401:
-                logger.critical('401 authentication failed, check key')
+            logger.critical('401 authentication failed, check key')
         if request.status_code == 500:
-                logger.critical('500 internal server error, perhaps flask server has crashed')
+            logger.critical('500 internal server error, perhaps flask server has crashed')
 
 if __name__ == '__main__':
     send_reading(
