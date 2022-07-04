@@ -238,6 +238,7 @@ def background_image():
     )
     # print(f"determine_background_image called with ({reading.temperature}, {reading.precipitation}) returned {image_name}")
     return give_photo(image_name)
+    # return give_photo('sunny')
     # return flask.send_file("test image.png", mimetype='image/gif')
 
 
