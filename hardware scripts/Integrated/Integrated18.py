@@ -24,7 +24,7 @@ loggerBack = logging.getLogger(os.path.basename(__file__) + " - Backend Logger")
 
 def integerCheck(checkMe): #Ensures all values have been calculated as integers (i.e. all valid) - if not defaults to 0
     try:
-        checkMe = int(checkMe)
+        checkMe = float(checkMe)
     except ValueError:
         loggerSens.error('   {checkMe}   has incorrect form. ')
         checkMe = 0
