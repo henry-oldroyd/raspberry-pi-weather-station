@@ -101,7 +101,12 @@ class Dataset {
         }
         // getting rid of wind direction
         if (this.windDirection != null) {
-            this.child[0].innerText = this.currentData + this.unit + ' ' + this.windDirection + '°';
+            this.windDirection = Math.round(this.windDirection)
+
+            while (this.windDirection.length != 3) {
+                this.windDirection = "0" + this.windDirection
+            }
+            this.child[0].innerText = this.windDirection + '° ' + this.currentData + this.unit;
 
         }
 
