@@ -116,7 +116,7 @@ class Dataset {
 }
 
 class Graph {
-    constructor(title, id, data, timestamps, unit, rgbaFront, rgbaBack, slider = false) {
+    constructor(title, id, data, timestamps, unit, rgbaFront, rgbaBack, slider_on = false) {
             this.title = title
             this.backgroundColour = rgbaFront
             this.colour = rgbaFront
@@ -128,7 +128,7 @@ class Graph {
             this.unit = unit;
             this.xlabels = this.createXlabels(timestamps)
             this.initialiseGraph(unit)
-            if (slider == true) {
+            if (slider_on == true) {
                 this.initialiseSlider();
             }
 
