@@ -449,8 +449,8 @@ function returnRandomHSL() {
         // var brightcolorname = 'rgba(' + r + ',' + g + ',' + b + ',1)';
         // var dimcolorname = 'rgba(' + r + ',' + g + ',' + b + ',0.2)';
     let h = Math.floor(Math.random() * (max + 1))
-    var brightcolorname = `hsl(${h}, 100%, 70%)`
-    var dimcolorname = `hsl(${h},40%,70%)`
+    var brightcolorname = `hsl(${h}, 100%, 50%)`
+    var dimcolorname = `hsl(${h},40%,80%)`
     return [brightcolorname, dimcolorname]
 
 }
