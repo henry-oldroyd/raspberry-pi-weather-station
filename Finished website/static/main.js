@@ -443,9 +443,9 @@ function resizeFunc() {
 
 function returnRandomHSL() {
     let max = 360
-    let h = Math.floor(Math.random() * (max + 1))
-    var brightcolorname = `hsl(${h}, 100%, 50%)`
-    var dimcolorname = `hsl(${h},40%,80%)`
+    let hue = Math.floor(Math.random() * max)
+    var brightcolorname = `hsl(${hue}, 80%, 50%)`
+    var dimcolorname = `hsl(${hue},40%,80%)`
     return [brightcolorname, dimcolorname]
 
 }
