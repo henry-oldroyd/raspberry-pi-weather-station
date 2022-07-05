@@ -101,7 +101,7 @@ class Dataset {
         }
         // getting rid of wind direction
         if (this.windDirection != null) {
-            this.windDirection = Math.round(this.windDirection)
+
 
             while (this.windDirection.length != 3) {
                 this.windDirection = "0" + this.windDirection
