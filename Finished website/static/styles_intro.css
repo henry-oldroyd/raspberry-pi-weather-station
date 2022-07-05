@@ -3,6 +3,7 @@
     /* background-size: cover; */
     width: 100%;
     height: 100vh;
+    background-color: var(--explore-bg-colour);
     background-size: cover;
     /* 100vh - sticky footer height */
     overflow: hidden;
