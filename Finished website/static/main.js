@@ -441,19 +441,22 @@ function resizeFunc() {
     }
 }
 
-function returnRandomRGBs() {
-    let max = 255
-    let r = Math.floor(Math.random() * (max + 1));
-    let g = Math.floor(Math.random() * (max + 1));
-    let b = Math.floor(Math.random() * (max + 1));
-    var brightcolorname = 'rgba(' + r + ',' + g + ',' + b + ',1)';
-    var dimcolorname = 'rgba(' + r + ',' + g + ',' + b + ',0.2)';
+function returnRandomHSL() {
+    let max = 360
+        // let r = Math.floor(Math.random() * (max + 1));
+        // let g = Math.floor(Math.random() * (max + 1));
+        // let b = Math.floor(Math.random() * (max + 1));
+        // var brightcolorname = 'rgba(' + r + ',' + g + ',' + b + ',1)';
+        // var dimcolorname = 'rgba(' + r + ',' + g + ',' + b + ',0.2)';
+    let h = Math.floor(Math.random() * (max + 1))
+    var brightcolorname = `hsl(${h}, 100%, 70%)`
+    var dimcolorname = `hsl(${h},40%,70%)`
     return [brightcolorname, dimcolorname]
 
 }
 
 function buttonAnimation() {
-    colours = returnRandomRGBs()
+    colours = returnRandomHSL()
 
     nonSelectedButton = document.getElementsByClassName("drop-button-big-graph")
 
