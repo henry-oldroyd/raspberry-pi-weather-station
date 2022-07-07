@@ -4,29 +4,40 @@
 # imports
 # sourcery skip: avoid-builtin-shadow
 import hashlib
-from urllib import response
 import sqlalchemy as sqla
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
 from marshmallow_sqlalchemy import SQLAlchemySchema, auto_field
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 import flask
 import json
 
+# local import
+import logger as logger_module
+
+# setup logger
+lgr, log_dir = logger_module.setup_logger(os.path.basename(__file__))
 
 # constants:
+lgr.info('setup: defining constants')
 PORT = 5000
 DATE_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 LAST_COMMITTED_TIMESTAMP = None
 
+lgr.info('setup: reading hashed key file')
 with open('./server/hashed_key.key', 'r') as file:
     SECRET_KEY_HASH = file.read()
 
+lgr.info('setup: reading image path lookup file')
 # image paths lookup
 with open("./images/images.json", "r") as file:
     image_file_names = json.loads(file.read())
 
+
+
+
+lgr.info("setting up flask app")
 # basedir = os.path.abspath(os.path.dirname(__file__))
 basedir = os.getcwd()
 
@@ -40,6 +51,7 @@ app = flask.Flask(
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
+lgr.info("setting up sqlalchemy engine")
 # setup sql engine:
 # https://stackoverflow.com/questions/48218065/programmingerror-sqlite-objects-created-in-a-thread-can-only-be-used-in-that-sa
 engine = sqla.create_engine(
@@ -53,7 +65,7 @@ engine = sqla.create_engine(
 session = scoped_session(sessionmaker(bind=engine))
 Base = declarative_base()
 
-
+lgr.info('defining reading class to represent a row in the readings table')
 # setup sqlalchemy row obj
 class Reading(Base):
     """Table for uncalibrated readings"""
@@ -66,7 +78,7 @@ class Reading(Base):
     temperature = sqla.Column(sqla.Float())
     humidity = sqla.Column(sqla.Float())
     wind_speed = sqla.Column(sqla.Float())
-    wind_direction = sqla.Column(sqla.Integer())
+    wind_direction = sqla.Column(sqla.Float())
     precipitation = sqla.Column(sqla.Float())
 
     def __init__(self, pressure, temperature, humidity, wind_speed, wind_direction, precipitation):
@@ -82,13 +94,16 @@ class Reading(Base):
         return f"<Reading_Uncalibrated(primary_key={self.primary_key}, timestamp={self.timestamp})>"
         # return f"<Reading(timestamp={self.timestamp})>"
 
-
+lgr.info("creating all tables if not already exists")
 # create all tables
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine, checkfirst=True)
+
+lgr.info('define sql index on timestamp to improve read times by timestamp')
+sqla.schema.Index("timestamp_index", Reading.timestamp)
 
 # setup marshmallow schema
 
-
+lgr.info('defining schema for reading to allow for validation and serialization')
 class Reading_Schema(SQLAlchemySchema):
     class Meta:
         model = Reading
@@ -105,6 +120,7 @@ class Reading_Schema(SQLAlchemySchema):
     precipitation = auto_field(required=True)
 
 
+lgr.info('setting up instances of the schema for serializing readings')
 # schema objs used in serialization
 reading_schema = Reading_Schema()
 reading_schema_many = Reading_Schema(many=True)
@@ -117,7 +133,7 @@ reading_schema_many = Reading_Schema(many=True)
 #     session.()
 #     session.commit()
 
-
+lgr.info('defining utility functions')
 # functions
 def hash(plain_txt):
     """one way hash using sha256"""
@@ -146,6 +162,7 @@ def determine_background_image(temperature, precipitation):
     return "mild"
 
 
+lgr.info("defining functions to handle routes / endpoints")
 # setup methods to handle routes
 
 # @app.route('/data', methods=['GET'])
@@ -187,6 +204,17 @@ def post_data():
         reading_schema.dumps(new_reading_obj)
     )
     # return "Thumbs up"
+
+# @app.route('/server_logs', methods=['POST'])
+# def get_log():
+#     data_header = flask.request.json
+#     secret_key = data_header["secret_key"]
+    
+#     if hash(secret_key) != SECRET_KEY_HASH:
+#         # print("secret key wrong for post request")
+#         flask.abort(401)
+    
+#     return flask.send_file()
 
 
 # @app.route("/get_data")
@@ -280,8 +308,9 @@ def csv_data():
             "Content-disposition": "attachment; filename=weather_data.csv",
         }
     )
+    
 
-
+lgr.info("binding route handlers to respective route")
 # decided to not use conventual decorators so that background image func can call give photo
 app.route('/data', methods=['POST'])(post_data)
 app.route('/data', methods=['GET'])(get_data)
@@ -291,6 +320,7 @@ app.route("/background_image", methods=["GET"])(background_image)
 app.route("/", methods=['GET'])(index)
 
 
+lgr.info('defining safe method for running app')
 def run_app():
     try:
         app.run(host='127.0.0.1', port=PORT, debug=True)
@@ -301,5 +331,6 @@ def run_app():
 
 
 if __name__ == '__main__':
+    lgr.info('running app')
     run_app()
     # delete_all_readings()

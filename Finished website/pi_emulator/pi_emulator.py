@@ -31,7 +31,8 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
         'wind_direction': wind_direction,
         'precipitation': precipitation
     }
-    logger.info(f"data about to be sent in post request:   {reading_data}")
+    logger.debug(f"data about to be sent in post request:   {reading_data}")
+
 
     payload = {"secret_key": SECRET_KEY, "new_data_item": reading_data}
 
@@ -41,12 +42,17 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
     except Exception as e:
         print("ERROR:")
         print(e)
-        if request.status_code == 404:
-            logger.critical('404 page not found')
-        if request.status_code == 401:
-            logger.critical('401 authentication failed, check key')
-        if request.status_code == 500:
-            logger.critical('500 internal server error, perhaps flask server has crashed')
+        try:
+            if request.status_code == 404:
+                logger.critical('404 page not found')
+            if request.status_code == 401:
+                logger.critical('401 authentication failed, check key')
+            if request.status_code == 500:
+                logger.critical('500 internal server error, perhaps flask server has crashed')
+        except UnboundLocalError:
+            print("request variable not defined, error occurred before this")
+    else:
+        logger.debug("status code 200, data sent successfully")
 
 if __name__ == '__main__':
     send_reading(
@@ -54,6 +60,6 @@ if __name__ == '__main__':
         temperature=uniform(0, 30),
         humidity=uniform(0, 30),
         wind_speed=uniform(0, 30),
-        wind_direction=randint(0, 360),
+        wind_direction=uniform(0, 360),
         precipitation=uniform(0, 4),
     )
