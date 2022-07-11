@@ -1,16 +1,16 @@
-2022-07-11 13:56:06,497 - server.py - INFO - this logger named server.py created
-2022-07-11 13:56:06,498 - server.py - INFO - setup: defining constants
-2022-07-11 13:56:06,499 - server.py - INFO - setup: reading hashed key file
-2022-07-11 13:56:06,500 - server.py - INFO - setup: reading image path lookup file
-2022-07-11 13:56:06,501 - server.py - INFO - setting up flask app
-2022-07-11 13:56:06,504 - server.py - INFO - setting up sqlalchemy engine
-2022-07-11 13:56:06,536 - server.py - INFO - defining reading class to represent a row in the readings table
-2022-07-11 13:56:06,542 - server.py - INFO - creating all tables if not already exists
-2022-07-11 13:56:06,555 - server.py - INFO - define sql index on timestamp to improve read times by timestamp
-2022-07-11 13:56:06,556 - server.py - INFO - defining schema for reading to allow for validation and serialization
-2022-07-11 13:56:06,582 - server.py - INFO - setting up instances of the schema for serializing readings
-2022-07-11 13:56:06,584 - server.py - INFO - defining utility functions
-2022-07-11 13:56:06,585 - server.py - INFO - defining functions to handle routes / endpoints
-2022-07-11 13:56:06,586 - server.py - INFO - binding route handlers to respective route
-2022-07-11 13:56:06,597 - server.py - INFO - defining safe method for running app
-2022-07-11 13:56:06,598 - server.py - INFO - running app
+2022-07-11 16:58:17,667 - server.py - INFO - this logger named server.py created
+2022-07-11 16:58:17,667 - server.py - INFO - setup: defining constants
+2022-07-11 16:58:17,667 - server.py - INFO - setup: reading hashed key file
+2022-07-11 16:58:17,675 - server.py - INFO - setup: reading image path lookup file
+2022-07-11 16:58:17,675 - server.py - INFO - setting up flask app
+2022-07-11 16:58:17,675 - server.py - INFO - setting up sqlalchemy engine
+2022-07-11 16:58:17,723 - server.py - INFO - defining reading class to represent a row in the readings table
+2022-07-11 16:58:17,731 - server.py - INFO - creating all tables if not already exists
+2022-07-11 16:58:17,739 - server.py - INFO - define sql index on timestamp to improve read times by timestamp
+2022-07-11 16:58:17,739 - server.py - INFO - defining schema for reading to allow for validation and serialization
+2022-07-11 16:58:17,771 - server.py - INFO - setting up instances of the schema for serializing readings
+2022-07-11 16:58:17,771 - server.py - INFO - defining utility functions
+2022-07-11 16:58:17,771 - server.py - INFO - defining functions to handle routes / endpoints
+2022-07-11 16:58:17,771 - server.py - INFO - binding route handlers to respective route
+2022-07-11 16:58:17,787 - server.py - INFO - defining safe method for running app
+2022-07-11 16:58:17,787 - server.py - INFO - running app
