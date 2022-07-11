@@ -35,7 +35,7 @@
 
 .about-us-contents {
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 0.4em;
     grid-template-areas: "img1 text1 text1" "quotes quotes img2";
     font-size: var(--text-fs)
 }
