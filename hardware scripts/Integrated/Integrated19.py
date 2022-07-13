@@ -50,7 +50,7 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
         'wind_direction': wind_direction,
         'precipitation': precipitation
     }
-    loggerBack.info(f"data about to be sent in post request:   {reading_data}")
+    loggerBack.info(f"data about to be sent in post request:   {readingData}")
 
     payload = {"secret_key": SECRET_KEY, "new_data_item": readingData}
 
@@ -60,13 +60,17 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
     except Exception as e:
         print("ERROR:")
         print(e)
-        
-        if request.status_code == 404:
-                loggerBack.critical('404 page not found')
-        elif request.status_code == 401:
-                loggerBack.critical('401 authentication failed, check key')
-        elif request.status_code == 500:
-                loggerBack.critical('500 internal server error, perhaps flask server has crashed')
+        try:
+                if request.status_code == 404:
+                        loggerBack.critical('404 page not found')
+                elif request.status_code == 401:
+                        loggerBack.critical('401 authentication failed, check key')
+                elif request.status_code == 500:
+                        loggerBack.critical('500 internal server error, perhaps flask server has crashed')
+        except:
+                print("Request variable not defined. Error occurred before this. ")
+        else:
+                logger.debug("Status code 200 - date sent successfully.")
 
 #Takes readings - ensures they are integers
 loggerSens.info(f"Taking rainfall reading...")

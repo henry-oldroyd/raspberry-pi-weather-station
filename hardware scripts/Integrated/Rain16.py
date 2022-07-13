@@ -7,6 +7,8 @@ def bucketTipped():
         dtNow = datetime.datetime.now()
         appendMe = dtNow.strftime("%d/%m/%Y, %H:%M:%S") #Formats current date and time as DD/MM/YY, HH:MM:SS
         
+        #print(appendMe)
+
         rainFile = open("rainTimesAll.txt", "a")
         rainFile.write(appendMe + "\n")
         rainFile.close()
@@ -40,8 +42,8 @@ def returnTips():
 def main():
 	rain_sensor = Button(6) #GPIO pin guage is connected to
 	startTime = time.time()
- 
-	while time.time() - startTime < ((5 * 60) - 7): #Change RHS for time between readings - minus 7 to account for time taking other readings
-		rain_sensor.when_pressed = bucketTipped
+
+	while time.time() - startTime < ((15) - 7): #Change RHS for time between readings - minus 7 to account for time taking other readings
+                rain_sensor.when_pressed = bucketTipped
 	volumeCollected = returnTips()
 	return volumeCollected
