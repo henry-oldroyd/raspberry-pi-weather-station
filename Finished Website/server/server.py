@@ -17,7 +17,9 @@ import json
 import logger as logger_module
 
 # setup logger
-lgr, LOG_DIR = logger_module.setup_logger(os.path.basename(__file__))
+basedir = os.getcwd()
+LOG_DIR =  os.path.join(basedir, 'server', 'server.log')
+lgr = logger_module.setup_logger('server', LOG_DIR)
 
 # constants:
 lgr.info('setup: defining constants')
@@ -34,12 +36,19 @@ lgr.info('setup: reading image path lookup file')
 with open("./images/images.json", "r") as file:
     image_file_names = json.loads(file.read())
 
-
+def print_dec(function):
+    name = function.__name__
+    def wrapper(*args, **kwargs):
+        lgr.debug(f"Beginning execution of function:   {name}")
+        result = function(*args, **kwargs)
+        lgr.debug(f"Finished execution of function:   {name}")
+        return result
+    wrapper.__name__ = name
+    return wrapper
 
 
 lgr.info("setting up flask app")
-# basedir = os.path.abspath(os.path.dirname(__file__))
-basedir = os.getcwd()
+
 
 # setup app
 app = flask.Flask(
@@ -129,6 +138,9 @@ reading_schema_many = Reading_Schema(many=True)
 
 lgr.info('defining utility functions')
 # functions
+
+
+@print_dec
 def hash(plain_txt):
     """one way hash using sha256"""
     hash_ = hashlib.sha256()
@@ -136,6 +148,7 @@ def hash(plain_txt):
     return hash_.hexdigest()
 
 
+@print_dec
 def determine_background_image(temperature, precipitation):
     # will check time stamp and be true if between 11pm and 5am
     hour = datetime.now().hour
@@ -160,6 +173,9 @@ lgr.info("defining functions to handle routes / endpoints")
 # setup methods to handle routes
 
 # @app.route('/data', methods=['GET'])
+
+
+@print_dec
 def get_data():
     # datediff: https://stackoverflow.com/questions/36571706/python-sqlalchemy-filter-by-datediff-of-months
     stmt = sqla.select(Reading)\
@@ -176,6 +192,9 @@ def get_data():
     return flask.jsonify(serialised_readings)
 
 # @app.route('/data', methods=['POST'])
+
+
+@print_dec
 def post_data():
     data_header = flask.request.json
 
@@ -198,7 +217,8 @@ def post_data():
         reading_schema.dumps(new_reading_obj)
     )
 
-@app.route("/utility/delete", methods=["POST"])
+
+@print_dec
 def delete_utility():
     data_header = flask.request.json
     secret_key = data_header["secret_key"]
@@ -211,7 +231,8 @@ def delete_utility():
 
     return "Database cleared"
 
-@app.route('/utility/server_log', methods=['POST'])
+
+@print_dec
 def server_log_utility():
     data_header = flask.request.json
     secret_key = data_header["secret_key"]
@@ -224,7 +245,8 @@ def server_log_utility():
         LOG_DIR
     )
 
-@app.route('/utility/load_many', methods=['POST'])
+
+@print_dec
 def load_many_utility():
     data_header = flask.request.json
     secret_key = data_header["secret_key"]
@@ -244,8 +266,9 @@ def load_many_utility():
     return flask.jsonify(
         reading_schema_many.dumps(new_reading_objs)
     )
-    
-@app.route('/utility/dump_all', methods=['POST'])
+
+
+@print_dec
 def dump_all_utility():
     data_header = flask.request.json
     secret_key = data_header["secret_key"]
@@ -269,6 +292,7 @@ def dump_all_utility():
 
 
 # @app.route("/", methods=['GET'])
+@print_dec
 def index():
     # return "HTML HERE"
     # return flask.redirect(flask.url_for("get_readings"))
@@ -276,6 +300,7 @@ def index():
 
 
 # @app.route("/images/<name>", methods=["GET"])
+@print_dec
 def give_photo(name):
     # print(name)
     try:
@@ -291,6 +316,7 @@ def give_photo(name):
 
 
 # @app.route("/background_image", methods=["GET"])
+@print_dec
 def background_image():
     # get last reading
     if LAST_COMMITTED_TIMESTAMP is not None:
@@ -316,6 +342,7 @@ def background_image():
 
 
 # @app.route("/csv_data", methods=["GET"])
+@print_dec
 def csv_data():
     def dicts_to_csv_lines(records):
         def format_row(row):
@@ -363,9 +390,15 @@ app.route("/csv_data", methods=["GET"])(csv_data)
 app.route("/images/<name>", methods=["GET"])(give_photo)
 app.route("/background_image", methods=["GET"])(background_image)
 app.route("/", methods=['GET'])(index)
-
+app.route("/utility/delete", methods=["POST"])(delete_utility)
+app.route('/utility/server_log', methods=['POST'])(server_log_utility)
+app.route('/utility/load_many', methods=['POST'])(load_many_utility)
+app.route('/utility/dump_all', methods=['POST'])(dump_all_utility)
 
 lgr.info('defining safe method for running app')
+
+
+@print_dec
 def run_app():
     try:
         app.run(host='127.0.0.1', port=PORT, debug=True)

@@ -1,0 +1,45 @@
+2022-07-13 16:57:46,144 - server - INFO - this logger named server created
+2022-07-13 16:57:46,145 - server - INFO - setup: defining constants
+2022-07-13 16:57:46,145 - server - INFO - setup: reading hashed key file
+2022-07-13 16:57:46,148 - server - INFO - setup: reading image path lookup file
+2022-07-13 16:57:46,148 - server - INFO - setting up flask app
+2022-07-13 16:57:46,151 - server - INFO - setting up sqlalchemy engine
+2022-07-13 16:57:46,175 - server - INFO - defining reading class to represent a row in the readings table
+2022-07-13 16:57:46,178 - server - INFO - creating all tables if not already exists
+2022-07-13 16:57:46,185 - server - INFO - define sql index on timestamp to improve read times by timestamp
+2022-07-13 16:57:46,189 - server - INFO - defining schema for reading to allow for validation and serialization
+2022-07-13 16:57:46,205 - server - INFO - setting up instances of the schema for serializing readings
+2022-07-13 16:57:46,207 - server - INFO - defining utility functions
+2022-07-13 16:57:46,208 - server - INFO - defining functions to handle routes / endpoints
+2022-07-13 16:57:46,209 - server - INFO - binding route handlers to respective route
+2022-07-13 16:57:46,219 - server - INFO - defining safe method for running app
+2022-07-13 16:57:46,220 - server - INFO - running app
+2022-07-13 16:57:46,221 - server - DEBUG - Beginning execution of function:   run_app
+2022-07-13 16:57:53,276 - server - DEBUG - Beginning execution of function:   index
+2022-07-13 16:57:53,287 - server - DEBUG - Finished execution of function:   index
+2022-07-13 16:57:53,558 - server - DEBUG - Beginning execution of function:   get_data
+2022-07-13 16:57:53,582 - server - DEBUG - Finished execution of function:   get_data
+2022-07-13 16:57:53,672 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-13 16:57:53,677 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,679 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,681 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,689 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,690 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,692 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,698 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-13 16:57:53,700 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-13 16:57:53,702 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,705 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,706 - server - DEBUG - Finished execution of function:   background_image
+2022-07-13 16:57:53,707 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,722 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,732 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,733 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,734 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,740 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,747 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-13 16:57:53,761 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-13 16:57:53,763 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-13 16:57:53,765 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-13 16:57:53,772 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-13 16:57:53,772 - server - DEBUG - Finished execution of function:   background_image
