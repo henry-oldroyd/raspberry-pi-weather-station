@@ -42,6 +42,7 @@ def print_dec(function):
         lgr.debug(f"Beginning execution of function:   {name}")
         result = function(*args, **kwargs)
         lgr.debug(f"Finished execution of function:   {name}")
+        lgr.debug(f" function {name} returned:   {result}")
         return result
     wrapper.__name__ = name
     return wrapper
