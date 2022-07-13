@@ -3,7 +3,6 @@
 
 # imports
 # sourcery skip: avoid-builtin-shadow
-import hashlib
 import sqlalchemy as sqla
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -13,8 +12,11 @@ from datetime import datetime
 import flask
 import json
 
-# local import
-import logger as logger_module
+# local import, this is a local file
+try:
+    from server import logger as logger_module
+except:
+    import logger as logger_module
 
 # setup logger
 basedir = os.getcwd()
