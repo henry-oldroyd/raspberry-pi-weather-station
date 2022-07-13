@@ -154,7 +154,7 @@ def determine_background_image(temperature, precipitation):
     hour = datetime.now().hour
     is_night = hour < 5 or hour >= 23
     # will make some comparrison with rain but I am not sure how to yet ask Sam
-    is_raining = precipitation/hour > 1
+    is_raining = precipitation/hour > 0.25
 
     if is_raining:
         return "rain"
