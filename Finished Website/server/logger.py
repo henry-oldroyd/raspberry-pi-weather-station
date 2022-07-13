@@ -5,12 +5,11 @@ import os
 
 
 # def setup_logger(name, file_path='log.log', c_level='INFO', f_level='INFO'):
-def setup_logger(name, level='INFO'):
-    log_file_dir = os.path.abspath(f"log_{name}.log")
+def setup_logger(name, log_file_dir, level='INFO'):
+
     # clear log file:
     with open(log_file_dir, 'w') as file:
         file.write("")
-    
     
     # Create a custom logger
     logger = logging.getLogger(name)
@@ -35,7 +34,7 @@ def setup_logger(name, level='INFO'):
     
     logger.info(f"this logger named {name} created")
 
-    return logger, log_file_dir
+    return logger
 
 
 
