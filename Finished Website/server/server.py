@@ -45,7 +45,8 @@ def print_dec(function):
         lgr.debug(f"Beginning execution of function:   {name}")
         result = function(*args, **kwargs)
         lgr.debug(f"Finished execution of function:   {name}")
-        lgr.debug(f" function {name} returned:   {str(result)[:200]}")
+        out = str(result).replace("\n", " ").replace("\t", " ")[:200]
+        lgr.debug(f" function {name} returned:   {out}")
         return result
     wrapper.__name__ = name
     return wrapper
