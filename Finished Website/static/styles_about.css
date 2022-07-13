@@ -35,7 +35,7 @@
 
 .about-us-contents {
     display: grid;
-    grid-gap: 0.4em;
+    grid-gap: 1em;
     grid-template-areas: "img1 text1 text1" "quotes quotes img2";
     font-size: var(--text-fs)
 }
@@ -65,17 +65,15 @@
 
 #selfie-img {
     grid-area: img1;
-    max-width: 90%;
+    max-width: 100%;
     max-height: 40vh;
-    margin: auto;
 }
 
 #pi-img {
     grid-area: img2;
-    max-width: 95%;
+    max-width: 100%;
     max-height: 200px;
     border: 1px solid green;
-    margin: auto;
 }
 
 @media (max-width: 718px) {

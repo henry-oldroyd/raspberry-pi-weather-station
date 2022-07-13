@@ -17,9 +17,7 @@ import json
 import logger as logger_module
 
 # setup logger
-basedir = os.getcwd()
-LOG_DIR = os.path.join(basedir, "server", "server.log")
-lgr = logger_module.setup_logger('server', LOG_DIR)
+lgr, log_dir = logger_module.setup_logger(os.path.basename(__file__))
 
 # constants:
 lgr.info('setup: defining constants')
@@ -41,6 +39,7 @@ with open("./images/images.json", "r") as file:
 
 lgr.info("setting up flask app")
 # basedir = os.path.abspath(os.path.dirname(__file__))
+basedir = os.getcwd()
 
 # setup app
 app = flask.Flask(
@@ -126,7 +125,13 @@ lgr.info('setting up instances of the schema for serializing readings')
 reading_schema = Reading_Schema()
 reading_schema_many = Reading_Schema(many=True)
 
-
+# def delete_all_readings():
+#     # all_readings = list(session.scalar(
+#     #     sqla.select(Reading)
+#     # ))
+#     # session.delete_all(all_readings)
+#     session.()
+#     session.commit()
 
 lgr.info('defining utility functions')
 # functions
@@ -198,69 +203,18 @@ def post_data():
     return flask.jsonify(
         reading_schema.dumps(new_reading_obj)
     )
+    # return "Thumbs up"
 
-@app.route("/utility/delete", methods=["POST"])
-def delete_utility():
-    data_header = flask.request.json
-    secret_key = data_header["secret_key"]
-
-    if hash(secret_key) != SECRET_KEY_HASH:
-        flask.abort(401)
-
-    session.query(Reading).delete()
-    session.commit()
-
-    return "Database cleared"
-
-@app.route('/utility/server_log', methods=['POST'])
-def server_log_utility():
-    data_header = flask.request.json
-    secret_key = data_header["secret_key"]
+# @app.route('/server_logs', methods=['POST'])
+# def get_log():
+#     data_header = flask.request.json
+#     secret_key = data_header["secret_key"]
     
-    if hash(secret_key) != SECRET_KEY_HASH:
-        # print("secret key wrong for post request")
-        flask.abort(401)
+#     if hash(secret_key) != SECRET_KEY_HASH:
+#         # print("secret key wrong for post request")
+#         flask.abort(401)
     
-    return flask.send_file(
-        LOG_DIR
-    )
-
-@app.route('/utility/load_many', methods=['POST'])
-def load_many_utility():
-    data_header = flask.request.json
-    secret_key = data_header["secret_key"]
-    new_data_items = data_header["new_data_items"]
-    
-    if hash(secret_key) != SECRET_KEY_HASH:
-        # print("secret key wrong for post request")
-        flask.abort(401)
-    
-    new_reading_objs = reading_schema_many.load(new_data_items, session=session)
-    # print(repr(new_reading_obj))
-    global LAST_COMMITTED_TIMESTAMP
-    LAST_COMMITTED_TIMESTAMP = None
-
-    session.bulk_save_objects(new_reading_objs)
-    session.commit()
-    return flask.jsonify(
-        reading_schema_many.dumps(new_reading_objs)
-    )
-    
-@app.route('/utility/dump_all', methods=['POST'])
-def dump_all_utility():
-    data_header = flask.request.json
-    secret_key = data_header["secret_key"]
-    
-    if hash(secret_key) != SECRET_KEY_HASH:
-        # print("secret key wrong for post request")
-        flask.abort(401)
-    
-    stmt = sqla.select(Reading)
-    all_readings = list(session.scalars(stmt))
-    # this changes the order so the most recent item is at the top
-    # all_readings.reverse()
-    serialised_readings: dict = reading_schema_many.dump(all_readings)
-    return flask.jsonify(serialised_readings)
+#     return flask.send_file()
 
 
 # @app.route("/get_data")
