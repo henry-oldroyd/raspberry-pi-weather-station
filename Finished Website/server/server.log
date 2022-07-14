@@ -1,256 +1,99 @@
-2022-07-13 17:22:40,697 - server - INFO - this logger named server created
-2022-07-13 17:22:40,697 - server - INFO - setup: defining constants
-2022-07-13 17:22:40,697 - server - INFO - setup: reading hashed key file
-2022-07-13 17:22:40,698 - server - INFO - setup: reading image path lookup file
-2022-07-13 17:22:40,699 - server - INFO - setting up flask app
-2022-07-13 17:22:40,701 - server - INFO - setting up sqlalchemy engine
-2022-07-13 17:22:40,728 - server - INFO - defining reading class to represent a row in the readings table
-2022-07-13 17:22:40,737 - server - INFO - creating all tables if not already exists
-2022-07-13 17:22:40,748 - server - INFO - define sql index on timestamp to improve read times by timestamp
-2022-07-13 17:22:40,750 - server - INFO - defining schema for reading to allow for validation and serialization
-2022-07-13 17:22:40,780 - server - INFO - setting up instances of the schema for serializing readings
-2022-07-13 17:22:40,785 - server - INFO - defining utility functions
-2022-07-13 17:22:40,786 - server - INFO - defining functions to handle routes / endpoints
-2022-07-13 17:22:40,786 - server - INFO - binding route handlers to respective route
-2022-07-13 17:22:40,795 - server - INFO - defining safe method for running app
-2022-07-13 17:22:56,391 - server - DEBUG - Beginning execution of function:   index
-2022-07-13 17:22:56,417 - server - DEBUG - Finished execution of function:   index
-2022-07-13 17:22:56,418 - server - DEBUG -  function index returned:   <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Weather Station</title>
-    <link rel="icon" href="https://img.icons8.com/doodle/2x/apple-weather.png">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-
-
-
-
-
-
-    <!-- <script type="text/javascript" src="../static/main.js"></script> -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="../static/styles_main.css">
-    <link rel="stylesheet" href="../static/styles_explore.css">
-    <link rel="stylesheet" href="../static/styles_intro.css">
-    <link rel="stylesheet" href="../static/styles_footer.css">
-    <link rel="stylesheet" href="../static/styles_about.css">
-    <link rel="stylesheet" href="../static/styles_animation.css"> -->
-
-
-
-    <!-- <script type="text/javascript" src="../static/main.js"></script> -->
-    <!-- example of how it should be done -->
-    <script type="text/javascript" src="/static/main.js"></script>
-    <link rel="stylesheet" href="/static/styles_main.css">
-
-    <link rel="stylesheet" href="/static/styles_explore.css">
-
-    <link rel="stylesheet" href="/static/styles_intro.css">
-
-    <link rel="stylesheet" href="/static/styles_footer.css">
-
-    <link rel="stylesheet" href="/static/styles_about.css">
-
-    <link rel="stylesheet" href="/static/styles_animation.css">
-
-
-</head>
-
-<body>
-    <h1 class="error">Please view on a bigger screen.</h1>
-    <section class="intro">
-
-        <div class="banner-intro banner">
-            <img id="sand-logo" src="" alt="">
-            <h1 class="intro-title section-title">Weather Station</h1>
-
-        </div>
-
-        <div class="wrapper">
-
-            <div class="intro-readout-boxes">
-                <div id="intro-subtitle" class="banner small-banner">
-                    <h1 class="section-title">Currently...</h1>
-                </div>
-
-                <div id="readout-box-temp" class="readout-box">
-                    <div class="readout-box-title readout-temp-title">Temperature</div>
-                    <p class="readout-box-data">30</p>
-                </div>
-
-                <div id="readout-box-pressure" class="readout-box">
-                    <div class="readout-box-title">Pressure</div>
-                    <p class="readout-box-data">30</p>
-                </div>
-                <div id="readout-box-humidity" class="readout-box">
-                    <div class="readout-box-title">Humidity</div>
-                    <p class="readout-box-data">30</p>
-                </div>
-                <div id="readout-box-rain" class="readout-box">
-                    <div class="readout-box-title">Rain</div>
-                    <p class="readout-box-data">30</p>
-                </div>
-                <div id="readout-box-wind" class="readout-box">
-                    <div class="readout-box-title">Wind</div>
-                    <p class="readout-box-data" id="readout-box-data-wind">30</p>
-                </div>
-            </div>
-        </div>
-        <p class="last-updated">Last Updated: </p>
-        <div class="status-wrapper">
-            <div class="status-dot"></div>
-            <p class="status-text">Status: Connected</p>
-        </div>
-
-    </section>
-
-    <section class="module explore">
-        <div class="wrapper-explore">
-            <div id="explore-banner" class="banner">
-                <h1 class="section-title">Explore</h1>
-            </div>
-            <div class="container-detailed-graph-section">
-                <div class="container-graph-big">
-                    <canvas id="graph-graph-big"></canvas>
-                </div>
-                <div class="slider-div-big-graph">
-                    <p class="slider-title">Drag to adjust time scale</p>
-                    <input type="range" class="slider-big-graph">
-
-                </div>
-                <div class="button-container-big-graph">
-                    <div class="drop-elements-big-graph">
-                        <p class="buttons-heading">Select to view...</p>
-                        <button class="drop-button-big-graph selected-button" id="temp-button-big-graph">Temperature</button>
-                        <button class="drop-button-big-graph" id="pressure-button-big-graph">Pressure</button>
-                        <button class="drop-button-big-graph" id="rain-button-big-graph">Rain</button>
-                        <button class="drop-button-big-graph " id="wind-button-big-graph">Wind Speed</button>
-                        <button class="drop-button-big-graph" id="humid-button-big-graph">Humidity</button>
-                    </div>
-                </div>
-            </div>
-            <!-- can't get it to work yet  -->
-            <!-- <button type="submit" download="data.json" class="download-csv">Download Data</button> -->
-
-            <!-- here you go George -->
-            <a href="/csv_data">
-                <button class="download-csv">Download Data</button>
-            </a>
-
-        </div>
-    </section>
-
-    <section class="about-us">
-        <div id="about-banner" class="banner">
-            <h1 class="section-title">About us</h1>
-        </div>
-        <div class="about-wrapper">
-            <div class="about-us-contents">
-                <p class="about-us-text1">Thank you for visiting our weather station website! What you are seeing is the culmination of over six months of hard work from our team of four Year 12 students (in addition to our photographer, another Year 12 student) at Sandringham School, each bringing their own capabilites to collaborate
-                    and build a fully functional weather station. 
-                    <br> <br> This project was made using a Raspberry Pi 4, installed on school site. It is recording a multitude of readings about the current weather, which are then stored and further processed on our server, before being accessed here.
-                    <br> <br> See below some quotes from our team, sharing their experiences... 
-                </p>
-                <img id="selfie-img" src="" alt="">
-
-                <div class="about-us-quotes">
-                    <!-- To-Do: Everyone please add your quote below -->
-                    <!-- A sentence or so describing your role in the project, etc. should be more than enough -->
-                    <p>&ldquo;This project was really great fun, and I loved working on it. It was also a great way to improve my programming skills. I especially enjoyed designing and developing the front-end of the website- it gave me the opportunity to showcase a project
-                        we're all so proud of!&rdquo; - George Angel</p>
-                    <p>&ldquo;I worked to create the web server in Python that hosts the website and manages a database, allowing me to develop problem-solving skills. I have really enjoyed working on this
-                    project as it is one of the few opportunities to work with other people who are equally passionate about programming and Computer Science.&rdquo; - Henry Oldroyd</p>
-                    <p>&ldquo;Working on the hardware was great fun. I got to create the code to read data from all of the different weather sensors. I was then able to help connect all the sensors to the Raspberry Pi. &rdquo; - Samuel Posner</p>
-                    <p>&ldquo;I was the leader of the group and thus in charge of looking after coordination/logistics as we developed this system, but also helping with every technical aspect of the project, from the website to the electronics. 
-                    Of course, nothing would have been possible without all the hard work from my wonderful team of friends - thank you to you all. I would also like to thank all the teachers who have supported this project throughout its development.&rdquo; - Devayan Patel</p>
-                </div>
-                <img id="pi-img" src="" alt="">
-            </div>
-        </div>
-
-    </section>
-
-    <footer>
-        <div class="non-sticky">
-            <div class="custom-hr"></div>
-            <p class="feedback">Thank you for visiting our weather station website. You can find the source code in the links below, as well as how to contact us. Feel free to give us feedback, or ask us any questions. </p>
-            <ul class="links">
-                <li class="github">
-                    <a class="footer-link" target="new" href="https://github.com/henry-oldroyd/raspberry-pi-weather-station">Source code</a>
-                </li>
-                <li class="sandringham">
-                    <a class="footer-link" target="new" href="https://sandringham.herts.sch.uk">School Website</a>
-                </li>
-                <li class="contact-us"><a target="new" class="footer-link" href="mailto:weather-station@mysandstorm.org">Email us!</a></li>
-            </ul>
-
-        </div>
-
-        <div class="sticky">
-            <p1 class="people-credits">Created by
-                <name>Devayan Patel </name>,
-                <!--I just made my own tag -->
-                <name>George Angel</name>,
-                <name>Henry Oldroyd</name>, and
-                <name>Samuel Posner</name> &emsp; Photographer:
-                <name>Isabella Blandford</name>
-            </p1>
-            <p1 class="sandringham-credits">Supported by <a target="new" class="sandringham-link" href="https://sandringham.herts.sch.uk">Sandringham School</a>, AL4 9NX
-            </p1>
-        </div>
-    </footer>
-
-
-
-</body>
-
-</html>
-2022-07-13 17:22:56,705 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-13 17:22:56,731 - server - DEBUG - Finished execution of function:   get_data
-2022-07-13 17:22:56,732 - server - DEBUG -  function get_data returned:   <Response 1832 bytes [200 OK]>
-2022-07-13 17:22:56,862 - server - DEBUG - Beginning execution of function:   background_image
-2022-07-13 17:22:56,865 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,867 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,868 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,880 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,883 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,884 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,884 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,886 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,890 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,892 - server - DEBUG - Beginning execution of function:   determine_background_image
-2022-07-13 17:22:56,906 - server - DEBUG - Finished execution of function:   determine_background_image
-2022-07-13 17:22:56,907 - server - DEBUG -  function determine_background_image returned:   mild
-2022-07-13 17:22:56,910 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,922 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,924 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,929 - server - DEBUG - Finished execution of function:   background_image
-2022-07-13 17:22:56,934 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,935 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,936 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,938 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:56,951 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,951 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,955 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:56,957 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,958 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,960 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:56,963 - server - DEBUG - Beginning execution of function:   background_image
-2022-07-13 17:22:56,990 - server - DEBUG - Beginning execution of function:   determine_background_image
-2022-07-13 17:22:57,000 - server - DEBUG - Finished execution of function:   determine_background_image
-2022-07-13 17:22:57,002 - server - DEBUG -  function determine_background_image returned:   mild
-2022-07-13 17:22:57,002 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-13 17:22:57,005 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-13 17:22:57,007 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:22:57,008 - server - DEBUG - Finished execution of function:   background_image
-2022-07-13 17:22:57,012 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-13 17:23:17,920 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-13 17:23:17,931 - server - DEBUG - Finished execution of function:   get_data
-2022-07-13 17:23:17,932 - server - DEBUG -  function get_data returned:   <Response 1832 bytes [200 OK]>
+2022-07-14 09:26:28,171 - server - INFO - this logger named server created
+2022-07-14 09:26:28,171 - server - INFO - setup: defining constants
+2022-07-14 09:26:28,171 - server - INFO - setup: reading hashed key file
+2022-07-14 09:26:28,171 - server - INFO - setup: reading image path lookup file
+2022-07-14 09:26:28,172 - server - INFO - setting up flask app
+2022-07-14 09:26:28,174 - server - INFO - setting up sqlalchemy engine
+2022-07-14 09:26:28,186 - server - INFO - defining reading class to represent a row in the readings table
+2022-07-14 09:26:28,188 - server - INFO - creating all tables if not already exists
+2022-07-14 09:26:28,192 - server - INFO - define sql index on timestamp to improve read times by timestamp
+2022-07-14 09:26:28,192 - server - INFO - defining schema for reading to allow for validation and serialization
+2022-07-14 09:26:28,199 - server - INFO - setting up instances of the schema for serializing readings
+2022-07-14 09:26:28,200 - server - INFO - defining utility functions
+2022-07-14 09:26:28,200 - server - INFO - defining functions to handle routes / endpoints
+2022-07-14 09:26:28,200 - server - INFO - binding route handlers to respective route
+2022-07-14 09:26:28,203 - server - INFO - defining safe method for running app
+2022-07-14 09:26:29,116 - server - DEBUG - Beginning execution of function:   index
+2022-07-14 09:26:29,126 - server - DEBUG - Finished execution of function:   index
+2022-07-14 09:26:29,126 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-07-14 09:26:29,168 - server - DEBUG - Beginning execution of function:   get_data
+2022-07-14 09:26:29,175 - server - DEBUG - Finished execution of function:   get_data
+2022-07-14 09:26:29,175 - server - DEBUG -  function get_data returned:   <Response 3437 bytes [200 OK]>
+2022-07-14 09:26:29,196 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:29,197 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,197 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,197 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,199 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:29,199 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:29,199 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:29,199 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,199 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,199 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,199 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:29,199 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,207 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,208 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,208 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,219 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,220 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,220 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,222 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,223 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,223 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,229 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:29,233 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:29,233 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:29,233 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:29,233 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,234 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,235 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,235 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:29,235 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,240 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,240 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,240 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,279 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,280 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,280 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,081 - server - DEBUG - Beginning execution of function:   index
+2022-07-14 09:26:30,083 - server - DEBUG - Finished execution of function:   index
+2022-07-14 09:26:30,083 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-07-14 09:26:30,113 - server - DEBUG - Beginning execution of function:   get_data
+2022-07-14 09:26:30,121 - server - DEBUG - Finished execution of function:   get_data
+2022-07-14 09:26:30,122 - server - DEBUG -  function get_data returned:   <Response 3437 bytes [200 OK]>
+2022-07-14 09:26:30,149 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:30,149 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,153 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,154 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,155 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,156 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:30,157 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,158 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,158 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,158 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:30,158 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,159 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,159 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:30,160 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,161 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,161 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,161 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:30,161 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,170 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,171 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,171 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,172 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,173 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,173 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:30,174 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,174 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,175 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,175 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,176 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:30,176 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:30,176 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:30,176 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,176 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,177 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,177 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:30,177 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
