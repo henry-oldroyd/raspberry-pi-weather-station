@@ -160,17 +160,15 @@ def determine_background_image(temperature, precipitation):
     # will check time stamp and be true if between 11pm and 5am
     hour = datetime.now().hour
     is_night = hour < 5 or hour >= 23
-    # will make some comparrison with rain but I am not sure how to yet ask Sam
-    is_raining = precipitation/hour > 0.25
+    is_raining = precipitation > 1
 
-    if is_raining:
-        return "rain"
-    # not sure of priority, should a hot night be night image or sunny image
     if is_night:
         return "night"
+    if is_raining:
+        return "rain"
     if temperature >= 20:
         return "sunny"
-    if temperature <= 14:
+    if temperature <= 10:
         return "cold"
     # default mild
     return "mild"

@@ -56,10 +56,10 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
 
 if __name__ == '__main__':
     send_reading(
-        pressure=uniform(0, 30),
-        temperature=uniform(0, 30),
-        humidity=uniform(0, 30),
+        pressure=uniform(1010, 1050),
+        temperature=uniform(0, 40),
+        humidity=uniform(40, 90),
         wind_speed=uniform(0, 30),
         wind_direction=uniform(0, 360),
-        precipitation=uniform(0, 4),
+        precipitation=uniform(0, 2),
     )
