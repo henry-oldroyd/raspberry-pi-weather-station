@@ -133,6 +133,8 @@ class Graph {
                 //     this.initialiseGraph(unit)
                 //     firstLoad = false
                 // }
+
+
             this.initialiseGraph(unit)
 
             if (slider_on == true) {
@@ -165,7 +167,8 @@ class Graph {
                         data: this.dataBeingUsed,
                         backgroundColor: this.backgroundColour,
                         color: this.colour,
-                        borderColor: this.borderColour
+                        borderColor: this.borderColour,
+                        fill: false,
 
                     }]
                 },
@@ -174,18 +177,26 @@ class Graph {
                         y: {
                             beginAtZero: false,
                             ticks: {
+                                autoSkip: true,
                                 callback: function(value, index, ticks) {
-
-
-                                    value = value + " " + unit;
-                                    return value;
+                                    return value + " " + unit;
                                 }
+
                             }
+
                         }
                     },
-                    responsive: true,
-                    interaction: {
-                        intersection: false,
+
+                    // interaction: {
+                    //     intersection: false,
+                    // },
+                    layout: {
+                        padding: 50
+                    },
+                    elements: {
+                        line: {
+                            tension: 0
+                        }
                     }
                 }
             }
@@ -211,6 +222,9 @@ class Graph {
         // array of 10, if selected 1, we want from 9- 10 
         this.dataBeingUsed = this.data.slice(this.data.length - val, this.data.length); // edits which part of data set is shwon
         this.xlabels = this.createXlabels()
+
+        console.log(this.xlabels.length)
+        console.log(this.dataBeingUsed.length)
 
 
         this.chart.data.datasets.forEach((dataset) => {

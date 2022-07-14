@@ -36,6 +36,7 @@
     align-self: center;
     color: rgb(59, 56, 56);
     margin-bottom: 0.75em;
+    z-index: 1000
 }
 
 @media (max-width: 1095px) {
@@ -236,7 +237,13 @@ input::-moz-range-progress {
 #graph-graph-big {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
-    margin-top: 50px;
+    /*margin-top: 50px; */
+    padding-right: 4em;
+}
+
+canvas {
+    width: 50px;
+    height: 20px;
 }
 
 @media (max-height: 700px) {
