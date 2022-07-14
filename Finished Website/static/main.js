@@ -425,15 +425,19 @@ function isConnected(recentTimeStamp) {
 
     if (currentYear != timeStampYear) { // compares years 
         returnVal = false;
+        console.log('years')
     }
     if (currentMonth != timeStampMonth) { // compares months
         returnVal = false;
+        console.log('mongth')
     }
     if (currentDay != timeStampDay) {
         returnVal = false;
+        console.log('DAY')
     }
-    if (currentHours > (parseInt(timeStampHours) + parseInt(timeBeforeInactive)) % 24) { // compares hours
+    if (currentHours < (parseInt(timeStampHours) + parseInt(timeBeforeInactive)) % 24) { // compares hours
         returnVal = false
+        console.log('hours')
     }
 
     return returnVal;
