@@ -4,13 +4,14 @@
     border: 1px solid var(--about-bg-colour);
     /* same trick as before, zero clue why it works lol  */
     font-family: 'Ubuntu', sans-serif;
+    height: 95vh;
 }
 
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
     .about-us {
         height: auto;
     }
-}
+} */
 
 .about-wrapper {
     margin-left: var(--margin-left);
@@ -59,7 +60,7 @@
 
 .about-us-quotes {
     grid-area: quotes;
-    font-size: 0.7em;
+    font-size: 0.65em;
 }
 
 #selfie-img {
