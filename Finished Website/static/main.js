@@ -104,10 +104,10 @@ class Dataset {
         if (this.windDirection != null) {
 
 
-            // while (this.windDirection.length != 3) {
-            //     this.windDirection = "0" + this.windDirection
-            // }
-            console.log(this.windDirection.length)
+            while (this.windDirection.toString().length != 3) {
+                this.windDirection = "0" + this.windDirection
+            }
+
             this.child[0].innerText = this.windDirection + '° ' + this.currentData + this.unit;
 
         }
