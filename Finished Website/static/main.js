@@ -190,9 +190,9 @@ class Graph {
                     // interaction: {
                     //     intersection: false,
                     // },
-                    layout: {
-                        padding: 50
-                    },
+                    // layout: {
+                    //     padding: 50
+                    // },
                     elements: {
                         line: {
                             tension: 0
