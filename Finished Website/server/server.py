@@ -3,7 +3,6 @@
 
 # imports
 # sourcery skip: avoid-builtin-shadow
-from crypt import methods
 import hashlib
 import sqlalchemy as sqla
 from sqlalchemy.ext.declarative import declarative_base
