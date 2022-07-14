@@ -16,7 +16,7 @@ import json
 # local import, this is a local file
 try:
     from server import logger as logger_module
-except:
+except ImportError:
     import logger as logger_module
 
 # setup logger
@@ -38,18 +38,6 @@ lgr.info('setup: reading image path lookup file')
 # image paths lookup
 with open("./images/images.json", "r") as file:
     image_file_names = json.loads(file.read())
-
-def print_dec(function):
-    name = function.__name__
-    def wrapper(*args, **kwargs):
-        lgr.debug(f"Beginning execution of function:   {name}")
-        result = function(*args, **kwargs)
-        lgr.debug(f"Finished execution of function:   {name}")
-        out = str(result).replace("\n", " ").replace("\t", " ")[:200]
-        lgr.debug(f" function {name} returned:   {out}")
-        return result
-    wrapper.__name__ = name
-    return wrapper
 
 
 lgr.info("setting up flask app")
@@ -145,6 +133,20 @@ lgr.info('defining utility functions')
 # functions
 
 
+def print_dec(function):
+    name = function.__name__
+    def wrapper(*args, **kwargs):
+        lgr.debug(f"Beginning execution of function:   {name}")
+        result = function(*args, **kwargs)
+        lgr.debug(f"Finished execution of function:   {name}")
+        out = str(result).replace("\n", " ").replace("\t", " ")[:200]
+        lgr.debug(f" function {name} returned:   {out}")
+        return result
+    wrapper.__name__ = name
+    return wrapper
+
+
+
 @print_dec
 def hash(plain_txt):
     """one way hash using sha256"""
@@ -232,6 +234,27 @@ def delete_utility():
         flask.abort(401)
 
     session.query(Reading).delete()
+    session.commit()
+
+    return "Database cleared"
+
+@print_dec
+def delete_before_date_utility():
+    data_header = flask.request.json
+    secret_key = data_header["secret_key"]
+    date: str = data_header["date"]
+
+    if hash(secret_key) != SECRET_KEY_HASH:
+        flask.abort(401)
+        
+    date: datetime = datetime.strptime(date, DATE_TIME_FORMAT)
+
+    session\
+        .query(Reading)\
+        .where(
+            Reading.timestamp <= date
+        )\
+        .delete()
     session.commit()
 
     return "Database cleared"
@@ -399,6 +422,7 @@ app.route("/utility/delete", methods=["POST"])(delete_utility)
 app.route('/utility/server_log', methods=['POST'])(server_log_utility)
 app.route('/utility/load_many', methods=['POST'])(load_many_utility)
 app.route('/utility/dump_all', methods=['POST'])(dump_all_utility)
+app.route('/utility/delete_before_date', methods=['POST'])(delete_before_date_utility)
 
 lgr.info('defining safe method for running app')
 
