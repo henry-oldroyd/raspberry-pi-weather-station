@@ -111,7 +111,7 @@
     flex-direction: column;
     align-items: center;
     text-align: right;
-    transform: translate(0, -10px);
+    transform: translate(0, -2em);
     margin-top: 2em;
 }
 
@@ -240,6 +240,7 @@ input::-moz-range-progress {
     margin-left: var(--margin-left);
     /*margin-top: 50px; */
     margin-right: 3em;
+    margin-bottom: 0;
 }
 
 canvas {
@@ -262,7 +263,7 @@ canvas {
 .download-csv {
     float: right;
     margin-right: calc(var(--margin-right));
-    transform: translate(-4em, -3.5em);
+    transform: translate(-4em, -7em);
     background-color: #9fa1a2;
     border: 1px solid transparent;
     border-radius: 3px;
