@@ -422,7 +422,7 @@ app.route("/utility/delete", methods=["POST"])(delete_utility)
 app.route('/utility/server_log', methods=['POST'])(server_log_utility)
 app.route('/utility/load_many', methods=['POST'])(load_many_utility)
 app.route('/utility/dump_all', methods=['POST'])(dump_all_utility)
-app.route('utility/delete_before_date', methods=['POST'])(delete_before_date_utility)
+app.route('/utility/delete_before_date', methods=['POST'])(delete_before_date_utility)
 
 lgr.info('defining safe method for running app')
 
