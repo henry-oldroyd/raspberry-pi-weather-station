@@ -104,9 +104,10 @@ class Dataset {
         if (this.windDirection != null) {
 
 
-            while (this.windDirection.length != 3) {
-                this.windDirection = "0" + this.windDirection
-            }
+            // while (this.windDirection.length != 3) {
+            //     this.windDirection = "0" + this.windDirection
+            // }
+            console.log(this.windDirection.length)
             this.child[0].innerText = this.windDirection + '° ' + this.currentData + this.unit;
 
         }
@@ -128,10 +129,11 @@ class Graph {
             this.timeStamps = timestamps
             this.unit = unit;
             this.xlabels = this.createXlabels(timestamps)
-            if (firstLoad == true) {
-                this.initialiseGraph(unit)
-                firstLoad = false
-            }
+                // if (firstLoad == true) {
+                //     this.initialiseGraph(unit)
+                //     firstLoad = false
+                // }
+            this.initialiseGraph(unit)
 
             if (slider_on == true) {
                 this.initialiseSlider();
