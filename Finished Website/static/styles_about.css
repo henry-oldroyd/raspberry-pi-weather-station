@@ -3,7 +3,6 @@
     background-color: var(--about-bg-colour);
     border: 1px solid var(--about-bg-colour);
     /* same trick as before, zero clue why it works lol  */
-    height: 95vh;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -54,13 +53,13 @@
 
 .about-us-text1 {
     grid-area: text1;
-    font-size: 0.7em;
+    font-size: 0.75em;
     margin: auto;
 }
 
 .about-us-quotes {
     grid-area: quotes;
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 #selfie-img {

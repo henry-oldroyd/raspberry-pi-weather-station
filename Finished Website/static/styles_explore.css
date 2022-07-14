@@ -112,6 +112,7 @@
     align-items: center;
     text-align: right;
     transform: translate(0, -10px);
+    margin-top: 2em;
 }
 
 .slider-big-graph {
@@ -238,7 +239,7 @@ input::-moz-range-progress {
     background-color: var(--explore-bg-colour);
     margin-left: var(--margin-left);
     /*margin-top: 50px; */
-    padding-right: 4em;
+    margin-right: 3em;
 }
 
 canvas {
@@ -277,6 +278,8 @@ canvas {
     touch-action: manipulation;
     white-space: nowrap;
     padding: 0.5em 1em 0.5em 1em;
+    margin-left: 2em;
+    margin-top: 2em;
 }
 
 .download-csv:hover,
