@@ -1,84 +1,99 @@
-2022-07-14 09:11:59,639 - server - INFO - this logger named server created
-2022-07-14 09:11:59,640 - server - INFO - setup: defining constants
-2022-07-14 09:11:59,640 - server - INFO - setup: reading hashed key file
-2022-07-14 09:11:59,641 - server - INFO - setup: reading image path lookup file
-2022-07-14 09:11:59,642 - server - INFO - setting up flask app
-2022-07-14 09:11:59,644 - server - INFO - setting up sqlalchemy engine
-2022-07-14 09:11:59,680 - server - INFO - defining reading class to represent a row in the readings table
-2022-07-14 09:11:59,680 - server - INFO - creating all tables if not already exists
-2022-07-14 09:11:59,697 - server - INFO - define sql index on timestamp to improve read times by timestamp
-2022-07-14 09:11:59,697 - server - INFO - defining schema for reading to allow for validation and serialization
-2022-07-14 09:11:59,718 - server - INFO - setting up instances of the schema for serializing readings
-2022-07-14 09:11:59,718 - server - INFO - defining utility functions
-2022-07-14 09:11:59,718 - server - INFO - defining functions to handle routes / endpoints
-2022-07-14 09:11:59,718 - server - INFO - binding route handlers to respective route
-2022-07-14 09:11:59,744 - server - INFO - defining safe method for running app
-2022-07-14 09:12:02,085 - server - DEBUG - Beginning execution of function:   index
-2022-07-14 09:12:02,121 - server - DEBUG - Finished execution of function:   index
-2022-07-14 09:12:02,123 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-2022-07-14 09:12:02,521 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-14 09:12:02,529 - server - DEBUG - Beginning execution of function:   background_image
-2022-07-14 09:12:02,550 - server - DEBUG - Finished execution of function:   get_data
-2022-07-14 09:12:02,554 - server - DEBUG - Beginning execution of function:   determine_background_image
-2022-07-14 09:12:02,555 - server - DEBUG -  function get_data returned:   <Response 1832 bytes [200 OK]>
-2022-07-14 09:12:02,556 - server - DEBUG - Finished execution of function:   determine_background_image
-2022-07-14 09:12:02,560 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-14 09:12:02,561 - server - DEBUG -  function determine_background_image returned:   mild
-2022-07-14 09:12:02,565 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-14 09:12:02,577 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-14 09:12:02,593 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-14 09:12:02,599 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [200 OK]>
-2022-07-14 09:12:02,601 - server - DEBUG - Finished execution of function:   background_image
-2022-07-14 09:12:02,604 - server - DEBUG - Finished execution of function:   get_data
-2022-07-14 09:12:02,604 - server - DEBUG -  function background_image returned:   <Response likely-streamed [200 OK]>
-2022-07-14 09:12:02,606 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-14 09:12:02,607 - server - DEBUG -  function get_data returned:   <Response 1832 bytes [200 OK]>
-2022-07-14 09:12:02,612 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-14 09:12:02,618 - server - DEBUG - Beginning execution of function:   background_image
-2022-07-14 09:12:02,620 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-14 09:12:02,643 - server - DEBUG - Beginning execution of function:   determine_background_image
-2022-07-14 09:12:02,645 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-14 09:12:02,646 - server - DEBUG - Finished execution of function:   determine_background_image
-2022-07-14 09:12:02,649 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-14 09:12:02,650 - server - DEBUG -  function determine_background_image returned:   mild
-2022-07-14 09:12:02,653 - server - DEBUG - Beginning execution of function:   give_photo
-2022-07-14 09:12:02,660 - server - DEBUG - Finished execution of function:   give_photo
-2022-07-14 09:12:02,661 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-14 09:12:02,661 - server - DEBUG - Finished execution of function:   background_image
-2022-07-14 09:12:02,662 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
-2022-07-14 09:12:06,552 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-14 09:12:06,570 - server - DEBUG - Finished execution of function:   get_data
-2022-07-14 09:12:06,573 - server - DEBUG -  function get_data returned:   <Response 1832 bytes [200 OK]>
-2022-07-14 09:12:16,086 - server - DEBUG - Beginning execution of function:   delete_utility
-2022-07-14 09:12:16,088 - server - DEBUG - Beginning execution of function:   hash
-2022-07-14 09:12:16,089 - server - DEBUG - Finished execution of function:   hash
-2022-07-14 09:12:16,090 - server - DEBUG -  function hash returned:   e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
-2022-07-14 09:12:16,122 - server - DEBUG - Finished execution of function:   delete_utility
-2022-07-14 09:12:16,123 - server - DEBUG -  function delete_utility returned:   Database cleared
-2022-07-14 09:12:20,172 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-14 09:12:20,181 - server - DEBUG - Finished execution of function:   get_data
-2022-07-14 09:12:20,183 - server - DEBUG -  function get_data returned:   <Response 3 bytes [200 OK]>
-2022-07-14 09:14:03,460 - server - DEBUG - Beginning execution of function:   server_log_utility
-2022-07-14 09:14:03,463 - server - DEBUG - Beginning execution of function:   hash
-2022-07-14 09:14:03,465 - server - DEBUG - Finished execution of function:   hash
-2022-07-14 09:14:03,465 - server - DEBUG -  function hash returned:   e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
-2022-07-14 09:14:03,488 - server - DEBUG - Finished execution of function:   server_log_utility
-2022-07-14 09:14:03,489 - server - DEBUG -  function server_log_utility returned:   <Response likely-streamed [200 OK]>
-2022-07-14 09:14:42,859 - server - DEBUG - Beginning execution of function:   load_many_utility
-2022-07-14 09:14:42,861 - server - DEBUG - Beginning execution of function:   hash
-2022-07-14 09:14:42,862 - server - DEBUG - Finished execution of function:   hash
-2022-07-14 09:14:42,863 - server - DEBUG -  function hash returned:   e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
-2022-07-14 09:14:42,895 - server - DEBUG - Finished execution of function:   load_many_utility
-2022-07-14 09:14:42,896 - server - DEBUG -  function load_many_utility returned:   <Response 5199 bytes [200 OK]>
-2022-07-14 09:14:45,774 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-14 09:14:45,805 - server - DEBUG - Finished execution of function:   get_data
-2022-07-14 09:14:45,807 - server - DEBUG -  function get_data returned:   <Response 4598 bytes [200 OK]>
-2022-07-14 09:14:58,760 - server - DEBUG - Beginning execution of function:   dump_all_utility
-2022-07-14 09:14:58,761 - server - DEBUG - Beginning execution of function:   hash
-2022-07-14 09:14:58,763 - server - DEBUG - Finished execution of function:   hash
-2022-07-14 09:14:58,764 - server - DEBUG -  function hash returned:   e06bad9f8dc27e08f1f568daed0d3ed33c8cbeb42289f17dabc03d89398c5e9e
-2022-07-14 09:14:58,774 - server - DEBUG - Finished execution of function:   dump_all_utility
-2022-07-14 09:14:58,774 - server - DEBUG -  function dump_all_utility returned:   <Response 4598 bytes [200 OK]>
-2022-07-14 09:16:59,437 - server - DEBUG - Beginning execution of function:   get_data
-2022-07-14 09:16:59,447 - server - DEBUG - Finished execution of function:   get_data
-2022-07-14 09:16:59,452 - server - DEBUG -  function get_data returned:   <Response 4598 bytes [200 OK]>
+2022-07-14 09:26:28,171 - server - INFO - this logger named server created
+2022-07-14 09:26:28,171 - server - INFO - setup: defining constants
+2022-07-14 09:26:28,171 - server - INFO - setup: reading hashed key file
+2022-07-14 09:26:28,171 - server - INFO - setup: reading image path lookup file
+2022-07-14 09:26:28,172 - server - INFO - setting up flask app
+2022-07-14 09:26:28,174 - server - INFO - setting up sqlalchemy engine
+2022-07-14 09:26:28,186 - server - INFO - defining reading class to represent a row in the readings table
+2022-07-14 09:26:28,188 - server - INFO - creating all tables if not already exists
+2022-07-14 09:26:28,192 - server - INFO - define sql index on timestamp to improve read times by timestamp
+2022-07-14 09:26:28,192 - server - INFO - defining schema for reading to allow for validation and serialization
+2022-07-14 09:26:28,199 - server - INFO - setting up instances of the schema for serializing readings
+2022-07-14 09:26:28,200 - server - INFO - defining utility functions
+2022-07-14 09:26:28,200 - server - INFO - defining functions to handle routes / endpoints
+2022-07-14 09:26:28,200 - server - INFO - binding route handlers to respective route
+2022-07-14 09:26:28,203 - server - INFO - defining safe method for running app
+2022-07-14 09:26:29,116 - server - DEBUG - Beginning execution of function:   index
+2022-07-14 09:26:29,126 - server - DEBUG - Finished execution of function:   index
+2022-07-14 09:26:29,126 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-07-14 09:26:29,168 - server - DEBUG - Beginning execution of function:   get_data
+2022-07-14 09:26:29,175 - server - DEBUG - Finished execution of function:   get_data
+2022-07-14 09:26:29,175 - server - DEBUG -  function get_data returned:   <Response 3437 bytes [200 OK]>
+2022-07-14 09:26:29,196 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:29,197 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,197 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,197 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,199 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:29,199 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:29,199 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:29,199 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,199 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,199 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,199 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:29,199 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,207 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,208 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,208 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,219 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,220 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,220 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,222 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,223 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,223 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,229 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:29,233 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:29,233 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:29,233 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:29,233 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,234 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,235 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,235 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:29,235 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,240 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,240 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,240 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:29,279 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:29,280 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:29,280 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,081 - server - DEBUG - Beginning execution of function:   index
+2022-07-14 09:26:30,083 - server - DEBUG - Finished execution of function:   index
+2022-07-14 09:26:30,083 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-07-14 09:26:30,113 - server - DEBUG - Beginning execution of function:   get_data
+2022-07-14 09:26:30,121 - server - DEBUG - Finished execution of function:   get_data
+2022-07-14 09:26:30,122 - server - DEBUG -  function get_data returned:   <Response 3437 bytes [200 OK]>
+2022-07-14 09:26:30,149 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:30,149 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,153 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,154 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,155 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,156 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:30,157 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,158 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,158 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,158 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:30,158 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,159 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,159 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:30,160 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,161 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,161 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,161 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:30,161 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,170 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,171 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,171 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,172 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,173 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,173 - server - DEBUG - Beginning execution of function:   background_image
+2022-07-14 09:26:30,174 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,174 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,175 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,175 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,176 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-07-14 09:26:30,176 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-07-14 09:26:30,176 - server - DEBUG -  function determine_background_image returned:   sunny
+2022-07-14 09:26:30,176 - server - DEBUG - Beginning execution of function:   give_photo
+2022-07-14 09:26:30,176 - server - DEBUG - Finished execution of function:   give_photo
+2022-07-14 09:26:30,177 - server - DEBUG -  function give_photo returned:   <Response likely-streamed [304 NOT MODIFIED]>
+2022-07-14 09:26:30,177 - server - DEBUG - Finished execution of function:   background_image
+2022-07-14 09:26:30,177 - server - DEBUG -  function background_image returned:   <Response likely-streamed [304 NOT MODIFIED]>

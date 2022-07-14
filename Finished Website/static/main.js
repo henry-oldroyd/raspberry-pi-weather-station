@@ -3,6 +3,7 @@ let faintBlack = "rgba(0,0,0,0.2)";
 let connectingOrange = "rgb(254, 141, 2)";
 let connectedGreen = "rgb(4, 167, 40)"
 let disconnectedRed = "rgb(205, 25, 50)"
+let firstLoad = true
 
 let timeBeforeInactive = 6 // hour 
 
@@ -127,10 +128,15 @@ class Graph {
             this.timeStamps = timestamps
             this.unit = unit;
             this.xlabels = this.createXlabels(timestamps)
-            this.initialiseGraph(unit)
+            if (firstLoad == true) {
+                this.initialiseGraph(unit)
+                firstLoad = false
+            }
+
             if (slider_on == true) {
                 this.initialiseSlider();
             }
+
 
         }
         // creates slider below graph 
