@@ -145,9 +145,21 @@ def print_dec(function):
     wrapper.__name__ = name
     return wrapper
 
-
+def repeat_decorator_factory(repeats:int):
+    """works where there is one input and a process can be repeated by running again on previous output"""
+    def decorator(function):
+        name = function.__name__
+        def wrapper(arg):
+            result = arg
+            for _ in range(repeats):
+                result = function(result)
+            return result
+        wrapper.__name__ = name
+        return wrapper
+    return decorator
 
 @print_dec
+@repeat_decorator_factory(10**3)
 def hash(plain_txt):
     """one way hash using sha256"""
     hash_ = hashlib.sha256()
