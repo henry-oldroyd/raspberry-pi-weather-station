@@ -30,6 +30,6 @@ def get_value():
          #print("Unknown Value: " + str(wind))
          data = 0.0 #if unknown just sends as 0 or North 
     else:
-         data = volts[wind] = OFFSET
-    #print(volts[wind]) #also used for testing
+         data = (volts[wind] + OFFSET) % 360
+        #print(volts[wind]) #also used for testing
     return data
