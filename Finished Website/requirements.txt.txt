@@ -1,0 +1,6 @@
+# Dependencies (Python Libraries) needed for the Flask server
+
+Flask
+sqlalchemy
+marshmallow_sqlalchemy
+waitress
