@@ -9,7 +9,7 @@ import os
 #Import files to use
 import Ann16 as Ann
 import BME8 as BME
-import Rain16 as Rain
+import Rain17 as Rain
 import Wind15 as Wind
 import logger as logger_module #For logging
 
