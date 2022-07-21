@@ -1,3 +1,5 @@
+#IMPORTANT: Do not forget to update crontab if make a new Integreated.py version with... sudo crontab -e
+
 #Import modules
 import requests
 from datetime import datetime
@@ -22,7 +24,7 @@ logger_module.setup_logger(os.path.basename(__file__) + " - Backend Logger")
 loggerBack = logging.getLogger(os.path.basename(__file__) + " - Backend Logger")
 
 #Server setup
-SERVER_URL = 'http://127.0.0.1:5000/data'
+SERVER_URL = 'http:/172.20.47.242:80/data'
 
 with open("secret_key.key", "r") as file:
     SECRET_KEY = file.read()
