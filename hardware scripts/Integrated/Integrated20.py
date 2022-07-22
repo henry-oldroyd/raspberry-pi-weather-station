@@ -73,7 +73,7 @@ def send_reading(pressure, temperature, humidity, wind_speed, wind_direction, pr
         except:
                 print("Request variable not defined. Error occurred before this. ")
         else:
-                logger.debug("Status code 200 - date sent successfully.")
+                loggerBack.debug("Status code 200 - date sent successfully.")
 
 #Takes readings - ensures they are integers
 loggerSens.info(f"Taking rainfall reading...")
