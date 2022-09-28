@@ -7,6 +7,7 @@
     height: 95vh;
 }
 
+
 /* @media (max-width: 750px) {
     .about-us {
         height: auto;
@@ -63,8 +64,15 @@
     font-size: 0.65em;
 }
 
-#selfie-img {
+.img-div {
     grid-area: img1;
+    font-size: 1em;
+}
+
+
+/* .img-credit {} */
+
+#selfie-img {
     max-width: 90%;
     max-height: 40vh;
     margin: auto;
