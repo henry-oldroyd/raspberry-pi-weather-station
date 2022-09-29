@@ -1628,3 +1628,1761 @@
 2022-09-28 13:57:59,689 - server - DEBUG - Finished execution of function:   background_image
 2022-09-28 13:57:59,689 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
 2022-09-28 13:57:59,689 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,535 - server - DEBUG - Beginning execution of function:   index
+2022-09-28 13:59:25,535 - server - DEBUG - Beginning execution of function:   index
+2022-09-28 13:59:25,541 - server - DEBUG - Finished execution of function:   index
+2022-09-28 13:59:25,541 - server - DEBUG - Finished execution of function:   index
+2022-09-28 13:59:25,542 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-28 13:59:25,542 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-28 13:59:25,681 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-28 13:59:25,681 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-28 13:59:25,697 - server - DEBUG - Finished execution of function:   get_data
+2022-09-28 13:59:25,697 - server - DEBUG - Finished execution of function:   get_data
+2022-09-28 13:59:25,697 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-28 13:59:25,697 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-28 13:59:25,727 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,727 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,731 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,731 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,731 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,731 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,732 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,732 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,732 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,732 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,733 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,733 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,735 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-28 13:59:25,735 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-28 13:59:25,736 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,736 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,736 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,737 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,736 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,738 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-28 13:59:25,737 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,738 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,738 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-28 13:59:25,739 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-28 13:59:25,738 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,739 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-28 13:59:25,740 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-28 13:59:25,740 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-28 13:59:25,741 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,741 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,741 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,741 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,742 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,742 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,742 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,742 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,742 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,742 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,743 - server - DEBUG - Finished execution of function:   background_image
+2022-09-28 13:59:25,743 - server - DEBUG - Finished execution of function:   background_image
+2022-09-28 13:59:25,743 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,743 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,749 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-28 13:59:25,750 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,749 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-28 13:59:25,750 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,751 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,751 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,751 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,751 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,752 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-28 13:59:25,752 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-28 13:59:25,752 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-28 13:59:25,752 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-28 13:59:25,752 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-28 13:59:25,752 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-28 13:59:25,752 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,752 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,752 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,752 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,752 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,752 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,753 - server - DEBUG - Finished execution of function:   background_image
+2022-09-28 13:59:25,753 - server - DEBUG - Finished execution of function:   background_image
+2022-09-28 13:59:25,753 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,753 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,775 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,775 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-28 13:59:25,776 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,776 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-28 13:59:25,776 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-28 13:59:25,776 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,502 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:01:50,502 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:01:50,533 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:01:50,533 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:01:50,533 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:01:50,533 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:01:50,570 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,571 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,570 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,582 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,571 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,583 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:01:50,582 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,584 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,584 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,583 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:01:50,589 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,589 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,590 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,590 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,590 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,590 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,592 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:01:50,593 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,592 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:01:50,593 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,593 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:01:50,593 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,593 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:01:50,594 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:01:50,594 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:01:50,594 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,594 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,594 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,593 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,594 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,595 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,595 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,595 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,595 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,595 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,595 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,596 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,596 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,596 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:01:50,596 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:01:50,597 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,597 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,599 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,599 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,600 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,600 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,600 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,600 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,607 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:01:50,608 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,607 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:01:50,608 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,610 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,610 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,610 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,610 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,613 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:01:50,613 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:01:50,613 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:01:50,613 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:01:50,613 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:01:50,613 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:01:50,614 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,614 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:01:50,614 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,614 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:01:50,614 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,614 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,614 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:01:50,614 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:01:50,614 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:01:50,614 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,262 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:03:03,262 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:03:03,293 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:03:03,293 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:03:03,293 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:03:03,293 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:03:03,430 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:03:03,430 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:03:03,532 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:03:03,532 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:03:03,532 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:03:03,532 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:03:03,576 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,576 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,578 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,578 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,587 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,587 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,590 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,590 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,588 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,589 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:03:03,588 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,592 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,589 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:03:03,592 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,595 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,595 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,597 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,597 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,600 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,600 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,602 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,603 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,602 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,603 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,604 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:03:03,604 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:03:03,606 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,606 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:03:03,606 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,607 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,606 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:03:03,607 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:03:03,607 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:03:03,607 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,606 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,607 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,607 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,606 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,608 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,608 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,609 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,609 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,610 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,610 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,610 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:03:03,610 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:03:03,611 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,611 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,611 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,611 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,612 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,612 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,612 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,612 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,629 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:03:03,629 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:03:03,631 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:03:03,631 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:03:03,631 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:03:03,631 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:03:03,631 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:03:03,631 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:03:03,631 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,631 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:03:03,632 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,632 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:03:03,632 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,632 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,632 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:03:03,632 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:03:03,632 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:03:03,632 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,346 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:03,346 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:03,349 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:03,349 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:03,350 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:03,350 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:03,478 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:03,478 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:03,507 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:03,507 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:03,507 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:03,507 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:03,539 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,539 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,541 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,541 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,552 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,552 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,553 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,553 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,558 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:03,558 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:03,559 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,559 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,566 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,566 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,568 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,568 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,571 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:03,571 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,571 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:03,571 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,572 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,572 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,572 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,572 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,572 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:03,572 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:03,573 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,573 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,573 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,573 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,573 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,573 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,574 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:03,576 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,574 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:03,576 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,576 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,576 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,576 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,576 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,578 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,578 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,578 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,578 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,578 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:03,578 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:03,578 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,578 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,582 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,582 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,585 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,585 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,585 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,585 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,594 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:03,594 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:03,596 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:03,596 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:03,596 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:03,596 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:03,596 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:03,596 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:03,596 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,596 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:03,596 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,596 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:03,597 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,597 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,597 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:03,597 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:03,597 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:03,597 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,418 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:09,418 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:09,420 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:09,420 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:09,420 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:09,420 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:09,498 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:09,498 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:09,616 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:09,616 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:09,617 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:09,617 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:09,654 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,654 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,655 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,655 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,659 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:09,660 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,659 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:09,660 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,660 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,660 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,661 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,661 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,661 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,661 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,661 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,663 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,661 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,663 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,664 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,664 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,666 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:09,666 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:09,666 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:09,666 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:09,666 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:09,666 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:09,666 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,666 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,666 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,666 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,666 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,666 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,666 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:09,666 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:09,667 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,667 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,673 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,673 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,673 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,673 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,674 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,674 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,674 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,675 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,674 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,675 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,676 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,676 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,676 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,676 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,677 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:09,677 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:09,677 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,677 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,678 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,678 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,679 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:09,679 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:09,679 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:09,679 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:09,679 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:09,679 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:09,679 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,679 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:09,680 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,680 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:09,680 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,680 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,680 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:09,680 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:09,680 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:09,680 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,064 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:15,064 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:15,066 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:15,066 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:15,066 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:15,066 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:15,150 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:15,150 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:15,202 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:15,202 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:15,202 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:15,202 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:15,224 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,224 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,224 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,226 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,226 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:15,224 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,227 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,226 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,227 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,226 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:15,227 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,229 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,227 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,229 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,230 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,230 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,230 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,231 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:15,230 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,232 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,231 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:15,232 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:15,232 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,232 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:15,233 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:15,233 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:15,233 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,233 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,234 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,234 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,234 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,234 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,235 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,235 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,235 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,235 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,236 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:15,236 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:15,236 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,236 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,236 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,236 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,237 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,237 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,237 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,238 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,239 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,237 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,238 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,239 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,240 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:15,240 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:15,241 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,241 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,241 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,241 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,242 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:15,242 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:15,242 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:15,242 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:15,242 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:15,242 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:15,242 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,242 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:15,243 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,243 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:15,243 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,243 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,243 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:15,243 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:15,243 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:15,243 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,669 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:30,669 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:30,672 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:30,672 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:30,673 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:30,673 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:30,781 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:30,781 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:30,851 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:30,851 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:30,851 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:30,851 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:30,877 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,877 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,880 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,881 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,880 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,881 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,881 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,881 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,882 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,882 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,882 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,882 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,887 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:30,887 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:30,890 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:30,890 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:30,890 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:30,890 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:30,890 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:30,890 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:30,890 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,890 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,891 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,891 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,891 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,891 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,892 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:30,892 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:30,892 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,892 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,894 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,894 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,895 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,895 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,896 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,896 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,896 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,897 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:30,896 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,897 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,897 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:30,897 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,897 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,897 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,897 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,897 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,900 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,900 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,900 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,900 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,901 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:30,901 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:30,901 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:30,901 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:30,901 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:30,901 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:30,901 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,901 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,902 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,902 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,902 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,902 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,902 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:30,902 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:30,902 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,902 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,907 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,907 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:30,908 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,908 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:30,908 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:30,908 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,758 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:45,758 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:45,761 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:45,761 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:45,761 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:45,761 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:45,833 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:45,833 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:45,895 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:45,895 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:45,895 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:45,895 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:45,911 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,911 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,913 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,913 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,914 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,914 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,915 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,916 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,915 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,916 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,917 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,917 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,928 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:45,928 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:45,934 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:45,934 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:45,934 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:45,934 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:45,934 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:45,934 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:45,934 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,934 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,935 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,935 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,935 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,935 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,935 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:45,935 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:45,935 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,935 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,938 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,938 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,938 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,938 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,939 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,939 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,939 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,939 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,939 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,939 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,940 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,940 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,941 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:45,941 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:45,944 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,944 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,945 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,945 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,945 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,945 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,946 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:45,946 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:45,946 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:45,946 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:45,946 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:45,946 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:45,946 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,946 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,946 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,946 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,947 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,947 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,947 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:45,947 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:45,947 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,947 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,952 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,952 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:45,954 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,954 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:45,954 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:45,954 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,398 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:53,398 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:04:53,401 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:53,401 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:04:53,402 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:53,402 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:04:53,498 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:53,498 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:04:53,571 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:53,571 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:04:53,571 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:53,571 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:04:53,605 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,605 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,607 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,607 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,609 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:53,609 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:53,610 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,610 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,611 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,611 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,612 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,614 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,612 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,614 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,614 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,614 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,614 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,614 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,615 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,615 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,628 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:53,628 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:53,628 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:53,628 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:53,628 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:53,628 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:53,628 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,628 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,629 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,629 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,629 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,629 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,630 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:53,630 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:53,630 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,630 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,631 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,631 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,634 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,634 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,635 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,635 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,636 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,637 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:53,636 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,637 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:04:53,637 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,637 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,639 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,639 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,638 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,638 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,638 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,638 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,641 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,641 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,641 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:53,641 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:04:53,643 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:53,643 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:04:53,643 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:53,643 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:04:53,643 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,643 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:04:53,644 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,644 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:04:53,645 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,645 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,645 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:53,645 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:04:53,645 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:04:53,645 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,731 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:04,731 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:04,734 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:04,734 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:04,734 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:04,734 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:04,808 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:04,808 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:04,870 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:04,870 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:04,871 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:04,871 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:04,894 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,894 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,897 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,897 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,899 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,899 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,900 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,900 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,900 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,900 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,900 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,900 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,902 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:04,902 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:04,905 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:04,905 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:04,906 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:04,906 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:04,906 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:04,906 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:04,906 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,906 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,906 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,906 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,906 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,906 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,907 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:04,907 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:04,907 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,907 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,907 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,907 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,908 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,908 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,909 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,909 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,909 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,909 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,910 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,910 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,911 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,911 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,911 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,911 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,912 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:04,912 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:04,912 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,912 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,913 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,913 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,915 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:04,915 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:04,915 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:04,915 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:04,915 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:04,915 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:04,915 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,915 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,916 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,916 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,917 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,917 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,917 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:04,917 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:04,917 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,917 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,938 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,938 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:04,939 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,939 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:04,939 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:04,939 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,074 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:13,074 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:13,077 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:13,077 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:13,077 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:13,077 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:13,168 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:13,168 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:13,249 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:13,249 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:13,249 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:13,249 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:13,271 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,271 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,273 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,273 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,275 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:13,275 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:13,275 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,275 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,276 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,277 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,276 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,278 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,277 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,278 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,278 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,279 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,278 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,281 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,279 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,281 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,283 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:13,283 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:13,283 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:13,283 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:13,283 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:13,283 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:13,284 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,284 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,284 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,284 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,285 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,285 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,285 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:13,285 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:13,285 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,285 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,295 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,295 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,296 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,296 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,296 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,296 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:13,296 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,297 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,297 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,296 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:13,298 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,297 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,297 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,298 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,298 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,298 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,298 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,298 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,298 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,298 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,300 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:13,300 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:13,301 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:13,301 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:13,301 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:13,301 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:13,301 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,301 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:13,301 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,301 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:13,301 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,301 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,302 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:13,302 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:13,302 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:13,302 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,674 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:24,674 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:24,677 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:24,677 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:24,678 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:24,678 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:24,764 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:24,764 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:24,858 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:24,858 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:24,859 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:24,859 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:24,888 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,888 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,890 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,890 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,890 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,890 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,898 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,898 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,900 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,900 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,901 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,901 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,904 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:24,904 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:24,909 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:24,909 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:24,909 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:24,909 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:24,912 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:24,912 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:24,912 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,912 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,913 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,913 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,913 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,913 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,913 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:24,913 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:24,913 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,913 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,916 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,916 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,916 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,916 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,917 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,917 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,917 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,917 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,918 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,918 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,918 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,918 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,925 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,925 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,925 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:24,925 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:24,926 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,926 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,926 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,926 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,928 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:24,928 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:24,928 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:24,928 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:24,928 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:24,928 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:24,928 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,928 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,929 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,929 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,929 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,929 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,929 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:24,929 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:24,929 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,929 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,935 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,935 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:24,935 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,935 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:24,935 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:24,935 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,796 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:33,796 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:33,798 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:33,798 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:33,798 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:33,798 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:33,870 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:33,870 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:33,927 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:33,927 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:33,927 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:33,927 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:33,952 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,952 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,954 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,954 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,955 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,955 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,955 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,955 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,959 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:33,959 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:33,960 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,960 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,963 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,963 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,964 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,964 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,967 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,967 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,968 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,968 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:33,968 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,968 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:33,970 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:33,970 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:33,970 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,970 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,969 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,969 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,970 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:33,970 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:33,970 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,970 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,970 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,970 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,970 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,970 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,971 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,971 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,972 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,972 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,972 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,972 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,973 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,973 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,973 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:33,973 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:33,973 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,973 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,976 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,976 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,976 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,976 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,976 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,976 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,979 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:33,979 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:33,980 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:33,980 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:33,980 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:33,980 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:33,980 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:33,980 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:33,980 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,980 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:33,981 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,981 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:33,981 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,981 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,981 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:33,981 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:33,981 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:33,981 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,360 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:40,360 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:40,362 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:40,362 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:40,362 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:40,362 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:40,439 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:40,439 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:40,477 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:40,477 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:40,479 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:40,479 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:40,496 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,496 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,496 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,496 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,497 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:40,497 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,498 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,497 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:40,498 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,497 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,500 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,498 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,500 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,498 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,500 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:40,500 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,500 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,500 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:40,501 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,501 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,501 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:40,501 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:40,502 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,502 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:40,502 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,502 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:40,502 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,502 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,503 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,503 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,503 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,503 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,503 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:40,503 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:40,503 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,503 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,528 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,528 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,530 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,530 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,530 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,530 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,533 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,533 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,535 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,535 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,535 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,535 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,537 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,537 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,538 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,538 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,538 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,538 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,541 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:40,541 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:40,543 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:40,543 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:40,543 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:40,543 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:40,543 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:40,543 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:40,544 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,544 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:40,545 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,545 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:40,545 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,545 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,545 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:40,545 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:40,545 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:40,545 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,614 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:46,614 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:46,616 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:46,616 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:46,616 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:46,616 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:46,694 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:46,694 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:46,766 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:46,766 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:46,766 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:46,766 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:46,783 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,783 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,784 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,786 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:46,787 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,788 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,784 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,786 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:46,790 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,787 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,791 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,791 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,788 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,790 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,793 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,793 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,793 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,793 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,794 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:46,794 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,794 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:46,794 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:46,794 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,794 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:46,795 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:46,795 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:46,795 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,795 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,796 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,796 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,796 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,796 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,796 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:46,796 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:46,796 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,796 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,799 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,799 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,800 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,800 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,801 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,801 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,802 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,802 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,802 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,802 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,803 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,803 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,803 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,803 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,804 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,804 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,803 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,803 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,806 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:46,806 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:46,808 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:46,808 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:46,808 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:46,808 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:46,808 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:46,808 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:46,808 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,808 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:46,808 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,808 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:46,808 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,808 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,808 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:46,808 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:46,808 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:46,808 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,231 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:52,231 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:52,233 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:52,233 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:52,233 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:52,233 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:52,300 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:52,300 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:52,369 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:52,369 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:52,369 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:52,369 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:52,390 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,390 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,391 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,391 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,393 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:52,394 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,393 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:52,394 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,395 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,394 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,394 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,397 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,395 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,397 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,397 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,397 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,401 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,401 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,402 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,402 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,404 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:52,404 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:52,404 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:52,404 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:52,404 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:52,404 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:52,405 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,405 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,406 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,406 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,406 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,406 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,406 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:52,406 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:52,406 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,406 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,414 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,414 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,416 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,416 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,418 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,418 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,418 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,418 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,419 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,419 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,420 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,420 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,421 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,421 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,421 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:52,421 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:52,423 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,423 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,424 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,424 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,425 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:52,425 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:52,425 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:52,425 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:52,425 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:52,425 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:52,425 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,425 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:52,426 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,426 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:52,426 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,426 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,427 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:52,427 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:52,427 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:52,427 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,154 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:57,154 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:05:57,157 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:57,157 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:05:57,157 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:57,157 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:05:57,228 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:57,228 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:05:57,329 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:57,329 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:05:57,329 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:57,329 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:05:57,357 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,357 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,358 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,358 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,362 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:57,362 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:57,364 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,365 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,364 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,366 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,365 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,366 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,366 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,366 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,370 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:57,370 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:57,370 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:57,370 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:57,372 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,372 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,372 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:57,372 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:57,372 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,372 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,373 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,373 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,373 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,373 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,373 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:57,373 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:57,373 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,373 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,373 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,373 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,374 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,374 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,377 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,377 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,377 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,377 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,378 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,378 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,379 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,379 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,379 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,379 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,379 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,379 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,384 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:57,384 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:05:57,386 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:57,386 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:05:57,387 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:57,387 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:05:57,387 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:57,387 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:05:57,387 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,387 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,388 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,388 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,388 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,388 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,388 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:57,388 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:05:57,388 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,388 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,391 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,391 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:05:57,392 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,392 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:05:57,392 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:05:57,392 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,207 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:06:42,207 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:06:42,209 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:06:42,209 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:06:42,210 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:06:42,210 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:06:42,328 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:06:42,328 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:06:42,370 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:06:42,370 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:06:42,370 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:06:42,370 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:06:42,403 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,403 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,404 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,404 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,406 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,406 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,406 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,406 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,408 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,408 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,408 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,408 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,410 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:42,410 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:42,415 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:42,415 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:42,415 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:42,415 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:42,415 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:42,415 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:42,416 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,416 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,417 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,417 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,417 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,417 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,417 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:42,417 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:42,417 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,419 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,417 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,420 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,421 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,419 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,420 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,422 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,421 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,422 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,422 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,423 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,423 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,422 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,424 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,424 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,426 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:42,426 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:42,426 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,426 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,427 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,427 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,429 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:42,429 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:42,429 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:42,429 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:42,429 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:42,429 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:42,429 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,429 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,430 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,430 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,430 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,430 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,430 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:42,430 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:42,431 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,431 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,433 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,433 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:42,434 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,434 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:42,434 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:42,434 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,690 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:06:47,690 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:06:47,692 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:06:47,692 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:06:47,692 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:06:47,692 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:06:47,762 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:06:47,762 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:06:47,822 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:06:47,822 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:06:47,822 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:06:47,822 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:06:47,844 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,844 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,845 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,845 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,847 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:47,847 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:47,848 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,848 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,850 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,850 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,850 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,850 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,851 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,851 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,852 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,852 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,853 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,853 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,854 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:47,854 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:47,854 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,856 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:47,854 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,856 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:47,857 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:47,857 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:47,858 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,858 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,859 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,859 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,859 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,859 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,860 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:47,860 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:47,860 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,860 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,867 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,867 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,867 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,867 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,868 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,868 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:47,868 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,868 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:06:47,869 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,869 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,870 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,870 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,870 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,870 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,870 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,870 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,871 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:47,871 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,871 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,871 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:06:47,872 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:47,871 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,871 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,872 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:06:47,873 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:47,873 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:06:47,873 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,873 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:06:47,873 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,873 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:06:47,873 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,873 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,873 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:47,873 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:06:47,874 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:06:47,874 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,062 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:07:33,062 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:07:33,065 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:07:33,065 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:07:33,066 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:07:33,066 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:07:33,143 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:07:33,143 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:07:33,256 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:07:33,256 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:07:33,256 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:07:33,256 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:07:33,289 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,289 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,291 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,291 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,292 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,292 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,293 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,293 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,294 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,294 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,294 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,294 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,303 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:33,303 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:33,304 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,305 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,304 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,305 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,307 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,307 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,309 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,309 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,310 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,310 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,311 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,311 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,312 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:33,312 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:33,312 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:33,312 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:33,312 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:33,312 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:33,312 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,312 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,313 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,313 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,313 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,313 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,313 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:33,313 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:33,313 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,313 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,315 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,315 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,316 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:33,316 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:33,317 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,317 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,317 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,317 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,323 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:33,323 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:33,323 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:33,323 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:33,323 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:33,323 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:33,323 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,323 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,324 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,324 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,324 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,324 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,324 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:33,324 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:33,324 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,324 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,341 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,341 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:33,341 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,341 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:33,341 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:33,341 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:47,947 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:07:47,947 - server - DEBUG - Beginning execution of function:   index
+2022-09-29 10:07:47,951 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:07:47,951 - server - DEBUG - Finished execution of function:   index
+2022-09-29 10:07:47,951 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:07:47,951 - server - DEBUG -  function index returned:   <!DOCTYPE html> <html lang="en">  <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+2022-09-29 10:07:48,085 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:07:48,085 - server - DEBUG - Beginning execution of function:   get_data
+2022-09-29 10:07:48,142 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:07:48,142 - server - DEBUG - Finished execution of function:   get_data
+2022-09-29 10:07:48,142 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:07:48,142 - server - DEBUG -  function get_data returned:   <Response 5688 bytes [200 OK]>
+2022-09-29 10:07:48,161 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,161 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,166 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,166 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,168 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,168 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,169 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,169 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,169 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,169 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,170 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,170 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,173 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:48,175 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,173 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:48,175 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,175 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,175 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,176 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,176 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,177 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,178 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,177 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,183 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,178 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,183 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,185 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:48,185 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,185 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:48,186 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:48,185 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,186 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:48,186 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:48,186 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:48,186 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,186 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,187 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,187 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,187 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,187 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,188 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,188 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,188 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,188 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,188 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:48,188 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:48,189 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,189 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,197 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,197 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,198 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,198 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,198 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,198 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,203 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:48,203 - server - DEBUG - Beginning execution of function:   background_image
+2022-09-29 10:07:48,206 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:48,206 - server - DEBUG - Beginning execution of function:   determine_background_image
+2022-09-29 10:07:48,206 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:48,206 - server - DEBUG - Finished execution of function:   determine_background_image
+2022-09-29 10:07:48,206 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:48,206 - server - DEBUG -  function determine_background_image returned:   rain
+2022-09-29 10:07:48,206 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,206 - server - DEBUG - Beginning execution of function:   give_photo
+2022-09-29 10:07:48,207 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,207 - server - DEBUG - Finished execution of function:   give_photo
+2022-09-29 10:07:48,208 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,208 - server - DEBUG -  function give_photo returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,208 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:48,208 - server - DEBUG - Finished execution of function:   background_image
+2022-09-29 10:07:48,208 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>
+2022-09-29 10:07:48,208 - server - DEBUG -  function background_image returned:   <Response streamed [304 NOT MODIFIED]>

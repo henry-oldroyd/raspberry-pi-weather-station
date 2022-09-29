@@ -28,7 +28,6 @@
     margin-bottom: var(--banner-bottom-gap);
     height: var(--banner-height);
     font-family: 'Passion One', cursive;
-    ;
 }
 
 
@@ -67,10 +66,20 @@
 .img-div {
     grid-area: img1;
     font-size: 1em;
+    position: relative;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 
-/* .img-credit {} */
+/* p tag */
+
+.img-credit {
+    position: absolute;
+    right: 1em;
+    font-size: 0.5em;
+    transform: translateX(-70px)
+}
 
 #selfie-img {
     max-width: 90%;
