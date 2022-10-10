@@ -13,11 +13,10 @@ window.addEventListener('load', function() {
         // henry add
         .then(function(data){
             if(data.length === 0){
-                alert("data endpoint gives empty array")
-            } 
+                alert("data endpoint gives empty array");
+            }
+            load_page(data)
         })
-
-        .then(data => load_page(data))
 
     $(window).resize(resizeFunc());
 });
