@@ -10,6 +10,13 @@ let timeBeforeInactive = 6 // hour
 
 window.addEventListener('load', function() {
     get_all_json_data()
+        // henry add
+        .then(function(data){
+            if(data.length === 0){
+                alert("data endpoint gives empty array")
+            } 
+        })
+
         .then(data => load_page(data))
 
     $(window).resize(resizeFunc());
