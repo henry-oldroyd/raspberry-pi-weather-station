@@ -6,5 +6,6 @@
         "sessionmaker",
         "sqla",
         "sqlalchemy"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
